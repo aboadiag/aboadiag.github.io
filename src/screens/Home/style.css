@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
 .home {
-  width: 100%;
-  max-width: 1440px;
+  background-color: var(--off-white); /* move background here */
+  min-width: 1440px;
   min-height: 100vh;     /* full viewport height */
   height: auto;         /* allow content to expand naturally */
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  /* width: 100%;
+  max-width: 1440px; */
   display: flex;
   flex-direction: column; /* optional */ 
-  background-color: var(--off-white); /* move background here */
   /* display: flex;
   min-height: 2757px;
   width: 100%; */
