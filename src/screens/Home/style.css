@@ -7,9 +7,9 @@
   display: flex;
   flex-direction: column; /* optional */ 
   background-color: var(--off-white); /* move background here */
+  /* min-width: 1440px; */
   /* display: flex;
   min-height: 2757px;
-  min-width: 1440px;
   width: 100%; */
   
 } 
@@ -19,6 +19,7 @@
   max-width: 1440px;    /* optional, keeps desktop layout wide */
   height: auto;        /* let content define height */
   position: relative;
+  margin: 0 auto;       /* center container */
   /* background-color: var(--off-white);
   height: 2757px;
   overflow: hidden;
