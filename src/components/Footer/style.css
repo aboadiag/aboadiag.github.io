@@ -1,0 +1,87 @@
+.footer {
+  height: 171px;
+  left: 80px;
+  position: relative;
+  top: 2560px;
+  width: 1468px;
+}
+
+.footer .text-wrapper {
+  color: var(--dark-brown);
+  font-family: "Poppins", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
+  width: 392px;
+}
+
+.footer .div {
+  color: var(--red-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 80px;
+  font-weight: 900;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 36px;
+  width: 308px;
+}
+
+.footer .text-wrapper-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 621px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
+  width: 144px;
+}
+
+.footer .github-icon {
+  height: 100px;
+  left: 1154px;
+  position: absolute;
+  top: 16px;
+  width: 106px;
+}
+
+.footer .https-github-com {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 128px;
+  justify-content: center;
+  left: 1167px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 36px;
+  width: 122px;
+}
+
+.footer .text-wrapper-3 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 1140px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
+}

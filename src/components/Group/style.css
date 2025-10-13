@@ -1,0 +1,65 @@
+.group {
+  height: 68px;
+  left: 20px;
+  position: relative;
+  width: 164px;
+}
+
+.group .rectangle {
+  background-color: var(--moss-green);
+  border-radius: 6px;
+  height: 89.71%;
+  left: 3.66%;
+  position: absolute;
+  top: 10.29%;
+  width: 96.34%;
+}
+
+.group .rectangle-2 {
+  border: 1px solid;
+  border-color: var(--red-brown);
+  border-radius: 6px;
+  height: 89.71%;
+  position: absolute;
+  width: 96.34%;
+}
+
+.group .resume {
+  color: var(--red-brown);
+  font-family: "Poppins", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  height: 44.12%;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  width: 49.39%;
+}
+
+.group.default {
+  top: 20px;
+}
+
+.group.variant-2 {
+  top: 108px;
+}
+
+.group.default .rectangle-2 {
+  left: 0;
+  top: 0;
+}
+
+.group.variant-2 .rectangle-2 {
+  left: 3.66%;
+  top: 10.29%;
+}
+
+.group.default .resume {
+  left: 23.17%;
+  top: 23.53%;
+}
+
+.group.variant-2 .resume {
+  left: 27.44%;
+  top: 32.35%;
+}

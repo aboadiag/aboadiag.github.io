@@ -1,0 +1,88 @@
+.nav-bar {
+  display: flex;
+  height: 30px;
+  left: 880px;
+  position: relative;
+  top: 40px;
+  width: 552px;
+}
+
+.nav-bar .site-logo {
+  display: flex;
+  gap: 20px;
+  margin-left: -725px;
+  width: 485px;
+}
+
+.nav-bar .bena-favicon-figma {
+  aspect-ratio: 1;
+  height: 96px;
+  margin-left: -116px;
+  object-fit: cover;
+  width: 96px;
+}
+
+.nav-bar .text-wrapper-4 {
+  color: var(--dark-brown);
+  font-family: "Figma Hand-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 485px;
+}
+
+.nav-bar .text-wrapper-5 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 240px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.nav-bar .text-wrapper-6 {
+  color: var(--dark-brown);
+  display: block;
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 68px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.nav-bar .text-wrapper-7 {
+  color: var(--dark-brown);
+  display: block;
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 68px;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.nav-bar .text-wrapper-8 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 68px;
+  white-space: nowrap;
+  width: 34px;
+}

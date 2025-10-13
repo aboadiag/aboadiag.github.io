@@ -1,0 +1,57 @@
+.research-about {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 342px;
+  left: 107px;
+  position: relative;
+  top: 228px;
+  width: 1143px;
+}
+
+.research-about .text-wrapper-14 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 100px;
+  font-weight: 400;
+  height: 72px;
+  letter-spacing: 0;
+  line-height: 32px;
+  width: 840px;
+}
+
+.research-about .my-research-focuses {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  height: 250px;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.research-about .span {
+  color: #5b240c;
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.research-about .text-wrapper-15 {
+  font-weight: 700;
+}
+
+.research-about .text-wrapper-16 {
+  font-weight: 900;
+}
+
+.research-about .text-wrapper-17 {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.research-about .text-wrapper-18 {
+  font-weight: 600;
+}

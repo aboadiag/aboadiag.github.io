@@ -1,0 +1,87 @@
+.div-wrapper {
+  display: flex;
+  height: 30px;
+  left: 880px;
+  position: relative;
+  top: 40px;
+  width: 552px;
+}
+
+.div-wrapper .site-logo-3 {
+  display: flex;
+  gap: 20px;
+  margin-left: -725px;
+  width: 485px;
+}
+
+.div-wrapper .bena-favicon-figma-2 {
+  aspect-ratio: 1;
+  height: 96px;
+  margin-left: -116px;
+  object-fit: cover;
+  width: 96px;
+}
+
+.div-wrapper .text-wrapper-19 {
+  color: var(--dark-brown);
+  font-family: "Figma Hand-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 485px;
+}
+
+.div-wrapper .text-wrapper-20 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 240px;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.div-wrapper .text-wrapper-21 {
+  color: var(--dark-brown);
+  display: block;
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 68px;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.div-wrapper .text-wrapper-22 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 68px;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.div-wrapper .text-wrapper-23 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  margin-left: 68px;
+  white-space: nowrap;
+  width: 34px;
+}

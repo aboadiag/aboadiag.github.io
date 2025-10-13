@@ -1,0 +1,1 @@
+export { ArtPage } from "./ArtPage";
