@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { NavBar } from "../../components/NavBar";
 import "./style.css";
 
 export const Research = () => {
@@ -63,7 +64,7 @@ export const Research = () => {
 
       <div className="text-wrapper-127">select research.</div>
 
-      <div className="navbar-4">
+      {/* <div className="navbar-4">
         <div className="text-wrapper-128">Home</div>
 
         <div className="text-wrapper-129">Research</div>
@@ -73,7 +74,9 @@ export const Research = () => {
         </Link>
 
         <div className="text-wrapper-131">Art</div>
-      </div>
+      </div> */}
+      <NavBar className="navbar" />
+
 
       <div className="project-delivery">
         <p className="we-used-various-3">
@@ -93,7 +96,12 @@ export const Research = () => {
 
         <img
           className="rectangle-14"
-          alt="Rectangle"
+          alt="four subfigures. all people in image have faces blurred.
+          (clockwise). Subfigure 1 shows two participants and facilitor gathered around co-designed mock up.
+          Subfigure 2. A lego mock-up of a wheeled robbot with bigger back wheels and smaller front wheels.
+          Subfigure 3. participants around a large table. There are legos sprawled across the table in front of them.  
+          The facilitator stands to the right of a participant.
+          Subfigure 4 is two craft mockups: a humanoid robot made of pipe cleaner next to a lego staircase."
           src="/img/rectangle-28-8.png"
         />
 
@@ -114,6 +122,7 @@ export const Research = () => {
         </p>
       </div>
 
+{/*  -----------PROJECT IS4HRA------------ */}
       <div className="project-ishra">
         <p className="blurb-5">
           <br />
@@ -152,7 +161,21 @@ export const Research = () => {
         <p className="video-featuring-2">
           Video featuring Control &amp; Experimental Conditions.
         </p>
+
+          {/* NEW VIDEO ELEMENT */}
+        <video controls width="800" className="hri-video">
+          <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
+          Videos are sub-videos. The left video is half screen, the right videos are top and bottom. 
+          Synchronous condition (left) versus two asynchronous conditions (right). top: temporally asynchronous order;
+          bottom: spatially asynchronous content.  The synchronous condition is spatially and temporally synchronous 
+          in which both the human and robot painted the same spiral using red pigment. 
+          Both the robot and human completed the spiral in the same order at the same time. In the temporally asynchronous
+          condition the human paints the spiral in a different order than the robot, but both completed in red pigment. In the spatially asynchronous condition, the human is painting an image with dissimilar brush strokes than the robot’s. The robot’s image is a spiral with smooth, circular edges and the human’s image is a spiral with squiggly lines. 
+
+        </video>
       </div>
+    {/*  -----------PROJECT IS4HRA------------ */}
+
 
       <div className="name-component-3">
         <img
@@ -183,7 +206,8 @@ export const Research = () => {
 
         <img
           className="rectangle-16"
-          alt="Rectangle"
+          alt="Man (with grey hair and light skin) walking with a wheeled guide robot. 
+          He is facing left and holding onto the handle of the robot, which is angled at 1 o'clock (directionally)."
           src="/img/rectangle-28-11.png"
         />
 
@@ -215,6 +239,8 @@ export const Research = () => {
         </p>
       </div>
 
+{/*  -----------PROJECT Voice Agent------------ */}
+
       <div className="project-voice">
         <p className="visual-art-making-2">
           <br />
@@ -225,11 +251,31 @@ export const Research = () => {
           art-making activity.
         </p>
 
-        <img
+        {/* <img
           className="rectangle-17"
           alt="Rectangle"
           src="/img/rectangle-28-10.gif"
-        />
+        /> */}
+          {/* NEW VIDEO ELEMENT */}
+        {/* <video controls width="800" className="rectangle-17">
+          <source src="static/vids/voice_agent_4_artmaking.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
+
+    {/* VIDEO CONTAINER */}
+  <div className="video-container">
+    <video controls className="voice-agents">
+      <source src="/vids/voice_agent_4_artmaking.mp4" type="video/mp4" />
+      Pilot participant following the prompts of the voice agent. The participant, whose face is blurred out, is waving their arm around.
+    </video>
+
+    {/* BLUR SHAPE OVERLAY */}
+    <img
+      className="video-blur-overlay"
+      src="/img/vid-blur.png"
+      alt="Blur overlay"
+    />
+  </div>
 
         <p className="text-wrapper-143">
           Voice Agent Guided Art-Making for Emotion Regulation
@@ -258,9 +304,15 @@ export const Research = () => {
         </p>
       </div>
 
+    {/*  -----------PROJECT Voice Agent------------ */}
+
+
       <div className="contact-bar-scholar-2">
         <div className="group-8">
-          <div className="text-wrapper-146">aboadiag@andrew.cmu.edu</div>
+          <div className="text-wrapper-146">              
+            <a href="mailto:aboadiag@andrew.cmu.edu"  style={{ textDecoration: "none", color: "inherit" }}>
+              aboadiag@andrew.cmu.edu
+              </a></div>
 
           <div className="text-wrapper-147">Contact</div>
 

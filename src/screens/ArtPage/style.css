@@ -1,407 +1,29 @@
+/* tuning variable: total space to reserve for intro + footer (in px).
+   Adjust this if your intro/footer sizes change. */
+:root {
+  --art-reserved-space: 720px; /* tweak if needed (intro ~500 + footer ~220 = 720) */
+  --art-bubble-size: 180px;
+}
+
+/* ArtPage container — allow overflow (so modal / expanded content isn't clipped) */
 .art-page {
-  background-color: var(--off-white);
-  min-width: 1440px;
-  width: 100%;
-}
-
-.art-page .footer-instance {
-  background-color: transparent !important;
-  position: absolute !important;
-}
-
-.art-page .CV {
-  display: flex;
-  height: 163px;
-  left: 368px;
-  position: absolute;
-  top: 2280px;
-  width: 822px;
-}
-
-.art-page .cv {
-  height: 163px;
+  background-color: var(--off-white); 
+  /* display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%; */
+  overflow: visible;
   position: relative;
-  width: 824px;
-}
-
-.art-page .this-is-only-a-bit {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 0;
-  width: 822px;
-}
-
-.art-page .text-wrapper-24 {
-  color: #5b240c;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 44px;
-}
-
-.art-page .text-wrapper-25 {
-  font-weight: 700;
-}
-
-.art-page .group-5 {
-  height: 108px !important;
-  left: 283px !important;
-  position: absolute !important;
-  top: 55px !important;
-  width: 224px !important;
-}
-
-.art-page .group-instance {
-  background-color: var(--sky-blue) !important;
-  border: 1px solid !important;
-  border-color: #000000 !important;
-}
-
-.art-page .group-5-instance {
-  border-color: var(--dark-brown) !important;
-  box-shadow: 0px 4px 4px #00000040 !important;
-}
-
-.art-page .instance-node {
-  color: var(--dark-brown) !important;
-  font-family: "Ribeye", Helvetica !important;
-  font-size: 40px !important;
-  height: 50.93% !important;
-  width: 28.12% !important;
-}
-
-.art-page .education {
-  display: flex;
-  height: 810px;
-  left: 107px;
-  position: absolute;
-  top: 1350px;
-  width: 1131px;
-}
-
-.art-page .education-2 {
-  height: 810px;
-  position: relative;
-  width: 1131px;
-}
-
-.art-page .ellipse {
-  background-color: var(--dark-brown);
-  border-radius: 6.5px;
-  height: 13px;
-  left: 33px;
-  position: absolute;
-  top: 173px;
-  width: 13px;
-}
-
-.art-page .ellipse-2 {
-  background-color: var(--dark-brown);
-  border-radius: 6.5px;
-  height: 13px;
-  left: 33px;
-  position: absolute;
-  top: 435px;
-  width: 13px;
-}
-
-.art-page .ellipse-3 {
-  background-color: var(--dark-brown);
-  border-radius: 6.5px;
-  height: 13px;
-  left: 33px;
-  position: absolute;
-  top: 697px;
-  width: 13px;
-}
-
-.art-page .a-bit-about-me {
-  height: 810px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 1145px;
-}
-
-.art-page .phd-in-robotics {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 400;
-  left: 63px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 210px;
-  width: 1065px;
-}
-
-.art-page .text-wrapper-26 {
-  font-weight: 600;
-}
-
-.art-page .text-wrapper-27 {
-  color: #5b240c;
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 44px;
-}
-
-.art-page .p {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-weight: 600;
-  left: 63px;
-  letter-spacing: 0;
-  line-height: 40px;
-  position: absolute;
-  top: 160px;
-  white-space: nowrap;
-}
-
-.art-page .m-s-in-robotics {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 400;
-  left: 63px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 472px;
-  width: 1065px;
-}
-
-.art-page .text-wrapper-28 {
-  text-decoration: underline;
-}
-
-.art-page .text-wrapper-29 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-weight: 600;
-  left: 63px;
-  letter-spacing: 0;
-  line-height: 40px;
-  position: absolute;
-  top: 422px;
-  white-space: nowrap;
-}
-
-.art-page .b-s-in-mechanical {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 400;
-  left: 63px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 734px;
-  width: 1068px;
-}
-
-.art-page .text-wrapper-30 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-weight: 600;
-  left: 63px;
-  letter-spacing: 0;
-  line-height: 40px;
-  position: absolute;
-  top: 684px;
-  white-space: nowrap;
-}
-
-.art-page .text-wrapper-31 {
-  align-items: flex-end;
-  color: var(--sky-blue);
-  display: flex;
-  font-family: "Roboto", Helvetica;
-  font-size: 80px;
-  font-weight: 700;
-  height: 116px;
-  justify-content: center;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 116px;
-  position: absolute;
-  top: 0;
-  white-space: nowrap;
-}
-
-.art-page .about {
+  /* background-color: var(--off-white); */
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  height: 506px;
-  left: 107px;
-  position: absolute;
-  top: 834px;
-  width: 1253px;
+  min-height: 100vh;
+  /* min-width: 1440px;  */
+  overflow: hidden;
+  width: 100%;  
 }
 
-.art-page .text-wrapper-32 {
-  align-items: flex-end;
-  color: var(--sky-blue);
-  display: flex;
-  font-family: "Roboto", Helvetica;
-  font-size: 100px;
-  font-weight: 700;
-  height: 116px;
-  justify-content: center;
-  letter-spacing: 0;
-  line-height: 116px;
-  white-space: nowrap;
-  width: 270px;
-}
-
-.art-page .i-am-in-the-fifth {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  height: 330px;
-  letter-spacing: 0;
-  line-height: 44px;
-}
-
-.art-page .intro {
-  display: flex;
-  flex-direction: column;
-  height: 472px;
-  left: 97px;
-  position: absolute;
-  top: 288px;
-  width: 674px;
-}
-
-.art-page .hi-my-name-is-abena {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  height: 52px;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-left: 10px;
-  width: 540px;
-}
-
-.art-page .text-wrapper-33 {
-  font-weight: 500;
-}
-
-.art-page .text-wrapper-34 {
-  font-size: 36px;
-  font-weight: 700;
-}
-
-.art-page .researcher-designer {
-  align-items: flex-end;
-  color: transparent;
-  display: flex;
-  font-family: "Poppins", Helvetica;
-  font-size: 100px;
-  font-weight: 400;
-  height: 330px;
-  justify-content: center;
-  letter-spacing: 0;
-  line-height: 116px;
-  width: 674px;
-}
-
-.art-page .text-wrapper-35 {
-  color: #5b240c;
-  font-weight: 800;
-}
-
-.art-page .text-wrapper-36 {
-  color: #943b16;
-  font-family: "Roboto", Helvetica;
-}
-
-.art-page .text-wrapper-37 {
-  color: #697b6c;
-  font-family: "Roboto", Helvetica;
-}
-
-.art-page .text-wrapper-38 {
-  color: #5b240c;
-  font-family: "Roboto", Helvetica;
-}
-
-.art-page .text-wrapper-39 {
-  color: #5b240c;
-  font-family: "Linefont", Helvetica;
-}
-
-.art-page .final-year-phd {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 500;
-  height: 50px;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-left: 10px;
-  margin-top: 40px;
-  width: 656px;
-}
-
-.art-page .intro-images {
-  display: flex;
-  height: 633px;
-  left: 790px;
-  position: absolute;
-  top: 177px;
-  width: 570px;
-}
-
-.art-page .intro-images-2 {
-  height: 633px;
-  position: relative;
-  width: 570px;
-}
-
-.art-page .bena-mask {
-  height: 570px;
-  left: 0;
-  position: absolute;
-  top: 41px;
-  width: 570px;
-}
-
-.art-page .bena-mug-removebg {
-  aspect-ratio: 0.67;
-  height: 641px;
-  left: 101px;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 430px;
-}
-
-.art-page .vector {
-  height: 420px;
-  left: -1px;
-  position: absolute;
-  top: 159px;
-  width: 568px;
-}
-
+/* Navbar */
 .art-page .navbar {
   left: unset !important;
   margin-left: 880px !important;
@@ -410,490 +32,8 @@
   top: unset !important;
 }
 
-.art-page .class {
-  position: absolute !important;
-}
-
-.art-page .research-about-instance {
-  left: unset !important;
-  margin-left: 107px !important;
-  margin-top: 158px !important;
-  position: unset !important;
-  top: unset !important;
-}
-
-.art-page .project {
-  background-color: var(--moss-green);
-  border-radius: 84px;
-  height: 530px;
-  margin-left: 80px;
-  margin-top: 120px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .text-wrapper-40 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.49%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 103.77%;
-  width: 19.98%;
-}
-
-.art-page .projectvisuals {
-  height: 430px;
-  left: 64px;
-  position: absolute;
-  top: 80px;
-  width: 678px;
-}
-
-.art-page .rectangle-3 {
-  height: 88.84%;
-  left: 0;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  width: 98.55%;
-}
-
-.art-page .collage-featuring-co {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 7.44%;
-  left: 4.26%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 92.56%;
-  white-space: nowrap;
-  width: 95.74%;
-}
-
-.art-page .project-about {
-  height: 358px;
-  left: 759px;
-  position: absolute;
-  top: 80px;
-  width: 483px;
-}
-
-.art-page .we-used-various {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  height: 89.94%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 10.06%;
-  width: 100%;
-}
-
-.art-page .text-wrapper-41 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.art-page .text-wrapper-42 {
-  font-size: 24px;
-}
-
-.art-page .description-under {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 13.97%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 97.27%;
-}
-
-.art-page .text-wrapper-43 {
-  color: #e8e3cf;
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.art-page .project-title {
-  display: flex;
-  height: 50px;
-  left: 255px;
-  position: absolute;
-  top: 20px;
-  width: 726px;
-}
-
-.art-page .text-wrapper-44 {
-  color: var(--off-white);
-  flex: 1;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-  width: 725.54px;
-}
-
-.art-page .project-2 {
-  background-color: var(--moss-green);
-  border-radius: 84px;
-  height: 530px;
-  margin-left: 80px;
-  margin-top: 170px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .text-wrapper-45 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 9.43%;
-  left: 3.85%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 101.89%;
-  width: 30.95%;
-}
-
-.art-page .projectvisuals-2 {
-  height: 419px;
-  left: 54px;
-  position: absolute;
-  top: 90px;
-  width: 656px;
-}
-
-.art-page .VD-i {
-  aspect-ratio: 1.78;
-  border-radius: 17px;
-  height: 372px;
-  left: 0;
-  position: absolute;
-  top: 8px;
-  width: 661px;
-}
-
-.art-page .video-featuring {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 7.64%;
-  left: 4.42%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 92.36%;
-  white-space: nowrap;
-  width: 81.25%;
-}
-
-.art-page .project-about-2 {
-  height: 388px;
-  left: 759px;
-  position: absolute;
-  top: 80px;
-  width: 483px;
-}
-
-.art-page .blurb {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  height: 90.72%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 9.28%;
-  width: 100%;
-}
-
-.art-page .description-paper {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 12.89%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 97.27%;
-}
-
-.art-page .text-wrapper-46 {
-  font-size: 24px;
-  text-decoration: underline;
-}
-
-.art-page .project-title-2 {
-  display: flex;
-  height: 50px;
-  left: 296px;
-  position: absolute;
-  top: 17px;
-  width: 726px;
-}
-
-.art-page .project-3 {
-  background-color: var(--moss-green);
-  border-radius: 84px;
-  height: 530px;
-  margin-left: 87px;
-  margin-top: 170px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .text-wrapper-47 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.30%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 103.77%;
-  width: 28.20%;
-}
-
-.art-page .projectvisuals-3 {
-  height: 417px;
-  left: 79px;
-  position: absolute;
-  top: 80px;
-  width: 656px;
-}
-
-.art-page .anonvid {
-  border-radius: 63px;
-  height: 322px;
-  left: -38px;
-  position: absolute;
-  top: 23px;
-  width: 694px;
-}
-
-.art-page .ellipse-4 {
-  height: 13.35%;
-  left: 89.27%;
-  position: absolute;
-  top: 18.63%;
-  width: 5.04%;
-}
-
-.art-page .text-wrapper-48 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 5.76%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 90.65%;
-  white-space: nowrap;
-  width: 99.39%;
-}
-
-.art-page .project-about-3 {
-  height: 417px;
-  left: 759px;
-  position: absolute;
-  top: 80px;
-  width: 497px;
-}
-
-.art-page .visual-art-making {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 84.41%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.59%;
-  width: 97.10%;
-}
-
-.art-page .description-HRI {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 11.51%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.art-page .project-title-3 {
-  display: flex;
-  height: 49px;
-  left: 255px;
-  position: absolute;
-  top: 20px;
-  width: 850px;
-}
-
-.art-page .text-wrapper-49 {
-  color: var(--off-white);
-  flex: 1;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-  width: 850px;
-}
-
-.art-page .text-wrapper-50 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.11%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 103.77%;
-  width: 29.93%;
-}
-
-.art-page .projectvisuals-4 {
-  height: 394px;
-  left: 83px;
-  position: absolute;
-  top: 103px;
-  width: 652px;
-}
-
-.art-page .rectangle-4 {
-  height: 91.88%;
-  left: 17.48%;
-  position: absolute;
-  top: 0;
-  width: 59.82%;
-}
-
-.art-page .text-wrapper-51 {
-  color: #ffffff;
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 6.09%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 93.91%;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.art-page .project-about-4 {
-  height: 404px;
-  left: 745px;
-  position: absolute;
-  top: 80px;
-  width: 483px;
-}
-
-.art-page .we-used-scenario {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  height: 87.62%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 12.38%;
-  width: 100%;
-}
-
-.art-page .description-ACM-THRI {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 12.38%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 97.27%;
-}
-
-.art-page .co-designing-guide-wrapper {
-  display: flex;
-  height: 38px;
-  left: 126px;
-  position: absolute;
-  top: 20px;
-  width: 1057px;
-}
-
-.art-page .co-designing-guide {
-  color: var(--off-white);
-  flex: 1;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-  white-space: nowrap;
-  width: 1057px;
-}
-
-.art-page .art-about {
+/* Intro / About section */
+.art-page .art-intro {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -905,7 +45,7 @@
 
 .art-page .select-art {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto-Regular", Helvetica;
   font-size: 100px;
   font-weight: 400;
   height: 72px;
@@ -914,9 +54,9 @@
   width: 840px;
 }
 
-.art-page .my-research-focuses-2 {
+.art-page .art-description {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "Roboto-Regular", Helvetica;
   font-size: 30px;
   font-weight: 400;
   height: 250px;
@@ -924,586 +64,167 @@
   line-height: 32px;
 }
 
-.art-page .project-persuasive {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 580px;
-  margin-left: 80px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .projectvisuals-5 {
-  height: 468px;
-  left: 64px;
-  position: absolute;
-  top: 88px;
-  width: 668px;
-}
-
-.art-page .rectangle-5 {
-  height: 89.41%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100.00%;
-}
-
-.art-page .text-wrapper-52 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 6.84%;
-  left: 4.32%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 93.16%;
-  white-space: nowrap;
-  width: 94.01%;
-}
-
-.art-page .about-2 {
-  height: 455px;
-  left: 759px;
-  position: absolute;
-  top: 88px;
-  width: 483px;
-}
-
-.art-page .blurb-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 25px;
-  font-weight: 600;
-  height: 91.35%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 8.65%;
-  width: 100%;
-}
-
-.art-page .description-under-2 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 12.02%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 97.27%;
-}
-
-.art-page .project-title-4 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.43%;
-  left: 20.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  width: 56.99%;
-}
-
-.art-page .project-robot {
-  height: 530px;
-  margin-left: 80px;
-  margin-top: 120px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .rectangle-6 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 126.04%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.art-page .text-wrapper-53 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 9.43%;
-  left: 5.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 128.30%;
-  width: 30.95%;
-}
-
-.art-page .projectvisuals-6 {
-  height: 485px;
-  left: 54px;
-  position: absolute;
-  top: 90px;
-  width: 658px;
-}
-
-.art-page .robot-med-haptics {
-  height: 79.79%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 98.18%;
-}
-
-.art-page .challenges-of {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  height: 17.73%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 82.27%;
-  width: 100%;
-}
-
-.art-page .text-wrapper-54 {
-  font-style: italic;
-  font-weight: 600;
-}
-
-.art-page .about-3 {
-  height: 441px;
-  left: 748px;
-  position: absolute;
-  top: 80px;
-  width: 514px;
-}
-
-.art-page .blurb-3 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 94.33%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 5.67%;
-  width: 100%;
-}
-
-.art-page .description-paper-2 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 11.34%;
-  left: 2.05%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 91.32%;
-}
-
-.art-page .project-title-5 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 12.08%;
-  left: 6.28%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.96%;
-  width: 81.38%;
-}
-
-.art-page .project-versatile {
-  height: 530px;
-  margin-left: 97px;
-  margin-top: 250px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .rectangle-7 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 134.15%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.art-page .text-wrapper-55 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.30%;
-  left: 4.32%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 137.17%;
-  width: 28.20%;
-}
-
-.art-page .projectvisuals-7 {
-  height: 529px;
-  left: 20px;
-  position: absolute;
-  top: 129px;
-  width: 750px;
-}
-
-.art-page .right-final {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 12.10%;
-  left: 2.27%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 57.28%;
-  width: 42.93%;
-}
-
-.art-page .vers-haptics {
-  height: 51.98%;
-  left: 47.87%;
-  position: absolute;
-  top: 48.02%;
-  width: 52.13%;
-}
-
-.art-page .text-wrapper-56 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 21.17%;
-  left: 53.33%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.02%;
-  width: 45.60%;
-}
-
-.art-page .vers-haptics-img {
-  height: 52.36%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50.13%;
-}
-
-.art-page .about-4 {
-  height: 668px;
-  left: 788px;
-  position: absolute;
-  top: 81px;
-  width: 497px;
-}
-
-.art-page .text-wrapper-57 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 91.02%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 8.98%;
-  width: 97.10%;
-}
-
-.art-page .description-UIST {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 7.19%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.art-page .project-title-6 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 35px;
-  font-weight: 700;
-  height: 9.25%;
-  left: 20.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  width: 66.77%;
-}
-
-.art-page .text-wrapper-58 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.art-page .project-haptics {
-  height: 530px;
-  margin-left: 97px;
-  margin-top: 330px;
-  position: relative;
-  width: 1273px;
-}
-
-.art-page .rectangle-8 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 108.68%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.art-page .text-wrapper-59 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.11%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 112.64%;
-  width: 29.93%;
-}
-
-.art-page .projectvisuals-8 {
-  height: 392px;
-  left: 38px;
-  position: absolute;
-  top: 154px;
-  width: 680px;
-}
-
-.art-page .text-wrapper-60 {
-  color: #ffffff;
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 30.61%;
-  left: 4.56%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 69.39%;
-  width: 95.44%;
-}
-
-.art-page .haptic-graphics {
-  aspect-ratio: 2.92;
-  border-radius: 53px;
-  height: 238px;
-  left: -3px;
-  position: absolute;
-  top: 9px;
-  width: 696px;
-}
-
-.art-page .about-5 {
-  height: 466px;
-  left: 745px;
-  position: absolute;
-  top: 80px;
-  width: 483px;
-}
-
-.art-page .text-wrapper-61 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 89.27%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 10.73%;
-  width: 100%;
-}
-
-.art-page .text-wrapper-62 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 10.73%;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 0;
-  width: 97.27%;
-}
-
-.art-page .project-title-7 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 7.17%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  white-space: nowrap;
-  width: 88.30%;
-}
-
-.art-page .text-wrapper-63 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.art-page .footer-2 {
-  background-color: transparent;
-  height: 191px;
-  margin-left: 94px;
-  margin-top: 179px;
-  position: relative;
-  width: 1326px;
-}
-
-.art-page .text-wrapper-64 {
-  color: var(--dark-brown);
-  font-family: "Poppins", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 120px;
-  white-space: nowrap;
-  width: 392px;
-}
-
-.art-page .text-wrapper-65 {
-  color: var(--red-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 80px;
-  font-weight: 900;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 36px;
-  width: 308px;
-}
-
-.art-page .text-wrapper-66 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 621px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 120px;
-  white-space: nowrap;
-  width: 144px;
-}
-
-.art-page .vector-wrapper {
+/* Art gallery items */
+.art-page .art-gallery {
   display: flex;
-  height: 100px;
-  left: 1154px;
-  position: absolute;
-  top: 16px;
-  width: 106px;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-left: 107px;
+  margin-top: 60px;
+  width: 1143px;
 }
 
-.art-page .vector-2 {
-  flex: 1;
-  width: 98.29px;
-}
-
-.art-page .https-github-com-2 {
+.art-page .art-item {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  color: transparent;
-  display: flex;
-  font-family: "Inter", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  height: 2610px;
-  justify-content: center;
-  left: 1167px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 36px;
-  width: 1440px;
+  width: 350px; /* adjust based on your images */
 }
 
-.art-page .text-wrapper-67 {
+.art-page .art-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.art-page .art-caption {
+  margin-top: 12px;
+  font-family: "Roboto-Regular", Helvetica;
+  font-size: 18px;
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 1140px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 120px;
-  white-space: nowrap;
+  text-align: center;
 }
 
-.art-page .footer-3 {
-  background-color: transparent !important;
+/* CV section */
+.art-page .cv-section {
+  margin-left: 107px;
+  margin-top: 80px;
+}
+
+.art-page .cv-text {
+  font-family: "Roboto-Regular", Helvetica;
+  font-size: 24px;
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+}
+
+/* Art-bubbles container — constrained so bubbles cannot overlap footer */
+/* breathing room so bubbles don't clip against the container edge */
+.art-bubbles-container {
+    position: relative;
+  width: 100%;
+  /* Reserve vertical space for intro and footer */
+  height: calc(100vh - var(--art-reserved-space));
+  margin-top: 60px; /* starts below intro text */
+  margin-bottom: 160px; /* buffer above footer */
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 12px;
+  overflow: visible;
+}
+
+/* Each bubble keeps a square aspect ratio, size driven by CSS var */
+.art-bubble {
+  will-change: top, left, transform;
+  position: absolute;
+  width: var(--art-bubble-size);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  animation-name: float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 2;
+  /* Increased motion speed */
+  animation-duration: 4s; /* default speed (can be randomized in JS) */
+}
+
+/* image inside bubble — cover and center, prevents squish */
+.art-bubble img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+/* hover + focus visible */
+.art-bubble:hover,
+.art-bubble:focus {
+  transform: scale(1.12);
+  border-color: #555;
+  outline: none;
+}
+
+
+/* Floating travel distance and speed (faster + wider range) */
+@keyframes float {
+  0% { transform: translate(0, 0); }
+  25% { transform: translate(50px, -100px); }
+  50% { transform: translate(-50px, 80px); }
+  75% { transform: translate(60px, 120px); }
+  100% { transform: translate(-60px, -120px); }
+}
+
+/* Pause bubble animation when modal is open (toggle .modal-open on body) */
+body.modal-open .art-bubble {
+  animation-play-state: paused;
+  transition: transform 0.12s ease; /* reduce motion on pause */
+}
+
+/* Modal overlay — high z-index so it sits above footer & bubbles */
+.art-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Modal content: constrained to viewport */
+.art-modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  text-align: center;
+  overflow: auto;
+}
+
+/* modal image respects aspect ratio and doesn't overflow viewport */
+.art-modal-content img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 70vh;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Footer */
+/* Footer rules for ArtPage: keep footer in document flow */
+.art-page .footer {
+  position: relative !important;
+  top: auto !important;
   left: unset !important;
-  margin-left: 94px !important;
-  margin-top: 3049px !important;
-  top: unset !important;
+  margin-top: 48px !important;
+  width: 100% !important;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+/* Make the footer's internal bar also position relatively so its children don't render off-screen */
+.art-page .footer .contact-bar-scholar {
+  position: relative !important;
+  top: auto !important;
+  left: unset !important;
+  width: 100% !important;
 }

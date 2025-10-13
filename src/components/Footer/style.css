@@ -1,13 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
+
+/* Footer absolute layout (mirrors home .contact-bar-scholar layout) */
 .footer {
   height: 171px;
   left: 80px;
   position: relative;
   top: 2560px;
   width: 1468px;
+  box-sizing: border-box;
 }
 
-.footer .text-wrapper {
+/* Contact bar wrapper (matches home) */
+.footer .contact-bar-scholar {
+  display: flex;
+  height: 171px;
+  left: 80px;
+  position: absolute;
+  top: 2560px;
+  width: 1468px;
+}
+
+/* Inner group layout (copied from home) */
+.footer .group-6 {
+  height: 2646px;
+  position: relative;
+  width: 2617px;
+}
+
+/* Email */
+.footer .text-wrapper-93 {
   color: var(--dark-brown);
+  /* text-decoration: underline; */
   font-family: "Poppins", Helvetica;
   font-size: 24px;
   font-weight: 400;
@@ -20,7 +43,13 @@
   width: 392px;
 }
 
-.footer .div {
+.footer .text-wrapper-93:hover{
+  color: var(--red-brown);
+  text-decoration: underline;
+}
+
+/* 'Contact' large label */
+.footer .text-wrapper-94 {
   color: var(--red-brown);
   font-family: "Roboto", Helvetica;
   font-size: 80px;
@@ -33,7 +62,77 @@
   width: 308px;
 }
 
-.footer .text-wrapper-2 {
+/* Google Scholar icon block */
+.footer .link-google-scholar {
+  height: 115px;
+  left: 640px;
+  position: absolute;
+  top: 0;
+  width: 106px;
+}
+
+.footer .google-scholar-logo {
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 106px;
+}
+
+/* Scholar icon pieces */
+.footer .vector-4 {
+  height: 80.91%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50.94%;
+}
+
+.footer .vector-5 {
+  height: 88.18%;
+  left: 45.28%;
+  position: absolute;
+  top: 0;
+  width: 54.72%;
+}
+
+.footer .vector-6 {
+  height: 57.27%;
+  left: 21.70%;
+  position: absolute;
+  top: 42.73%;
+  width: 56.60%;
+}
+
+.footer .vector-7 {
+  height: 16.36%;
+  left: 24.53%;
+  position: absolute;
+  top: 42.73%;
+  width: 51.89%;
+}
+
+/* Scholar link text area (copied behavior) */
+.footer .https-scholar-google {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 110px;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: -9px;
+  width: 106px;
+}
+
+/* "read my work" label */
+.footer .text-wrapper-95 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 24px;
@@ -47,7 +146,9 @@
   width: 144px;
 }
 
-.footer .github-icon {
+/* small github image wrapper */
+.footer .img-wrapper {
+  display: flex;
   height: 100px;
   left: 1154px;
   position: absolute;
@@ -55,14 +156,21 @@
   width: 106px;
 }
 
-.footer .https-github-com {
+/* github icon inside wrapper */
+.footer .vector-8 {
+  flex: 1;
+  width: 98.29px;
+}
+
+/* GitHub link area (absolute) */
+.footer .https-github-com-3 {
   align-items: center;
   color: transparent;
   display: flex;
   font-family: "Inter", Helvetica;
   font-size: 12px;
   font-weight: 400;
-  height: 128px;
+  height: 2610px;
   justify-content: center;
   left: 1167px;
   letter-spacing: 0;
@@ -70,10 +178,11 @@
   position: absolute;
   text-align: center;
   top: 36px;
-  width: 122px;
+  width: 1440px;
 }
 
-.footer .text-wrapper-3 {
+/* "visit my repos" label */
+.footer .text-wrapper-96 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 24px;

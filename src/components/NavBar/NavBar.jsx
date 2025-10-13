@@ -3,7 +3,6 @@ We're constantly improving the code you see.
 Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
 */
 
-import PropTypes from "prop-types";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
@@ -21,22 +20,21 @@ export const NavBar = ({ className, to, to1 }) => {
         <div className="text-wrapper-4">Abena Boadi-Agyemang</div>
       </div>
 
-      <div className="text-wrapper-5">Home</div>
+      <Link className="text-wrapper-5" to="/">
+        Home
+      </Link>
 
-      <Link className="text-wrapper-6" to={to}>
+      <Link className="text-wrapper-6" to="/research">
         Research
       </Link>
 
-      <Link className="text-wrapper-7" to={to1}>
+      <Link className="text-wrapper-7" to="/projects">
         Projects
       </Link>
 
-      <div className="text-wrapper-8">Art</div>
+      <Link className="text-wrapper-8" to="/artpage">
+        Art
+      </Link>
     </div>
   );
-};
-
-NavBar.propTypes = {
-  to: PropTypes.string,
-  to1: PropTypes.string,
 };

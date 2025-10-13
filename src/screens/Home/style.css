@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
+
 .home {
   display: flex;
   min-height: 2757px;
@@ -39,9 +41,9 @@
   width: 96px;
 }
 
-.home .text-wrapper-68 {
+.home .site-title {
   color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
+  font-family: 'Patrick Hand', cursive;
   font-size: 30px;
   font-weight: 700;
   height: 96px;
@@ -117,7 +119,16 @@
 }
 
 .home .text-wrapper-74 {
-  text-decoration: underline;
+  color: var(--dark-brown); /* same as your normal paragraph text */
+  text-decoration: underline; /* removes the underline if you want */
+  /* margin: 4rem 0;  */
+  font-weight: 600; /* optional: bold the link */
+}
+
+.home .text-wrapper-74:hover {
+    color: var(--red-brown); /* hover effect for accessibility */
+
+  /* text-decoration: none; optional: show underline on hover */
 }
 
 .home .text-wrapper-75 {
@@ -130,21 +141,22 @@
 }
 
 .home .researcher-designer-2 {
-  align-items: flex-end;
   color: transparent;
-  display: flex;
   font-family: "Poppins", Helvetica;
   font-size: 100px;
   font-weight: 400;
-  height: 330px;
-  justify-content: center;
-  left: 97px;
-  letter-spacing: 0;
-  line-height: 116px;
   position: absolute;
-  top: 340px;
+  top: 220px;
+  left: 97px;
+  line-height: 116px;
   width: 674px;
+
+  /* 🪄 new fixes */
+  display: block; /* allow text to wrap */
+  white-space: normal; /* allow line breaks */
+  text-align: left; /* align text properly */
 }
+
 
 .home .text-wrapper-77 {
   color: #5b240c;
@@ -461,10 +473,11 @@
 }
 
 .home .bena-mug-removebg-2 {
-  aspect-ratio: 0.67;
+  aspect-ratio: 0.80;
   height: 570px;
   margin-left: 101px;
   object-fit: cover;
+  overflow: visible;
   width: 430px;
 }
 
@@ -499,6 +512,7 @@
 
 .home .text-wrapper-93 {
   color: var(--dark-brown);
+  text-decoration: underline;
   font-family: "Poppins", Helvetica;
   font-size: 24px;
   font-weight: 400;
@@ -509,6 +523,11 @@
   top: 120px;
   white-space: nowrap;
   width: 392px;
+}
+
+.home .text-wrapper-93:hover{
+  color: var(--red-brown);
+  text-decoration: underline;
 }
 
 .home .text-wrapper-94 {

@@ -1,30 +1,27 @@
 import React from "react";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ArtPage } from "./screens/ArtPage";
 import { Home } from "./screens/Home";
 import { Projects } from "./screens/Projects";
 import { Research } from "./screens/Research";
+import { ArtPage } from "./screens/ArtPage";
 
+// Define your routes
 const router = createBrowserRouter([
   {
-    path: "/*",
-    element: <ArtPage />,
-  },
-  {
-    path: "/artpage",
-    element: <ArtPage />,
-  },
-  {
-    path: "/home",
+    path: "/",
     element: <Home />,
+  },
+    {
+    path: "/research",
+    element: <Research />,
   },
   {
     path: "/projects",
     element: <Projects />,
   },
   {
-    path: "/research",
-    element: <Research />,
+    path: "/artpage",
+    element: <ArtPage />,
   },
 ]);
 

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
+import { NavBar } from "../../components/NavBar";
 import "./style.css";
 
 export const Home = () => {
@@ -9,18 +10,19 @@ export const Home = () => {
       <div className="div-2">
         <img
           className="bena-background"
-          alt="Bena background"
+          alt="A three-quarter view ofAbena Boadi-Agyemang with a brown circle in the background and a hand drawn curve around her. Abena is a 
+                dark skin, Black woman with Black afro hair. She is smiling at the viewer"
           src="/img/bena-background-2.svg"
         />
 
         <div className="name-component">
           <img
             className="bena-favicon-figma-3"
-            alt="Bena favicon figma"
+            alt="Favicon. Sketch of Abena's face on blue bakcground."
             src="/img/bena-favicon-figma-1-2.png"
           />
 
-          <div className="text-wrapper-68">Abena Boadi-Agyemang</div>
+          <div className="site-title">Abena Boadi-Agyemang</div>
         </div>
 
         <p className="hi-my-name-is-abena-2">
@@ -29,6 +31,15 @@ export const Home = () => {
           <span className="text-wrapper-70">Abena</span>
 
           <span className="text-wrapper-69"> (she/her), a</span>
+        </p>
+
+
+        <p className="researcher-designer-2">
+          <span className="text-wrapper-77"><br /></span>
+          <span className="text-wrapper-78">Researcher,<br /></span>
+          <span className="text-wrapper-79">Designer,<br /></span>
+          <span className="text-wrapper-80">Engineer</span>
+          <span className="text-wrapper-81">,</span>
         </p>
 
         <p className="final-year-phd-2">
@@ -104,41 +115,33 @@ export const Home = () => {
           </span>
         </p>
 
-        <p className="researcher-designer-2">
-          <span className="text-wrapper-77">
-            <br />
-          </span>
+ {/* <p className="researcher-designer-2">
+  <span className="text-wrapper-77"><br /></span>
+  <span className="text-wrapper-78">Researcher,<br /></span>
+  <span className="text-wrapper-79">Designer,<br /></span>
+  <span className="text-wrapper-80">Engineer</span>
+  <span className="text-wrapper-81">,</span>
+</p> */}
 
-          <span className="text-wrapper-78">
-            Researcher,
-            <br />
-          </span>
+<div className="text-wrapper-82">a(bit).</div>
 
-          <span className="text-wrapper-79">
-            Designer,
-            <br />
-          </span>
 
-          <span className="text-wrapper-80">Engineer</span>
+{/* --------------NAV BAR------------- */}
+{/* <div className="navbar-2">
+  <Link className="text-wrapper-83" to="/">Home</Link>
 
-          <span className="text-wrapper-81">,</span>
-        </p>
+  <Link className="text-wrapper-84" to="/research">Research</Link>
 
-        <div className="text-wrapper-82">a(bit).</div>
+  <Link className="text-wrapper-85" to="/projects">Projects</Link>
 
-        <div className="navbar-2">
-          <div className="text-wrapper-83">Home</div>
+  <Link className="text-wrapper-86" to="/artpage">Art</Link>
+</div> */}
+<NavBar className="navbar" />
 
-          <Link className="text-wrapper-84" to="/artpage">
-            Research
-          </Link>
 
-          <Link className="text-wrapper-85" to="/artpage">
-            Projects
-          </Link>
 
-          <div className="text-wrapper-86">Art</div>
-        </div>
+{/* --------------NAV BAR------------- */}
+
 
         <div className="a-bit-about-me-2">
           <p className="this-is-only-a-bit-2">
@@ -153,6 +156,11 @@ export const Home = () => {
             <span className="text-wrapper-71">, see my CV below.</span>
           </p>
 
+        <a
+          href="/static/pdfs/AbenaBoadi_CV_Fall25.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <Group
             className="design-component-instance-node"
             divClassName="group-4"
@@ -161,6 +169,7 @@ export const Home = () => {
             rectangleClassNameOverride="group-3"
             text="CV"
           />
+          </a>
         </div>
 
         <div className="education-bit">
@@ -240,13 +249,13 @@ export const Home = () => {
           <img
             className="bena-mug-removebg-2"
             alt="Bena mug removebg"
-            src="/img/bena-mug-removebg-preview-1-2.png"
+            src="/img/bena-mug-removebg-preview-1-1.svg"
           />
 
           <img
             className="bena-mask-2"
             alt="Bena mask"
-            src="/img/bena-mask-2.png"
+            src="/img/bena-mask-1.svg"
           />
         </div>
 
@@ -254,7 +263,11 @@ export const Home = () => {
 
         <div className="contact-bar-scholar">
           <div className="group-6">
-            <div className="text-wrapper-93">aboadiag@andrew.cmu.edu</div>
+            <div className="text-wrapper-93">
+              <a href="mailto:aboadiag@andrew.cmu.edu"  style={{ textDecoration: "none", color: "inherit" }}>
+              aboadiag@andrew.cmu.edu
+              </a>
+              </div>
 
             <div className="text-wrapper-94">Contact</div>
 
@@ -291,19 +304,7 @@ export const Home = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                XXXXXXXXXXXXX
-                <br />
-                XXXXXXXXXXXXX
-                <br />
-                XXXXXXXXXXXXX
-                <br />
-                XXXXXXXXXXXXX
-                <br />
-                XXXXXXXXXXXXX
-                <br />
-                XXXXXXXXXXXXX
-                <br />
-                XXXXXXXXXXXXX
+                
               </a>
             </div>
 

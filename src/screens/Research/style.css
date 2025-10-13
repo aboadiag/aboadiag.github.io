@@ -162,6 +162,8 @@
   position: absolute;
   top: 15.09%;
   width: 52.48%;
+  border-radius: 8px; /* optional, matches Figma-style rounded corners */
+
 }
 
 .research .text-wrapper-134 {
@@ -234,12 +236,27 @@
 
 .research .project-ishra {
   background-color: var(--moss-green);
-  border-radius: 84px;
-  height: 530px;
-  left: 80px;
-  position: absolute;
-  top: 1390px;
-  width: 1273px;
+    border-radius: 84px;
+      height: 530px;
+        left: 80px;
+          /* position: absolute; */
+            position: relative;  /* ensures child absolute positioning is relative to this box */
+              top: 1390px;
+                width: 1273px;
+}
+
+/* HRI Video */
+.hri-video {
+  position: absolute;   /* allows positioning relative to container */
+  left: 54px;
+  top: 55px;
+  width: 661px;       /* fixed width from Figma */
+  height: 372px;      /* fixed height from Figma */
+  max-width: 100%;    /* ensures it doesn't overflow on smaller screens */
+  display: block;
+  margin: 20px auto;  /* centers the video with some spacing */
+  border-radius: 8px; /* optional, matches Figma-style rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional soft shadow */
 }
 
 .research .blurb-5 {
@@ -271,8 +288,14 @@
 }
 
 .research .text-wrapper-138 {
+  color: var(--dark-brown); /* same as your normal paragraph text */
   font-size: 24px;
   text-decoration: underline;
+}
+
+.research .text-wrapper-138:hover {
+    color: var(--red-brown); /* hover effect for accessibility */
+  /* text-decoration: none; optional: show underline on hover */
 }
 
 .research .rectangle-15 {
@@ -421,7 +444,7 @@
 }
 
 .research .text-wrapper-142 {
-  color: #ffffff;
+  color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 24px;
   font-style: italic;
@@ -455,17 +478,28 @@
   left: 59.62%;
   letter-spacing: 0;
   line-height: 32px;
-  position: absolute;
+  position: relative;
   top: 27.36%;
   width: 37.91%;
 }
-
-.research .rectangle-17 {
+/* voice agents video */
+.research .voice-agents {
+  left: 54px;
+  top: 55px;
   height: 71.13%;
   left: 6.21%;
   position: absolute;
   top: 15.09%;
   width: 51.53%;
+  border-radius: 8px; /* optional, matches Figma-style rounded corners */
+
+}
+
+.research .video-blur-overlay {
+  position: absolute;
+  left: 685px;
+  top:180px;
+
 }
 
 .research .text-wrapper-143 {
@@ -544,6 +578,7 @@
 
 .research .text-wrapper-146 {
   color: var(--dark-brown);
+  text-decoration: underline;
   font-family: "Poppins", Helvetica;
   font-size: 24px;
   font-weight: 400;
@@ -554,6 +589,11 @@
   top: 120px;
   white-space: nowrap;
   width: 392px;
+}
+
+.research .text-wrapper-146:hover{
+  color: var(--red-brown);
+  text-decoration: underline;
 }
 
 .research .text-wrapper-147 {
@@ -693,3 +733,4 @@
   top: 120px;
   white-space: nowrap;
 }
+

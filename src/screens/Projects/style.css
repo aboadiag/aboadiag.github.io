@@ -125,7 +125,7 @@
   width: 52.48%;
 }
 
-.projects .co-designing {
+.projects .persuasive-title {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 30px;
@@ -137,6 +137,58 @@
   position: absolute;
   top: 3.77%;
   width: 56.99%;
+}
+
+.projects .persuasive-blurb {
+  /* color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  height: 78.49%;
+  left: 58.76%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 19.81%;
+  width: 40.38%; */
+    color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  height: 60.75%;
+  left: 59.59%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 21.89%;
+  width: 37.91%;
+}
+
+.research .we-used-various-3 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  height: 60.75%;
+  left: 59.59%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 21.89%;
+  width: 37.91%;
+}
+
+.research .text-wrapper-132 {
+  color: #e8e3cf;
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.research .text-wrapper-133 {
+  font-size: 24px;
 }
 
 .projects .div-3 {
@@ -163,8 +215,14 @@
 }
 
 .projects .text-wrapper-103 {
+  color : var(--off-white);
   font-size: 24px;
+
 }
+/* .projects .text-wrapper-103:hover {
+  color: var(--red-brown);
+  /* font-size: 24px; */
+/* } */ 
 
 .projects .spring-fall {
   color: var(--dark-brown);
@@ -244,8 +302,13 @@
 }
 
 .projects .text-wrapper-104 {
+  color: var(--off-white);
   font-size: 24px;
   text-decoration: underline;
+}
+
+.projects .text-wrapper-104:hover {
+  color: var(--dark-brown);
 }
 
 .projects .robot-med-haptics-2 {
@@ -417,7 +480,7 @@
 }
 
 .projects .text-wrapper-113 {
-  color: #ffffff;
+  color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 24px;
   font-style: italic;
@@ -578,6 +641,7 @@
 
 .projects .text-wrapper-118 {
   color: var(--dark-brown);
+  text-decoration: underline;
   font-family: "Poppins", Helvetica;
   font-size: 24px;
   font-weight: 400;
@@ -588,6 +652,11 @@
   top: 120px;
   white-space: nowrap;
   width: 392px;
+}
+
+.projects .text-wrapper-118:hover{
+  color: var(--red-brown);
+  text-decoration: underline;
 }
 
 .projects .text-wrapper-119 {
