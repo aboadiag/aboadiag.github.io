@@ -15,12 +15,13 @@
 }
 
 .home .div-2 {
-  width: 100%;
+  width: 100%; /* responsive width */
+  max-width: 1440px;    /* optional, keeps desktop layout wide */
   height: auto;        /* let content define height */
+  position: relative;
   /* background-color: var(--off-white);
   height: 2757px;
   overflow: hidden;
-  position: relative;
   width: 100%; */
   /* width: 1440px; */
 }
