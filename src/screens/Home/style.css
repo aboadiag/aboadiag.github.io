@@ -2,7 +2,7 @@
 
 .home {
   width: 100%;
-  min-width: 1440px;
+  max-width: 1440px;
   min-height: 100vh;     /* full viewport height */
   height: auto;         /* allow content to expand naturally */
   display: flex;
