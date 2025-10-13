@@ -20,7 +20,7 @@
 
 .home .div-2 {
   width: 100%; /* responsive width */
-  max-width: 1440px;    /* optional, keeps desktop layout wide */
+  min-width: 1440px;    /* optional, keeps desktop layout wide */
   height: auto;        /* let content define height */
   position: relative;
   margin: 0 auto;       /* center container */
