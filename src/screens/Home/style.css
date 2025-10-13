@@ -14,11 +14,13 @@
 }
 
 .home .div-2 {
-  background-color: var(--off-white);
+  width: 100%;
+  height: auto;        /* let content define height */
+  /* background-color: var(--off-white);
   height: 2757px;
   overflow: hidden;
   position: relative;
-  width: 100%;
+  width: 100%; */
   /* width: 1440px; */
 }
 
