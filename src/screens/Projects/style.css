@@ -1,801 +1,275 @@
-.projects {
-  background-color: var(--off-white);
-  min-height: 100vh;
-  height:auto;
-  /* height: 3845px; */
-  max-width: 1440px;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+/* ===========================
+   Projects - Responsive Styles
+   Replace existing projects.css
+   =========================== */
+
+:root {
+  --off-white: #faf7f2;
+  --dark-brown: #5b240c;
+  --red-brown: #943b16;
+  --moss-green: #6b8a58;
 }
 
+/* ---------- Base ---------- */
+.projects {
+  background-color: var(--off-white);
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 4vw;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ---------- Navbar ---------- */
+.projects .navbar-3 {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-end;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1.5rem auto;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.projects .text-wrapper-98,
+.projects .text-wrapper-99,
+.projects .text-wrapper-100,
+.projects .text-wrapper-101 {
+  color: var(--dark-brown);
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  white-space: nowrap;
+}
+
+/* ---------- Heading / Intro ---------- */
 .projects .during-my-phd-i-have {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  left: 107px;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 320px;
-  /* width: 1143px; */
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.4;
   width: 100%;
+  max-width: 1140px;
+  margin: 1rem auto 0;
+  text-align: left;
+  position: relative;
 }
 
 .projects .text-wrapper-97 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 100px;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
-  left: 107px;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 228px;
-  width: 840px;
-}
-
-.projects .navbar-3 {
-  display: flex;
-  gap: 68px;
-  height: 30px;
-  left: 880px;
-  position: absolute;
-  top: 40px;
-  width: 552px;
-}
-
-.projects .text-wrapper-98 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  height: 29px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  width: 68px;
-}
-
-.projects .text-wrapper-99 {
-  color: var(--dark-brown);
-  display: block;
-  font-family: "Roboto", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  height: 29px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  width: 104px;
-}
-
-.projects .text-wrapper-100 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  height: 29px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  width: 92px;
-}
-
-.projects .text-wrapper-101 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 25px;
-  font-weight: 400;
-  height: 29px;
-  letter-spacing: 0;
-  line-height: normal;
-  white-space: nowrap;
-  width: 34px;
-}
-
-.projects .project-persuasive-2 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 530px;
-  left: 80px;
-  position: absolute;
-  top: 570px;
-  width: 1273px;
-}
-
-.projects .we-used-various-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  height: 12.08%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 21.89%;
-  width: 37.91%;
-}
-
-.projects .rectangle-9 {
-  height: 72.08%;
-  left: 5.04%;
-  object-fit: cover;
-  position: absolute;
-  top: 15.09%;
-  width: 52.48%;
-}
-
-.projects .persuasive-title {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.43%;
-  left: 20.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  width: 56.99%;
-}
-
-.projects .persuasive-blurb {
-  /* color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 78.49%;
-  left: 58.76%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 19.81%;
-  width: 40.38%; */
-    color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 20px;
-  font-weight: 600;
-  height: 60.75%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 21.89%;
-  width: 37.91%;
-}
-
-.research .we-used-various-3 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  height: 60.75%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 21.89%;
-  width: 37.91%;
-}
-
-.research .text-wrapper-132 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.research .text-wrapper-133 {
-  font-size: 24px;
-}
-
-.projects .div-3 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.43%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.09%;
-  width: 36.87%;
-}
-
-.projects .text-wrapper-102 {
-  color: #e8e3cf;
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.projects .text-wrapper-103 {
-  color : var(--off-white);
-  font-size: 24px;
-
-}
-/* .projects .text-wrapper-103:hover {
-  color: var(--red-brown);
-  /* font-size: 24px; */
-/* } */ 
-
-.projects .spring-fall {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.49%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 103.77%;
-  width: 19.98%;
-}
-
-.projects .collage-featuring-co-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 6.04%;
-  left: 7.31%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 90.19%;
-  white-space: nowrap;
-  width: 50.98%;
-}
-
-.projects .project-robot-2 {
-  height: 530px;
-  left: 80px;
-  position: absolute;
-  top: 1270px;
-  width: 1273px;
-}
-
-.projects .rectangle-10 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 126.04%;
-  left: 0;
-  position: absolute;
-  top: 0;
+  font-size: clamp(2rem, 6vw, 5rem);
+  line-height: 1.15;
   width: 100%;
+  max-width: 900px;
+  margin: 1rem auto 2rem;
+  text-align: left;
+  position: relative;
 }
 
-.projects .blurb-4 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 78.49%;
-  left: 58.76%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 19.81%;
-  width: 40.38%;
+/* ---------- Project card base (used for all project-* blocks) ---------- */
+.projects .project-persuasive-2,
+.projects .project-robot-2,
+.projects .project-versatile-2,
+.projects .project-haptics-2,
+.projects .project-med,
+.projects .project-other {
+  width: 90%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border-radius: 1.5rem;
+  position: relative;
+  box-sizing: border-box;
 }
 
-.projects .robot-mediated {
+/* keep your background colors for each block */
+.projects .project-persuasive-2,
+.projects .rectangle-10,
+.projects .rectangle-11,
+.projects .rectangle-12,
+.projects .rectangle-13 {
+  background-color: var(--red-brown);
   color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
+}
+
+/* ---------- Card content: image / media and text ---------- */
+.projects .rectangle-9,
+.projects .rectangle-10,
+.projects .rectangle-11,
+.projects .rectangle-12,
+.projects .rectangle-13,
+.projects .robot-med-haptics-2,
+.projects .vers-haptics-2 {
+  flex: 1 1 45%;
+  max-width: 48%;
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+
+/* textual side */
+.projects .we-used-various-2,
+.projects .persuasive-blurb,
+.projects .blurb-4,
+.projects .text-wrapper-103,
+.projects .text-wrapper-109,
+.projects .text-wrapper-115 {
+  flex: 1 1 45%;
+  min-width: 220px;
+  color: var(--off-white);
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* small headings inside cards */
+.projects .persuasive-title,
+.projects .robot-mediated,
+.projects .versatile-haptics,
+.projects .accessible-haptics {
+  color: var(--off-white);
+  font-family: "Roboto", sans-serif;
   font-weight: 700;
-  height: 12.08%;
-  left: 6.28%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.96%;
-  width: 81.38%;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  width: 100%;
+  margin-bottom: .5rem;
 }
 
-.projects .text-wrapper-104 {
+/* italic captions and small bits */
+.projects .spring-fall,
+.projects .collage-featuring-co-2,
+.projects .text-wrapper-104,
+.projects .text-wrapper-112,
+.projects .text-wrapper-117 {
+  font-style: italic;
   color: var(--off-white);
-  font-size: 24px;
-  text-decoration: underline;
+  font-size: clamp(.9rem, 2vw, 1.15rem);
 }
 
+/* underline links */
+.projects .text-wrapper-104 {
+  text-decoration: underline;
+  cursor: pointer;
+}
 .projects .text-wrapper-104:hover {
   color: var(--dark-brown);
 }
 
-.projects .robot-med-haptics-2 {
-  height: 73.02%;
-  left: 5.03%;
-  position: absolute;
-  top: 16.98%;
-  width: 50.75%;
+/* ---------- Group / footer wrapper ---------- */
+.projects .group-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 4rem auto;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
 }
 
-.projects .text-wrapper-105 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 9.43%;
-  left: 4.24%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 129.25%;
-  width: 30.95%;
-}
-
-.projects .challenges-of-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  height: 16.23%;
-  left: 4.24%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 92.26%;
-  width: 51.69%;
-}
-
-.projects .text-wrapper-106 {
-  font-weight: 600;
-}
-
-.projects .text-wrapper-107 {
-  font-style: italic;
-  font-weight: 600;
-}
-
+/* small favicon/name area */
 .projects .name-component-2 {
   display: flex;
-  gap: 20px;
-  height: 96px;
-  left: 155px;
-  position: absolute;
-  top: 40px;
-  width: 485px;
+  gap: 1rem;
+  align-items: center;
+  margin: 1rem 0;
+  width: 100%;
+  max-width: 480px;
 }
-
 .projects .bena-favicon-figma-4 {
-  aspect-ratio: 1;
-  height: 96px;
-  margin-left: -116px;
+  width: clamp(56px, 9vw, 96px);
+  height: auto;
   object-fit: cover;
-  width: 96px;
 }
 
-.projects .text-wrapper-108 {
-  color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 96px;
-  letter-spacing: 0;
-  line-height: normal;
-  width: 485px;
+/* ---------- Utility ---------- */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-.projects .project-haptics-2 {
-  height: 530px;
-  left: 97px;
-  position: absolute;
-  top: 2910px;
-  width: 1273px;
+/* ---------- Correct stray selectors from research: move/rename if necessary ---------- */
+/* If these belong on Projects, rename to .projects; if they belong to Research, move them */
+.projects .we-used-various-3,
+.projects .text-wrapper-132,
+.projects .text-wrapper-133 {
+  /* placeholder: ensure no duplicate definitions conflict */
+  /* If not used on projects, remove these lines from projects.css */
 }
 
-.projects .rectangle-11 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 108.68%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
+/* ---------- Media Queries ---------- */
+/* Tablet */
+@media (max-width: 1024px) {
+  .projects .navbar-3 {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .projects .project-persuasive-2,
+  .projects .project-robot-2,
+  .projects .project-versatile-2,
+  .projects .project-haptics-2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+
+  .projects .rectangle-9,
+  .projects .robot-med-haptics-2,
+  .projects .rectangle-10 {
+    max-width: 100%;
+    flex: 1 1 100%;
+  }
+
+  .projects .we-used-various-2,
+  .projects .persuasive-blurb {
+    flex: 1 1 100%;
+    text-align: left;
+  }
 }
 
-.projects .text-wrapper-109 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 78.49%;
-  left: 58.52%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 24.53%;
-  width: 37.91%;
-}
+/* Mobile */
+@media (max-width: 600px) {
+  .projects {
+    padding: 2rem 3vw;
+  }
 
-.projects .rectangle-12 {
-  height: 48.30%;
-  left: 2.99%;
-  position: absolute;
-  top: 29.06%;
-  width: 51.85%;
-}
+  .projects .text-wrapper-97 {
+    font-size: clamp(1.5rem, 8vw, 2.4rem);
+    text-align: left;
+  }
 
-.projects .accessible-haptics {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 7.17%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  white-space: nowrap;
-  width: 88.30%;
-}
+  .projects .navbar-3 {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
 
-.projects .text-wrapper-110 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
+  .projects .project-persuasive-2,
+  .projects .project-robot-2,
+  .projects .project-versatile-2,
+  .projects .project-haptics-2 {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
 
-.projects .text-wrapper-111 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.43%;
-  left: 58.52%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.09%;
-  width: 36.87%;
-}
-
-.projects .text-wrapper-112 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.11%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 112.64%;
-  width: 29.93%;
-}
-
-.projects .text-wrapper-113 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 22.64%;
-  left: 5.42%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 80.38%;
-  width: 50.98%;
-}
-
-.projects .project-versatile-2 {
-  height: 530px;
-  left: 97px;
-  position: absolute;
-  top: 2050px;
-  width: 1273px;
-}
-
-.projects .rectangle-13 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  height: 134.15%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.projects .text-wrapper-114 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 21.13%;
-  left: 32.99%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 27.36%;
-  width: 26.87%;
-}
-
-.projects .text-wrapper-115 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 114.72%;
-  left: 61.90%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 26.60%;
-  width: 37.91%;
-}
-
-.projects .vers-haptics-2 {
-  height: 52.26%;
-  left: 0;
-  position: absolute;
-  top: 24.34%;
-  width: 29.54%;
-}
-
-.projects .versatile-haptics {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 35px;
-  font-weight: 700;
-  height: 9.25%;
-  left: 20.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  width: 66.77%;
-}
-
-.projects .text-wrapper-116 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.projects .description-UIST-2 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.06%;
-  left: 61.90%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.28%;
-  width: 39.04%;
-}
-
-.projects .text-wrapper-117 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.30%;
-  left: 4.32%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 137.17%;
-  width: 28.20%;
-}
-
-.projects .vers-haptics-3 {
-  height: 51.89%;
-  left: 29.77%;
-  position: absolute;
-  top: 72.26%;
-  width: 30.71%;
-}
-
-.projects .right-final-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 0;
-  left: 9.31%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 64.55%;
-  width: 22.36%;
-}
-
-.projects .group-wrapper {
-  display: flex;
-  height: 171px;
-  left: 94px;
-  position: absolute;
-  top: 3619px;
-  width: 2607px;
-}
-
-.projects .group-7 {
-  height: 2646px;
-  position: relative;
-  width: 2617px;
-}
-
-.projects .text-wrapper-118 {
-  color: var(--dark-brown);
-  text-decoration: underline;
-  font-family: "Poppins", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 120px;
-  white-space: nowrap;
-  width: 392px;
-}
-
-.projects .text-wrapper-118:hover{
-  color: var(--red-brown);
-  text-decoration: underline;
-}
-
-.projects .text-wrapper-119 {
-  color: var(--red-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 80px;
-  font-weight: 900;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 36px;
-  width: 308px;
-}
-
-.projects .link-google-scholar-2 {
-  height: 115px;
-  left: 640px;
-  position: absolute;
-  top: 0;
-  width: 106px;
-}
-
-.projects .google-scholar-logo-2 {
-  height: 110px;
-  left: 0;
-  position: absolute;
-  top: 5px;
-  width: 106px;
-}
-
-.projects .vector-9 {
-  height: 80.91%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50.94%;
-}
-
-.projects .vector-10 {
-  height: 88.18%;
-  left: 45.28%;
-  position: absolute;
-  top: 0;
-  width: 54.72%;
-}
-
-.projects .vector-11 {
-  height: 57.27%;
-  left: 21.70%;
-  position: absolute;
-  top: 42.73%;
-  width: 56.60%;
-}
-
-.projects .vector-12 {
-  height: 16.36%;
-  left: 24.53%;
-  position: absolute;
-  top: 42.73%;
-  width: 51.89%;
-}
-
-.projects .https-scholar-google-2 {
-  align-items: center;
-  color: transparent;
-  display: flex;
-  font-family: "Inter", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  height: 110px;
-  justify-content: center;
-  left: 0;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: -9px;
-  width: 106px;
-}
-
-.projects .text-wrapper-120 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 621px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 120px;
-  white-space: nowrap;
-  width: 144px;
-}
-
-.projects .github-icon-2 {
-  display: flex;
-  height: 100px;
-  left: 1154px;
-  position: absolute;
-  top: 16px;
-  width: 106px;
-}
-
-.projects .vector-13 {
-  flex: 1;
-  width: 98.29px;
-}
-
-.projects .https-github-com-4 {
-  align-items: center;
-  color: transparent;
-  display: flex;
-  font-family: "Inter", Helvetica;
-  font-size: 12px;
-  font-weight: 400;
-  height: 2610px;
-  justify-content: center;
-  left: 1167px;
-  letter-spacing: 0;
-  line-height: normal;
-  position: absolute;
-  text-align: center;
-  top: 36px;
-  width: 1440px;
-}
-
-.projects .text-wrapper-121 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  left: 1140px;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 120px;
-  white-space: nowrap;
+  .projects .we-used-various-2,
+  .projects .persuasive-blurb,
+  .projects .blurb-4 {
+    font-size: 1rem;
+    text-align: left;
+  }
 }
