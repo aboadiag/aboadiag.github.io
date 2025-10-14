@@ -2,7 +2,7 @@
 
 .home {
   background-color: var(--off-white); /* move background here */
-  /* min-width: 1440px; */
+  max-width: 1440px;
   min-height: 100vh;     /* full viewport height */
   height: auto;         /* allow content to expand naturally */
   overflow: visible;

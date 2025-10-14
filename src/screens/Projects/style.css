@@ -1,7 +1,9 @@
 .projects {
   background-color: var(--off-white);
-  height: 3845px;
-  /* min-width: 1440px; */
+  min-height: 100vh;
+  height:auto;
+  /* height: 3845px; */
+  max-width: 1440px;
   overflow: hidden;
   position: relative;
   width: 100%;

@@ -3,7 +3,7 @@
   min-height: 100vh;     /* full viewport height */
   height: auto;         /* allow content to expand naturally */
   /* min-height: 3663px; */
-  /* min-width: 1440px; */
+  max-width: 1440px;
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -19,7 +19,7 @@
   line-height: 32px;
   position: absolute;
   top: 320px;
-  /* width: 1143px; */
+  max-width: 1143px;
   width: 100%; 
 }
 
