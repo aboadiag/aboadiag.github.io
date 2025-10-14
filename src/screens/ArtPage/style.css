@@ -40,7 +40,8 @@
   height: 342px;
   margin-left: 107px;
   margin-top: 158px;
-  width: 1143px;
+  /* width: 1143px; */
+  width: 100%;
 }
 
 .art-page .select-art {
