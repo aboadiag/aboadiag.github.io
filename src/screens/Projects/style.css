@@ -204,12 +204,12 @@ img, video {
 
 /* ---------- Correct stray selectors from research: move/rename if necessary ---------- */
 /* If these belong on Projects, rename to .projects; if they belong to Research, move them */
-.projects .we-used-various-3,
+/* .projects .we-used-various-3,
 .projects .text-wrapper-132,
-.projects .text-wrapper-133 {
+.projects .text-wrapper-133 { */
   /* placeholder: ensure no duplicate definitions conflict */
   /* If not used on projects, remove these lines from projects.css */
-}
+/* } */
 
 /* ---------- Media Queries ---------- */
 /* Tablet */
