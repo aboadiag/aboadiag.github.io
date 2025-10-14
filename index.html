@@ -1,61 +1,70 @@
-<head>
-  <meta charset="utf-8" />
-  <title>Abena Boadi-Agyemang</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#ffffff" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Abena Boadi-Agyemang </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="./img/bena-favicon-figma-1-2.png" />
 
-  <!-- Fonts: preconnect + swap for faster rendering -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+      @font-face {
+        font-family: "Figma Hand-Bold";
+        src: url("https://anima-uploads.s3.amazonaws.com/projects/68e6a82052f94121fb078d64/fonts/patrickhand-regular.ttf")
+          format("truetype");
+      }
+    </style>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0px;
+        height: 100%;
+      }
+      /* a blue color as a generic focus style */
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+        outline: -webkit-focus-ring-color auto 5px !important;
+      }
+      a {
+        text-decoration: none;
+      }
 
-  <link rel="icon" type="image/png" href="./img/bena-favicon-figma-1-2.png" />
+      /* ---- PATCH ---- */
+      html, body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+      }
 
-  <style>
-    @font-face {
-      font-family: "Figma Hand-Bold";
-      src: url("https://anima-uploads.s3.amazonaws.com/projects/68e6a82052f94121fb078d64/fonts/patrickhand-regular.ttf") format("truetype");
-      font-display: swap;
-    }
+      img, video, canvas {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    /* Reset + box-sizing already provided by imported reset, but be explicit */
-    * { box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+      #app {
+        width: 100vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+            /* ---- PATCH ---- */
 
-    /* Root / defensive layout rules */
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow-x: hidden; /* defensive: prevents horizontal scrollbar while debugging */
-    }
 
-    /* Media should never overflow */
-    img, video, canvas, svg {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    /* App container — avoid 100vw (scrollbar issue) */
-    #app {
-      width: 100%;
-      max-width: 100%;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      box-sizing: border-box;
-    }
-
-    /* optional: make anchors clearly visible */
-    a { text-decoration: none; color: inherit; }
-
-    /* focus outline for accessibility */
-    button:focus-visible { outline: 2px solid #4a90e2 !important; }
-  </style>
-
-  <script type="module" crossorigin src="./assets/index-DuiWPQY5.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CcTI7LcG.css">
-</head>
+    </style>
+    <script type="module" crossorigin src="./assets/index-DuiWPQY5.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CcTI7LcG.css">
+  </head>
+  <body>
+    <div id="app"></div>
+  </body>
+</html>
