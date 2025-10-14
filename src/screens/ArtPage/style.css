@@ -229,3 +229,134 @@ body.modal-open .art-bubble {
   left: unset !important;
   width: 100% !important;
 }
+
+/* ===== Responsive ArtPage overrides ===== */
+:root{
+  --art-reserved-space: clamp(320px, 40vh, 720px);
+  --art-bubble-size: clamp(64px, 12vw, 180px);
+}
+
+/* container */
+.art-page{
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem 4vw;
+  box-sizing: border-box;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+/* intro */
+.art-page .art-intro{
+  margin: 3rem auto;
+  max-width: 1140px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: left;
+}
+.art-page .select-art{
+  font-size: clamp(2rem, 6vw, 6rem);
+  line-height: 1.05;
+  margin: 0;
+}
+.art-page .art-description{
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  margin: 0;
+}
+
+/* gallery -> responsive grid */
+.art-page .art-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 1140px;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+.art-page .art-item{
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* bubbles area: clamp height and clip overflow */
+.art-bubbles-container{
+  position: relative;
+  width: 100%;
+  height: max(40vh, calc(100vh - var(--art-reserved-space)));
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  padding-left: 20px;
+  padding-top: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* bubbles */
+.art-bubble{
+  width: var(--art-bubble-size);
+  aspect-ratio: 1/1;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #ccc;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+  animation-name: float;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  z-index: 2;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.art-bubble img{ width: 100%; height: 100%; object-fit: cover; }
+
+/* reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .art-bubble{ animation: none !important; transition: none !important; }
+}
+
+/* keyframes (desktop) */
+@keyframes float{
+  0%{ transform: translate(0,0); }
+  25%{ transform: translate(40px, -60px); }
+  50%{ transform: translate(-40px, 40px); }
+  75%{ transform: translate(40px, 80px); }
+  100%{ transform: translate(-40px, -80px); }
+}
+
+/* modal adjustments */
+.art-modal{ padding: 1rem; overflow: auto; }
+.art-modal-content{ max-width: 90vw; max-height: 90vh; overflow: auto; }
+
+/* Footer: ensure in flow */
+.art-page .footer{ position: relative !important; left: unset !important; top: auto !important; margin-top: 48px !important; width: 100% !important; box-sizing: border-box; z-index: 10; }
+.art-page .footer .contact-bar-scholar{ position: relative !important; left: unset !important; top: auto !important; width: 100% !important; }
+
+/* tablet layout tweaks */
+@media (max-width: 1024px){
+  .art-page .art-intro{ text-align: center; padding: 0 1rem; }
+  .art-page .select-art{ font-size: clamp(2rem, 9vw, 4.5rem); }
+  .art-bubbles-container{ height: calc(60vh - var(--art-reserved-space)/8); }
+}
+
+/* mobile */
+@media (max-width: 600px){
+  .art-page{ padding: 1.25rem 3vw; }
+  .art-page .select-art{ font-size: clamp(1.6rem, 11vw, 2.6rem); text-align: center; }
+  .art-bubbles-container{ height: calc(40vh - var(--art-reserved-space)/10); }
+  /* slow & short motion */
+  @keyframes float{
+    0%{ transform: translate(0,0); }
+    25%{ transform: translate(12px, -20px); }
+    50%{ transform: translate(-12px, 12px); }
+    75%{ transform: translate(12px, 24px); }
+    100%{ transform: translate(-12px, -24px); }
+  }
+  .art-bubble{ animation-duration: 6s; }
+}
