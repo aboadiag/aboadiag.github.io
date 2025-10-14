@@ -270,11 +270,11 @@ export const Research = () => {
     </video>
 
     {/* BLUR SHAPE OVERLAY */}
-  {/* <img
+  <img
       className="video-blur-overlay"
       src="/img/vid-blur.png"
       alt="Blur overlay"
-    /> */}
+    />
   </div>
 
         <p className="text-wrapper-143">
