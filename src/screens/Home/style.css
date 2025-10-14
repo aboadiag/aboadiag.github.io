@@ -218,3 +218,60 @@ img {
     gap: 1rem;
   }
 }
+
+/* -----------------------
+   Overflow / flex shrink fixes
+   ----------------------- */
+
+/* make sure the page itself can't scroll horizontally as a last resort */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* allow flex children to shrink properly (prevents flex overflow) */
+.hero,
+.hero > * {
+  box-sizing: border-box;
+}
+
+.hero-text {
+  /* allow the text column to shrink below its intrinsic width */
+  min-width: 0;
+  flex: 1 1 0;         /* prefer shrinking before overflowing */
+}
+
+/* make sure hero image is constrained and will not push width */
+.hero img {
+  flex: 0 0 auto;      /* keep image width controlled by max-width */
+  max-width: 45%;
+  width: 100%;
+  height: auto;
+  min-width: 0;
+}
+
+/* if any other flex containers exist, make their children shrink too */
+.home, .hero, .education-bit, .contact-bar-scholar {
+  -webkit-font-smoothing: antialiased;
+}
+
+.home * {
+  /* defensive rule: avoid accidental no-wrap that causes overflow */
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+/* avoid 100vw pitfalls (if any elements use 100vw) —
+   this prevents 100vw + vertical scrollbar from creating overflow */
+.full-vw-fix {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* temporary debugging helper (remove after debugging) */
+/*
+* {
+  outline: 0.5px solid rgba(0,0,0,0.05);
+}
+*/
