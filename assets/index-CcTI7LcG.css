@@ -78,7 +78,7 @@ img, video, canvas, svg {
 /* Media queries: make absolute elements static on small screens */
 @media (max-width: 1024px) {
   /* convert absolute-positioned children to natural flow */
-  .home [style], .projects [style], .research [style] { } /* noop to hint manual check */
+  /* .home [style], .projects [style], .research [style] { } noop to hint manual check */
 
   .home .name-component,
   .home .navbar-2,
