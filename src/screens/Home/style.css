@@ -2,7 +2,7 @@
 
 .home {
   background-color: var(--off-white); /* move background here */
-  min-width: 1440px;
+  /* min-width: 1440px; */
   min-height: 100vh;     /* full viewport height */
   height: auto;         /* allow content to expand naturally */
   overflow: visible;
@@ -20,7 +20,7 @@
 
 .home .div-2 {
   width: 100%; /* responsive width */
-  min-width: 1440px;    /* optional, keeps desktop layout wide */
+  /* min-width: 1440px;    optional, keeps desktop layout wide */
   height: auto;        /* let content define height */
   position: relative;
   margin: 0 auto;       /* center container */
