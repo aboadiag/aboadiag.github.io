@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
-import "./style.css";
+// import "./style.css";
+import "../../../assets/index-CcTI7LcG.css";
+
 
 export const Projects = () => {
   return (

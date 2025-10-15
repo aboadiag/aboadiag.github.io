@@ -1,7 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import { Footer } from "../../components/Footer";
-import "./style.css";
+// import "./style.css";
+import "../../../assets/index-CcTI7LcG.css";
+
 
 // Art pieces array
 const artPieces = [
