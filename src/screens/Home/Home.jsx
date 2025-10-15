@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
-// import "../../../assets/index-CcTI7LcG.css";
 
 export const Home = () => {
   return (
