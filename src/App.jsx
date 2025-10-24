@@ -23,7 +23,9 @@ const router = createBrowserRouter([
     path: "/artpage",
     element: <ArtPage />,
   },
-]);
+], {
+basename: "/aboadiag.github.io" // <-- **IMPORTANT: Change this to your actual repository name**
+});
 
 export const App = () => {
   return <RouterProvider router={router} />;
