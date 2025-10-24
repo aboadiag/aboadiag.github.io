@@ -42,7 +42,11 @@
         padding: 0;
         width: 100%;
         height: 100%;
-        overflow-x: hidden; /* prevent horizontal scroll */
+
+        /* ADD THIS LINE: This is the ultimate containment barrier */
+        max-width: 100vw; 
+
+        overflow-x: hidden; /*prevent horizontal scroll */
       }
 
       img,
