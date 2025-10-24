@@ -1,0 +1,67 @@
+[33m6a04055[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33m6a04055[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{1}: reset: moving to HEAD
+[33m6a04055[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m HEAD@{2}: commit: back
+[33m4b27fe5[m HEAD@{3}: reset: moving to HEAD
+[33m4b27fe5[m HEAD@{4}: commit: isolation test
+[33m8420841[m HEAD@{5}: commit: isolation test
+[33m5070cce[m HEAD@{6}: commit: remove duplicated content on home page
+[33m2f6a9bc[m HEAD@{7}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33m14bf99d[m HEAD@{8}: commit: global css override
+[33m898e510[m HEAD@{9}: pull --tags origin main: Merge made by the 'ort' strategy.
+[33mb4bdce5[m HEAD@{10}: commit: handling routing
+[33m88d3908[m HEAD@{11}: commit: fonts
+[33m1bd277b[m HEAD@{12}: commit: handle routing
+[33m2260a02[m HEAD@{13}: commit: 404.html add
+[33md0ea2e8[m HEAD@{14}: commit: test
+[33m232d274[m HEAD@{15}: commit: relaunch
+[33m62d0ae8[m HEAD@{16}: commit: revert
+[33mf532e2e[m HEAD@{17}: commit: revert
+[33m1a5315a[m HEAD@{18}: commit: revert
+[33mc9ceeb5[m HEAD@{19}: commit: updates
+[33m62bfada[m HEAD@{20}: commit: hail mary
+[33m017b841[m HEAD@{21}: commit: index css overhaul
+[33m5a1643d[m HEAD@{22}: commit: revert
+[33m6d370c7[m HEAD@{23}: commit: test
+[33m81e964c[m HEAD@{24}: commit: revert
+[33me7256ec[m HEAD@{25}: commit: check
+[33maf06e00[m HEAD@{26}: commit: index patch
+[33ma3108cc[m HEAD@{27}: commit: index css patch
+[33mf257f24[m HEAD@{28}: commit: home patch
+[33mb5f907b[m HEAD@{29}: commit: home patch
+[33m30ebea2[m HEAD@{30}: commit: pls
+[33m55ffcf4[m HEAD@{31}: commit: ughhhh research html
+[33m709e5d7[m HEAD@{32}: commit: undo
+[33m382f38a[m HEAD@{33}: commit: voice agents
+[33m1385ad1[m HEAD@{34}: commit: index override
+[33mc1f6a37[m HEAD@{35}: commit: index undo
+[33m91c1fb2[m HEAD@{36}: commit: change to index
+[33m161f62d[m HEAD@{37}: commit: undo
+[33me9d7d92[m HEAD@{38}: commit: undo
+[33m920c61e[m HEAD@{39}: commit: index
+[33ma44706b[m HEAD@{40}: commit: patches/overrides
+[33mf96566c[m HEAD@{41}: commit: patches
+[33m3154014[m HEAD@{42}: commit: patches
+[33m8cb2e33[m HEAD@{43}: commit: home patch
+[33m957434a[m HEAD@{44}: commit: patch
+[33m8c1d2d5[m HEAD@{45}: commit: patch
+[33mc192922[m HEAD@{46}: commit: patch
+[33macc32b3[m HEAD@{47}: commit: patch?
+[33me49ed41[m HEAD@{48}: commit: test
+[33m5351b44[m HEAD@{49}: commit: widths
+[33m0604495[m HEAD@{50}: commit: site title
+[33m455e4dd[m HEAD@{51}: commit: conflict?
+[33me05df86[m HEAD@{52}: commit: test
+[33m30e6aa7[m HEAD@{53}: commit: test
+[33m75061c2[m HEAD@{54}: commit: test
+[33me13c09e[m HEAD@{55}: commit: max width test
+[33m9d65d35[m HEAD@{56}: commit: playing
+[33m44a7aa7[m HEAD@{57}: commit: test
+[33me2ffcc5[m HEAD@{58}: commit: test
+[33m8b63fe5[m HEAD@{59}: commit: test2
+[33m191a876[m HEAD@{60}: commit: test
+[33md441986[m HEAD@{61}: commit: check
+[33mcf6f43f[m HEAD@{62}: commit: favicon
+[33m483b8a9[m HEAD@{63}: commit: update
+[33m246f04c[m HEAD@{64}: commit: publish
+[33m8cc09d7[m HEAD@{65}: commit: major updates
+[33mb2c373a[m HEAD@{66}: commit (initial): test
