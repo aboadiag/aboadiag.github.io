@@ -1,7 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { Group } from "../../components/Group";
-import { NavBar } from "../../components/NavBar";
+// import { Link } from "react-router-dom";
+// import { Group } from "../../components/Group";
+// import { NavBar } from "../../components/NavBar";
 import "./style.css";
 
 export const Home = () => {
@@ -38,8 +38,8 @@ export const Home = () => {
           <span className="text-wrapper-77"><br /></span>
           <span className="text-wrapper-78">Researcher,<br /></span>
           <span className="text-wrapper-79">Designer,<br /></span>
-          <span className="text-wrapper-80">Engineer</span>
-          <span className="text-wrapper-81">,</span>
+          <span className="text-wrapper-80">Engineer,</span>
+          {/* <span className="text-wrapper-81">,</span> */}
         </p>
 
         <p className="final-year-phd-2">
