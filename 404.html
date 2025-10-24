@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+      // Get the requested path
+      const path = window.location.pathname;
+
+      // The base path of your GitHub Pages site (e.g., /your-repo-name)
+      // This is necessary if you're using a Project Page (e.g., user.github.io/repo-name)
+      const baseName = "/aboadiag.github.io"; // <-- **IMPORTANT: Change this**
+
+      // Construct the new URL by appending the path and search params
+      // to the base URL and adding a '404' query parameter to prevent an infinite loop
+      const redirectUrl = path + window.location.search + (window.location.search ? '&' : '?') + '404=true';
+
+      // Redirect the user to the root index.html with the original path in the query string
+      window.location.replace(baseName + "/index.html" + redirectUrl);
+    </script>
+  </head>
+  <body>
+    <p>Loading...</p>
+  </body>
+</html>
