@@ -1,6 +1,6 @@
 import React from "react";
-// import { Link } from "react-router-dom";
-// import { Group } from "../../components/Group";
+import { Link } from "react-router-dom";
+import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
 
@@ -8,21 +8,21 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="div-2">
-        {/* <img
+        <img
           className="bena-background"
           alt="A three-quarter view ofAbena Boadi-Agyemang with a brown circle in the background and a hand drawn curve around her. Abena is a 
                 dark skin, Black woman with Black afro hair. She is smiling at the viewer"
           src="/img/bena-background-2.svg"
-        /> */}
-{/* 
+        />
+
         <div className="name-component">
           <img
             className="bena-favicon-figma-3"
             alt="Favicon. Sketch of Abena's face on blue bakcground."
             src="/img/bena-favicon-figma-1-2.png"
-          /> */}
+          />
 
-          {/* <div className="site-title">Abena Boadi-Agyemang</div>
+          <div className="site-title">Abena Boadi-Agyemang</div>
         </div>
 
         <p className="hi-my-name-is-abena-2">
@@ -31,18 +31,18 @@ export const Home = () => {
           <span className="text-wrapper-70">Abena</span>
 
           <span className="text-wrapper-69"> (she/her), a</span>
-        </p> */}
+        </p>
 
 
-        {/* <p className="researcher-designer-2">
+        <p className="researcher-designer-2">
           <span className="text-wrapper-77"><br /></span>
           <span className="text-wrapper-78">Researcher,<br /></span>
           <span className="text-wrapper-79">Designer,<br /></span>
           <span className="text-wrapper-80">Engineer,</span>
-          <span className="text-wrapper-81">,</span> *
-        </p> */}
+          {/* <span className="text-wrapper-81">,</span> */}
+        </p>
 
-        {/* <p className="final-year-phd-2">
+        <p className="final-year-phd-2">
           &amp; final year PhD Candidate in Robotics!
         </p>
 
@@ -113,7 +113,7 @@ export const Home = () => {
           <span className="text-wrapper-71">
             &amp; their respective communities.
           </span>
-        </p> */}
+        </p>
 
  {/* <p className="researcher-designer-2">
   <span className="text-wrapper-77"><br /></span>
@@ -123,7 +123,7 @@ export const Home = () => {
   <span className="text-wrapper-81">,</span>
 </p> */}
 
-{/* <div className="text-wrapper-82">a(bit).</div> */}
+<div className="text-wrapper-82">a(bit).</div>
 
 
 {/* --------------NAV BAR------------- */}
@@ -143,7 +143,7 @@ export const Home = () => {
 {/* --------------NAV BAR------------- */}
 
 
-        {/* <div className="a-bit-about-me-2">
+        <div className="a-bit-about-me-2">
           <p className="this-is-only-a-bit-2">
             <span className="text-wrapper-71">This is only a </span>
 
@@ -331,8 +331,8 @@ export const Home = () => {
 
             <div className="text-wrapper-96">visit my repos</div>
           </div>
-        </div> */}
-      </div> 
+        </div>
+      </div>
     </div>
   );
 };
