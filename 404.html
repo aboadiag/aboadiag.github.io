@@ -2,22 +2,21 @@
 <html>
   <head>
     <script>
-      // Get the requested path
-      const path = window.location.pathname;
+      // Since this is a User Page (aboadiag.github.io), the base path is the root "/".
+      // We capture the requested path and redirect to index.html with the path in the query string.
+      // This allows the SPA (React Router) to read the intended route.
+      var path = window.location.pathname;
+      var search = window.location.search;
+      var hash = window.location.hash;
 
-      // The base path of your GitHub Pages site (e.g., /your-repo-name)
-      // This is necessary if you're using a Project Page (e.g., user.github.io/repo-name)
-      const baseName = "/aboadiag.github.io"; // <-- **IMPORTANT: Change this**
+      // The destination is index.html, with the original full path/search/hash attached.
+      // We add a ?404=true flag to prevent an infinite loop, which the router should ignore.
+      var newUrl = '/index.html?p=' + encodeURIComponent(path + search + hash) + '&404=true';
 
-      // Construct the new URL by appending the path and search params
-      // to the base URL and adding a '404' query parameter to prevent an infinite loop
-      const redirectUrl = path + window.location.search + (window.location.search ? '&' : '?') + '404=true';
-
-      // Redirect the user to the root index.html with the original path in the query string
-      window.location.replace(baseName + "/index.html" + redirectUrl);
+      window.location.replace(newUrl);
     </script>
   </head>
   <body>
-    <p>Loading...</p>
+    <p>Redirecting to the correct page...</p>
   </body>
 </html>

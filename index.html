@@ -74,6 +74,26 @@
     </style>
 
     <!-- Scripts and CSS built by your app -->
+     <script>
+      (function () {
+        // 1. Get the full URL path, including any query parameters.
+        const url = window.location.search;
+        
+        // 2. Check if the URL contains the special flag added by the 404.html redirect.
+        // The flag is '?p=...' or '&404=true'. We look for the 'p=' (path) parameter.
+        const pathParam = new URLSearchParams(url).get('p');
+        
+        if (pathParam) {
+          // 3. Decode the original path (e.g., '/projects?query=term' from '%2Fprojects%3Fquery%3Dterm').
+          const originalPath = decodeURIComponent(pathParam);
+
+          // 4. Use the History API to rewrite the URL in the address bar.
+          // This keeps the user on the correct page without causing a full page reload,
+          // allowing React Router (which initializes after this script) to see the correct path.
+          window.history.replaceState(null, null, originalPath);
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-DuiWPQY5.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-CcTI7LcG.css" />
 
