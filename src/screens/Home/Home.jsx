@@ -24,7 +24,7 @@ export const Home = () => {
             src="/img/bena-favicon-figma-1-2.png"
           />
 
-          <h1  className="site-title">Abena Boadi-Agyemang</h1>
+          <h1 className="site-title">Abena Boadi-Agyemang</h1>
         </div>
 
         <p className="hi-my-name-is-abena-2">

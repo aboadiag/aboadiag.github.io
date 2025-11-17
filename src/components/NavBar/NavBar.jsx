@@ -1,23 +1,25 @@
-/*
-We're constantly improving the code you see. 
-Please share your feedback here: https://form.asana.com/?k=uvp-HPgd3_hyoXRBw1IcNg&d=1152665201300829
-*/
-
 import React from "react";
 import { Link } from "react-router-dom";
 import "./style.css";
 
-export const NavBar = ({ className, to, to1 }) => {
+export const NavBar = ({ className }) => {
   return (
-    <div className={`nav-bar ${className}`}>
+    <nav
+      className={`nav-bar ${className}`}
+      role="navigation"
+      aria-label="Main Navigation"
+    >
       <div className="site-logo">
         <img
           className="bena-favicon-figma"
-          alt="Site logo - sketch of Abena's face"
+          alt="Site logo – sketch of Abena's face"
           src="/img/bena-favicon-figma-1.svg"
         />
 
-        <div className="text-wrapper-4">Abena Boadi-Agyemang</div>
+        {/* Branding should NEVER be <h1> */}
+        <span className="text-wrapper-4 site-logo-text">
+          Abena Boadi-Agyemang
+        </span>
       </div>
 
       <Link className="text-wrapper-5" to="/">
@@ -35,6 +37,6 @@ export const NavBar = ({ className, to, to1 }) => {
       <Link className="text-wrapper-8" to="/artpage">
         Art
       </Link>
-    </div>
+    </nav>
   );
 };
