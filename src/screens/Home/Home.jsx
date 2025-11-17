@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
 import "./style.css";
+import { Footer } from "../../components/Footer";
+
 
 export const Home = () => {
   return (
@@ -18,11 +20,11 @@ export const Home = () => {
         <div className="name-component">
           <img
             className="bena-favicon-figma-3"
-            alt="Favicon. Sketch of Abena's face on blue bakcground."
+            alt="Favicon sketch of Abena's face on blue background"
             src="/img/bena-favicon-figma-1-2.png"
           />
 
-          <div className="site-title">Abena Boadi-Agyemang</div>
+          <h1  className="site-title">Abena Boadi-Agyemang</h1>
         </div>
 
         <p className="hi-my-name-is-abena-2">
@@ -241,97 +243,31 @@ export const Home = () => {
               2021 - present, Stanford University
             </p>
 
-            <div className="text-wrapper-92">education.</div>
+            <h2 className="text-wrapper-92">education.</h2>
           </div>
         </div>
 
         <div className="mask-group">
           <img
             className="bena-mug-removebg-2"
-            alt="Bena mug removebg"
+            alt="Portrait of Abena smiling"
             src="/img/bena-mug-removebg-preview-1-1.svg"
           />
 
           <img
             className="bena-mask-2"
-            alt="Bena mask"
+            alt="" /* purely decorative */
             src="/img/bena-mask-1.svg"
           />
         </div>
 
-        <img className="vector-3" alt="Vector" src="/img/vector-1-3.svg" />
+        <img 
+          className="vector-3" 
+          alt=""  /* decorative divider */ 
+          src="/img/vector-1-3.svg" 
+        />
 
-        <div className="contact-bar-scholar">
-          <div className="group-6">
-            <div className="text-wrapper-93">
-              <a href="mailto:aboadiag@andrew.cmu.edu"  style={{ textDecoration: "none", color: "inherit" }}>
-              aboadiag@andrew.cmu.edu
-              </a>
-              </div>
-
-            <div className="text-wrapper-94">Contact</div>
-
-            <div className="link-google-scholar">
-              <div className="google-scholar-logo">
-                <img
-                  className="vector-4"
-                  alt="Vector"
-                  src="/img/vector-32.svg"
-                />
-
-                <img
-                  className="vector-5"
-                  alt="Vector"
-                  src="/img/vector-33.svg"
-                />
-
-                <img
-                  className="vector-6"
-                  alt="Vector"
-                  src="/img/vector-34.svg"
-                />
-
-                <img
-                  className="vector-7"
-                  alt="Vector"
-                  src="/img/vector-35.svg"
-                />
-              </div>
-
-              <a
-                className="https-scholar-google"
-                href="https://scholar.google.com/citations?hl=en&amp;user=OYnusysAAAAJ"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                
-              </a>
-            </div>
-
-            <div className="text-wrapper-95">read my work</div>
-
-            <div className="img-wrapper">
-              <img className="vector-8" alt="Vector" src="/img/vector-36.svg" />
-            </div>
-
-            <a
-              className="https-github-com-3"
-              href="https://github.com/aboadiag"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              XXXXXXXX
-              <br />
-              XXXXXXXX
-              <br />
-              XXXXXXXX
-              <br />
-              XXXXXXXX
-            </a>
-
-            <div className="text-wrapper-96">visit my repos</div>
-          </div>
-        </div>
+      <Footer className="footer" />
       </div>
     </div>
   );

@@ -21,10 +21,10 @@ export const Footer = ({
 
           <div className="link-google-scholar">
             <div className="google-scholar-logo" aria-hidden="true">
-              <img className="vector-4" alt="scholar icon part" src="/img/vector-32.svg" />
-              <img className="vector-5" alt="scholar icon part" src="/img/vector-33.svg" />
-              <img className="vector-6" alt="scholar icon part" src="/img/vector-34.svg" />
-              <img className="vector-7" alt="scholar icon part" src="/img/vector-35.svg" />
+              <img className="vector-4" alt="" src="/img/vector-32.svg" />
+              <img className="vector-5" alt="" src="/img/vector-33.svg" />
+              <img className="vector-6" alt="" src="/img/vector-34.svg" />
+              <img className="vector-7" alt="" src="/img/vector-35.svg" />
             </div>
 
             <a
@@ -32,7 +32,7 @@ export const Footer = ({
               href={scholarHref}
               rel="noopener noreferrer"
               target="_blank"
-              aria-label="Google Scholar profile"
+              aria-label="Google Scholar profile for Abena Boadi-Agyemang"
             >
               Google Scholar
             </a>
@@ -41,7 +41,7 @@ export const Footer = ({
           <div className="text-wrapper-95">read my work</div>
 
           <div className="img-wrapper">
-            <img className="vector-8" alt="github icon" src="/img/vector-36.svg" />
+            <img className="vector-8" alt="" src="/img/vector-36.svg" />
           </div>
 
           <a
@@ -49,15 +49,9 @@ export const Footer = ({
             href={githubHref}
             rel="noopener noreferrer"
             target="_blank"
-            aria-label="GitHub profile"
+            aria-label="GitHub profile for Abena Boadi-Agyemang"
           >
-            XXXXXXXX
-            <br />
-            XXXXXXXX
-            <br />
-            XXXXXXXX
-            <br />
-            XXXXXXXX
+              GitHub Profile
           </a>
 
           <div className="text-wrapper-96">visit my repos</div>

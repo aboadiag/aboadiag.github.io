@@ -13,7 +13,7 @@ export const NavBar = ({ className, to, to1 }) => {
       <div className="site-logo">
         <img
           className="bena-favicon-figma"
-          alt="Bena favicon figma"
+          alt="Site logo - sketch of Abena's face"
           src="/img/bena-favicon-figma-1.svg"
         />
 
