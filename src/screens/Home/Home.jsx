@@ -10,23 +10,54 @@ export const Home = () => {
   return (
     <div className="home">
       <div className="div-2">
-        <img
-          className="bena-background"
-          alt="A three-quarter view ofAbena Boadi-Agyemang with a brown circle in the background and a hand drawn curve around her. Abena is a 
-                dark skin, Black woman with Black afro hair. She is smiling at the viewer"
-          src="/img/bena-background-2.svg"
-        />
 
+        {/* SEMANTIC IMPROVEMENT: Wrap the NavBar in a <header> */}
+        <header>
+        {/* Consider moving name-component here if it acts as a site title/logo */}
         <div className="name-component">
           <img
             className="bena-favicon-figma-3"
             alt="Favicon sketch of Abena's face on blue background"
             src="/img/bena-favicon-figma-1-2.png"
           />
-
           <h1 className="site-title">Abena Boadi-Agyemang</h1>
         </div>
+        
+        {/* --------------NAV BAR------------- */}
+        <NavBar className="navbar" />
+      </header>
 
+      {/* SEMANTIC IMPROVEMENT: Wrap the main content in <main> */}
+      <main>
+        {/* SECTION 1: Hero / Introduction */}
+        <section className="hero-intro">
+        <img
+          className="bena-background"
+          alt="A three-quarter view ofAbena Boadi-Agyemang with a brown circle in the background and a hand drawn curve around her. Abena is a 
+                dark skin, Black woman with Black afro hair. She is smiling at the viewer"
+          src="/img/bena-background-2.svg"
+        />
+        <div className="mask-group">
+          <img
+            className="bena-mug-removebg-2"
+            alt="Portrait of Abena smiling"
+            src="/img/bena-mug-removebg-preview-1-1.svg"
+          />
+
+          <img
+            className="bena-mask-2"
+            alt="" /* purely decorative */
+            src="/img/bena-mask-1.svg"
+          />
+        </div>
+
+        <img 
+          className="vector-3" 
+          alt=""  /* decorative divider */ 
+          src="/img/vector-1-3.svg" 
+        />
+
+      {/* Introductory Text Blocks (Hi, my name is..., Researcher, Engineer...) */}
         <p className="hi-my-name-is-abena-2">
           <span className="text-wrapper-69">Hi, my name is </span>
 
@@ -34,7 +65,6 @@ export const Home = () => {
 
           <span className="text-wrapper-69"> (she/her), a</span>
         </p>
-
 
         <p className="researcher-designer-2">
           <span className="text-wrapper-77"><br /></span>
@@ -48,6 +78,7 @@ export const Home = () => {
           &amp; final year PhD Candidate in Robotics!
         </p>
 
+        
         <p className="i-am-in-the-fifth-2">
           <span className="text-wrapper-71">I am in the </span>
 
@@ -116,35 +147,12 @@ export const Home = () => {
             &amp; their respective communities.
           </span>
         </p>
-
- {/* <p className="researcher-designer-2">
-  <span className="text-wrapper-77"><br /></span>
-  <span className="text-wrapper-78">Researcher,<br /></span>
-  <span className="text-wrapper-79">Designer,<br /></span>
-  <span className="text-wrapper-80">Engineer</span>
-  <span className="text-wrapper-81">,</span>
-</p> */}
-
-<div className="text-wrapper-82">a(bit).</div>
+        </section>
 
 
-{/* --------------NAV BAR------------- */}
-{/* <div className="navbar-2">
-  <Link className="text-wrapper-83" to="/">Home</Link>
-
-  <Link className="text-wrapper-84" to="/research">Research</Link>
-
-  <Link className="text-wrapper-85" to="/projects">Projects</Link>
-
-  <Link className="text-wrapper-86" to="/artpage">Art</Link>
-</div> */}
-<NavBar className="navbar" />
-
-
-
-{/* --------------NAV BAR------------- */}
-
-
+    {/* SECTION 2: About Me & CV CTA */}
+    <section className="about-me-cv-cta">
+    <div className="text-wrapper-82">a(bit).</div>
         <div className="a-bit-about-me-2">
           <p className="this-is-only-a-bit-2">
             <span className="text-wrapper-71">This is only a </span>
@@ -173,7 +181,10 @@ export const Home = () => {
           />
           </a>
         </div>
+        </section>
 
+      {/* SECTION 3: Education */}
+      <section className="education-section">
         <div className="education-bit">
           <div className="ellipse-5" />
 
@@ -246,27 +257,10 @@ export const Home = () => {
             <h2 className="text-wrapper-92">education.</h2>
           </div>
         </div>
+        </section>
+     </main>
 
-        <div className="mask-group">
-          <img
-            className="bena-mug-removebg-2"
-            alt="Portrait of Abena smiling"
-            src="/img/bena-mug-removebg-preview-1-1.svg"
-          />
-
-          <img
-            className="bena-mask-2"
-            alt="" /* purely decorative */
-            src="/img/bena-mask-1.svg"
-          />
-        </div>
-
-        <img 
-          className="vector-3" 
-          alt=""  /* decorative divider */ 
-          src="/img/vector-1-3.svg" 
-        />
-
+     {/* Keep the Footer component outside of <main> but inside the top-level div */}
       <Footer className="footer" />
       </div>
     </div>
