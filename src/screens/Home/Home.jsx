@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
-import "./style.css";
+import "src/screens/Home/Home.module.css";
 import { Footer } from "../../components/Footer";
 
 
