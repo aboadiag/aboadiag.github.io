@@ -10,7 +10,7 @@ export const Footer = ({
 }) => {
   return (
     <footer className={`footer ${className}`} style={style}>
-      <div className="contact-bar-scholar">
+      <section className="contact-bar-scholar">
         <div className="group-6">
           <div className="text-wrapper-93">     
             <a href="mailto:aboadiag@andrew.cmu.edu" style={{ textDecoration: "none", color: "inherit" }}>
@@ -56,7 +56,7 @@ export const Footer = ({
 
           <div className="text-wrapper-96">visit my repos</div>
         </div>
-      </div>
+      </section>
     </footer>
   );
 };
