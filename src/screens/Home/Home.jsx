@@ -167,7 +167,7 @@ export const Home = () => {
           </p>
 
         <a
-          href="/static/pdfs/abena-boadi-cv-nov2025.pdf"
+          href="/static/pdfs/bena-boadi-cv-nov2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
