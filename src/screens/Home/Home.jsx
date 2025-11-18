@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
-import "src/screens/Home/Home.module.css";
+import styles from "./Home.module.css";
 import { Footer } from "../../components/Footer";
 
 
@@ -167,7 +167,7 @@ export const Home = () => {
           </p>
 
         <a
-          href="/static/pdfs/AbenaBoadi_CV_Fall25.pdf"
+          href="/static/pdfs/abena-boadi-cv-nov2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >

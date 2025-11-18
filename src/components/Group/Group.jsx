@@ -22,7 +22,11 @@ export const Group = ({
 
   return (
     <div
-      className={`group ${state.property1} ${className}`}
+      // CRITICAL FIX: Reference module classes using 'styles.' or 'styles[]'
+      // styles.group: The hashed base class.
+      // styles[state.property1]: Dynamic hashed class (e.g., styles['default'] or styles['variant-2']).
+      // className: Allows external overrides passed via props.
+      className={`${styles.group} ${styles[state.property1]} ${className}`}
       onMouseLeave={() => {
         dispatch("mouse_leave");
       }}
@@ -33,11 +37,14 @@ export const Group = ({
         dispatch("click");
       }}
     >
-      <div className={`rectangle ${rectangleClassName}`} />
+      {/* Reference the hashed class name for 'rectangle' */}
+      <div className={`${styles.rectangle} ${rectangleClassName}`} />
 
-      <div className={`rectangle-2 ${rectangleClassNameOverride}`} />
+      {/* Reference the hashed class name for 'rectangle-2' (using bracket notation for the dash) */}
+      <div className={`${styles['rectangle-2']} ${rectangleClassNameOverride}`} />
 
-      <div className={`resume ${divClassName}`}>{text}</div>
+      {/* Reference the hashed class name for 'resume' */}
+      <div className={`${styles.resume} ${divClassName}`}>{text}</div>
     </div>
   );
 };
