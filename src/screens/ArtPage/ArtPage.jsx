@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import { Footer } from "../../components/Footer";
-import "./style.css";
+import styles from "./ArtPage.module.css";
 
 // Art pieces array
 const artPieces = [

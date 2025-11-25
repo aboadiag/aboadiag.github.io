@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
-import "./style.css";
+import styles from "./Projects.module.css";
 
 export const Projects = () => {
   return (
