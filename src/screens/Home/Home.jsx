@@ -5,6 +5,8 @@ import { NavBar } from "../../components/NavBar";
 import styles from "./Home.module.css";
 import { Footer } from "../../components/Footer";
 
+// Force rebuild trigger
+
 
 export const Home = () => {
   return (
