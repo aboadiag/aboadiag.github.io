@@ -169,7 +169,7 @@ export const Home = () => {
           </p>
 
         <a
-          href="/static/pdfs/abenab-cv-2page_v4.pdf"
+          href="/static/pdfs/ab-final-cv-nov2025.pdf"
           target="_blank"
           rel="noopener noreferrer"
         >
