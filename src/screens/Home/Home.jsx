@@ -253,7 +253,7 @@ export const Home = () => {
             </p>
 
             <p className="text-wrapper-91">
-              2021 - present, Stanford University
+              2017 - 2021, Stanford University
             </p>
 
             <h2 className="text-wrapper-92">education.</h2>
