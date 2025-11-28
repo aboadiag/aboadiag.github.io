@@ -10,7 +10,7 @@
     "build": "vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "deploy": "gh-pages -d dist -b main"
+    "deploy": "gh-pages -d dist -b gh-pages"
   },
   "dependencies": {
     "prop-types": "^15.8.1",
