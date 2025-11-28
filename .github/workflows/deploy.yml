@@ -42,3 +42,5 @@ jobs:
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+          # *** NEW FIX: Force a push, bypassing the "Everything up-to-date" error ***
+          force_orphan: true
