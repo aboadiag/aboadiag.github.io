@@ -1,6 +1,5 @@
 name: Deploy to GitHub Pages
 
-# This workflow runs every time you push code to the 'main' branch.
 on:
   push:
     branches:
@@ -8,34 +7,33 @@ on:
 
 jobs:
   build-and-deploy:
-    # We use a clean Linux server instance for guaranteed success.
+    # Set permissions for the GITHUB_TOKEN to allow writing to contents (required for push)
+    permissions:
+      contents: write
+    
     runs-on: ubuntu-latest
     
     steps:
-      # Step 1: Check out your code (downloads the repo).
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      # Step 2: Set up the necessary Node.js version.
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      # Step 3: Install all dependencies (npm install).
       - name: Install Dependencies
         run: npm install
 
-      # Step 4: Run your build command (npm run build).
-      # This creates the clean, cache-busted '/dist' folder.
       - name: Run Clean Build
         run: npm run build
       
-      # Step 5: The final deployment. This tool forces the /dist folder 
-      # onto the gh-pages branch, bypassing the Git conflict.
+      # The final deployment.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           publish_branch: gh-pages
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
