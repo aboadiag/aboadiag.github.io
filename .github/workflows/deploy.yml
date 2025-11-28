@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-deploy:
-    # Set permissions for the GITHUB_TOKEN to allow writing to contents (required for push)
+    # Set permissions for the GITHUB_TOKEN to allow writing to contents
     permissions:
       contents: write
     
@@ -25,10 +25,15 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      # *** NEW CRITICAL STEP: DELETE OLD BUILD ***
+      - name: Cleanup Old Build Artifacts
+        run: rm -rf dist
+      
+      # Step 5: Run the build command on a clean slate.
       - name: Run Clean Build
         run: npm run build
       
-      # The final deployment.
+      # Step 6: The final deployment.
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
