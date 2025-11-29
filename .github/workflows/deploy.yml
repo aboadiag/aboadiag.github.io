@@ -24,16 +24,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          
-      # *** NEW CRITICAL FIX: Explicitly disable the built-in dependency caching ***
-      - name: Disable and Skip Dependency Cache Restore
-        uses: actions/cache/restore@v4
-        id: node-modules-cache
-        with:
-          path: node_modules
-          key: node-${{ runner.os }}-build-cache-disabled
-          restore-keys: |
-            node-${{ runner.os }}-build-cache-disabled-
+          # NOTE: Removed the erroneous 'cache: false' line.
+
+      # *** FIX 5 (RE-INTEGRATED): Aggressively purge all old cache and modules ***
+      - name: Purge Node Modules and Cache
+        run: |
+          rm -rf node_modules
+          npm cache clean --force
 
       - name: Install Dependencies
         run: npm install
