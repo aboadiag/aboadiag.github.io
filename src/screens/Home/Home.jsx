@@ -55,7 +55,7 @@ export const Home = () => {
               src="/img/bena-favicon-figma-1-2.png"
             />
             {/* Note: Original site-title commented out. Using hardcoded title below */}
-            <h1 className="text-4xl font-extrabold">THIS CONTENT IS NEW AND CORRECT V4.0</h1>
+            <h1 className={styles.siteTitle}>Abena Boadi-Agyemang</h1>         
           </div>
         
           {/* NavBar component is assumed to handle its own internal styling. 
