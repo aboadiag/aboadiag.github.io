@@ -9,6 +9,8 @@ import { Footer } from "../../components/Footer";
 
 
 export const Home = () => {
+    // *** VITE HASH BUSTER: Added comment to force new build hash ***
+  // console.log('Forcing new build hash to bypass stale cache.');
   return (
     <div className="home">
       <div className="div-2">
