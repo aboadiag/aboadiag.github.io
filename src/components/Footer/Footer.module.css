@@ -13,16 +13,24 @@
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
-/* --- Global Footer Container (No absolute positioning) --- */
+/* Footer.module.css */
+
+/* ... (Keep your existing @imports and variables) ... */
+
 .footer {
+  /* Ensure this sits naturally in the flow */
   position: relative; 
-  width: 100%; 
-  height: auto; 
-  padding: 40px 80px; 
+  width: 100%;
+  height: auto;
+  padding: 40px 80px;
   box-sizing: border-box;
-  margin-top: 40px; 
+  margin-top: 0; 
+  /* Ensures footer is not transparent, covering any glitchy overlap */
+  background-color: var(--off-white); 
+  z-index: 10;
 }
 
+/* ... (Keep the rest of your Footer CSS exactly as is) ... */
 /* --- Contact Bar Wrapper (The Main Layout Grid) --- */
 .footer .contact-bar-scholar {
   /* CRITICAL FIX: Grid for 3-column desktop layout */

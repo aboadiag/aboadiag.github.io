@@ -1,35 +1,40 @@
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
+/* Home.module.css */
+
 .home {
-  /* display: flex;
-  min-height: 2757px;
-  min-width: 1440px;
-  width: 100%; */
   display: flex;
-  flex-direction: column; /* optional */
-  min-height: 100vh;     /* full viewport height */
+  flex-direction: column; /* Stacks items: Navbar -> Content -> Footer */
+  min-height: 100vh;
   width: 100%;
-  background-color: var(--off-white); /* move background here */
-  
+  background-color: var(--off-white);
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
 }
 
-.home .div-2 {
+/* This is the container for your specific 'absolute' layout designs */
+.main-content-canvas {
   background-color: var(--off-white);
-  height: 2757px;
-  overflow: hidden;
+  /* CALCULATED HEIGHT: 
+     The lowest element in your design is 'a-bit-about-me-2' at top: 2280px.
+     It has a height of ~163px. 2280 + 163 = ~2443px.
+     We set height to 2500px to ensure plenty of room before the footer starts.
+  */
+  height: 2500px; 
   position: relative;
   width: 100%;
-  /* width: 1440px; */
 }
 
-.home .bena-background {
+/* ... Keep all your existing image/text classes below exactly as they were ... */
+.bena-background {
   height: 550px;
   left: 833px;
   position: absolute;
-  top: 252px;
+  top: 252px; /* Relative to main-content-canvas */
   width: 540px;
 }
+
+/* ... (Rest of your CSS remains unchanged) ... */
 
 .home .name-component {
   display: flex;
