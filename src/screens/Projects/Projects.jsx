@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Projects.module.css";
+import { Footer } from "../../components/Footer";
 
 export const Projects = () => {
   return (

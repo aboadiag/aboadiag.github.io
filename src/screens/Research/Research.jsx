@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
+import { Footer } from "../../components/Footer";
 
 export const Research = () => {
   return (
