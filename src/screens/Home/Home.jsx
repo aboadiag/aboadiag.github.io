@@ -15,7 +15,7 @@ export const Home = () => {
       
       {/* 1. Header flows naturally at the top */}
       <header>
-        <NavBar className={styles.navbar} />
+        <NavBar />
       </header>
 
       {/* 2. Main Content Canvas 
