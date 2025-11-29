@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Abena Boadi-Agyemang</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/png" href="/assets/bena-favicon-figma-1-2-C05O8Yf6.png" />
+
+    <!-- Reset CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom font -->
+    <style>
+      @font-face {
+        font-family: "Figma Hand-Bold";
+        src: url("/assets/PatrickHand-Regular-Oke4spkc.ttf")
+          format("truetype");
+        font-display: swap;
+      }
+    </style>
+
+    <!-- App / global styles -->
+    <style>
+      /* Smooth font rendering */
+      * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
+        /* ADD THIS LINE: This is the ultimate containment barrier */
+        max-width: 100vw; 
+
+        overflow-x: hidden; /*prevent horizontal scroll */
+      }
+
+      img,
+      video,
+      canvas,
+      svg {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      #app {
+        width: 100%; /* fix horizontal overflow */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      button:focus-visible {
+        outline: 2px solid #4a90e2 !important;
+      }
+    </style>
+
+    <!-- Scripts and CSS built by your app -->
+     <script>
+      (function () {
+        // 1. Get the full URL path, including any query parameters.
+        const url = window.location.search;
+        
+        // 2. Check if the URL contains the special flag added by the 404.html redirect.
+        // The flag is '?p=...' or '&404=true'. We look for the 'p=' (path) parameter.
+        const pathParam = new URLSearchParams(url).get('p');
+        
+        if (pathParam) {
+          // 3. Decode the original path (e.g., '/projects?query=term' from '%2Fprojects%3Fquery%3Dterm').
+          const originalPath = decodeURIComponent(pathParam);
+
+          // 4. Use the History API to rewrite the URL in the address bar.
+          // This keeps the user on the correct page without causing a full page reload,
+          // allowing React Router (which initializes after this script) to see the correct path.
+          window.history.replaceState(null, null, originalPath);
+        }
+      })();
+    </script>
+    <!-- IMPORTANT: The final output links will be injected here automatically by Vite. -->
+
+    <script type="module" crossorigin src="/assets/index-DsZ9dZjc.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-DVEhZmlP.css">
+  </head>
+
+  <body>
+    <div id="app"></div>
+
+      <!-- !!! CRITICAL FIX !!! This line tells Vite where your app starts -->
+  </body>
+</html>
