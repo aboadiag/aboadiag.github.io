@@ -1,56 +1,46 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (Official)
 
 on:
   push:
     branches:
       - main 
 
+# Permissions required for both artifact upload and deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build-and-deploy:
-    # Set permissions for the GITHUB_TOKEN to allow writing to contents
-    permissions:
-      contents: write
-    
     runs-on: ubuntu-latest
     
     steps:
-      - name: Checkout Code
+      - name: Checkout Code 🛎️
         uses: actions/checkout@v4
-        # *** FIX 1: Ensure a deep, fresh clone of the source code (fetch-depth: 0) ***
         with:
-          fetch-depth: 0
+          fetch-depth: 0 
 
-      - name: Set up Node.js
+      - name: Set up Node.js 🔧
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          # NOTE: Removed the erroneous 'cache: false' line.
 
-      # *** FIX 5 (RE-INTEGRATED): Aggressively purge all old cache and modules ***
-      - name: Purge Node Modules and Cache
-        run: |
-          rm -rf node_modules
-          npm cache clean --force
-
-      - name: Install Dependencies
+      - name: Install Dependencies ⬇️
         run: npm install
 
-      # *** FIX 3: DELETE OLD BUILD ARTIFACTS ***
-      - name: Cleanup Old Build Artifacts
-        run: rm -rf dist
-      
-      # Step 5: Run the build command on a clean slate.
-      - name: Run Clean Build
+      - name: Run Production Build 🏗️
+        # This command runs your Vite build and outputs to ./dist
         run: npm run build
       
-      # Step 6: The final deployment.
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      # Step 1: Upload the build output as a deployable artifact
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: gh-pages
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
-          # *** FIX 4: Force a push, bypassing "Everything up-to-date" ***
-          force_orphan: true
+          # The contents of the dist folder will be uploaded
+          path: './dist'
+      
+      # Step 2: Deploy the uploaded artifact to GitHub Pages
+      - name: Deploy to GitHub Pages 🚀
+        id: deployment
+        uses: actions/deploy-pages@v4
