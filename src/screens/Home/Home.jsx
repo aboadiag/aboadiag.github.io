@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 // or simplify to standard relative paths if they are co-located.
 // Given previous errors, I will try the most standard '../components/Component' pattern 
 // which assumes Home.jsx is in src/screens/Home and components are in src/components.
-import { Group } from "../../../components/Group"; 
-import { NavBar } from "../../../components/NavBar";
+import { Group } from "../../components/Group"; 
+import { NavBar } from "../../components/NavBar";
 import styles from "./Home.module.css";
-import { Footer } from "../../../components/Footer";
+import { Footer } from "../../components/Footer";
 
 
 // --- Custom Error Handling for Chunk Loading Failures (Version Skew) ---
