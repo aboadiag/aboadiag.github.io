@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
+
+/* ===============  GLOBAL =============== */
+:root {
+  --off-white: #faf7f2;
+  --dark-brown: #5b240c;
+  --red-brown: #943b16;
+  --sky-blue: #7ab3ff;
+}
+
 .home {
   /* display: flex;
   min-height: 2757px;
