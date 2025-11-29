@@ -5,7 +5,7 @@ import { Projects } from "./screens/Projects";
 import { Research } from "./screens/Research";
 import { ArtPage } from "./screens/ArtPage";
 
-/* Adding this comment to update vite files!!!! */
+/* Adding this comment to update vite files!!!! -- AGAIN*/
 // Define your routes
 const router = createBrowserRouter([
   {
