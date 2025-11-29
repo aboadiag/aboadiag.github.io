@@ -1,309 +1,128 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// Adjust paths as needed for your structure
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
-import styles from "./Home.module.css";
 import { Footer } from "../../components/Footer";
 
+// Import the CSS Module
+import styles from "./Home.module.css";
 
-// --- Custom Error Handling for Chunk Loading Failures (Version Skew) ---
 
-/**
- * Global error handler for dynamic import failures.
- * When a chunk fails to load (often due to browser caching an old HTML file
- * that references a deleted/renamed JS chunk in a new deployment), this function
- * forces a page reload to retrieve the fresh HTML and manifest.
- */
-function handleLoadError() {
-  const MAX_RELOADS = 1; // Only attempt to reload once to prevent an infinite loop
-  const RELOAD_KEY = 'app_reload_attempt';
-  const currentAttempts = sessionStorage.getItem(RELOAD_KEY) ? parseInt(sessionStorage.getItem(RELOAD_KEY), 10) : 0;
-
-  if (currentAttempts < MAX_RELOADS) {
-    console.error("Chunk failed to load (version skew likely). Initiating graceful page reload...");
-    sessionStorage.setItem(RELOAD_KEY, currentAttempts + 1);
-    // Force a full page reload to fetch the new index.html
-    window.location.reload();
-  } else {
-    console.error("Chunk failed to load. Max reload attempts reached. Please clear cache manually.");
-    sessionStorage.removeItem(RELOAD_KEY); // Reset attempts after failure
-  }
-}
-
-// Attach the load error handler to the window globally
-if (typeof window !== 'undefined') {
-    // Clear the reload attempt counter on a successful script execution
-    sessionStorage.removeItem('app_reload_attempt');
-    
-    // Fallback handler for script errors that bubble up
-    window.addEventListener('error', (event) => {
-        // A generic check for script loading failure errors
-        if (event.message.includes('Loading chunk failed') || (event.target instanceof HTMLScriptElement && event.target.src)) {
-            handleLoadError();
-        }
-    });
-}
-
-// Force rebuild trigger
 export const Home = () => {
-    // *** VITE HASH BUSTER: Added comment to force new build hash ***
-  // console.log('Forcing new build hash to bypass stale cache.');
   return (
-    <div className="home">
-      <div className="div-2">
+    // 1. Main Container
+    <div className={styles.home}>
+      <div className={styles.mainContainer}>
 
-        {/* SEMANTIC IMPROVEMENT: Wrap the NavBar in a <header> */}
-        <header>
-        {/* Consider moving name-component here if it acts as a site title/logo */}
-        <div className="name-component">
-          <img
-            className="bena-favicon-figma-3"
-            alt="Favicon sketch of Abena's face on blue background"
-            src="/img/bena-favicon-figma-1-2.png"
-          />
-          {/* <h1 className="site-title">Abena Boadi-Agyemang</h1> */}
-          <h1 className="text-4xl font-extrabold">THIS CONTENT IS NEW AND CORRECT V4.0</h1>
-        </div>
-        
-        {/* --------------NAV BAR------------- */}
-        <NavBar className="navbar" />
-      </header>
-
-      {/* SEMANTIC IMPROVEMENT: Wrap the main content in <main> */}
-      <main>
-        {/* SECTION 1: Hero / Introduction */}
-        <section className="hero-intro">
-        <img
-          className="bena-background"
-          alt="A three-quarter view ofAbena Boadi-Agyemang with a brown circle in the background and a hand drawn curve around her. Abena is a 
-                dark skin, Black woman with Black afro hair. She is smiling at the viewer"
-          src="/img/bena-background-2.svg"
-        />
-        <div className="mask-group">
-          <img
-            className="bena-mug-removebg-2"
-            alt="Portrait of Abena smiling"
-            src="/img/bena-mug-removebg-preview-1-1.svg"
-          />
-
-          <img
-            className="bena-mask-2"
-            alt="" /* purely decorative */
-            src="/img/bena-mask-1.svg"
-          />
-        </div>
-
-        <img 
-          className="vector-3" 
-          alt=""  /* decorative divider */ 
-          src="/img/vector-1-3.svg" 
-        />
-
-      {/* Introductory Text Blocks (Hi, my name is..., Researcher, Engineer...) */}
-        <p className="hi-my-name-is-abena-2">
-          <span className="text-wrapper-69">Hi, my name is </span>
-
-          <span className="text-wrapper-70">Abena</span>
-
-          <span className="text-wrapper-69"> (she/her), a</span>
-        </p>
-
-        <p className="researcher-designer-2">
-          <span className="text-wrapper-77"><br /></span>
-          <span className="text-wrapper-78">Researcher,<br /></span>
-          <span className="text-wrapper-79">Designer,<br /></span>
-          <span className="text-wrapper-80">Engineer,</span>
-          {/* <span className="text-wrapper-81">,</span> */}
-        </p>
-
-        <p className="final-year-phd-2">
-          &amp; final year PhD Candidate in Robotics!
-        </p>
-
-        
-        <p className="i-am-in-the-fifth-2">
-          <span className="text-wrapper-71">I am in the </span>
-
-          <span className="text-wrapper-72">fifth</span>
-
-          <span className="text-wrapper-71">&nbsp;</span>
-
-          <span className="text-wrapper-73">year</span>
-
-          <span className="text-wrapper-71">
-            {" "}
-            PhD Candidate at the Robotics Institute at Carnegie Mellon
-            University. Here, I am advised by{" "}
-          </span>
-
-          <a
-            href="https://www.ri.cmu.edu/ri-faculty/aaron-steinfeld/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span className="text-wrapper-74">Aaron Steinfeld</span>
-          </a>
-
-          <span className="text-wrapper-71"> and a part of the </span>
-
-          <a
-            href="https://tbd.ri.cmu.edu/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <span className="text-wrapper-74">TBD Lab</span>
-          </a>
-
-          <span className="text-wrapper-71">
-            .<br />
-            <br />
-            My research interests are at the intersection of{" "}
-          </span>
-
-          <span className="text-wrapper-72">human-robot interaction</span>
-
-          <span className="text-wrapper-71">, </span>
-
-          <span className="text-wrapper-72">design research</span>
-
-          <span className="text-wrapper-71">, and </span>
-
-          <span className="text-wrapper-72">accessibility</span>
-
-          <span className="text-wrapper-71">
-            . I am interested in applying{" "}
-          </span>
-
-          <span className="text-wrapper-75">
-            human-centered design approaches
-          </span>
-
-          <span className="text-wrapper-71">
-            {" "}
-            to design intelligent agents that can support{" "}
-          </span>
-
-          <span className="text-wrapper-76">people with disabilities </span>
-
-          <span className="text-wrapper-71">
-            &amp; their respective communities.
-          </span>
-        </p>
-        </section>
-
-
-    {/* SECTION 2: About Me & CV CTA */}
-    <section className="about-me-cv-cta">
-    <div className="text-wrapper-82">a(bit).</div>
-        <div className="a-bit-about-me-2">
-          <p className="this-is-only-a-bit-2">
-            <span className="text-wrapper-71">This is only a </span>
-
-            <span className="text-wrapper-72">bit</span>
-
-            <span className="text-wrapper-71"> about me. For a </span>
-
-            <span className="text-wrapper-72">byte</span>
-
-            <span className="text-wrapper-71">, see my CV below.</span>
-          </p>
-
-        <a
-          href="/static/pdfs/ab-final-cv-nov2025-updated.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Group
-            className="design-component-instance-node"
-            divClassName="group-4"
-            property1="default"
-            rectangleClassName="group-2"
-            rectangleClassNameOverride="group-3"
-            text="CV"
-          />
-          </a>
-        </div>
-        </section>
-
-      {/* SECTION 3: Education */}
-      <section className="education-section">
-        <div className="education-bit">
-          <div className="ellipse-5" />
-
-          <div className="ellipse-6" />
-
-          <div className="ellipse-7" />
-
-          <div className="a-bit-about-me-3">
-            <p className="phd-in-robotics-2">
-              <span className="text-wrapper-87">
-                PhD in Robotics. <br />
-              </span>
-
-              <span className="text-wrapper-88">
-                Aaron Steinfeld (Chair), Jean Oh, Patrick Carrington, Cynthia L.
-                Bennett
-                <br />
-                “Designing Supportive Agents with the Lived Experience of People
-                with Disabilities” [Proposed Thesis]
-              </span>
-            </p>
-
-            <p className="text-wrapper-89">
-              2021 - present, Carnegie Mellon University
-            </p>
-
-            <p className="m-s-in-robotics-2">
-              <span className="text-wrapper-87">
-                M.S. in Robotics.
-                <br />
-              </span>
-
-              <span className="text-wrapper-88">
-                Aaron Steinfeld (Chair), Henny Admoni, Nikolas Martelaro,
-                Michelle Zhao
-                <br />
-                “Simulated Encounters of the Third Kind: A Scenario-Based
-                Approach to Designing Robotic Mobility Aids” [
-              </span>
-
-              <a
-                href="https://www.ri.cmu.edu/app/uploads/2025/03/WritingQual_MSRThesis_aboadiag_final.pdf"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className="text-wrapper-74">Master’s Thesis</span>
-              </a>
-
-              <span className="text-wrapper-88">]</span>
-            </p>
-
-            <p className="text-wrapper-90">
-              2021 - 2025, Carnegie Mellon University
-            </p>
-
-            <p className="b-s-in-mechanical-2">
-              <span className="text-wrapper-87">
-                B.S. in Mechanical Engineering
-              </span>
-
-              <span className="text-wrapper-88">
-                . Concentration in Dynamic Systems &amp; Controls
-              </span>
-            </p>
-
-            <p className="text-wrapper-91">
-              2017 - 2021, Stanford University
-            </p>
-
-            <h2 className="text-wrapper-92">education.</h2>
+        {/* 2. Header */}
+        <header className={styles.header}>
+          <div className={styles.branding}>
+            <img
+              className={styles.logoImage}
+              alt="Sketch of Abena's face"
+              src="/img/bena-favicon-figma-1-2.png"
+            />
+            <h1 className={styles.siteTitle}>Abena Boadi-Agyemang</h1>
           </div>
-        </div>
-        </section>
-     </main>
+          
+          <div className={styles.navbarWrapper}>
+             <NavBar />
+          </div>
+        </header>
 
-     {/* Keep the Footer component outside of <main> but inside the top-level div */}
-      <Footer className="footer" />
+        {/* 3. Main Content */}
+        <main>
+          
+          {/* Hero Section */}
+          <section className={styles.heroSection}>
+             {/* Image First (Visual order handled by CSS flex-wrap-reverse on mobile) */}
+             <img
+                className={styles.heroImage}
+                alt="Portrait of Abena"
+                src="/img/bena-background-2.svg"
+              />
+              
+              <div className={styles.heroContent}>
+                <h2 className={styles.heroHeadline}>
+                   Hi, my name is <span className={styles.blueHighlight}>Abena</span> (she/her).
+                </h2>
+                
+                <div className={styles.heroSubtext}>
+                  <p>
+                    Researcher, Designer, Engineer, &amp; final year PhD Candidate in Robotics!
+                  </p>
+                  <p>
+                    I am a PhD Candidate at the Robotics Institute at Carnegie Mellon University, advised by{" "}
+                    <a href="https://www.ri.cmu.edu/ri-faculty/aaron-steinfeld/" target="_blank" rel="noreferrer" className={styles.textLink}>Aaron Steinfeld</a>
+                     {" "}and part of the <a href="https://tbd.ri.cmu.edu/" target="_blank" rel="noreferrer" className={styles.textLink}>TBD Lab</a>.
+                  </p>
+                  <p>
+                     My research interests are at the intersection of <strong>human-robot interaction</strong>, <strong>design research</strong>, and <strong>accessibility</strong>.
+                  </p>
+                </div>
+              </div>
+          </section>
+
+          {/* About / CV Section */}
+          <section className={`${styles.section} ${styles.aboutSection}`}>
+             <h2 className={styles.sectionTitle}>a(bit).</h2>
+             <div className={styles.sectionContent}>
+                <p style={{textAlign: 'center', fontSize: '1.2rem'}}>
+                   This is only a <strong>bit</strong> about me. For a <strong>byte</strong>, see my CV below.
+                </p>
+                
+                <div style={{display: 'flex', justifyContent: 'center', marginTop: '2rem'}}>
+                   <a href="/static/pdfs/ab-final-cv-nov2025.pdf" target="_blank" rel="noreferrer" style={{textDecoration: 'none'}}>
+                      <Group text="Download CV" />
+                   </a>
+                </div>
+             </div>
+          </section>
+
+          {/* Education Section */}
+          <section className={styles.section}>
+             <h2 className={styles.sectionTitle}>education.</h2>
+             
+             <div className={styles.sectionContent}>
+                
+                {/* PhD Entry */}
+                <div className={styles.educationItem}>
+                   <h3 className={styles.degreeTitle}>PhD in Robotics</h3>
+                   <p className={styles.degreeDetails}>
+                      <strong>Advisors:</strong> Aaron Steinfeld (Chair), Jean Oh, Patrick Carrington, Cynthia L. Bennett<br/>
+                      <strong>Thesis:</strong> “Designing Supportive Agents with the Lived Experience of People with Disabilities”
+                   </p>
+                   <p className={styles.degreeDate}>2021 - Present | Carnegie Mellon University</p>
+                </div>
+
+                {/* MS Entry */}
+                <div className={styles.educationItem}>
+                   <h3 className={styles.degreeTitle}>M.S. in Robotics</h3>
+                   <p className={styles.degreeDetails}>
+                      <strong>Thesis:</strong> “Simulated Encounters of the Third Kind”
+                      [<a href="#" className={styles.textLink}>View PDF</a>]
+                   </p>
+                   <p className={styles.degreeDate}>2021 - 2025 | Carnegie Mellon University</p>
+                </div>
+
+                {/* BS Entry */}
+                <div className={styles.educationItem}>
+                   <h3 className={styles.degreeTitle}>B.S. in Mechanical Engineering</h3>
+                   <p className={styles.degreeDetails}>Concentration in Dynamic Systems &amp; Controls</p>
+                   <p className={styles.degreeDate}>2017 - 2021 | Stanford University</p>
+                </div>
+
+             </div>
+          </section>
+
+        </main>
+
+        {/* 4. Footer */}
+        <div className={styles.footerWrapper}>
+           <Footer />
+        </div>
+        
       </div>
     </div>
   );

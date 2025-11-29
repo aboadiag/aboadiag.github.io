@@ -1,283 +1,227 @@
+/* 1. Imports & Variables */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* ===============  doing this for an update =============== */
-
-/* ===============  GLOBAL =============== */
 :root {
-  --off-white: #faf7f2;
-  --dark-brown: #5b240c;
-  --red-brown: #943b16;
-  --sky-blue: #7ab3ff;
+  --color-off-white: #faf7f2;
+  --color-dark-brown: #5b240c;
+  --color-red-brown: #943b16;
+  --color-sky-blue: #7ab3ff;
+  
+  --font-heading: "Patrick Hand", cursive;
+  --font-body: "Roboto", sans-serif;
+  --font-secondary: "Poppins", sans-serif;
 }
 
+/* 2. Global Layout */
 .home {
-  background-color: var(--off-white);
+  background-color: var(--color-off-white);
   min-height: 100vh;
   width: 100%;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: clamp(1rem, 3vw, 2rem) 0;
-   /* clamp(2rem, 5vw, 4rem); */
+  padding: 0; /* Padding handled by internal containers */
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
+/* Main Content Wrapper (replaces div-2) */
+.mainContainer {
+  width: 90%;
+  max-width: 1200px; /* Standard max-width for readability */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
 }
 
-/* html, body {
-  width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
-} */
-
-/* ===============  NAVBAR  =============== */
-.navbar-2 {
+/* 3. Header & Navigation */
+.header {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
-  gap: 2rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+  margin-bottom: 4rem;
+  flex-wrap: wrap; /* Allow wrapping on mobile */
+  gap: 1rem;
 }
 
-.navbar-2 a {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  color: var(--dark-brown);
-  text-decoration: none;
-}
-
-.navbar-2 a:hover {
-  color: var(--red-brown);
-}
-
-/* ===============  HEADER SECTION  =============== */
-.name-component {
+.branding {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1rem;
 }
 
-.name-component img {
-  width: clamp(60px, 10vw, 96px);
+.logoImage {
+  width: clamp(40px, 8vw, 64px);
   height: auto;
+  border-radius: 50%;
 }
 
-.site-title {
-  font-family: "Patrick Hand", cursive;
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  color: var(--dark-brown);
+.siteTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--color-dark-brown);
+  margin: 0;
+  font-weight: 700;
 }
 
-/* ===============  HERO / INTRO  =============== */
-.hero {
+/* Navbar styling is handled by NavBar component, but we position it here */
+.navbarWrapper {
+  flex-grow: 1;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  justify-content: flex-end;
+}
+
+/* 4. Hero Section */
+.heroSection {
+  display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
-  margin-top: 3rem;
+  margin-bottom: 6rem;
+  flex-wrap: wrap-reverse; /* Text on top on mobile */
 }
 
-.hero-text {
+.heroImage {
   flex: 1 1 300px;
-  max-width: 600px;
-  min-width: 0;
-}
-
-.hero-text h1 {
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(2rem, 6vw, 4rem);
-  color: var(--dark-brown);
-  line-height: 1.2;
-}
-
-.hero-text p {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.6;
-  color: var(--dark-brown);
-  margin-top: 1rem;
-}
-
-.hero img {
-  flex: 1 1 300px;
-  max-width: clamp(250px, 40vw, 450px);
+  max-width: 450px;
   height: auto;
-  object-fit: contain;
+  border-radius: 20px;
+  box-shadow: 10px 10px 0px rgba(91, 36, 12, 0.1); /* stylized shadow */
 }
 
-/* Tablet breakpoint: stack hero earlier */
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-  }
-
-  .hero img {
-    max-width: 70%;
-  }
-
-  .hero-text h1 {
-    font-size: clamp(1.75rem, 6vw, 3rem);
-  }
+.heroContent {
+  flex: 1 1 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-/* ===============  EDUCATION SECTION  =============== */
-.education-bit {
-  margin-top: 5rem;
-  width: 100%;
-  max-width: clamp(600px, 80vw, 900px);
-  padding: 0 1rem;
-}
-
-.education-bit h2 {
-  color: var(--sky-blue);
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(2rem, 5vw, 3rem);
+.heroHeadline {
+  font-family: var(--font-secondary);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: var(--color-dark-brown);
+  line-height: 1.1;
   font-weight: 700;
+}
+
+.heroSubtext {
+  font-family: var(--font-body);
+  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  color: var(--color-dark-brown);
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+/* 5. Generic Section Styles */
+.section {
+  width: 100%;
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
-.education-item {
-  margin-top: 2rem;
+.sectionTitle {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--color-sky-blue); /* Default section color */
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
 }
 
-.education-item h3 {
-  color: var(--dark-brown);
-  font-size: clamp(1.25rem, 3vw, 1.75rem);
-  font-weight: 600;
+/* Variation for About Me section */
+.aboutSection .sectionTitle {
+  color: var(--color-red-brown);
 }
 
-.education-item p {
-  color: var(--dark-brown);
-  font-size: clamp(1rem, 2.2vw, 1.25rem);
+.sectionContent {
+  width: 100%;
+  max-width: 800px; /* Limit width for readability */
+  text-align: left; /* Default left align for lists/text */
+}
+
+/* Education List Items */
+.educationItem {
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--color-sky-blue);
+  padding-left: 1.5rem;
+}
+
+.degreeTitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--color-dark-brown);
+  margin-bottom: 0.5rem;
+}
+
+.degreeDetails {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--color-dark-brown);
   line-height: 1.5;
 }
 
-/* ===============  ABOUT SECTION  =============== */
-.a-bit-about-me-2 {
-  margin-top: 5rem;
-  width: 100%;
-  max-width: clamp(500px, 80vw, 800px);
-  padding: 0 1rem;
-  text-align: center;
+.degreeDate {
+  font-size: 0.9rem;
+  color: #777;
+  margin-top: 0.25rem;
 }
 
-.a-bit-about-me-2 h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  color: var(--red-brown);
-  font-weight: 900;
+/* 6. Links */
+.textLink {
+  color: var(--color-sky-blue);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.a-bit-about-me-2 p {
-  margin-top: 1.5rem;
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-  line-height: 1.6;
-  color: var(--dark-brown);
-}
-
-/* ===============  CONTACT SECTION  =============== */
-.contact-bar-scholar {
-  margin-top: 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(1rem, 4vw, 2rem);
-  width: 100%;
-  text-align: center;
-}
-
-.contact-bar-scholar h2 {
-  color: var(--red-brown);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-}
-
-.contact-bar-scholar a {
-  color: var(--dark-brown);
-  font-family: "Poppins", sans-serif;
-  font-size: clamp(1rem, 2vw, 1.25rem);
+.textLink:hover {
+  color: var(--color-red-brown);
   text-decoration: underline;
 }
 
-.contact-bar-scholar a:hover {
-  color: var(--red-brown);
+/* 7. Footer Wrapper */
+.footerWrapper {
+  width: 100%;
+  margin-top: auto; /* Pushes footer to bottom if content is short */
 }
 
-/* ===============  RESPONSIVE MEDIA QUERIES  =============== */
-@media (max-width: 1024px) {
-  .navbar-2 {
-    justify-content: center;
-    gap: 1.5rem;
-  }
-
-  .hero-text {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 600px) {
-  .home {
-    padding: 1rem 2rem;
-  }
-
-  .hero-text h1 {
-    font-size: clamp(1.5rem, 8vw, 2.5rem);
-  }
-
-  .contact-bar-scholar {
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
     flex-direction: column;
-    gap: 1rem;
+    align-items: flex-start;
   }
-}
+  
+  .navbarWrapper {
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+  }
 
-/* -----------------------
-   Overflow / flex shrink fixes
-   ----------------------- */
+  .heroSection {
+    text-align: center;
+    justify-content: center;
+  }
 
-.hero,
-.hero > * {
-  box-sizing: border-box;
-}
-
-.hero-text {
-  min-width: 0;
-  flex: 1 1 0;
-}
-
-.hero img {
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  min-width: 0;
-}
-
-.home, .hero, .education-bit, .contact-bar-scholar {
-  -webkit-font-smoothing: antialiased;
-}
-
-.home * {
-  word-wrap: break-word;
-  word-break: break-word;
-}
-
-.full-vw-fix {
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+  .heroContent {
+    align-items: center;
+  }
+  
+  .sectionContent {
+    text-align: center;
+  }
+  
+  .educationItem {
+    border-left: none;
+    border-top: 4px solid var(--color-sky-blue);
+    padding-top: 1rem;
+    padding-left: 0;
+  }
 }
