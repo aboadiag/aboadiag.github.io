@@ -219,12 +219,28 @@ export const Home = () => {
               </div>
             </div>
           </section>
+
+          {/* THE FIX: 
+             1. Move Footer INSIDE the canvas.
+             2. Add 'style' prop to position it absolutely at the bottom.
+             3. 'top: 2500px' places it right after your education section ends.
+          */}
+          <Footer 
+            style={{ 
+              position: 'absolute', 
+              top: '2500px', 
+              width: '100%' 
+            }} 
+          />
         </main>
       </div> 
       {/* End of main-content-canvas */}
 
       {/* 3. Footer - Now outside the canvas, so it sits at the bottom */}
-      <Footer />
+      {/* <footer>
+        <Footer />
+      </footer>
+       */}
       
     </div>
   );
