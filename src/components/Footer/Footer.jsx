@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import React from "react";
-import "./style.css";
+import styles from "./Footer.module.css";
 
 export const Footer = ({
   className = "",
@@ -12,7 +12,7 @@ export const Footer = ({
     <footer className={`footer ${className}`} style={style}>
       <section className="contact-bar-scholar">
         <div className="group-6">
-          <div className="text-wrapper-93">     
+          <div className="text-wrapper-93ssa">     
             <a href="mailto:aboadiag@andrew.cmu.edu" style={{ textDecoration: "none", color: "inherit" }}>
               aboadiag@andrew.cmu.edu
               </a>
