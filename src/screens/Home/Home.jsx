@@ -165,7 +165,7 @@ export const Home = () => {
                 rel="noopener noreferrer"
               >
                 <Group
-                  className="design-component-instance-node"
+                  className={styles['design-component-instance-node']}
                   divClassName="group-4"
                   property1="default"
                   rectangleClassName="group-2"

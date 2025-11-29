@@ -118,7 +118,7 @@ export const ArtPage = () => {
   }, [modalArt]);
 
   return (
-    <div className="art-page">
+    <div className={styles["art-page"]}>
       <NavBar className="navbar" />
 
       <div className="art-intro">
