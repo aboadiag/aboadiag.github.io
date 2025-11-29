@@ -247,7 +247,7 @@ export const Home = () => {
         </main>
 
         {/* FOOTER */}
-        <Footer className={styles.footer} />
+        <Footer />
       </div>
     </div>
   );
