@@ -1,192 +1,146 @@
+@import "./styleguide.css"; 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* --- Global Footer Container --- */
+/* --- CSS Variables (KEEP OR REMOVE): Delete this :root block if your styleguide.css handles all color and font variables correctly. --- */
+/* :root {
+  --off-white: #faf7f2;
+  --dark-brown: #5b240c;
+  --red-brown: #943b16;
+  --sky-blue: #7ab3ff;
+  --font-primary: "Roboto", Helvetica, sans-serif;
+  --font-accent: "Poppins", Helvetica, sans-serif;
+} */
+/* ------------------------------------------------------------------------------------------------------------------------------------------- */
+
+
+/* --- Global Footer Container (No absolute positioning) --- */
 .footer {
-  /*
-   * CRITICAL FIX: Removed absolute positioning (left, top, position).
-   * It now flows naturally after the main content, pushed down by the 'flex-grow: 1'
-   * applied to the main page wrapper (as discussed in previous steps).
-   */
-  position: relative; /* Maintain relative context for positioning elements if needed, but they should generally flow */
-  width: 100%; /* Take up full available width */
-  height: auto; /* Allow height to be determined by content */
-  padding: 40px 80px; /* Add padding to match the original fixed 'left: 80px' margin */
+  position: relative; 
+  width: 100%; 
+  height: auto; 
+  padding: 40px 80px; 
   box-sizing: border-box;
-  margin-top: 40px; /* Add space above the footer to separate it from the last section */
+  margin-top: 40px; 
 }
 
 /* --- Contact Bar Wrapper (The Main Layout Grid) --- */
 .footer .contact-bar-scholar {
-  /*
-   * CRITICAL FIX: Replaced absolute positioning with CSS Grid for robust layout.
-   * This sets up a 3-column layout for desktop.
-   */
+  /* CRITICAL FIX: Grid for 3-column desktop layout */
   display: grid;
-  /* Define columns for Contact | Scholar Icon | GitHub Icon */
-  grid-template-columns: 1fr auto auto; /* 1fr gives Contact all remaining space */
-  align-items: flex-start; /* Align all items to the top of the grid cell */
-  gap: 80px; /* Add horizontal spacing between the major sections */
+  /* Columns: Contact Info (responsive) | Scholar Link (auto width) | GitHub Link (auto width) */
+  grid-template-columns: minmax(200px, 1fr) auto auto; 
+  align-items: flex-start;
+  gap: clamp(40px, 5vw, 80px); /* Responsive gap */
   width: 100%;
-  max-width: 1468px; /* Restrict max width to match original design width */
-  margin: 0 auto; /* Center the content wrapper on large screens */
-
-  /* REMOVED: height: 171px; left: 80px; position: absolute; top: 2560px; width: 1468px; */
+  max-width: 1468px;
+  margin: 0 auto;
 }
 
-/* --- Inner group layout (Resetting internal element flow) --- */
+/* --- Inner group layout (Containing the three columns) --- */
 .footer .group-6 {
-  /*
-   * CRITICAL FIX: This class seems to wrap the entire contact bar content but has huge absolute dimensions.
-   * Removing fixed dimensions to allow content to flow inside the grid cell.
-   */
-  height: auto;
-  position: relative;
-  width: 100%;
+  /* CRITICAL FIX: Allows children to participate in the parent grid (the 3 columns) */
+  display: contents; 
 }
 
 /* --- Section 1: Contact & Email --- */
 
-/* 'Contact' large label */
+/* 'Contact' large label (text-wrapper-94) - Uses defined variables */
 .footer .text-wrapper-94 {
-  /* Reset positioning */
   position: static;
-  margin-bottom: 20px; /* Space below the heading */
-
-  /* Original styles preserved */
+  margin-bottom: 20px;
   color: var(--red-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 80px;
+  font-family: var(--font-primary);
+  font-size: clamp(2.5rem, 5vw, 5rem); 
   font-weight: 900;
   letter-spacing: 0;
-  line-height: 44px;
-  width: 308px;
+  line-height: 1.1;
+  width: auto;
 }
 
-/* Email */
+/* Email (text-wrapper-93) - Uses defined variables */
 .footer .text-wrapper-93 {
-  /* Reset positioning */
   position: static;
-
-  /* Original styles preserved */
   color: var(--dark-brown);
-  font-family: "Poppins", Helvetica;
-  font-size: 24px;
+  font-family: var(--font-accent);
+  font-size: clamp(1rem, 2vw, 24px); 
   font-weight: 400;
   letter-spacing: 0;
   line-height: 44px;
   white-space: nowrap;
-  /* width: 392px; (Kept for the wrapping constraint) */
 }
-
-.footer .text-wrapper-93:hover {
+.footer .text-wrapper-93 a {
+  text-decoration: none;
+  color: inherit;
+}
+.footer .text-wrapper-93 a:hover {
   color: var(--red-brown);
   text-decoration: underline;
 }
 
-/* --- Section 2: Google Scholar --- */
+/* --- Section 2: Google Scholar (link-google-scholar) --- */
 .footer .link-google-scholar {
-  /*
-   * CRITICAL FIX: Replaced absolute positioning with flex to center elements.
-   * This container is now one grid item.
-   */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; 
   text-align: center;
-  height: auto; /* Let content define height */
-  width: 120px; /* Give it a bit more responsive width */
-  padding-top: 5px; /* Adjust top padding if needed */
-
-  /* REMOVED: left: 640px; position: absolute; top: 0; width: 106px; */
+  height: auto;
+  width: auto; 
+  padding-top: 5px; 
+  text-decoration: none; 
 }
 
 .footer .google-scholar-logo {
-  position: static; /* Let it flow normally */
+  position: relative;
   height: 110px;
   width: 106px;
-  margin-bottom: 5px; /* Space between icon and label */
+  margin-bottom: 5px;
 }
 
-/* Scholar icon pieces - Kept their original relative/absolute styles
-   as they are SVG fragments that rely on being positioned within their parent */
-.footer .vector-4,
-.footer .vector-5,
-.footer .vector-6,
-.footer .vector-7 {
-  /* Original styles preserved */
-}
-
-/* Scholar link text area */
-.footer .https-scholar-google {
-  /* Reset positioning */
-  position: static;
-  color: transparent; /* Assuming this is a transparent overlay for click target */
-  display: block; /* Change to block for better flow control */
-  text-align: center;
-  height: auto;
-  width: auto;
-}
-
-/* "read my work" label */
+/* "read my work" label (text-wrapper-95) - Uses defined variables */
 .footer .text-wrapper-95 {
-  /* Reset positioning */
   position: static;
-  margin-top: -30px; /* Adjust margin to pull it closer to the icon based on original design */
-
-  /* Original styles preserved */
+  margin-top: 0; 
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: var(--font-primary); 
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 44px;
   white-space: nowrap;
-  width: 144px;
+  width: auto;
   text-align: center;
 }
+.footer .link-google-scholar:hover .text-wrapper-95 {
+    color: var(--red-brown);
+}
 
-/* --- Section 3: GitHub --- */
+/* --- Section 3: GitHub (img-wrapper) --- */
 .footer .img-wrapper {
-  /*
-   * CRITICAL FIX: Replaced absolute positioning with flex to center elements.
-   * This container is now one grid item.
-   */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: auto;
-  width: 120px;
-  padding-top: 10px; /* Adjust top padding if needed */
-
-  /* REMOVED: left: 1154px; position: absolute; top: 16px; width: 106px; */
+  width: auto;
+  padding-top: 10px;
+  text-decoration: none;
 }
 
 /* github icon inside wrapper */
 .footer .vector-8 {
   position: static;
   width: 98.29px;
-  margin-bottom: 5px; /* Space between icon and label */
+  margin-bottom: 5px;
 }
 
-/* GitHub link area (text area) - This class seems unnecessary and over-positioned/sized */
-.footer .https-github-com-3 {
-  /* Reset positioning (assuming this class is redundant, if you need it, set it to position: static) */
-  display: none; /* Hide or remove in JSX if it was a transparent click area */
-  /* If you MUST keep it, reset positioning: */
-  /* position: static; width: auto; height: auto; */
-}
-
-/* "visit my repos" label */
+/* "visit my repos" label (text-wrapper-96) - Uses defined variables */
 .footer .text-wrapper-96 {
-  /* Reset positioning */
   position: static;
-  margin-top: -30px; /* Adjust margin to pull it closer to the icon based on original design */
+  margin-top: 0;
 
-  /* Original styles preserved */
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 400;
   letter-spacing: 0;
@@ -194,36 +148,36 @@
   white-space: nowrap;
   text-align: center;
 }
+.footer .img-wrapper:hover .text-wrapper-96 {
+    color: var(--red-brown);
+}
 
-/* --- Mobile Responsiveness (Stacks content vertically below 768px) --- */
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .footer {
-    padding: 30px 20px; /* Reduce horizontal padding on mobile */
+    padding: 30px 20px;
   }
 
   .footer .contact-bar-scholar {
-    /* Switch to a single column layout */
     grid-template-columns: 1fr;
-    gap: 40px; /* Increase vertical gap between sections */
-    text-align: center;
+    gap: 40px;
+  }
+  
+  .footer .group-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; 
   }
 
   .footer .text-wrapper-94,
   .footer .text-wrapper-93 {
     text-align: center;
-    width: 100%; /* Allow contact info to span full width */
+    width: 100%;
   }
 
   .footer .text-wrapper-94 {
-    margin-bottom: 0; /* Tighten up spacing */
-  }
-
-  /* Center the block containers on mobile */
-  .footer .link-google-scholar,
-  .footer .img-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    /* Ensure internal flex centers everything */
-    align-items: center;
+    margin-bottom: 5px;
   }
 }

@@ -12,26 +12,26 @@ export const Research = () => {
           agents.&nbsp;&nbsp;I commonly{" "}
         </span>
 
-        <span className="text-wrapper-123">&nbsp;</span>
+        <span className={styles['text-wrapper-123']}>&nbsp;</span>
 
-        <span className="text-wrapper-124">cooperatively design</span>
+        <span className={styles['text-wrapper-124']}>cooperatively design</span>
 
-        <span className="text-wrapper-122"> (“co-design) with</span>
+        <span className={styles['text-wrapper-122']}> (“co-design) with</span>
 
-        <span className="text-wrapper-125"> people with disabilities</span>
+        <span className={styles['text-wrapper-125']}> people with disabilities</span>
 
-        <span className="text-wrapper-122">
+        <span className={styles['text-wrapper-122']}>
           {" "}
           (PwDs) who are non-professional designers to ensure more
         </span>
 
-        <span className="text-wrapper-125"> equitable experiences</span>
+        <span className={styles['text-wrapper-125']}> equitable experiences</span>
 
-        <span className="text-wrapper-122"> with</span>
+        <span className={styles['text-wrapper-122']}> with</span>
 
-        <span className="text-wrapper-123">&nbsp;&nbsp;accessible</span>
+        <span className={styles['text-wrapper-123']}>&nbsp;&nbsp;accessible</span>
 
-        <span className="text-wrapper-122">
+        <span className={styles['text-wrapper-122']}>
           {" "}
           robotic/agentic interfaces. I use{" "}
         </span>

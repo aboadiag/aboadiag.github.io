@@ -6,55 +6,62 @@ export const Footer = ({
   className = "",
   scholarHref = "https://scholar.google.com/citations?hl=en&user=OYnusysAAAAJ",
   githubHref = "https://github.com/aboadiag",
-  style = {},           // NEW optional inline style prop
+  style = {},
 }) => {
   return (
-    <footer className={`footer ${className}`} style={style}>
-      <section className="contact-bar-scholar">
-        <div className="group-6">
-          <div className="text-wrapper-93ssa">     
+    // CRITICAL FIX 1: Use styles.footer for CSS Module targeting
+    <footer className={`${styles.footer} ${className}`} style={style}>
+      {/* CRITICAL FIX 2: Use styles['contact-bar-scholar'] for scoping */}
+      <section className={styles['contact-bar-scholar']}>
+        {/* CRITICAL FIX 3: Use styles['group-6'] for scoping */}
+        <div className={styles['group-6']}>
+          
+          {/* Contact Block */}
+          {/* Note: Corrected 'text-wrapper-93ssa' to 'text-wrapper-93' to match typical CSS naming */}
+          <div className={styles['text-wrapper-94']}>Contact</div> 
+          <div className={styles['text-wrapper-93']}>
             <a href="mailto:aboadiag@andrew.cmu.edu" style={{ textDecoration: "none", color: "inherit" }}>
               aboadiag@andrew.cmu.edu
-              </a>
-              </div>
-          <div className="text-wrapper-94">Contact</div>
-
-          <div className="link-google-scholar">
-            <div className="google-scholar-logo" aria-hidden="true">
-              <img className="vector-4" alt="" src="/img/vector-32.svg" />
-              <img className="vector-5" alt="" src="/img/vector-33.svg" />
-              <img className="vector-6" alt="" src="/img/vector-34.svg" />
-              <img className="vector-7" alt="" src="/img/vector-35.svg" />
-            </div>
-
-            <a
-              className="https-scholar-google"
-              href={scholarHref}
-              rel="noopener noreferrer"
-              target="_blank"
-              aria-label="Google Scholar profile for Abena Boadi-Agyemang"
-            >
-              Google Scholar
             </a>
           </div>
 
-          <div className="text-wrapper-95">read my work</div>
 
-          <div className="img-wrapper">
-            <img className="vector-8" alt="" src="/img/vector-36.svg" />
-          </div>
-
+          {/* Google Scholar Block - Link wraps the entire clickable area */}
           <a
-            className="https-github-com-3"
+            className={styles['link-google-scholar']} 
+            href={scholarHref}
+            rel="noopener noreferrer"
+            target="_blank"
+            aria-label="Google Scholar profile for Abena Boadi-Agyemang"
+          >
+            <div className={styles['google-scholar-logo']} aria-hidden="true">
+              <img className={styles['vector-4']} alt="Google Scholar Logo Vector" src="/img/vector-32.svg" />
+              <img className={styles['vector-5']} alt="" src="/img/vector-33.svg" />
+              <img className={styles['vector-6']} alt="" src="/img/vector-34.svg" />
+              <img className={styles['vector-7']} alt="" src="/img/vector-35.svg" />
+            </div>
+            
+            {/* text-wrapper-95 for the visible label. */}
+            <div className={styles['text-wrapper-95']}>read my work</div>
+          </a>
+
+          
+          {/* GitHub Block - Link wraps the entire clickable area */}
+          <a
+            className={styles['img-wrapper']} // Reusing .img-wrapper as the link container
             href={githubHref}
             rel="noopener noreferrer"
             target="_blank"
             aria-label="GitHub profile for Abena Boadi-Agyemang"
           >
-              GitHub Profile
+            <img className={styles['vector-8']} alt="GitHub Logo Vector" src="/img/vector-36.svg" />
+            
+            {/* text-wrapper-96 for the visible label. */}
+            <div className={styles['text-wrapper-96']}>visit my repos</div>
           </a>
+          
+          {/* Redundant elements from the original structure are now consolidated into the <a> tags */}
 
-          <div className="text-wrapper-96">visit my repos</div>
         </div>
       </section>
     </footer>
@@ -65,5 +72,5 @@ Footer.propTypes = {
   className: PropTypes.string,
   scholarHref: PropTypes.string,
   githubHref: PropTypes.string,
-  style: PropTypes.object, // added
+  style: PropTypes.object,
 };

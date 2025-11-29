@@ -30,7 +30,10 @@ export const Projects = () => {
         <div className="text-wrapper-101">Art</div>
       </div> */}
 
-      <NavBar className="navbar" />
+        <header>
+          {/* The NavBar component includes the site logo and title internally. */}
+          <NavBar className={styles.navbar} />
+        </header>
 
 
       <div className="project-persuasive-2">
@@ -53,7 +56,7 @@ export const Projects = () => {
         </p>
 
         
-        <p className="persuasive-blurb">
+        <p className={styles['persuasive-blurb']}>
           Visual art-making can support mental wellbeing.
           Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user "involvement" (a proxy for engagement; low, medium, high),
           to adapt a social robotic coach's personality (i.e., charismatic/direct vs uncharismatic/indirect) 
