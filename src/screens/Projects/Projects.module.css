@@ -2,13 +2,9 @@
    Projects - Responsive Styles
    Replace existing projects.css
    =========================== */
+@import "./styleguide.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-:root {
-  --off-white: #faf7f2;
-  --dark-brown: #5b240c;
-  --red-brown: #943b16;
-  --moss-green: #6b8a58;
-}
 
 /* ---------- Base ---------- */
 .projects {
