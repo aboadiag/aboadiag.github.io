@@ -61,7 +61,8 @@ export const Home = () => {
             alt="Favicon sketch of Abena's face on blue background"
             src="/img/bena-favicon-figma-1-2.png"
           />
-          <h1 className="site-title">Abena Boadi-Agyemang</h1>
+          {/* <h1 className="site-title">Abena Boadi-Agyemang</h1> */}
+          <h1 className="text-4xl font-extrabold">THIS CONTENT IS NEW AND CORRECT V4.0</h1>
         </div>
         
         {/* --------------NAV BAR------------- */}
