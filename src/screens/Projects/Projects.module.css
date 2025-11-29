@@ -1,9 +1,11 @@
+@import "./styleguide.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
+
 /* ===========================
    Projects - Responsive Styles
    Replace existing projects.css
    =========================== */
-@import "./styleguide.css";
-
+   
 /* ---------- Base ---------- */
 .projects {
   background-color: var(--off-white);

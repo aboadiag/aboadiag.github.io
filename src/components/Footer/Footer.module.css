@@ -2,14 +2,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
 /* --- CSS Variables (KEEP OR REMOVE): Delete this :root block if your styleguide.css handles all color and font variables correctly. --- */
-/* :root {
+:root {
   --off-white: #faf7f2;
   --dark-brown: #5b240c;
   --red-brown: #943b16;
   --sky-blue: #7ab3ff;
   --font-primary: "Roboto", Helvetica, sans-serif;
   --font-accent: "Poppins", Helvetica, sans-serif;
-} */
+}
 /* ------------------------------------------------------------------------------------------------------------------------------------------- */
 
 
