@@ -8,7 +8,7 @@ import { Footer } from "../../components/Footer";
 // Force rebuild trigger
 
 
-export const React.memo(() => {
+export const Home = React.memo(() => {
     // *** VITE HASH BUSTER: Added comment to force new build hash ***
   // console.log('Forcing new build hash to bypass stale cache.');
   return (
