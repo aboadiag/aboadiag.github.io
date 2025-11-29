@@ -16,16 +16,25 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
+        # *** FIX 1: Ensure a deep, fresh clone of the source code (fetch-depth: 0) ***
+        with:
+          fetch-depth: 0
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
+      
+      # *** FIX 2 (NEW): Purge ALL stale dependency cache before npm install ***
+      - name: Purge Node Modules and Cache
+        run: |
+          rm -rf node_modules
+          npm cache clean --force
 
       - name: Install Dependencies
         run: npm install
 
-      # *** NEW CRITICAL STEP: DELETE OLD BUILD ***
+      # *** FIX 3: DELETE OLD BUILD ARTIFACTS ***
       - name: Cleanup Old Build Artifacts
         run: rm -rf dist
       
@@ -42,5 +51,5 @@ jobs:
           publish_branch: gh-pages
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          # *** NEW FIX: Force a push, bypassing the "Everything up-to-date" error ***
+          # *** FIX 4: Force a push, bypassing "Everything up-to-date" ***
           force_orphan: true
