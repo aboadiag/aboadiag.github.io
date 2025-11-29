@@ -1,50 +1,677 @@
+@import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* --- Root Container --- */
 .home {
+  /* display: flex;
+  min-height: 2757px;
+  min-width: 1440px;
+  width: 100%; */
   display: flex;
-  flex-direction: column; /* CRITICAL: Enables column flex layout */
-  min-height: 100vh;     /* CRITICAL: Ensures the container spans the full viewport height */
+  flex-direction: column; /* optional */
+  min-height: 100vh;     /* full viewport height */
   width: 100%;
-  background-color: var(--off-white);
+  background-color: var(--off-white); /* move background here */
+  
 }
 
-/* --- Content Wrapper (This now replaces the old fixed-height .div-2) --- */
-.div-2 {
-  /*
-   * CRITICAL FIX: This container must absorb all available space 
-   * to push the footer to the bottom.
-   */
-  flex-grow: 1; 
+.home .div-2 {
   background-color: var(--off-white);
+  height: 2757px;
   overflow: hidden;
   position: relative;
   width: 100%;
+  /* width: 1440px; */
+}
+
+.home .bena-background {
+  height: 550px;
+  left: 833px;
+  position: absolute;
+  top: 252px;
+  width: 540px;
+}
+
+.home .name-component {
+  display: flex;
+  gap: 20px;
+  height: 96px;
+  left: 155px;
+  position: absolute;
+  top: 40px;
+  width: 485px;
+}
+
+.home .bena-favicon-figma-3 {
+  aspect-ratio: 1;
+  height: 96px;
+  margin-left: -116px;
+  object-fit: cover;
+  width: 96px;
+}
+
+.home .site-title {
+  color: var(--dark-brown);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 30px;
+  font-weight: 700;
+  height: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 485px;
+}
+
+.home .hi-my-name-is-abena-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 288px;
+  width: 540px;
+}
+
+.home .text-wrapper-69 {
+  font-weight: 500;
+}
+
+.home .text-wrapper-70 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.home .final-year-phd-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 500;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 710px;
+  width: 656px;
+}
+
+.home .i-am-in-the-fifth-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 1010px;
+  width: 1253px;
+}
+
+.home .text-wrapper-71 {
+  color: #5b240c;
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 44px;
+}
+
+.home .text-wrapper-72 {
+  font-weight: 700;
+}
+
+.home .text-wrapper-73 {
+  font-family: "Roboto-ExtraBold", Helvetica;
+  font-weight: 800;
+}
+
+.home .text-wrapper-74 {
+  color: var(--dark-brown); /* same as your normal paragraph text */
+  text-decoration: underline; /* removes the underline if you want */
+  /* margin: 4rem 0;  */
+  font-weight: 600; /* optional: bold the link */
+}
+
+.home .text-wrapper-74:hover {
+    color: var(--red-brown); /* hover effect for accessibility */
+
+  /* text-decoration: none; optional: show underline on hover */
+}
+
+.home .text-wrapper-75 {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.home .text-wrapper-76 {
+  font-weight: 900;
+}
+
+.home .researcher-designer-2 {
+  color: transparent;
+  font-family: "Poppins", Helvetica;
+  font-size: 100px;
+  font-weight: 400;
+  position: absolute;
+  top: 220px;
+  left: 97px;
+  line-height: 116px;
+  width: 674px;
+
+  /* 🪄 new fixes */
+  display: block; /* allow text to wrap */
+  white-space: normal; /* allow line breaks */
+  text-align: left; /* align text properly */
 }
 
 
-/*
- * WARNING: The following styles were REMOVED from the snippet
- * because they use 'position: absolute', fixed 'left', and 'top' values, 
- * which conflict with your new responsive footer.module.css:
- * * .home .bena-background
- * .home .name-component
- * .home .bena-favicon-figma-3
- * * .home .contact-bar-scholar 
- * .home .text-wrapper-93
- * .home .text-wrapper-94
- * .home .link-google-scholar
- * .home .google-scholar-logo
- * .home .vector-4, .vector-5, .vector-6, .vector-7
- * .home .https-scholar-google
- * .home .text-wrapper-95 
- * .home .img-wrapper
- * .home .https-github-com-3
- * .home .text-wrapper-96
- * * If you need to restore the positioning of any of the elements above (other than the footer),
- * please provide the specific CSS block you need to keep, and I will refactor it to use
- * relative/flex positioning instead of absolute.
- */
+.home .text-wrapper-77 {
+  color: #5b240c;
+  font-weight: 800;
+}
 
-/* --- Rest of the existing Home.module.css styles are kept as-is --- */
-/* [Immersive content redacted for brevity. Total file size: 1.05 KB] */
+.home .text-wrapper-78 {
+  color: #943b16;
+  font-family: "Roboto", Helvetica;
+}
+
+.home .text-wrapper-79 {
+  color: #697b6c;
+  font-family: "Roboto", Helvetica;
+}
+
+.home .text-wrapper-80 {
+  color: #5b240c;
+  font-family: "Roboto", Helvetica;
+}
+
+.home .text-wrapper-81 {
+  color: #5b240c;
+  font-family: "Linefont", Helvetica;
+}
+
+.home .text-wrapper-82 {
+  align-items: flex-end;
+  color: var(--sky-blue);
+  display: flex;
+  font-family: "Roboto", Helvetica;
+  font-size: 100px;
+  font-weight: 700;
+  height: 116px;
+  justify-content: center;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 116px;
+  position: absolute;
+  top: 834px;
+  white-space: nowrap;
+}
+
+.home .navbar-2 {
+  display: flex;
+  gap: 68px;
+  height: 30px;
+  left: 880px;
+  position: absolute;
+  top: 40px;
+  width: 552px;
+}
+
+.home .text-wrapper-83 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  width: 68px;
+}
+
+.home .text-wrapper-84 {
+  color: var(--dark-brown);
+  display: block;
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  width: 104px;
+}
+
+.home .text-wrapper-85 {
+  color: var(--dark-brown);
+  display: block;
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  width: 92px;
+}
+
+.home .text-wrapper-86 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 25px;
+  font-weight: 400;
+  height: 29px;
+  letter-spacing: 0;
+  line-height: normal;
+  white-space: nowrap;
+  width: 34px;
+}
+
+.home .a-bit-about-me-2 {
+  height: 163px;
+  left: 368px;
+  position: absolute;
+  top: 2280px;
+  width: 824px;
+}
+
+.home .this-is-only-a-bit-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 0;
+  width: 822px;
+}
+
+.home .design-component-instance-node {
+  height: 108px !important;
+  left: 283px !important;
+  position: absolute !important;
+  top: 55px !important;
+  width: 224px !important;
+}
+
+.home .group-2 {
+  background-color: var(--sky-blue) !important;
+  border: 1px solid !important;
+  border-color: #000000 !important;
+}
+
+.home .group-3 {
+  border-color: var(--dark-brown) !important;
+  box-shadow: 0px 4px 4px #00000040 !important;
+}
+
+.home .group-4 {
+  color: var(--dark-brown) !important;
+  font-family: "Ribeye", Helvetica !important;
+  font-size: 40px !important;
+  height: 50.93% !important;
+  width: 28.12% !important;
+}
+
+.home .education-bit {
+  height: 810px;
+  left: 107px;
+  position: absolute;
+  top: 1350px;
+  width: 1131px;
+}
+
+.home .ellipse-5 {
+  background-color: var(--dark-brown);
+  border-radius: 6.5px;
+  height: 13px;
+  left: 33px;
+  position: absolute;
+  top: 173px;
+  width: 13px;
+}
+
+.home .ellipse-6 {
+  background-color: var(--dark-brown);
+  border-radius: 6.5px;
+  height: 13px;
+  left: 33px;
+  position: absolute;
+  top: 435px;
+  width: 13px;
+}
+
+.home .ellipse-7 {
+  background-color: var(--dark-brown);
+  border-radius: 6.5px;
+  height: 13px;
+  left: 33px;
+  position: absolute;
+  top: 697px;
+  width: 13px;
+}
+
+.home .a-bit-about-me-3 {
+  height: 810px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 1145px;
+}
+
+.home .phd-in-robotics-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 210px;
+  width: 1065px;
+}
+
+.home .text-wrapper-87 {
+  font-weight: 600;
+}
+
+.home .text-wrapper-88 {
+  color: #5b240c;
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 44px;
+}
+
+.home .text-wrapper-89 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 160px;
+  white-space: nowrap;
+}
+
+.home .m-s-in-robotics-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 472px;
+  width: 1065px;
+}
+
+.home .text-wrapper-90 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 422px;
+  white-space: nowrap;
+}
+
+.home .b-s-in-mechanical-2 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 400;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 734px;
+  width: 1068px;
+}
+
+.home .text-wrapper-91 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
+  font-weight: 600;
+  left: 63px;
+  letter-spacing: 0;
+  line-height: 40px;
+  position: absolute;
+  top: 684px;
+  white-space: nowrap;
+}
+
+.home .text-wrapper-92 {
+  align-items: flex-end;
+  color: var(--sky-blue);
+  display: flex;
+  font-family: "Roboto", Helvetica;
+  font-size: 80px;
+  font-weight: 700;
+  height: 116px;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 116px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.home .mask-group {
+  display: flex;
+  gap: 161px;
+  height: 570px;
+  left: 790px;
+  position: absolute;
+  top: 218px;
+  width: 570px;
+}
+
+.home .bena-mug-removebg-2 {
+  aspect-ratio: 0.80;
+  height: 570px;
+  margin-left: 101px;
+  object-fit: cover;
+  overflow: visible;
+  width: 430px;
+}
+
+.home .bena-mask-2 {
+  height: 570px;
+  margin-top: 643px;
+  width: 570px;
+}
+
+.home .vector-3 {
+  height: 420px;
+  left: 789px;
+  position: absolute;
+  top: 336px;
+  width: 568px;
+}
+
+.home .contact-bar-scholar {
+  display: flex;
+  height: 171px;
+  left: 80px;
+  position: absolute;
+  top: 2560px;
+  width: 1468px;
+}
+
+.home .group-6 {
+  height: 2646px;
+  position: relative;
+  width: 2617px;
+}
+
+.home .text-wrapper-93 {
+  color: var(--dark-brown);
+  text-decoration: underline;
+  font-family: "Poppins", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
+  width: 392px;
+}
+
+.home .text-wrapper-93:hover{
+  color: var(--red-brown);
+  text-decoration: underline;
+}
+
+.home .text-wrapper-94 {
+  color: var(--red-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 80px;
+  font-weight: 900;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 36px;
+  width: 308px;
+}
+
+.home .link-google-scholar {
+  height: 115px;
+  left: 640px;
+  position: absolute;
+  top: 0;
+  width: 106px;
+}
+
+.home .google-scholar-logo {
+  height: 110px;
+  left: 0;
+  position: absolute;
+  top: 5px;
+  width: 106px;
+}
+
+.home .vector-4 {
+  height: 80.91%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50.94%;
+}
+
+.home .vector-5 {
+  height: 88.18%;
+  left: 45.28%;
+  position: absolute;
+  top: 0;
+  width: 54.72%;
+}
+
+.home .vector-6 {
+  height: 57.27%;
+  left: 21.70%;
+  position: absolute;
+  top: 42.73%;
+  width: 56.60%;
+}
+
+.home .vector-7 {
+  height: 16.36%;
+  left: 24.53%;
+  position: absolute;
+  top: 42.73%;
+  width: 51.89%;
+}
+
+.home .https-scholar-google {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 110px;
+  justify-content: center;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: -9px;
+  width: 106px;
+}
+
+.home .text-wrapper-95 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 621px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
+  width: 144px;
+}
+
+.home .img-wrapper {
+  display: flex;
+  height: 100px;
+  left: 1154px;
+  position: absolute;
+  top: 16px;
+  width: 106px;
+}
+
+.home .vector-8 {
+  flex: 1;
+  width: 98.29px;
+}
+
+.home .https-github-com-3 {
+  align-items: center;
+  color: transparent;
+  display: flex;
+  font-family: "Inter", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  height: 2610px;
+  justify-content: center;
+  left: 1167px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 36px;
+  width: 1440px;
+}
+
+.home .text-wrapper-96 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  left: 1140px;
+  letter-spacing: 0;
+  line-height: 44px;
+  position: absolute;
+  top: 120px;
+  white-space: nowrap;
+}
