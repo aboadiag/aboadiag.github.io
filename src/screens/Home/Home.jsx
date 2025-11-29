@@ -5,9 +5,46 @@ import { NavBar } from "../../components/NavBar";
 import styles from "./Home.module.css";
 import { Footer } from "../../components/Footer";
 
+
+// --- Custom Error Handling for Chunk Loading Failures (Version Skew) ---
+
+/**
+ * Global error handler for dynamic import failures.
+ * When a chunk fails to load (often due to browser caching an old HTML file
+ * that references a deleted/renamed JS chunk in a new deployment), this function
+ * forces a page reload to retrieve the fresh HTML and manifest.
+ */
+function handleLoadError() {
+  const MAX_RELOADS = 1; // Only attempt to reload once to prevent an infinite loop
+  const RELOAD_KEY = 'app_reload_attempt';
+  const currentAttempts = sessionStorage.getItem(RELOAD_KEY) ? parseInt(sessionStorage.getItem(RELOAD_KEY), 10) : 0;
+
+  if (currentAttempts < MAX_RELOADS) {
+    console.error("Chunk failed to load (version skew likely). Initiating graceful page reload...");
+    sessionStorage.setItem(RELOAD_KEY, currentAttempts + 1);
+    // Force a full page reload to fetch the new index.html
+    window.location.reload();
+  } else {
+    console.error("Chunk failed to load. Max reload attempts reached. Please clear cache manually.");
+    sessionStorage.removeItem(RELOAD_KEY); // Reset attempts after failure
+  }
+}
+
+// Attach the load error handler to the window globally
+if (typeof window !== 'undefined') {
+    // Clear the reload attempt counter on a successful script execution
+    sessionStorage.removeItem('app_reload_attempt');
+    
+    // Fallback handler for script errors that bubble up
+    window.addEventListener('error', (event) => {
+        // A generic check for script loading failure errors
+        if (event.message.includes('Loading chunk failed') || (event.target instanceof HTMLScriptElement && event.target.src)) {
+            handleLoadError();
+        }
+    });
+}
+
 // Force rebuild trigger
-
-
 export const Home = () => {
     // *** VITE HASH BUSTER: Added comment to force new build hash ***
   // console.log('Forcing new build hash to bypass stale cache.');
