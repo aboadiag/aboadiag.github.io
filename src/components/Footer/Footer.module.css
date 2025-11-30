@@ -43,7 +43,7 @@
 .footer .text-wrapper-94 { /* "Contact" Label */
   margin-bottom: 20px;
   color: var(--red-brown);
-  font-family: var(--font-primary);
+  font-family: "Roboto", Helvetica;
   font-size: clamp(2.5rem, 5vw, 5rem); 
   font-weight: 900;
   line-height: 1.1;
@@ -51,7 +51,7 @@
 
 .footer .text-wrapper-93 { /* Email Address */
   color: var(--dark-brown);
-  font-family: var(--font-accent);
+  font-family: "Roboto", Helvetica;
   font-size: clamp(1rem, 2vw, 24px); 
   font-weight: 400;
   line-height: 44px;
@@ -114,7 +114,7 @@
 
 .footer .text-wrapper-95 { /* "read my work" */
   color: var(--dark-brown);
-  font-family: var(--font-primary); 
+  font-family: "Roboto", Helvetica;
   font-size: 24px;
   font-weight: 400;
   line-height: 44px;
@@ -140,7 +140,7 @@
 
 .footer .text-wrapper-96 { /* "visit my repos" */
   color: var(--dark-brown);
-  font-family: var(--font-primary);
+  font-family: "Roboto", Helvetica;
   font-size: 24px;
   font-weight: 400;
   line-height: 44px;
