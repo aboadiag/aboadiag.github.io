@@ -187,7 +187,7 @@ export const Projects = () => {
               <div className={styles['description-header']}>
                 Description 
                 <span className={styles['bracket']}> [</span>
-                <a href="static/pdfs/me-suri-2020-accessible.pdf" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                <a href="/pdfs/me-suri-2020-accessible.pdf" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
                   project poster
                 </a>
                 <span className={styles['bracket']}>]</span>
