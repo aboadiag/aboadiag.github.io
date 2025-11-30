@@ -3,201 +3,543 @@
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* --- Main Layout --- */
+/* Main Container */
 .projects {
   background-color: var(--off-white);
+  /* Use min-height so it can grow if needed, but respect your design height */
+  min-height: 3845px; 
   width: 100%;
-  min-height: 100vh;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow-x: hidden;
-  padding-bottom: 0; 
+  overflow-x: hidden; /* Prevent horizontal scroll bars */
 }
 
-/* Header Wrapper */
-.header-wrapper {
-  width: 100%;
-  /* If your NavBar needs specific positioning context */
-  display: flex;
-  justify-content: center;
-}
-
-/* --- Intro Text --- */
+/* --- Intro Text Section --- */
 .during-my-phd-i-have {
   color: var(--dark-brown);
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 1.5vw, 1.25rem);
-  line-height: 1.5;
-  width: 90%;
-  max-width: 1140px;
-  margin: 100px auto 40px; /* Top margin accounts for navbar */
-  text-align: left;
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 320px;
+  width: 1143px;
 }
 
 .text-wrapper-97 {
   color: var(--dark-brown);
-  font-family: "Roboto", sans-serif;
-  font-weight: 700; /* Bold title */
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.2;
-  width: 90%;
-  max-width: 1140px;
-  margin: 0 auto 60px;
-  text-align: left;
+  font-family: "Roboto", Helvetica;
+  font-size: 100px;
+  font-weight: 400;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 228px;
+  width: 840px;
 }
 
-/* --- Project Cards (Shared Styling) --- */
-/* Each project block shares these properties */
-.project-persuasive-2,
-.project-robot-2,
-.project-haptics-2,
-.project-versatile-2 {
-  background-color: var(--red-brown); /* The card background */
-  width: 90%;
-  max-width: 1200px;
-  margin-bottom: 60px; /* Space between projects */
-  border-radius: 20px;
-  padding: 40px;
-  box-sizing: border-box;
-  
-  /* Flex Layout: Side by Side */
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 40px;
-  
-  /* Text inside cards is white */
+/* --- Project 1: Persuasive Social Robots --- */
+.project-persuasive-2 {
+  background-color: var(--red-brown);
+  border-radius: 84px;
+  height: 530px;
+  left: 80px;
+  position: absolute;
+  top: 570px;
+  width: 1273px;
+}
+
+.we-used-various-2 {
   color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 28px;
+  font-weight: 600;
+  height: 12.08%;
+  left: 59.59%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 21.89%;
+  width: 37.91%;
 }
 
-/* --- Media & Text Splitters --- */
-.media-content,
-.text-content {
-  flex: 1; /* Both take equal width */
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-/* Ensure images/videos fit in their container */
-.rectangle-9,
-.robot-med-haptics-2,
-.rectangle-12,
-.vers-haptics-2,
-.vers-haptics-3,
-video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
+.rectangle-9 {
+  height: 72.08%;
+  left: 5.04%;
   object-fit: cover;
-  background-color: #000; /* Placeholder for loading videos */
+  position: absolute;
+  top: 15.09%;
+  width: 52.48%;
+  border-radius: 20px; /* Optional: rounds video corners */
 }
 
-/* --- Typography Inside Cards --- */
-.persuasive-title,
-.robot-mediated,
-.accessible-haptics,
-.versatile-haptics {
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: clamp(1.5rem, 2.5vw, 2rem);
-  line-height: 1.2;
-  margin-bottom: 10px;
-}
-
-.persuasive-blurb,
-.blurb-4,
-.text-wrapper-109,
-.text-wrapper-115 {
-  font-family: "Roboto", sans-serif;
-  font-size: clamp(1rem, 1.2vw, 1.15rem);
-  line-height: 1.6;
-  opacity: 0.95;
-}
-
-/* Links inside cards */
-.link-text {
+.persuasive-title {
   color: var(--off-white);
-  text-decoration: underline;
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
   font-weight: 700;
-  margin: 0 5px;
-  cursor: pointer;
-}
-.link-text:hover {
-  color: var(--sky-blue); /* Hover effect */
+  height: 9.43%;
+  left: 20.03%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 3.77%;
+  width: 56.99%;
 }
 
-/* Captions (Italic) */
-.spring-fall,
-.collage-featuring-co-2,
-.challenges-of-2,
-.text-wrapper-113,
-.text-wrapper-114,
-.right-final-2,
-.text-wrapper-105,
-.text-wrapper-112,
-.text-wrapper-117 {
+.persuasive-blurb {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 20px;
+  font-weight: 600;
+  height: 60.75%;
+  left: 59.59%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 21.89%;
+  width: 37.91%;
+}
+
+.div-3 {
+  color: var(--off-white);
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 9.43%;
+  left: 59.59%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 15.09%;
+  width: 36.87%;
+}
+
+.text-wrapper-102 {
+  color: #e8e3cf;
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.text-wrapper-103 {
+  color: var(--off-white);
+  font-size: 24px;
+}
+
+.text-wrapper-104 {
+  color: var(--off-white);
+  font-size: 24px;
+  text-decoration: underline;
+}
+.text-wrapper-104:hover {
+  color: var(--dark-brown);
+}
+
+.spring-fall {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
   font-style: italic;
-  font-size: 0.9rem;
-  opacity: 0.8;
-  margin-top: 5px;
+  font-weight: 500;
+  height: 8.49%;
+  left: 4.63%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 103.77%;
+  width: 19.98%;
 }
 
-/* --- Section Dividers / Name Components --- */
+.collage-featuring-co-2 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  height: 6.04%;
+  left: 7.31%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 90.19%;
+  white-space: nowrap;
+  width: 50.98%;
+}
+
+/* --- Project 2: Robot Mediated Haptics --- */
+.project-robot-2 {
+  height: 530px;
+  left: 80px;
+  position: absolute;
+  top: 1270px;
+  width: 1273px;
+}
+
+.rectangle-10 {
+  background-color: var(--red-brown);
+  border-radius: 84px;
+  height: 126.04%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.blurb-4 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  height: 78.49%;
+  left: 58.76%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 19.81%;
+  width: 40.38%;
+}
+
+.robot-mediated {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 12.08%;
+  left: 6.28%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 3.96%;
+  width: 81.38%;
+}
+
+.robot-med-haptics-2 {
+  height: 73.02%;
+  left: 5.03%;
+  position: absolute;
+  top: 16.98%;
+  width: 50.75%;
+  border-radius: 20px;
+}
+
+.text-wrapper-105 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  height: 9.43%;
+  left: 4.24%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 129.25%;
+  width: 30.95%;
+}
+
+.challenges-of-2 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 400;
+  height: 16.23%;
+  left: 4.24%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 92.26%;
+  width: 51.69%;
+}
+
+.text-wrapper-106 { font-weight: 600; }
+.text-wrapper-107 { font-style: italic; font-weight: 600; }
+
+/* --- Name / Divider --- */
 .name-component-2 {
   display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 20px;
-  margin: 60px 0;
+  height: 96px;
+  left: 155px;
+  position: absolute;
+  top: 40px;
+  width: 485px;
 }
+
 .bena-favicon-figma-4 {
-  width: 60px;
-  height: 60px;
+  aspect-ratio: 1;
+  height: 96px;
+  margin-left: -116px;
   object-fit: cover;
+  width: 96px;
 }
+
 .text-wrapper-108 {
-  font-family: "Figma Hand-Bold", "Patrick Hand", cursive; /* Use your handwriting font */
-  font-size: 24px;
   color: var(--dark-brown);
+  font-family: "Figma Hand-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 96px;
+  letter-spacing: 0;
+  line-height: normal;
+  width: 485px;
 }
 
-/* --- Footer Area --- */
-.footer-container {
+/* --- Project 3: Haptic Graphics --- */
+.project-haptics-2 {
+  height: 530px;
+  left: 97px;
+  position: absolute;
+  top: 2910px;
+  width: 1273px;
+}
+
+.rectangle-11 {
+  background-color: var(--red-brown);
+  border-radius: 84px;
+  height: 108.68%;
+  left: 0;
+  position: absolute;
+  top: 0;
   width: 100%;
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* This ensures the footer sits naturally at the end */
-  position: relative; 
 }
 
-.text-wrapper-118 {
-  margin-bottom: 20px;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+.text-wrapper-109 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  height: 78.49%;
+  left: 58.52%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 24.53%;
+  width: 37.91%;
+}
+
+.rectangle-12 {
+  height: 48.30%;
+  left: 2.99%;
+  position: absolute;
+  top: 29.06%;
+  width: 51.85%;
+  border-radius: 20px;
+}
+
+.accessible-haptics {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 7.17%;
+  left: 4.63%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 3.77%;
+  white-space: nowrap;
+  width: 88.30%;
+}
+
+.text-wrapper-110 {
+  color: #e8e3cf;
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.text-wrapper-111 {
+  color: var(--off-white);
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 9.43%;
+  left: 58.52%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 15.09%;
+  width: 36.87%;
+}
+
+.text-wrapper-112 {
   color: var(--dark-brown);
-  text-decoration: underline;
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  height: 8.11%;
+  left: 4.63%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 112.64%;
+  width: 29.93%;
 }
 
-/* --- Mobile Responsiveness --- */
-@media (max-width: 900px) {
-  .project-persuasive-2,
-  .project-robot-2,
-  .project-haptics-2,
-  .project-versatile-2 {
-    flex-direction: column; /* Stack vertically on tablet/mobile */
-    padding: 25px;
-  }
-  
-  /* Reset order if you want image first or text first specifically */
-  .media-content {
-    order: 1; /* Image/Video first */
-  }
-  .text-content {
-    order: 2; /* Text below */
+.text-wrapper-113 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  height: 22.64%;
+  left: 5.42%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 80.38%;
+  width: 50.98%;
+}
+
+/* --- Project 4: Versatile Haptics --- */
+.project-versatile-2 {
+  height: 530px;
+  left: 97px;
+  position: absolute;
+  top: 2050px;
+  width: 1273px;
+}
+
+.rectangle-13 {
+  background-color: var(--red-brown);
+  border-radius: 84px;
+  height: 134.15%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.text-wrapper-114 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  height: 21.13%;
+  left: 32.99%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 27.36%;
+  width: 26.87%;
+}
+
+.text-wrapper-115 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-weight: 600;
+  height: 114.72%;
+  left: 61.90%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 26.60%;
+  width: 37.91%;
+}
+
+.vers-haptics-2 {
+  height: 52.26%;
+  left: 0;
+  position: absolute;
+  top: 24.34%;
+  width: 29.54%;
+}
+
+.versatile-haptics {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+  height: 9.25%;
+  left: 20.03%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 3.77%;
+  width: 66.77%;
+}
+
+.text-wrapper-116 {
+  color: #e8e3cf;
+  font-family: "Roboto", Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 32px;
+}
+
+.description-UIST-2 {
+  color: var(--off-white);
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+  height: 9.06%;
+  left: 61.90%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 15.28%;
+  width: 39.04%;
+}
+
+.text-wrapper-117 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 500;
+  height: 8.30%;
+  left: 4.32%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 137.17%;
+  width: 28.20%;
+}
+
+.vers-haptics-3 {
+  height: 51.89%;
+  left: 29.77%;
+  position: absolute;
+  top: 72.26%;
+  width: 30.71%;
+}
+
+.right-final-2 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 600;
+  height: 0;
+  left: 9.31%;
+  letter-spacing: 0;
+  line-height: 32px;
+  position: absolute;
+  top: 64.55%;
+  width: 22.36%;
+}
+
+/* Mobile Responsiveness for Absolute Positioning
+   (Forces elements to scale down if screen is < 1440px)
+*/
+@media (max-width: 1440px) {
+  .projects {
+    /* Scale content to fit width */
+    transform: scale(calc(100vw / 1440));
+    transform-origin: top left;
+    width: 1440px; /* Force width */
+    height: auto; 
+    overflow-x: hidden;
   }
 }
