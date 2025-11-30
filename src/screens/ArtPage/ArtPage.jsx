@@ -73,7 +73,7 @@ export const ArtPage = () => {
       </header>
 
       <div className={styles['art-intro']}>
-        <div className={styles['select-art']}>select art.</div>
+        <h1 className={styles['select-art']}>select art.</h1>
         <p className={styles['art-description']}>
           I have always enjoyed creating visual art in my free time. This is some of my work. Click images to view larger.
         </p>

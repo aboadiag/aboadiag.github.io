@@ -53,11 +53,11 @@ export const Home = () => {
               src="/img/vector-1-3.svg" 
             />
 
-            <h2 className={styles['hi-my-name-is-abena-2']}>
+            <h1 className={styles['hi-my-name-is-abena-2']}>
               <span className={styles['text-wrapper-69']}>Hi, my name is </span>
               <span className={styles['text-wrapper-70']}>Abena</span>
               <span className={styles['text-wrapper-69']}> (she/her), a</span>
-            </h2>
+            </h1>
 
             <h2 className={styles['researcher-designer-2']}>
               <span className={styles['text-wrapper-77']}><br /></span>
@@ -66,9 +66,9 @@ export const Home = () => {
               <span className={styles['text-wrapper-80']}>Engineer,</span>
             </h2>
 
-            <p className={styles['final-year-phd-2']}>
+            <h3 className={styles['final-year-phd-2']}>
               &amp; final year PhD Candidate in Robotics!
-            </p>
+            </h3>
 
             <p className={styles['i-am-in-the-fifth-2']}>
               <span className={styles['text-wrapper-71']}>I am in the </span>

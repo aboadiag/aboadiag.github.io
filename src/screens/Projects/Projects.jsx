@@ -14,7 +14,7 @@ export const Projects = () => {
       </header>
 
       {/* INTRO */}
-      <div className={styles['text-wrapper-97']}>select projects.</div>
+      <h1 className={styles['text-wrapper-97']}>select projects.</h1>
 
       <p className={styles['during-my-phd-i-have']}>
         During my PhD, I have had the opportunity to design, fabricate, &amp;

@@ -15,7 +15,7 @@ export const Research = () => {
       </header>
 
       {/* TITLE */}
-      <div className={styles['text-wrapper-127']}>select research.</div>
+      <h1 className={styles['text-wrapper-127']}>select research.</h1>
 
       {/* INTRO */}
       <p className={styles['my-research-focuses-3']}>
