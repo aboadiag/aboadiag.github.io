@@ -212,9 +212,9 @@ export const Research = () => {
           <div className={styles['left-column']}>
             <div className={styles['video-container']}>
               <video controls className={styles['project-video']}>
-                <source src="/vids/voice_agent_4_artmaking.mp4" type="video/mp4" />
+                <source src="/vids/voice_agent_4_artmaking-2.mp4" type="video/mp4" />
               </video>
-              <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" />
+              {/* <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" /> */}
             </div>
             <p className={styles['media-caption']}>
               Pilot participant engaged in voice-agent guided art-making.
