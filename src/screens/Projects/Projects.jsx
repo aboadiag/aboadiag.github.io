@@ -209,9 +209,12 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* FOOTER */}
+      {/* FOOTER FIX: 
+          position: 'relative' -> Puts it back in the normal flow (not floating).
+          top: 'auto' -> Tells it to ignore the "2600px" setting from CSS.
+      */}
       <div style={{ width: '100%' }}>
-         <Footer />
+        <Footer style={{ position: 'relative', top: 'auto' }} />
       </div>
 
     </div>
