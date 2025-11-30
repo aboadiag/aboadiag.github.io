@@ -25,26 +25,28 @@ export const ArtPage = () => {
 
   // Helper: Random positions
   useEffect(() => {
-    // Only calculate random positions on Client Side (after mount)
     const calculatePositions = () => {
       if (!containerRef.current) return;
       
       const containerW = containerRef.current.offsetWidth;
       const containerH = containerRef.current.offsetHeight;
-      const bubbleSize = 150; // Match CSS var default
+      
+      // FIX: Match this to the CSS variable (--art-bubble-size)
+      const bubbleSize = 250; 
 
       const newStyles = artPieces.map(() => {
         // Random X/Y within container bounds (minus bubble size)
-        const left = Math.random() * (containerW - bubbleSize);
-        const top = Math.random() * (containerH - bubbleSize);
-        // Random animation delay for natural feel
+        // Math.max(0, ...) ensures we don't get negative numbers if container is small
+        const left = Math.random() * Math.max(0, containerW - bubbleSize);
+        const top = Math.random() * Math.max(0, containerH - bubbleSize);
+        
         const delay = Math.random() * 2; 
-        const duration = 3 + Math.random() * 3; // 3-6s float duration
+        const duration = 3 + Math.random() * 3; 
 
         return {
           left: `${left}px`,
           top: `${top}px`,
-          animationDelay: `-${delay}s`, // Negative delay starts animation immediately at random point
+          animationDelay: `-${delay}s`,
           animationDuration: `${duration}s`
         };
       });
@@ -52,7 +54,6 @@ export const ArtPage = () => {
     };
 
     calculatePositions();
-    // Optional: Recalculate on resize
     window.addEventListener('resize', calculatePositions);
     return () => window.removeEventListener('resize', calculatePositions);
   }, []);
@@ -60,7 +61,7 @@ export const ArtPage = () => {
   // Modal handlers
   const openModal = (art) => {
     setModalArt(art);
-    document.body.style.overflow = "hidden"; // Prevent background scroll
+    document.body.style.overflow = "hidden"; 
   };
 
   const closeModal = () => {
@@ -84,14 +85,14 @@ export const ArtPage = () => {
         </p>
       </div>
 
-      {/* 3. Bubbles Container */}
+      {/* 3. Bubbles Container (Reduced Height) */}
       <div className={styles['art-bubbles-container']} ref={containerRef}>
         {artPieces.map((art, index) => (
           <button
             key={art.id}
             type="button"
             className={styles['art-bubble']}
-            style={bubbleStyles[index]} // Apply calculated random positions
+            style={bubbleStyles[index]} 
             onClick={() => openModal(art)}
             aria-label={`View ${art.title}`}
           >

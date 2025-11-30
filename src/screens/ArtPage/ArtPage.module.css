@@ -3,6 +3,12 @@
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
+/* --- CONFIG --- */
+:root {
+  /* FIX: Increased bubble size significantly */
+  --art-bubble-size: 250px; 
+}
+
 /* --- MAIN PAGE CONTAINER --- */
 .art-page {
   background-color: var(--off-white);
@@ -11,7 +17,6 @@
   position: relative;
   overflow-x: hidden;
   
-  /* Flex Column Layout */
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -23,7 +28,6 @@
   display: flex;
   justify-content: center;
   padding-top: 20px;
-  /* Ensure it sits at the top */
   z-index: 100;
 }
 
@@ -31,15 +35,16 @@
 .art-intro {
   width: 90%;
   max-width: 1143px;
-  margin-top: 100px;
+  /* Reduced top margin to pull content up */
+  margin-top: 60px; 
   text-align: left;
-  z-index: 10; /* Keep text above bubbles if they float near */
+  z-index: 10; 
 }
 
 .select-art {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
-  font-size: clamp(3rem, 8vw, 100px); /* Responsive font size */
+  font-size: clamp(3rem, 8vw, 100px); 
   font-weight: 400;
   line-height: 1.1;
   margin-bottom: 20px;
@@ -60,33 +65,33 @@
   width: 100%;
   max-width: 1440px;
   
-  /* Give it explicit height so bubbles have room to float */
-  height: 800px; 
-  margin: 40px 0;
+  /* FIX: Significantly reduced height to minimize scrolling */
+  height: 600px; 
   
-  /* Bubbles stay inside this box */
+  /* Tightened margins */
+  margin: 20px 0;
+  
+  /* Allow bubbles to float slightly outside bounds without clipping */
   overflow: visible; 
 }
 
 /* --- BUBBLES --- */
 .art-bubble {
   position: absolute;
-  /* Use CSS variable for size, fallback to 150px */
-  width: var(--art-bubble-size, 150px);
+  /* Use CSS variable */
+  width: var(--art-bubble-size);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  border: 4px solid white; /* White border makes them pop */
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow for depth */
+  border: 4px solid white; 
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
   
-  /* Animation properties */
   animation-name: float;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   
-  /* Smooth transition for hover effect */
   transition: transform 0.3s ease, border-color 0.3s ease, z-index 0s;
   z-index: 1;
 }
@@ -95,25 +100,21 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none; /* Prevents dragging image inside button */
+  pointer-events: none; 
 }
 
-.art-caption {
-  display: none; /* Hide caption in bubble mode, show in modal */
-}
-
-/* HOVER EFFECT: Scale up slightly */
+/* HOVER EFFECT: Scale up */
 .art-bubble:hover {
-  transform: scale(1.15) !important; /* Override animation transform temporarily */
-  z-index: 10; /* Bring to front */
+  transform: scale(1.2) !important; /* Slightly larger scale on hover */
+  z-index: 20; 
   border-color: var(--sky-blue);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
 /* --- ANIMATION --- */
-/* gentler float to keep them from disappearing */
 @keyframes float {
   0% { transform: translateY(0px); }
-  100% { transform: translateY(-30px); }
+  100% { transform: translateY(-20px); }
 }
 
 /* --- MODAL --- */
@@ -136,7 +137,6 @@
   max-width: 90vw;
   max-height: 90vh;
   text-align: center;
-  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -174,14 +174,14 @@
 /* --- FOOTER --- */
 .footer-container {
   width: 100%;
-  margin-top: auto; /* Pushes footer to bottom if page is short */
+  margin-top: 0; 
   position: relative;
 }
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .art-bubbles-container {
-    height: auto; /* On mobile, let them stack or wrap if needed */
+    height: auto; 
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -190,10 +190,10 @@
   }
   
   .art-bubble {
-    position: relative; /* Disable absolute positioning on mobile for easier scrolling */
+    position: relative; 
     top: auto !important;
     left: auto !important;
-    width: 120px; /* Smaller bubbles */
-    animation: none; /* Disable float on mobile for performance/readability */
+    width: 150px; /* Still keep them decent size on mobile */
+    animation: none; 
   }
 }
