@@ -5,11 +5,9 @@
 
 /* --- Main Footer Container --- */
 .footer {
-  /* CRITICAL FIX 1: We switch to Absolute to force it to the bottom */
   position: absolute;
-  top: 2600px; /* Matches the bottom of your Home content */
+  top: 2600px; /* Forces footer to the bottom */
   left: 0;
-  
   width: 100%;
   height: auto;
   padding: 40px 80px;
@@ -18,30 +16,37 @@
   z-index: 10;
 }
 
-/* --- Contact Bar Wrapper (The Main Layout Grid) --- */
+/* --- Contact Bar Wrapper --- */
 .footer .contact-bar-scholar {
   display: grid;
-  /* Columns: 
-     1. Contact Info (Takes all available space, pushes others right) 
-     2. Scholar Link (Auto width) 
-     3. GitHub Link (Auto width) 
-  */
-  grid-template-columns: 1fr auto auto; 
-  align-items: flex-end; /* Aligns items to the bottom visual line */
-  gap: clamp(40px, 5vw, 80px);
   width: 100%;
   max-width: 1468px;
   margin: 0 auto;
+  align-items: end;
+  gap: clamp(10px, 2vw, 40px); /* Reduced gap slightly for better stacking */
+  
+  /* CRITICAL FIX: 
+     1fr (Left space) | auto (Center content) | 1fr (Right space) 
+  */
+  grid-template-columns: 1fr auto 1fr;
+  
+  /* CRITICAL FIX: Named areas to force Contact/Email to stack on the left */
+  grid-template-areas: 
+    "contact scholar github"
+    "email   scholar github";
 }
 
 /* --- Inner group layout --- */
 .footer .group-6 {
-  display: contents; /* Allows children to sit directly on the grid */
+  display: contents; 
 }
 
 /* --- LEFT COLUMN: Contact & Email --- */
 .footer .text-wrapper-94 { /* "Contact" Label */
-  margin-bottom: 20px;
+  grid-area: contact; /* Assign to top-left area */
+  justify-self: start;
+  
+  margin-bottom: 0px; /* Reduced margin since grid gap handles spacing */
   color: var(--red-brown);
   font-family: "Roboto", Helvetica;
   font-size: clamp(2.5rem, 5vw, 5rem); 
@@ -50,6 +55,9 @@
 }
 
 .footer .text-wrapper-93 { /* Email Address */
+  grid-area: email; /* Assign to bottom-left area */
+  justify-self: start;
+  
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: clamp(1rem, 2vw, 24px); 
@@ -57,6 +65,7 @@
   line-height: 44px;
   white-space: nowrap;
 }
+
 .footer .text-wrapper-93 a {
   text-decoration: none;
   color: inherit;
@@ -68,13 +77,15 @@
 
 /* --- CENTER COLUMN: Google Scholar --- */
 .footer .link-google-scholar {
+  grid-area: scholar; /* Assign to center area */
+  justify-self: center; /* Forces it to the exact middle */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none; 
 }
 
-/* This was missing in your snippet! Restores the logo shape */
 .footer .google-scholar-logo {
   position: relative;
   height: 110px;
@@ -83,36 +94,12 @@
 }
 
 /* Vector positioning relative to the logo container */
-.footer .vector-4 {
-  height: 80.91%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 50.94%;
-}
-.footer .vector-5 {
-  height: 88.18%;
-  left: 45.28%;
-  position: absolute;
-  top: 0;
-  width: 54.72%;
-}
-.footer .vector-6 {
-  height: 57.27%;
-  left: 21.70%;
-  position: absolute;
-  top: 42.73%;
-  width: 56.60%;
-}
-.footer .vector-7 {
-  height: 16.36%;
-  left: 24.53%;
-  position: absolute;
-  top: 42.73%;
-  width: 51.89%;
-}
+.footer .vector-4 { height: 80.91%; left: 0; position: absolute; top: 0; width: 50.94%; }
+.footer .vector-5 { height: 88.18%; left: 45.28%; position: absolute; top: 0; width: 54.72%; }
+.footer .vector-6 { height: 57.27%; left: 21.70%; position: absolute; top: 42.73%; width: 56.60%; }
+.footer .vector-7 { height: 16.36%; left: 24.53%; position: absolute; top: 42.73%; width: 51.89%; }
 
-.footer .text-wrapper-95 { /* "read my work" */
+.footer .text-wrapper-95 { 
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 24px;
@@ -121,24 +108,25 @@
   white-space: nowrap;
   text-align: center;
 }
-.footer .link-google-scholar:hover .text-wrapper-95 {
-   color: var(--red-brown);
-}
+.footer .link-google-scholar:hover .text-wrapper-95 { color: var(--red-brown); }
 
 /* --- RIGHT COLUMN: GitHub --- */
 .footer .img-wrapper {
+  grid-area: github; /* Assign to right area */
+  justify-self: end; /* Forces it to the far right */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   text-decoration: none;
 }
 
-.footer .vector-8 { /* GitHub Icon */
+.footer .vector-8 {
   width: 98.29px;
   margin-bottom: 5px;
 }
 
-.footer .text-wrapper-96 { /* "visit my repos" */
+.footer .text-wrapper-96 { 
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 24px;
@@ -147,26 +135,34 @@
   white-space: nowrap;
   text-align: center;
 }
-.footer .img-wrapper:hover .text-wrapper-96 {
-   color: var(--red-brown);
-}
+.footer .img-wrapper:hover .text-wrapper-96 { color: var(--red-brown); }
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .footer {
     padding: 30px 20px;
-    height: auto; /* Allow height to expand on mobile */
+    height: auto;
   }
 
   .footer .contact-bar-scholar {
-    grid-template-columns: 1fr; /* Stack everything vertically */
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    /* Reset areas for mobile stack */
+    grid-template-areas: 
+      "contact"
+      "email"
+      "scholar"
+      "github";
     gap: 40px;
-    justify-items: center; /* Center everything */
-    align-items: center;
+    justify-items: center;
   }
   
+  /* Reset justify-self for mobile centering */
   .footer .text-wrapper-94,
-  .footer .text-wrapper-93 {
+  .footer .text-wrapper-93,
+  .footer .link-google-scholar,
+  .footer .img-wrapper {
+    justify-self: center;
     text-align: center;
   }
 }
