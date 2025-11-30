@@ -172,9 +172,9 @@ export const Home = () => {
                   </span>
                 </p>
 
-                <p className={styles['text-wrapper-89']}>
+                <h3 className={styles['text-wrapper-89']}>
                   2021 - present, Carnegie Mellon University
-                </p>
+                </h3>
 
                 <p className={styles['m-s-in-robotics-2']}>
                   <span className={styles['text-wrapper-87']}>
@@ -198,9 +198,9 @@ export const Home = () => {
                   <span className={styles['text-wrapper-88']}>]</span>
                 </p>
 
-                <p className={styles['text-wrapper-90']}>
+                <h3 className={styles['text-wrapper-90']}>
                   2021 - 2025, Carnegie Mellon University
-                </p>
+                </h3>
 
                 <p className={styles['b-s-in-mechanical-2']}>
                   <span className={styles['text-wrapper-87']}>
@@ -211,9 +211,9 @@ export const Home = () => {
                   </span>
                 </p>
 
-                <p className={styles['text-wrapper-91']}>
+                <h3 className={styles['text-wrapper-91']}>
                   2017 - 2021, Stanford University
-                </p>
+                </h3>
 
                 <h2 className={styles['text-wrapper-92']}>education.</h2>
               </div>

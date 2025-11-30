@@ -3,6 +3,9 @@
 
 /* Home.module.css */
 
+:root {
+  --blue-contrast: rgba(77, 99, 107, 1);
+}
 .home {
   display: flex;
   flex-direction: column; /* Stacks items: Navbar -> Content -> Footer */
@@ -198,7 +201,7 @@
 
 .home .text-wrapper-82 {
   align-items: flex-end;
-  color: var(--sky-blue);
+  color: var(--blue-contrast);
   display: flex;
   font-family: "Roboto", Helvetica;
   font-size: 100px;
@@ -460,7 +463,7 @@
 
 .home .text-wrapper-92 {
   align-items: flex-end;
-  color: var(--sky-blue);
+  color: var(--blue-contrast);
   display: flex;
   font-family: "Roboto", Helvetica;
   font-size: 80px;
