@@ -11,6 +11,7 @@
   width: 100%;
   height: auto;
   padding: 40px 80px;
+  padding-bottom: 60px; /* Extra padding for the credits line */
   box-sizing: border-box;
   background-color: var(--off-white);
   z-index: 10;
@@ -23,17 +24,16 @@
   max-width: 1468px;
   margin: 0 auto;
   align-items: end;
-  gap: clamp(10px, 2vw, 40px); /* Reduced gap slightly for better stacking */
+  gap: clamp(10px, 2vw, 40px);
   
-  /* CRITICAL FIX: 
-     1fr (Left space) | auto (Center content) | 1fr (Right space) 
-  */
+  /* Left (Contact) | Center (Scholar) | Right (GitHub) */
   grid-template-columns: 1fr auto 1fr;
   
-  /* CRITICAL FIX: Named areas to force Contact/Email to stack on the left */
+  /* CRITICAL FIX: Added the third row 'credits' spanning all columns */
   grid-template-areas: 
     "contact scholar github"
-    "email   scholar github";
+    "email   scholar github"
+    "credits credits credits";
 }
 
 /* --- Inner group layout --- */
@@ -43,10 +43,10 @@
 
 /* --- LEFT COLUMN: Contact & Email --- */
 .footer .text-wrapper-94 { /* "Contact" Label */
-  grid-area: contact; /* Assign to top-left area */
+  grid-area: contact; 
   justify-self: start;
   
-  margin-bottom: 0px; /* Reduced margin since grid gap handles spacing */
+  margin-bottom: 0px; 
   color: var(--red-brown);
   font-family: "Roboto", Helvetica;
   font-size: clamp(2.5rem, 5vw, 5rem); 
@@ -55,7 +55,7 @@
 }
 
 .footer .text-wrapper-93 { /* Email Address */
-  grid-area: email; /* Assign to bottom-left area */
+  grid-area: email; 
   justify-self: start;
   
   color: var(--dark-brown);
@@ -77,8 +77,8 @@
 
 /* --- CENTER COLUMN: Google Scholar --- */
 .footer .link-google-scholar {
-  grid-area: scholar; /* Assign to center area */
-  justify-self: center; /* Forces it to the exact middle */
+  grid-area: scholar; 
+  justify-self: center; 
   
   display: flex;
   flex-direction: column;
@@ -112,8 +112,8 @@
 
 /* --- RIGHT COLUMN: GitHub --- */
 .footer .img-wrapper {
-  grid-area: github; /* Assign to right area */
-  justify-self: end; /* Forces it to the far right */
+  grid-area: github; 
+  justify-self: end; 
   
   display: flex;
   flex-direction: column;
@@ -137,6 +137,23 @@
 }
 .footer .img-wrapper:hover .text-wrapper-96 { color: var(--red-brown); }
 
+/* --- BOTTOM ROW: Credits --- */
+.footer .credits {
+  grid-area: credits; 
+  justify-self: center; 
+  text-align: center;
+  
+  margin-top: 60px; 
+  width: 100%; 
+  
+  /* Colors and Fonts */
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 16px; 
+  font-weight: 400;
+  opacity: 0.8; 
+}
+
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .footer {
@@ -147,44 +164,26 @@
   .footer .contact-bar-scholar {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    /* Reset areas for mobile stack */
+    
+    /* UPDATED: Stack credits at the very bottom */
     grid-template-areas: 
       "contact"
       "email"
       "scholar"
-      "github";
+      "github"
+      "credits";
+      
     gap: 40px;
     justify-items: center;
   }
   
-  /* Reset justify-self for mobile centering */
+  /* Reset alignment for mobile centering */
   .footer .text-wrapper-94,
   .footer .text-wrapper-93,
   .footer .link-google-scholar,
-  .footer .img-wrapper {
+  .footer .img-wrapper,
+  .footer .credits {
     justify-self: center;
     text-align: center;
   }
-  /* --- NEW: Credits Styling --- */
-.footer .credits {
-  /* Positioning: Places it in the bottom row defined in grid-template-areas */
-  grid-area: credits; 
-  
-  /* Centering: Forces the element to the middle of the footer width */
-  justify-self: center; 
-  text-align: center;
-  
-  /* Layout: Pushes it down slightly from the main logos */
-  margin-top: 60px; 
-  width: 100%; /* Ensures text alignment works even if text wraps */
-  
-  /* BRANDING: Applying your colors and fonts */
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  
-  /* Optional: Make it slightly smaller/lighter than the main links */
-  font-size: 16px; 
-  font-weight: 400;
-  opacity: 0.8; 
-}
 }
