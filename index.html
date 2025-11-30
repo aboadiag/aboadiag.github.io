@@ -6,19 +6,16 @@
     <meta name="viewport" content="width=1440, user-scalable=yes" />
     <link rel="icon" type="image/png" href="./img/bena-favicon-figma-1-2.png" />
 
-    <!-- Reset CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
 
-    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Custom font -->
     <style>
       @font-face {
         font-family: "Figma Hand-Bold";
@@ -28,7 +25,6 @@
       }
     </style>
 
-    <!-- App / global styles -->
     <style>
       /* Smooth font rendering */
       * {
@@ -54,7 +50,7 @@
       }
 
       #app {
-        width: 100%; /* fix horizontal overflow */
+        width: 100%;
         min-height: 100vh;
         display: flex;
         flex-direction: column;
@@ -72,35 +68,10 @@
       }
     </style>
 
-    <!-- Scripts and CSS built by your app -->
-     <script>
-      (function () {
-        // 1. Get the full URL path, including any query parameters.
-        const url = window.location.search;
-        
-        // 2. Check if the URL contains the special flag added by the 404.html redirect.
-        // The flag is '?p=...' or '&404=true'. We look for the 'p=' (path) parameter.
-        const pathParam = new URLSearchParams(url).get('p');
-        
-        if (pathParam) {
-          // 3. Decode the original path (e.g., '/projects?query=term' from '%2Fprojects%3Fquery%3Dterm').
-          const originalPath = decodeURIComponent(pathParam);
-
-          // 4. Use the History API to rewrite the URL in the address bar.
-          // This keeps the user on the correct page without causing a full page reload,
-          // allowing React Router (which initializes after this script) to see the correct path.
-          window.history.replaceState(null, null, originalPath);
-        }
-      })();
-    </script>
-    <!-- IMPORTANT: The final output links will be injected here automatically by Vite. -->
-
-  </head>
+    </head>
 
   <body>
     <div id="app"></div>
-
-      <!-- !!! CRITICAL FIX !!! This line tells Vite where your app starts -->
     <script type="module" src="/src/index.jsx"></script>
   </body>
 </html>

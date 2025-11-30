@@ -1,13 +1,13 @@
 import React from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+// 1. CHANGE IMPORT
+import { RouterProvider, createHashRouter } from "react-router-dom";
 import { Home } from "./screens/Home";
 import { Projects } from "./screens/Projects";
 import { Research } from "./screens/Research";
 import { ArtPage } from "./screens/ArtPage";
 
-/* Adding this comment to update vite files!!!! -- AGAIN*/
-// Define your routes
-const router = createBrowserRouter([
+// 2. CHANGE TO createHashRouter
+const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
