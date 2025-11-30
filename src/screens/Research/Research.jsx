@@ -123,7 +123,7 @@ export const Research = () => {
               Description 
               <span className={styles['bracket']}> [</span>
               <a
-                href="https://drive.google.com/file/d/1TmX2Ph5OcCT0B_EPkaPw0LT8tYmmLDS4/view?usp=sharing"
+                href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11217674"
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles['link-text']}
@@ -214,7 +214,7 @@ export const Research = () => {
               <video controls className={styles['project-video']}>
                 <source src="/vids/voice_agent_4_artmaking.mp4" type="video/mp4" />
               </video>
-              <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" />
+              {/* <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" /> */}
             </div>
             <p className={styles['media-caption']}>
               Pilot participant engaged in voice-agent guided art-making.
