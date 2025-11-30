@@ -62,6 +62,11 @@ export const Footer = ({
           
           {/* Redundant elements from the original structure are now consolidated into the <a> tags */}
 
+
+          {/* NEW: Credits Section */}
+          <div className={styles['credits']}>
+            © {currentYear} Abena Boadi-Agyemang. Designed & Built with React, Figma, Anima, & Builder.io.
+          </div>
         </div>
       </section>
     </footer>

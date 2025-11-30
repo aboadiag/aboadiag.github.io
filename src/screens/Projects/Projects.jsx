@@ -309,75 +309,19 @@ export const Projects = () => {
               </a>
           </div>
 
-          <div className="text-wrapper-119">Contact</div>
 
-          <div className="link-google-scholar-2">
-            <div className="google-scholar-logo-2">
-              <img className="vector-9" alt="google scholar logo element" src="/img/vector-32.svg" />
-
-              <img
-                className="vector-10"
-                alt="google scholar logo element"
-                src="/img/vector-39.svg"
-              />
-
-              <img
-                className="vector-11"
-                alt="google scholar logo element"
-                src="/img/vector-34.svg"
-              />
-
-              <img
-                className="vector-12"
-                alt="google scholar logo element"
-                src="/img/vector-35.svg"
-              />
-            </div>
-
-            <a
-              className="https-scholar-google-2"
-              href="https://scholar.google.com/citations?hl=en&amp;user=OYnusysAAAAJ"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              XXXXXXXXXXXXX
-              <br />
-              XXXXXXXXXXXXX
-              <br />
-              XXXXXXXXXXXXX
-              <br />
-              XXXXXXXXXXXXX
-              <br />
-              XXXXXXXXXXXXX
-              <br />
-              XXXXXXXXXXXXX
-              <br />
-              XXXXXXXXXXXXX
-            </a>
-          </div>
-
-          <div className="text-wrapper-120">read my work</div>
-
-          <div className="github-icon-2">
-            <img className="github logo" alt="Vector" src="/img/vector-36.svg" />
-          </div>
-
-          <a
-            className="https-github-com-4"
-            href="https://github.com/aboadiag"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            XXXXXXXX
-            <br />
-            XXXXXXXX
-            <br />
-            XXXXXXXX
-            <br />
-            XXXXXXXX
-          </a>
-
-          <div className="text-wrapper-121">visit my repos</div>
+          {/* THE FIX: 
+             1. Move Footer INSIDE the canvas.
+             2. Add 'style' prop to position it absolutely at the bottom.
+             3. 'top: 2500px' places it right after your education section ends.
+          */}
+          <Footer 
+            style={{ 
+              position: 'absolute', 
+              top: '2500px', 
+              width: '100%' 
+            }} 
+          />
         </div>
       </div>
     </div>
