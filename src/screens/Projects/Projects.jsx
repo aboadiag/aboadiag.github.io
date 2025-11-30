@@ -9,14 +9,14 @@ export const Projects = () => {
   return (
     <div className={styles.projects}>
       
+      {/* HEADER / NAVBAR (Top of Page) */}
       <header>
         <NavBar />
       </header>
 
-      {/* Title First */}
+      {/* Title & Intro Text */}
       <div className={styles['text-wrapper-97']}>select projects.</div>
 
-      {/* Intro Text Second */}
       <p className={styles['during-my-phd-i-have']}>
         During my PhD, I have had the opportunity to design, fabricate, &amp;
         implement various ideas within the space of HRI &amp; physical
@@ -29,14 +29,11 @@ export const Projects = () => {
 
       {/* ================= PROJECT 1: PERSUASIVE ================= */}
       <div className={styles['project-persuasive-2']}>
-        
-        {/* Title Top Center */}
         <p className={styles['persuasive-title']}>
           Persuasive Social Robots to Encourage Art-making
         </p>
 
         <div className={styles['split-content']}>
-          {/* LEFT: Video, Caption, Date */}
           <div className={styles['left-column']}>
             <video controls className={styles['project-video']}>
               <source src="/vids/persuasive_misty.mp4" type="video/mp4" />
@@ -44,13 +41,10 @@ export const Projects = () => {
             <p className={styles['media-caption']}>
               Two Pilot Participants. Left: Baseline. Right: Context Bandit.
             </p>
-            {/* Date Bottom Left */}
             <div className={styles['project-date']}>Fall 2024</div>
           </div>
 
-          {/* RIGHT: Description Header, Full Text */}
           <div className={styles['right-column']}>
-            {/* Subtitle Top Right */}
             <div className={styles['description-header']}>
               Description 
               <span className={styles['bracket']}> [</span>
@@ -60,7 +54,6 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            {/* Full Text */}
             <p className={styles['project-text']}>
               Visual art-making can support mental wellbeing.
               Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user "involvement" (a proxy for engagement; low, medium, high),
@@ -76,14 +69,12 @@ export const Projects = () => {
 
       {/* ================= PROJECT 2: ROBOT MEDIATED ================= */}
       <div className={styles['project-robot-2']}>
-        
         <p className={styles['robot-mediated']}>
           Robot Mediated Haptic Mouse for Co-creation of Non-Visual Aids
           between&nbsp;&nbsp;TVIs &amp; BLV Students
         </p>
 
         <div className={styles['split-content']}>
-          {/* LEFT */}
           <div className={styles['left-column']}>
             <video controls className={styles['project-video']}>
               <source src="/vids/haptic-mouse-vid.mp4" type="video/mp4" />
@@ -96,7 +87,6 @@ export const Projects = () => {
              <div className={styles['project-date']}>2021-2023</div>
           </div>
 
-          {/* RIGHT */}
           <div className={styles['right-column']}>
             <div className={styles['description-header']}>
               Description 
@@ -123,64 +113,10 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* DIVIDER */}
-      <div className={styles['name-component-2']}>
-        <img className={styles['bena-favicon-figma-4']} alt="Bena Logo" src="/img/bena-favicon-figma-1-2.png" />
-        <div className={styles['text-wrapper-108']}>Abena Boadi-Agyemang</div>
-      </div>
+      {/* FIX: REMOVED DIVIDER/FAVICON HERE */}
 
-      {/* ================= PROJECT 3: ACCESSIBLE HAPTICS ================= */}
-      <div className={styles['project-haptics-2']}>
-        
-        <p className={styles['accessible-haptics']}>
-            Accessible Haptics through Graphics Rendering
-            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collab with A. Brantley, A.F. Siu, &amp; S. Follmer]</span>
-        </p>
-
-        <div className={styles['split-content']}>
-           {/* LEFT */}
-           <div className={styles['left-column']}>
-             <video controls className={styles['project-video']}>
-                <source src="/vids/haptic-graphics.mp4 " type="video/mp4" />
-             </video>
-             <p className={styles['media-caption']}>
-                Left: haptic mouse platform. Right: Rendering surface curvature
-                through kinesthetic feedback (left) and visually on GUI (right). Note:
-                While 2 fingers are placed on the tilt platform, 1 finger is best for
-                curvature perception.
-             </p>
-             <div className={styles['project-date']}>2020-2021</div>
-           </div>
-
-           {/* RIGHT */}
-           <div className={styles['right-column']}>
-              <div className={styles['description-header']}>
-                Description 
-                <span className={styles['bracket']}> [</span>
-                <a href="static/pdfs/me-suri-2020-accessible.pdf" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
-                  project poster
-                </a>
-                <span className={styles['bracket']}>]</span>
-              </div>
-
-              <p className={styles['project-text']}>
-                The preliminary development of a mechanically-actuated, kinesthetic
-                haptic mouse for tactile graphic rendering to assist with remote
-                learning for blind and low vision (BLV) students. It provides
-                kinesthetic feedback to render surfaces and the mechanism is a 3 DOF
-                (height, pitch, yaw) modified Stewart platform. We explore the
-                system’s design, integration, and preliminary implementation. For
-                future work, we proposed the integration of a voice coil actuator
-                (VCA) for haptic texture rendering and a sensor for absolute position
-                tracking.
-              </p>
-           </div>
-        </div>
-      </div>
-
-      {/* ================= PROJECT 4: VERSATILE HAPTICS (Zig-Zag) ================= */}
+      {/* ================= PROJECT 3: VERSATILE HAPTICS (Reordered) ================= */}
       <div className={styles['project-versatile-2']}>
-        
         <p className={styles['versatile-haptics']}>
            Versatile Haptics
            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collaboration with Violet Han et al.]</span>
@@ -232,7 +168,56 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* FOOTER - Sits naturally at the bottom now due to Flex layout */}
+      {/* ================= PROJECT 4: ACCESSIBLE HAPTICS (Reordered to Last) ================= */}
+      <div className={styles['project-haptics-2']}>
+        
+        <p className={styles['accessible-haptics']}>
+            Accessible Haptics through Graphics Rendering
+            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collab with A. Brantley, A.F. Siu, &amp; S. Follmer]</span>
+        </p>
+
+        <div className={styles['split-content']}>
+           {/* LEFT */}
+           <div className={styles['left-column']}>
+             <video controls className={styles['project-video']}>
+                <source src="/vids/haptic-graphics.mp4 " type="video/mp4" />
+             </video>
+             <p className={styles['media-caption']}>
+                Left: haptic mouse platform. Right: Rendering surface curvature
+                through kinesthetic feedback (left) and visually on GUI (right). Note:
+                While 2 fingers are placed on the tilt platform, 1 finger is best for
+                curvature perception.
+             </p>
+             <div className={styles['project-date']}>2020-2021</div>
+           </div>
+
+           {/* RIGHT */}
+           <div className={styles['right-column']}>
+              <div className={styles['description-header']}>
+                Description 
+                <span className={styles['bracket']}> [</span>
+                <a href="static/pdfs/me-suri-2020-accessible.pdf" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                  project poster
+                </a>
+                <span className={styles['bracket']}>]</span>
+              </div>
+
+              <p className={styles['project-text']}>
+                The preliminary development of a mechanically-actuated, kinesthetic
+                haptic mouse for tactile graphic rendering to assist with remote
+                learning for blind and low vision (BLV) students. It provides
+                kinesthetic feedback to render surfaces and the mechanism is a 3 DOF
+                (height, pitch, yaw) modified Stewart platform. We explore the
+                system’s design, integration, and preliminary implementation. For
+                future work, we proposed the integration of a voice coil actuator
+                (VCA) for haptic texture rendering and a sensor for absolute position
+                tracking.
+              </p>
+           </div>
+        </div>
+      </div>
+
+      {/* FOOTER */}
       <div style={{ width: '100%', position: 'relative' }}>
          <Footer />
       </div>

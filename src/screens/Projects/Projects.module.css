@@ -7,26 +7,27 @@
 .projects {
   background-color: var(--off-white);
   width: 100%;
-  min-height: 100vh;
+  
+  /* FIX: Changed from fixed 4400px to 100vh so it hugs content */
+  min-height: 100vh; 
+  
   position: relative;
   overflow-x: hidden;
   
-  /* FLEX LAYOUT FOR CONSISTENT SPACING */
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the cards horizontally */
+  align-items: center; 
   
-  /* This creates exact 100px space between every project block */
-  gap: 100px; 
+  gap: 100px; /* Consistent spacing between projects */
   
-  /* Padding at top to push projects below the Title/Intro */
+  /* Top padding creates space for the Title/Intro text */
   padding-top: 550px; 
-  /* Padding at bottom for Footer space */
-  padding-bottom: 400px; 
+  
+  /* FIX: Reduced bottom padding to remove the large gap before footer */
+  padding-bottom: 150px; 
 }
 
 /* --- HEADER / TITLE / INTRO --- */
-/* These remain absolute so they stay pinned to the top */
 .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
@@ -61,28 +62,18 @@
 .project-versatile-2 {
   background-color: var(--red-brown);
   border-radius: 84px;
-  
-  /* Dimensions */
   width: 1273px;
-  /* Removed fixed height so it grows with text */
   height: auto; 
-  
-  /* Internal Layout */
-  padding: 60px; /* Comfortable internal spacing */
+  padding: 60px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 40px; /* Gap between Title and Content */
-  
-  /* Text defaults */
+  gap: 40px;
   color: var(--off-white);
-  
-  /* IMPORTANT: Removed 'position: absolute' and 'top'. 
-     The Flex container (.projects) now handles placement. */
   position: relative;
 }
 
-/* --- TITLES (Centered above content) --- */
+/* --- TITLES --- */
 .persuasive-title,
 .robot-mediated,
 .accessible-haptics,
@@ -100,29 +91,26 @@
 .split-content {
   display: flex;
   flex-direction: row;
-  gap: 60px; /* Space between Video and Text columns */
-  align-items: stretch; /* Ensures both columns stretch to full height */
+  gap: 60px; 
+  align-items: stretch;
 }
 
-/* LEFT COLUMN: Video/Image + Caption + Date */
 .left-column {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* RIGHT COLUMN: Description + Text */
 .right-column {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  text-align: right; /* Forces all text to align right */
-  align-items: flex-end; /* Aligns the container elements to right */
+  text-align: right; 
+  align-items: flex-end;
 }
 
 /* --- TEXT STYLING --- */
-/* The "Description [Link]" Subtitle */
 .description-header {
   color: var(--off-white);
   font-family: "Roboto Mono", Helvetica;
@@ -131,7 +119,6 @@
   margin-bottom: 10px;
 }
 
-/* The Main Paragraph Text */
 .project-text {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
@@ -140,7 +127,6 @@
   line-height: 1.6;
 }
 
-/* Links */
 .link-text {
   color: var(--off-white);
   text-decoration: underline;
@@ -158,7 +144,6 @@
   object-fit: cover;
 }
 
-/* Captions under video */
 .media-caption {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
@@ -170,59 +155,28 @@
 }
 
 /* --- DATE STYLING --- */
-/* Positioned at bottom left with comfortable distance */
 .project-date {
   color: var(--dark-brown);
   background-color: rgba(255, 255, 255, 0.85);
   padding: 8px 24px;
   border-radius: 30px;
-  
   font-family: "Roboto", Helvetica;
   font-size: 22px;
   font-style: italic;
   font-weight: 600;
-  
   width: fit-content;
-  
-  /* This pushes the date to the very bottom of the flex column */
   margin-top: auto; 
-  /* Comfortable distance from the element above it */
   padding-top: 8px; 
-  /* Ensure it doesn't touch the bottom border immediately (handled by card padding),
-     but if you want extra space: */
   transform: translateY(10px); 
 }
 
-/* --- PROJECT 4 SPECIFIC (Zig-Zag) --- */
+/* --- ZIG ZAG LAYOUT --- */
 .zig-zag-row {
   display: flex;
   flex-direction: row;
   gap: 60px;
   align-items: flex-start;
   margin-bottom: 40px;
-}
-
-/* Name Component / Divider */
-.name-component-2 {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 0; /* Add some space around the logo divider */
-}
-
-.bena-favicon-figma-4 {
-  height: 96px;
-  width: 96px;
-  object-fit: cover;
-}
-
-.text-wrapper-108 {
-  color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
 }
 
 /* Responsive Scaling for Desktop */
