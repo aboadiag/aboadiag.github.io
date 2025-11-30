@@ -165,4 +165,26 @@
     justify-self: center;
     text-align: center;
   }
+  /* --- NEW: Credits Styling --- */
+.footer .credits {
+  /* Positioning: Places it in the bottom row defined in grid-template-areas */
+  grid-area: credits; 
+  
+  /* Centering: Forces the element to the middle of the footer width */
+  justify-self: center; 
+  text-align: center;
+  
+  /* Layout: Pushes it down slightly from the main logos */
+  margin-top: 60px; 
+  width: 100%; /* Ensures text alignment works even if text wraps */
+  
+  /* BRANDING: Applying your colors and fonts */
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  
+  /* Optional: Make it slightly smaller/lighter than the main links */
+  font-size: 16px; 
+  font-weight: 400;
+  opacity: 0.8; 
+}
 }
