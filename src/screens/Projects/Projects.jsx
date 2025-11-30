@@ -13,9 +13,10 @@ export const Projects = () => {
         <NavBar />
       </header>
 
-      {/* FIX 1: Title ABOVE Intro Text */}
+      {/* Title First */}
       <div className={styles['text-wrapper-97']}>select projects.</div>
 
+      {/* Intro Text Second */}
       <p className={styles['during-my-phd-i-have']}>
         During my PhD, I have had the opportunity to design, fabricate, &amp;
         implement various ideas within the space of HRI &amp; physical
@@ -26,230 +27,215 @@ export const Projects = () => {
         See some of these&nbsp;&nbsp;projects below.
       </p>
 
-
-      {/* ---------------- PROJECT 1: PERSUASIVE ---------------- */}
+      {/* ================= PROJECT 1: PERSUASIVE ================= */}
       <div className={styles['project-persuasive-2']}>
         
-        {/* FIX 2: Title centered above video */}
+        {/* Title Top Center */}
         <p className={styles['persuasive-title']}>
           Persuasive Social Robots to Encourage Art-making
         </p>
 
-        {/* Flex Container for Left/Right Alignment */}
         <div className={styles['split-content']}>
-          
-          {/* FIX 3: Left Side - Video + Caption */}
+          {/* LEFT: Video, Caption, Date */}
           <div className={styles['left-column']}>
-            <video controls className={styles['rectangle-9']}>
+            <video controls className={styles['project-video']}>
               <source src="/vids/persuasive_misty.mp4" type="video/mp4" />
             </video>
-            <p className={styles['collage-featuring-co-2']}>
+            <p className={styles['media-caption']}>
               Two Pilot Participants. Left: Baseline. Right: Context Bandit.
             </p>
+            {/* Date Bottom Left */}
+            <div className={styles['project-date']}>Fall 2024</div>
           </div>
 
-          {/* FIX 4: Right Side - Description */}
+          {/* RIGHT: Description Header, Full Text */}
           <div className={styles['right-column']}>
-            <p className={styles['persuasive-blurb']}>
-              Visual art-making can support mental wellbeing.
-              Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user "involvement"
-              to adapt a social robotic coach's personality (i.e., charismatic/direct vs uncharismatic/indirect) 
-              with the goal of increasing user engagement.
-            </p>
-
-            <p className={styles['div-3']}>
-              <span className={styles['text-wrapper-102']}>Description </span>
-              <span className={styles['text-wrapper-103']}>[</span>
-              <a
-                href="https://github.com/aboadiag/persuasive-misty" 
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className={styles['text-wrapper-104']}>github project</span>
+            {/* Subtitle Top Right */}
+            <div className={styles['description-header']}>
+              Description 
+              <span className={styles['bracket']}> [</span>
+              <a href="https://github.com/aboadiag/persuasive-misty" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                github project
               </a>
-              <span className={styles['text-wrapper-103']}>]</span>
+              <span className={styles['bracket']}>]</span>
+            </div>
+
+            {/* Full Text */}
+            <p className={styles['project-text']}>
+              Visual art-making can support mental wellbeing.
+              Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user "involvement" (a proxy for engagement; low, medium, high),
+              to adapt a social robotic coach's personality (i.e., charismatic/direct vs uncharismatic/indirect) 
+              with the goal of increasing user engagement. While there are benefits 
+              of personalized robotic coach feedback during visual art-making activities, 
+              our work suggests the importance of identifying user-specific context 
+              (e.g., attention, stress, affect) to enrich feedback personalization policies.
             </p>
-
-            <div className={styles['spring-fall']}>Fall 2024</div>
           </div>
-
         </div>
       </div>
 
-
-      {/* ---------------- PROJECT 2: ROBOT MEDIATED ---------------- */}
+      {/* ================= PROJECT 2: ROBOT MEDIATED ================= */}
       <div className={styles['project-robot-2']}>
         
-        {/* FIX 5: Title centered above */}
         <p className={styles['robot-mediated']}>
           Robot Mediated Haptic Mouse for Co-creation of Non-Visual Aids
           between&nbsp;&nbsp;TVIs &amp; BLV Students
         </p>
 
         <div className={styles['split-content']}>
-          
-          {/* FIX 6: Video Left */}
+          {/* LEFT */}
           <div className={styles['left-column']}>
-             <video controls className={styles['robot-med-haptics-2']}>
+            <video controls className={styles['project-video']}>
               <source src="/vids/haptic-mouse-vid.mp4" type="video/mp4" />
             </video>
-             <p className={styles['challenges-of-2']}>
-               Left: FDM 3D printed 3DoF RUU Delta; Middle: SLA printed with Capstan Drive; Right: Impedance-type mechanism.
+            <p className={styles['media-caption']}>
+              Left: FDM 3D printed 3DoF RUU Delta Rendering a Simple Spring;
+              Middle: SLA printed 3 Dof RUU Delta with Capstan Drive Mechanism;
+              Right: Capstan-drive, impedence-type mechanism.
             </p>
+             <div className={styles['project-date']}>2021-2023</div>
           </div>
 
-          {/* FIX 6: Description Right */}
+          {/* RIGHT */}
           <div className={styles['right-column']}>
-            <p className={styles['blurb-4']}>
+            <div className={styles['description-header']}>
+              Description 
+              <span className={styles['bracket']}> [</span>
+              <a href="https://dl.acm.org/doi/pdf/10.1145/3597638.3614512" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                ASSETS ‘23
+              </a>
+              <span className={styles['bracket']}>]</span>
+            </div>
+
+            <p className={styles['project-text']}>
               Inspired by my previous work in accessible haptics,
               I iterated on a haptic mouse&nbsp;&nbsp;to facilitate
               on-demand and iterative adaptation of visual aids used in K-12
-              learning to non-visual, particularly haptic modalities.
+              learning to non-visual, particularly haptic modalities. This haptic
+              device is an impedance-type kinesthetic device based on an RUU delta
+              mechanism. 
               <br /><br />
               I also conducted semi-structured interviews with TVIs to uncover
               design recommendations for interactive devices to support non-visual
               adaptation.
             </p>
-
-            <p className={styles['div-3']}>
-              <span className={styles['text-wrapper-102']}>Description </span>
-              <span className={styles['text-wrapper-103']}>[</span>
-              <a
-                href="https://dl.acm.org/doi/pdf/10.1145/3597638.3614512?casa_token=mncCzpzuYq0AAAAA:1xCrYya7HXN2buCKNvvxFeC1doa1JKVqaVHGaipU4to0iLcyQcNDsUeeXC0THFJZ5DtSOubzx5DJ"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className={styles['text-wrapper-104']}>ASSETS ‘23</span>
-              </a>
-              <span className={styles['text-wrapper-103']}>]</span>
-            </p>
-            <div className={styles['spring-fall']}>2021-2023</div>
           </div>
         </div>
       </div>
 
-      {/* FIX 7: Favicon REMOVED (Code deleted here) */}
-
-
-      {/* ---------------- PROJECT 3: ACCESSIBLE HAPTICS (Re-added) ---------------- */}
-      <div className={styles['project-haptics-2']}>
-         
-         {/* Title Centered */}
-         <p className={styles['accessible-haptics']}>
-            <span className={styles['text-wrapper-110']}>
-              Accessible Haptics through Graphics Rendering{" "}
-            </span>
-            <span className={styles['text-wrapper-103']}>
-              [Collab with A. Brantley, A.F. Siu,&nbsp;&nbsp;&amp; S. Follmer]
-            </span>
-          </p>
-
-          <div className={styles['split-content']}>
-            {/* Video Left */}
-             <div className={styles['left-column']}>
-               <video controls className={styles['rectangle-12']}>
-                <source src="/vids/haptic-graphics.mp4 " type="video/mp4" />
-               </video>
-               <p className={styles['challenges-of-2']}>
-                Left: haptic mouse platform. Right: Rendering surface curvature.
-              </p>
-             </div>
-
-             {/* Text Right */}
-             <div className={styles['right-column']}>
-                <p className={styles['text-wrapper-109']}>
-                  The preliminary development of a mechanically-actuated, kinesthetic
-                  haptic mouse for tactile graphic rendering to assist with remote
-                  learning for blind and low vision (BLV) students.
-                </p>
-                <p className={styles['div-3']}>
-                  <span className={styles['text-wrapper-102']}>Description </span>
-                  <span className={styles['text-wrapper-103']}>[</span>
-                  <a
-                    href="static/pdfs/me-suri-2020-accessible.pdf"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <span className={styles['text-wrapper-104']}>project poster</span>
-                  </a>
-                  <span className={styles['text-wrapper-103']}>]</span>
-                </p>
-                <div className={styles['spring-fall']}>2020-2021</div>
-             </div>
-          </div>
+      {/* DIVIDER */}
+      <div className={styles['name-component-2']}>
+        <img className={styles['bena-favicon-figma-4']} alt="Bena Logo" src="/img/bena-favicon-figma-1-2.png" />
+        <div className={styles['text-wrapper-108']}>Abena Boadi-Agyemang</div>
       </div>
 
-
-      {/* ---------------- PROJECT 4: VERSATILE HAPTICS ---------------- */}
-      <div className={styles['project-versatile-2']}>
+      {/* ================= PROJECT 3: ACCESSIBLE HAPTICS ================= */}
+      <div className={styles['project-haptics-2']}>
         
-        {/* Title Centered */}
-        <p className={styles['versatile-haptics']}>
-          <span className={styles['text-wrapper-116']}>Versatile Haptics </span>
-          <span className={styles['text-wrapper-103']}>
-            [Collaboration with Violet Han et al.]
-          </span>
+        <p className={styles['accessible-haptics']}>
+            Accessible Haptics through Graphics Rendering
+            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collab with A. Brantley, A.F. Siu, &amp; S. Follmer]</span>
         </p>
 
-        {/* FIX 9: Zig Zag Layout */}
+        <div className={styles['split-content']}>
+           {/* LEFT */}
+           <div className={styles['left-column']}>
+             <video controls className={styles['project-video']}>
+                <source src="/vids/haptic-graphics.mp4 " type="video/mp4" />
+             </video>
+             <p className={styles['media-caption']}>
+                Left: haptic mouse platform. Right: Rendering surface curvature
+                through kinesthetic feedback (left) and visually on GUI (right). Note:
+                While 2 fingers are placed on the tilt platform, 1 finger is best for
+                curvature perception.
+             </p>
+             <div className={styles['project-date']}>2020-2021</div>
+           </div>
+
+           {/* RIGHT */}
+           <div className={styles['right-column']}>
+              <div className={styles['description-header']}>
+                Description 
+                <span className={styles['bracket']}> [</span>
+                <a href="static/pdfs/me-suri-2020-accessible.pdf" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                  project poster
+                </a>
+                <span className={styles['bracket']}>]</span>
+              </div>
+
+              <p className={styles['project-text']}>
+                The preliminary development of a mechanically-actuated, kinesthetic
+                haptic mouse for tactile graphic rendering to assist with remote
+                learning for blind and low vision (BLV) students. It provides
+                kinesthetic feedback to render surfaces and the mechanism is a 3 DOF
+                (height, pitch, yaw) modified Stewart platform. We explore the
+                system’s design, integration, and preliminary implementation. For
+                future work, we proposed the integration of a voice coil actuator
+                (VCA) for haptic texture rendering and a sensor for absolute position
+                tracking.
+              </p>
+           </div>
+        </div>
+      </div>
+
+      {/* ================= PROJECT 4: VERSATILE HAPTICS (Zig-Zag) ================= */}
+      <div className={styles['project-versatile-2']}>
         
-        {/* ROW 1: Image Left, Text Right */}
+        <p className={styles['versatile-haptics']}>
+           Versatile Haptics
+           <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collaboration with Violet Han et al.]</span>
+        </p>
+
+        {/* ROW 1: Image Left | Text Right */}
         <div className={styles['zig-zag-row']}>
             <div className={styles['left-column']}>
-                <img
-                  className={styles['vers-haptics-img']}
-                  alt="Early prototype"
-                  src="/img/vers-haptics-img1-2.png"
-                />
-                <p className={styles['text-wrapper-114']}>
-                  Left: Early prototype with vertical motor arrangement.
-                </p>
+               <img className={styles['project-image']} src="/img/vers-haptics-img1-2.png" alt="Prototype 1" />
+               <p className={styles['media-caption']}>Left: Early prototype with vertical motor arrangement.</p>
             </div>
-            
             <div className={styles['right-column']}>
-               <p className={styles['text-wrapper-115']}>
+               <p className={styles['project-text']}>
                   We presented Parametric Haptics, customizable and versatile haptic
                   patches that are lightweight, reconfigurable, and can be integrated as
                   wearables or into objects. We linearly actuated the motors by
-                  varying the direction of the rotation, PWM, duration and frequency.
-                </p>
-                <div className={styles['spring-fall']}>Fall 2023</div>
+                  varying the direction of the rotation, the Pulse-Width-Modulation
+                  (PWM), and the duration and frequency of the pulses, allowing us to
+                  approximate control over the displacement of the tactors and velocity
+                  of actuation to achieve a diverse set of tactile sensations.  Control
+                  strategies can be adapted to elicit desired tactile feedback and
+                  incorporate refined control approaches with appropriate hardware consideration.
+               </p>
             </div>
         </div>
 
-        {/* ROW 2: Text Left, Image Right */}
+        {/* ROW 2: Text Left | Image Right */}
         <div className={styles['zig-zag-row']}>
-            <div className={styles['left-column']}>
-                 <p className={styles['text-wrapper-115']}>
-                   Right: Final Prototype with horizontal motor arrangement.
+             <div className={styles['left-column']}>
+                <div className={styles['description-header']} style={{ textAlign: 'left', alignSelf: 'flex-start' }}>
+                   Description 
+                   <span className={styles['bracket']}> [</span>
+                   <a href="https://dl.acm.org/doi/pdf/10.1145/3586183.3606766" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                     UIST ‘23
+                   </a>
+                   <span className={styles['bracket']}>]</span>
+                </div>
+                <p className={styles['media-caption']}>
+                  Right: Final Prototype with horizontal motor arrangement.
                 </p>
-                 <p className={styles['div-3']}>
-                    <span className={styles['text-wrapper-102']}>Description </span>
-                    <span className={styles['text-wrapper-103']}>[</span>
-                    <a
-                      href="https://dl.acm.org/doi/pdf/10.1145/3586183.3606766"
-                      rel="noopener noreferrer"
-                      target="_blank"
-                    >
-                      <span className={styles['text-wrapper-104']}>UIST ‘23</span>
-                    </a>
-                    <span className={styles['text-wrapper-103']}>]</span>
-                  </p>
-            </div>
-            
-            <div className={styles['right-column']}>
-                 <img
-                  className={styles['vers-haptics-img']}
-                  alt="Final prototype"
-                  src="/img/vers-haptics-img2-2.png"
-                />
-            </div>
-        </div>
+                
+                {/* Date at Bottom Left of this text block */}
+                <div className={styles['project-date']}>Fall 2023</div>
+             </div>
 
+             <div className={styles['right-column']}>
+                <img className={styles['project-image']} src="/img/vers-haptics-img2-2.png" alt="Prototype 2" />
+             </div>
+        </div>
       </div>
 
-      {/* FOOTER */}
-      <Footer style={{ position: 'absolute', top: '3850px', width: '100%' }} />
+      {/* FOOTER - Sits naturally at the bottom now due to Flex layout */}
+      <div style={{ width: '100%', position: 'relative' }}>
+         <Footer />
+      </div>
 
     </div>
   );

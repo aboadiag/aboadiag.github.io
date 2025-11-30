@@ -3,316 +3,227 @@
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* Main Container */
+/* --- MAIN CONTAINER --- */
 .projects {
   background-color: var(--off-white);
-  /* Height increased slightly to accommodate content flow */
-  min-height: 4200px; 
   width: 100%;
+  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
+  
+  /* FLEX LAYOUT FOR CONSISTENT SPACING */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the cards horizontally */
+  
+  /* This creates exact 100px space between every project block */
+  gap: 100px; 
+  
+  /* Padding at top to push projects below the Title/Intro */
+  padding-top: 550px; 
+  /* Padding at bottom for Footer space */
+  padding-bottom: 400px; 
 }
 
-/* --- FIX 1: SWAP TITLE AND TEXT POSITIONS --- */
-
-/* 1. Main Title (Select Projects) - Now Higher Up */
+/* --- HEADER / TITLE / INTRO --- */
+/* These remain absolute so they stay pinned to the top */
 .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 100px;
   font-weight: 400;
   left: 107px;
-  letter-spacing: 0;
   line-height: 1.1;
   position: absolute;
-  top: 150px; /* Moved UP */
+  top: 150px;
   width: 840px;
+  z-index: 2;
 }
 
-/* 2. Intro Text - Now Below Title */
 .during-my-phd-i-have {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 30px;
   font-weight: 400;
   left: 107px;
-  letter-spacing: 0;
   line-height: 1.4;
   position: absolute;
-  top: 300px; /* Moved DOWN */
+  top: 300px;
   width: 1143px;
+  z-index: 2;
 }
 
 /* --- SHARED CARD STYLING --- */
-/* We turn the cards into Flex columns to fix overlap issues */
-.project-card {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  position: absolute;
-  width: 1273px;
-  left: 80px;
-  padding: 50px; /* Internal breathing room */
-  box-sizing: border-box;
-  
-  display: flex;
-  flex-direction: column;
-  gap: 30px; /* Space between Title and Content */
-}
-
-/* --- PROJECT 1: PERSUASIVE (Layout) --- */
-.project-persuasive-2 {
-  /* Inherits .project-card styling via composition in CSS Modules not supported easily, 
-     so we copy the base styles or apply two classes in JSX. 
-     Here we apply properties directly. */
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  position: absolute;
-  width: 1273px;
-  left: 80px;
-  padding: 50px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  
-  /* Position on page */
-  top: 550px;
-  height: auto; /* Allow height to fit content */
-  min-height: 600px;
-}
-
-/* Title Centered Top */
-.persuasive-title {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center; /* Center aligned */
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* Split Row: Video Left, Text Right */
-.split-content {
-  display: flex;
-  flex-direction: row;
-  gap: 40px;
-  align-items: flex-start;
-}
-
-.left-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.right-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  text-align: left; /* Text alignment */
-}
-
-/* Video Styling */
-.rectangle-9 {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-  object-fit: cover;
-}
-
-/* Captions */
-.collage-featuring-co-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 400;
-  margin-top: 10px;
-}
-
-/* Text Block */
-.persuasive-blurb {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-/* Links */
-.div-3 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 24px;
-  font-weight: 700;
-}
-.text-wrapper-104 {
-  color: var(--off-white);
-  text-decoration: underline;
-  cursor: pointer;
-}
-.spring-fall {
-  color: var(--dark-brown); /* As requested in design */
-  background-color: rgba(255,255,255, 0.8); /* Added bg so it's readable on red */
-  padding: 5px 15px;
-  border-radius: 20px;
-  font-family: "Roboto", Helvetica;
-  font-size: 20px;
-  font-style: italic;
-  font-weight: 600;
-  width: fit-content;
-}
-
-/* --- PROJECT 2: ROBOT MEDIATED (Layout) --- */
-.project-robot-2 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  position: absolute;
-  width: 1273px;
-  left: 80px;
-  padding: 50px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  
-  /* Position */
-  top: 1350px;
-  height: auto;
-}
-
-.robot-mediated {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
-  width: 100%;
-}
-
-.robot-med-haptics-2 {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-.blurb-4 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
-.challenges-of-2 {
-  color: var(--off-white);
-  font-size: 18px;
-  font-style: italic;
-  margin-top: 10px;
-}
-
-/* --- PROJECT 3: ACCESSIBLE HAPTICS (Layout) --- */
-.project-haptics-2 {
-  background-color: var(--red-brown);
-  border-radius: 84px;
-  position: absolute;
-  width: 1273px;
-  left: 80px;
-  padding: 50px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  
-  /* Position */
-  top: 2150px;
-  height: auto;
-}
-
-.accessible-haptics {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 36px;
-  font-weight: 700;
-  text-align: center;
-}
-
-.text-wrapper-109 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.rectangle-12 {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
-}
-
-/* --- PROJECT 4: VERSATILE HAPTICS (Zig-Zag Layout) --- */
+.project-card,
+.project-persuasive-2,
+.project-robot-2,
+.project-haptics-2,
 .project-versatile-2 {
   background-color: var(--red-brown);
   border-radius: 84px;
-  position: absolute;
+  
+  /* Dimensions */
   width: 1273px;
-  left: 80px;
-  padding: 50px;
+  /* Removed fixed height so it grows with text */
+  height: auto; 
+  
+  /* Internal Layout */
+  padding: 60px; /* Comfortable internal spacing */
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 40px; /* Gap between Title and Content */
   
-  /* Position */
-  top: 2950px;
-  height: auto;
+  /* Text defaults */
+  color: var(--off-white);
+  
+  /* IMPORTANT: Removed 'position: absolute' and 'top'. 
+     The Flex container (.projects) now handles placement. */
+  position: relative;
 }
 
+/* --- TITLES (Centered above content) --- */
+.persuasive-title,
+.robot-mediated,
+.accessible-haptics,
 .versatile-haptics {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 36px;
   font-weight: 700;
   text-align: center;
+  width: 100%;
+  margin: 0;
 }
 
-/* Zig-Zag Rows */
-.zig-zag-row {
+/* --- SPLIT CONTENT LAYOUT --- */
+.split-content {
   display: flex;
   flex-direction: row;
-  gap: 40px;
-  align-items: flex-start;
+  gap: 60px; /* Space between Video and Text columns */
+  align-items: stretch; /* Ensures both columns stretch to full height */
 }
 
-.vers-haptics-img {
+/* LEFT COLUMN: Video/Image + Caption + Date */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT COLUMN: Description + Text */
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: right; /* Forces all text to align right */
+  align-items: flex-end; /* Aligns the container elements to right */
+}
+
+/* --- TEXT STYLING --- */
+/* The "Description [Link]" Subtitle */
+.description-header {
+  color: var(--off-white);
+  font-family: "Roboto Mono", Helvetica;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* The Main Paragraph Text */
+.project-text {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Links */
+.link-text {
+  color: var(--off-white);
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.bracket { color: var(--off-white); }
+
+/* --- MEDIA STYLING --- */
+.project-video,
+.project-image {
   width: 100%;
-  max-width: 500px;
+  height: auto;
   border-radius: 20px;
   object-fit: cover;
 }
 
-.text-wrapper-115, 
-.text-wrapper-114, 
-.right-final-2 {
+/* Captions under video */
+.media-caption {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 20px;
-  line-height: 1.5;
-}
-
-.text-wrapper-114,
-.right-final-2 {
-  font-style: italic;
   font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 15px;
+  text-align: left;
 }
 
-/* --- Utilities --- */
-.text-wrapper-103 { color: var(--off-white); }
-.text-wrapper-110 { color: #e8e3cf; }
-.text-wrapper-116 { color: #e8e3cf; }
+/* --- DATE STYLING --- */
+/* Positioned at bottom left with comfortable distance */
+.project-date {
+  color: var(--dark-brown);
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 8px 24px;
+  border-radius: 30px;
+  
+  font-family: "Roboto", Helvetica;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 600;
+  
+  width: fit-content;
+  
+  /* This pushes the date to the very bottom of the flex column */
+  margin-top: auto; 
+  /* Comfortable distance from the element above it */
+  padding-top: 8px; 
+  /* Ensure it doesn't touch the bottom border immediately (handled by card padding),
+     but if you want extra space: */
+  transform: translateY(10px); 
+}
+
+/* --- PROJECT 4 SPECIFIC (Zig-Zag) --- */
+.zig-zag-row {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+
+/* Name Component / Divider */
+.name-component-2 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0; /* Add some space around the logo divider */
+}
+
+.bena-favicon-figma-4 {
+  height: 96px;
+  width: 96px;
+  object-fit: cover;
+}
+
+.text-wrapper-108 {
+  color: var(--dark-brown);
+  font-family: "Figma Hand-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
+}
 
 /* Responsive Scaling for Desktop */
 @media (max-width: 1440px) {
