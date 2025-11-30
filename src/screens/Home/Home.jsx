@@ -53,18 +53,18 @@ export const Home = () => {
               src="/img/vector-1-3.svg" 
             />
 
-            <p className={styles['hi-my-name-is-abena-2']}>
+            <h2 className={styles['hi-my-name-is-abena-2']}>
               <span className={styles['text-wrapper-69']}>Hi, my name is </span>
               <span className={styles['text-wrapper-70']}>Abena</span>
               <span className={styles['text-wrapper-69']}> (she/her), a</span>
-            </p>
+            </h2>
 
-            <p className={styles['researcher-designer-2']}>
+            <h2 className={styles['researcher-designer-2']}>
               <span className={styles['text-wrapper-77']}><br /></span>
               <span className={styles['text-wrapper-78']}>Researcher,<br /></span>
               <span className={styles['text-wrapper-79']}>Designer,<br /></span>
               <span className={styles['text-wrapper-80']}>Engineer,</span>
-            </p>
+            </h2>
 
             <p className={styles['final-year-phd-2']}>
               &amp; final year PhD Candidate in Robotics!
@@ -124,7 +124,7 @@ export const Home = () => {
 
           {/* SECTION 2: About Me & CV CTA */}
           <section className={styles['about-me-cv-cta']}>
-            <div className={styles['text-wrapper-82']}>a(bit).</div>
+            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
             <div className={styles['a-bit-about-me-2']}>
               <p className={styles['this-is-only-a-bit-2']}>
                 <span className={styles['text-wrapper-71']}>This is only a </span>
