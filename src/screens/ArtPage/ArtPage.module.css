@@ -5,7 +5,6 @@
 
 /* --- CONFIG --- */
 :root {
-  /* FIX: Increased bubble size significantly */
   --art-bubble-size: 250px; 
 }
 
@@ -13,7 +12,10 @@
 .art-page {
   background-color: var(--off-white);
   width: 100%;
+  
+  /* FIX: Changed to allow footer to be visible immediately on tall screens */
   min-height: 100vh;
+  
   position: relative;
   overflow-x: hidden;
   
@@ -35,8 +37,8 @@
 .art-intro {
   width: 90%;
   max-width: 1143px;
-  /* Reduced top margin to pull content up */
-  margin-top: 60px; 
+  /* FIX: Reduced margin to pull content up */
+  margin-top: 40px; 
   text-align: left;
   z-index: 10; 
 }
@@ -47,7 +49,7 @@
   font-size: clamp(3rem, 8vw, 100px); 
   font-weight: 400;
   line-height: 1.1;
-  margin-bottom: 20px;
+  margin-bottom: 10px; /* Reduced gap */
 }
 
 .art-description {
@@ -65,20 +67,19 @@
   width: 100%;
   max-width: 1440px;
   
-  /* FIX: Significantly reduced height to minimize scrolling */
-  height: 600px; 
+  /* FIX: Reduced from 600px to 350px (Approx 50% reduction) */
+  /* Bubbles are 250px, so this leaves ~100px wiggle room for randomness */
+  height: 350px; 
   
-  /* Tightened margins */
-  margin: 20px 0;
+  /* Reduced margins */
+  margin: 10px 0;
   
-  /* Allow bubbles to float slightly outside bounds without clipping */
   overflow: visible; 
 }
 
 /* --- BUBBLES --- */
 .art-bubble {
   position: absolute;
-  /* Use CSS variable */
   width: var(--art-bubble-size);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
@@ -103,9 +104,9 @@
   pointer-events: none; 
 }
 
-/* HOVER EFFECT: Scale up */
+/* HOVER EFFECT */
 .art-bubble:hover {
-  transform: scale(1.2) !important; /* Slightly larger scale on hover */
+  transform: scale(1.2) !important; 
   z-index: 20; 
   border-color: var(--sky-blue);
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -174,7 +175,9 @@
 /* --- FOOTER --- */
 .footer-container {
   width: 100%;
-  margin-top: 0; 
+  /* This ensures footer sits at bottom of content, 
+     or bottom of screen if content is short */
+  margin-top: auto; 
   position: relative;
 }
 
@@ -193,7 +196,7 @@
     position: relative; 
     top: auto !important;
     left: auto !important;
-    width: 150px; /* Still keep them decent size on mobile */
+    width: 150px; 
     animation: none; 
   }
 }

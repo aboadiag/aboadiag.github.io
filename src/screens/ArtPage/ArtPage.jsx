@@ -4,7 +4,6 @@ import { NavBar } from "../../components/NavBar";
 import { Footer } from "../../components/Footer";
 import styles from "./ArtPage.module.css";
 
-// Art pieces array
 const artPieces = [
   { id: 1, title: "Self Portrait (2020).", src: "/img/art/abena_self_portrait.png", alt: "Self portrait of Abena" },
   { id: 2, title: "TT 1 (2020).", src: "/img/art/tt_art1.jpg", alt: "Digital image of person with hand on breast in blue ink." },
@@ -23,7 +22,6 @@ export const ArtPage = () => {
   const [bubbleStyles, setBubbleStyles] = useState([]);
   const containerRef = useRef(null);
 
-  // Helper: Random positions
   useEffect(() => {
     const calculatePositions = () => {
       if (!containerRef.current) return;
@@ -31,12 +29,11 @@ export const ArtPage = () => {
       const containerW = containerRef.current.offsetWidth;
       const containerH = containerRef.current.offsetHeight;
       
-      // FIX: Match this to the CSS variable (--art-bubble-size)
+      // Match CSS var
       const bubbleSize = 250; 
 
       const newStyles = artPieces.map(() => {
-        // Random X/Y within container bounds (minus bubble size)
-        // Math.max(0, ...) ensures we don't get negative numbers if container is small
+        // Math.max(0, ...) ensures we don't get negative numbers
         const left = Math.random() * Math.max(0, containerW - bubbleSize);
         const top = Math.random() * Math.max(0, containerH - bubbleSize);
         
@@ -58,7 +55,6 @@ export const ArtPage = () => {
     return () => window.removeEventListener('resize', calculatePositions);
   }, []);
 
-  // Modal handlers
   const openModal = (art) => {
     setModalArt(art);
     document.body.style.overflow = "hidden"; 
@@ -72,12 +68,10 @@ export const ArtPage = () => {
   return (
     <div className={styles['art-page']}>
       
-      {/* 1. Header */}
       <header className={styles['navbar-container']}>
         <NavBar />
       </header>
 
-      {/* 2. Intro */}
       <div className={styles['art-intro']}>
         <div className={styles['select-art']}>select art.</div>
         <p className={styles['art-description']}>
@@ -85,7 +79,6 @@ export const ArtPage = () => {
         </p>
       </div>
 
-      {/* 3. Bubbles Container (Reduced Height) */}
       <div className={styles['art-bubbles-container']} ref={containerRef}>
         {artPieces.map((art, index) => (
           <button
@@ -101,7 +94,6 @@ export const ArtPage = () => {
         ))}
       </div>
 
-      {/* 4. Modal (Overlay) */}
       {modalArt && (
         <div className={styles['art-modal']} onClick={closeModal}>
           <div className={styles['art-modal-content']} onClick={(e) => e.stopPropagation()}>
@@ -114,7 +106,6 @@ export const ArtPage = () => {
         </div>
       )}
 
-      {/* 5. Footer */}
       <div className={styles['footer-container']}>
         <Footer />
       </div>
