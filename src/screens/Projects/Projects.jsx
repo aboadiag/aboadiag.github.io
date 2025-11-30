@@ -8,15 +8,14 @@ export const Projects = () => {
   return (
     <div className={styles.projects}>
       
-      {/* FIX: Header is now Absolute so it ignores the padding and sits at Top */}
+      {/* HEADER */}
       <header className={styles['navbar-container']}>
         <NavBar />
       </header>
 
-      {/* Title */}
+      {/* INTRO */}
       <div className={styles['text-wrapper-97']}>select projects.</div>
 
-      {/* Intro */}
       <p className={styles['during-my-phd-i-have']}>
         During my PhD, I have had the opportunity to design, fabricate, &amp;
         implement various ideas within the space of HRI &amp; physical
@@ -120,13 +119,35 @@ export const Projects = () => {
            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collaboration with Violet Han et al.]</span>
         </p>
 
-        <div className={styles['zig-zag-row']}>
+        <div className={styles['split-content']}>
+            {/* LEFT COLUMN: Both Images Stacked */}
             <div className={styles['left-column']}>
-               <img className={styles['project-image']} src="/img/vers-haptics-img1-2.png" alt="Prototype 1" />
-               <p className={styles['media-caption']}>Left: Early prototype with vertical motor arrangement.</p>
+               <div className={styles['versatile-image-stack']}>
+                  <div>
+                    <img className={styles['vers-haptics-img']} src="/img/vers-haptics-img1-2.png" alt="Prototype 1" />
+                    <p className={styles['media-caption']}>Left: Early prototype with vertical motor arrangement.</p>
+                  </div>
+                  <div>
+                    <img className={styles['vers-haptics-img']} src="/img/vers-haptics-img2-2.png" alt="Prototype 2" />
+                    <p className={styles['media-caption']}>Right: Final Prototype with horizontal motor arrangement.</p>
+                  </div>
+               </div>
+               
+               <div className={styles['project-date']}>Fall 2023</div>
             </div>
+
+            {/* RIGHT COLUMN: Description Header + Main Text */}
             <div className={styles['right-column']}>
-               <p className={styles['text-wrapper-115']}>
+                <div className={styles['description-header']}>
+                   Description 
+                   <span className={styles['bracket']}> [</span>
+                   <a href="https://dl.acm.org/doi/pdf/10.1145/3586183.3606766" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                     UIST ‘23
+                   </a>
+                   <span className={styles['bracket']}>]</span>
+                </div>
+
+                <p className={styles['text-wrapper-115']}>
                   We presented Parametric Haptics, customizable and versatile haptic
                   patches that are lightweight, reconfigurable, and can be integrated as
                   wearables or into objects. We linearly actuated the motors by
@@ -136,35 +157,13 @@ export const Projects = () => {
                   of actuation to achieve a diverse set of tactile sensations.  Control
                   strategies can be adapted to elicit desired tactile feedback and
                   incorporate refined control approaches with appropriate hardware consideration.
-               </p>
-            </div>
-        </div>
-
-        <div className={styles['zig-zag-row']}>
-             <div className={styles['left-column']}>
-                <div className={styles['description-header']} style={{ textAlign: 'left', alignSelf: 'flex-start' }}>
-                   Description 
-                   <span className={styles['bracket']}> [</span>
-                   <a href="https://dl.acm.org/doi/pdf/10.1145/3586183.3606766" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
-                     UIST ‘23
-                   </a>
-                   <span className={styles['bracket']}>]</span>
-                </div>
-                <p className={styles['media-caption']}>
-                  Right: Final Prototype with horizontal motor arrangement.
                 </p>
-                <div className={styles['project-date']}>Fall 2023</div>
-             </div>
-
-             <div className={styles['right-column']}>
-                <img className={styles['project-image']} src="/img/vers-haptics-img2-2.png" alt="Prototype 2" />
-             </div>
+            </div>
         </div>
       </div>
 
       {/* ================= PROJECT 4: ACCESSIBLE HAPTICS ================= */}
       <div className={styles['project-haptics-2']}>
-        
         <p className={styles['accessible-haptics']}>
             Accessible Haptics through Graphics Rendering
             <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collab with A. Brantley, A.F. Siu, &amp; S. Follmer]</span>
@@ -209,12 +208,9 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* FOOTER FIX: 
-          position: 'relative' -> Puts it back in the normal flow (not floating).
-          top: 'auto' -> Tells it to ignore the "2600px" setting from CSS.
-      */}
+      {/* FOOTER - FIXED: Inline style override forces it to relative/auto */}
       <div style={{ width: '100%' }}>
-        <Footer style={{ position: 'relative', top: 'auto' }} />
+         <Footer style={{ position: 'relative', top: 'auto' }} />
       </div>
 
     </div>
