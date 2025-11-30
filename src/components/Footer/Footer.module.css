@@ -1,78 +1,59 @@
+/* Footer.module.css */
+
 @import "./styleguide.css"; 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* --- CSS Variables (KEEP OR REMOVE): Delete this :root block if your styleguide.css handles all color and font variables correctly. --- */
-:root {
-  --off-white: #faf7f2;
-  --dark-brown: #5b240c;
-  --red-brown: #943b16;
-  --sky-blue: #7ab3ff;
-  --font-primary: "Roboto", Helvetica, sans-serif;
-  --font-accent: "Poppins", Helvetica, sans-serif;
-}
-/* ------------------------------------------------------------------------------------------------------------------------------------------- */
-
-
-/* Footer.module.css */
-
-/* ... (Keep your existing @imports and variables) ... */
-
+/* --- Main Footer Container --- */
 .footer {
-  /* Ensure this sits naturally in the flow */
-  position: relative; 
+  /* CRITICAL FIX 1: We switch to Absolute to force it to the bottom */
+  position: absolute;
+  top: 2600px; /* Matches the bottom of your Home content */
+  left: 0;
+  
   width: 100%;
   height: auto;
   padding: 40px 80px;
   box-sizing: border-box;
-  margin-top: 0; 
-  /* Ensures footer is not transparent, covering any glitchy overlap */
-  background-color: var(--off-white); 
+  background-color: var(--off-white);
   z-index: 10;
 }
 
-/* ... (Keep the rest of your Footer CSS exactly as is) ... */
 /* --- Contact Bar Wrapper (The Main Layout Grid) --- */
 .footer .contact-bar-scholar {
-  /* CRITICAL FIX: Grid for 3-column desktop layout */
   display: grid;
-  /* Columns: Contact Info (responsive) | Scholar Link (auto width) | GitHub Link (auto width) */
-  grid-template-columns: minmax(200px, 1fr) auto auto; 
-  align-items: flex-start;
-  gap: clamp(40px, 5vw, 80px); /* Responsive gap */
+  /* Columns: 
+     1. Contact Info (Takes all available space, pushes others right) 
+     2. Scholar Link (Auto width) 
+     3. GitHub Link (Auto width) 
+  */
+  grid-template-columns: 1fr auto auto; 
+  align-items: flex-end; /* Aligns items to the bottom visual line */
+  gap: clamp(40px, 5vw, 80px);
   width: 100%;
   max-width: 1468px;
   margin: 0 auto;
 }
 
-/* --- Inner group layout (Containing the three columns) --- */
+/* --- Inner group layout --- */
 .footer .group-6 {
-  /* CRITICAL FIX: Allows children to participate in the parent grid (the 3 columns) */
-  display: contents; 
+  display: contents; /* Allows children to sit directly on the grid */
 }
 
-/* --- Section 1: Contact & Email --- */
-
-/* 'Contact' large label (text-wrapper-94) - Uses defined variables */
-.footer .text-wrapper-94 {
-  position: static;
+/* --- LEFT COLUMN: Contact & Email --- */
+.footer .text-wrapper-94 { /* "Contact" Label */
   margin-bottom: 20px;
   color: var(--red-brown);
   font-family: var(--font-primary);
   font-size: clamp(2.5rem, 5vw, 5rem); 
   font-weight: 900;
-  letter-spacing: 0;
   line-height: 1.1;
-  width: auto;
 }
 
-/* Email (text-wrapper-93) - Uses defined variables */
-.footer .text-wrapper-93 {
-  position: static;
+.footer .text-wrapper-93 { /* Email Address */
   color: var(--dark-brown);
   font-family: var(--font-accent);
   font-size: clamp(1rem, 2vw, 24px); 
   font-weight: 400;
-  letter-spacing: 0;
   line-height: 44px;
   white-space: nowrap;
 }
@@ -85,19 +66,15 @@
   text-decoration: underline;
 }
 
-/* --- Section 2: Google Scholar (link-google-scholar) --- */
+/* --- CENTER COLUMN: Google Scholar --- */
 .footer .link-google-scholar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start; 
-  text-align: center;
-  height: auto;
-  width: auto; 
-  padding-top: 5px; 
   text-decoration: none; 
 }
 
+/* This was missing in your snippet! Restores the logo shape */
 .footer .google-scholar-logo {
   position: relative;
   height: 110px;
@@ -105,87 +82,91 @@
   margin-bottom: 5px;
 }
 
-/* "read my work" label (text-wrapper-95) - Uses defined variables */
-.footer .text-wrapper-95 {
-  position: static;
-  margin-top: 0; 
+/* Vector positioning relative to the logo container */
+.footer .vector-4 {
+  height: 80.91%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 50.94%;
+}
+.footer .vector-5 {
+  height: 88.18%;
+  left: 45.28%;
+  position: absolute;
+  top: 0;
+  width: 54.72%;
+}
+.footer .vector-6 {
+  height: 57.27%;
+  left: 21.70%;
+  position: absolute;
+  top: 42.73%;
+  width: 56.60%;
+}
+.footer .vector-7 {
+  height: 16.36%;
+  left: 24.53%;
+  position: absolute;
+  top: 42.73%;
+  width: 51.89%;
+}
+
+.footer .text-wrapper-95 { /* "read my work" */
   color: var(--dark-brown);
   font-family: var(--font-primary); 
   font-size: 24px;
   font-weight: 400;
-  letter-spacing: 0;
   line-height: 44px;
   white-space: nowrap;
-  width: auto;
   text-align: center;
 }
 .footer .link-google-scholar:hover .text-wrapper-95 {
-    color: var(--red-brown);
+   color: var(--red-brown);
 }
 
-/* --- Section 3: GitHub (img-wrapper) --- */
+/* --- RIGHT COLUMN: GitHub --- */
 .footer .img-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  height: auto;
-  width: auto;
-  padding-top: 10px;
   text-decoration: none;
 }
 
-/* github icon inside wrapper */
-.footer .vector-8 {
-  position: static;
+.footer .vector-8 { /* GitHub Icon */
   width: 98.29px;
   margin-bottom: 5px;
 }
 
-/* "visit my repos" label (text-wrapper-96) - Uses defined variables */
-.footer .text-wrapper-96 {
-  position: static;
-  margin-top: 0;
-
+.footer .text-wrapper-96 { /* "visit my repos" */
   color: var(--dark-brown);
   font-family: var(--font-primary);
   font-size: 24px;
   font-weight: 400;
-  letter-spacing: 0;
   line-height: 44px;
   white-space: nowrap;
   text-align: center;
 }
 .footer .img-wrapper:hover .text-wrapper-96 {
-    color: var(--red-brown);
+   color: var(--red-brown);
 }
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .footer {
     padding: 30px 20px;
+    height: auto; /* Allow height to expand on mobile */
   }
 
   .footer .contact-bar-scholar {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Stack everything vertically */
     gap: 40px;
+    justify-items: center; /* Center everything */
+    align-items: center;
   }
   
-  .footer .group-6 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px; 
-  }
-
   .footer .text-wrapper-94,
   .footer .text-wrapper-93 {
     text-align: center;
-    width: 100%;
-  }
-
-  .footer .text-wrapper-94 {
-    margin-bottom: 5px;
   }
 }
