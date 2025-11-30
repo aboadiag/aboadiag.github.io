@@ -3,31 +3,40 @@
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* --- MAIN CONTAINER --- */
+/* --- MAIN PAGE CONTAINER --- */
 .projects {
   background-color: var(--off-white);
   width: 100%;
-  
-  /* FIX: Changed from fixed 4400px to 100vh so it hugs content */
-  min-height: 100vh; 
-  
+  min-height: 100vh;
   position: relative;
   overflow-x: hidden;
   
+  /* FLEX COLUMN for cards */
   display: flex;
   flex-direction: column;
   align-items: center; 
   
-  gap: 100px; /* Consistent spacing between projects */
+  gap: 100px; 
   
-  /* Top padding creates space for the Title/Intro text */
+  /* This padding pushes the *Flex* items (Project Cards) down 
+     so they don't overlap the Title/Description. */
   padding-top: 550px; 
-  
-  /* FIX: Reduced bottom padding to remove the large gap before footer */
-  padding-bottom: 150px; 
+  padding-bottom: 150px;
 }
 
-/* --- HEADER / TITLE / INTRO --- */
+/* --- FIX: NAVBAR CONTAINER --- */
+/* This pulls the navbar out of the flow so it ignores the padding-top */
+.navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100; /* Ensures it stays on top */
+  /* Optional: Add some top margin if you want it to breathe */
+  padding-top: 20px; 
+}
+
+/* --- TITLE & INTRO --- */
 .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
@@ -55,11 +64,10 @@
 }
 
 /* --- SHARED CARD STYLING --- */
-.project-card,
 .project-persuasive-2,
 .project-robot-2,
-.project-haptics-2,
-.project-versatile-2 {
+.project-versatile-2,
+.project-haptics-2 {
   background-color: var(--red-brown);
   border-radius: 84px;
   width: 1273px;
@@ -76,8 +84,8 @@
 /* --- TITLES --- */
 .persuasive-title,
 .robot-mediated,
-.accessible-haptics,
-.versatile-haptics {
+.versatile-haptics,
+.accessible-haptics {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 36px;
@@ -87,7 +95,7 @@
   margin: 0;
 }
 
-/* --- SPLIT CONTENT LAYOUT --- */
+/* --- SPLIT CONTENT --- */
 .split-content {
   display: flex;
   flex-direction: row;
@@ -105,12 +113,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
   text-align: right; 
   align-items: flex-end;
 }
 
-/* --- TEXT STYLING --- */
+/* --- TEXT --- */
 .description-header {
   color: var(--off-white);
   font-family: "Roboto Mono", Helvetica;
@@ -119,12 +127,17 @@
   margin-bottom: 10px;
 }
 
-.project-text {
+.project-text,
+.persuasive-blurb,
+.blurb-4,
+.text-wrapper-115,
+.text-wrapper-109 {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
+  text-align: right;
 }
 
 .link-text {
@@ -135,7 +148,7 @@
 }
 .bracket { color: var(--off-white); }
 
-/* --- MEDIA STYLING --- */
+/* --- MEDIA --- */
 .project-video,
 .project-image {
   width: 100%;
@@ -154,10 +167,10 @@
   text-align: left;
 }
 
-/* --- DATE STYLING --- */
+/* --- DATES --- */
 .project-date {
   color: var(--dark-brown);
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 8px 24px;
   border-radius: 30px;
   font-family: "Roboto", Helvetica;
@@ -170,16 +183,17 @@
   transform: translateY(10px); 
 }
 
-/* --- ZIG ZAG LAYOUT --- */
+/* --- ZIG ZAG --- */
 .zig-zag-row {
   display: flex;
   flex-direction: row;
   gap: 60px;
   align-items: flex-start;
-  margin-bottom: 40px;
+  width: 100%;
+  margin-bottom: 30px;
 }
 
-/* Responsive Scaling for Desktop */
+/* --- RESPONSIVE --- */
 @media (max-width: 1440px) {
   .projects {
     transform: scale(calc(100vw / 1440));

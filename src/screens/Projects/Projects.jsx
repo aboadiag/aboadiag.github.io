@@ -1,6 +1,5 @@
 // Projects.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Projects.module.css";
 import { Footer } from "../../components/Footer";
@@ -9,14 +8,15 @@ export const Projects = () => {
   return (
     <div className={styles.projects}>
       
-      {/* HEADER / NAVBAR (Top of Page) */}
-      <header>
+      {/* FIX: Header is now Absolute so it ignores the padding and sits at Top */}
+      <header className={styles['navbar-container']}>
         <NavBar />
       </header>
 
-      {/* Title & Intro Text */}
+      {/* Title */}
       <div className={styles['text-wrapper-97']}>select projects.</div>
 
+      {/* Intro */}
       <p className={styles['during-my-phd-i-have']}>
         During my PhD, I have had the opportunity to design, fabricate, &amp;
         implement various ideas within the space of HRI &amp; physical
@@ -54,7 +54,7 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['project-text']}>
+            <p className={styles['persuasive-blurb']}>
               Visual art-making can support mental wellbeing.
               Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user "involvement" (a proxy for engagement; low, medium, high),
               to adapt a social robotic coach's personality (i.e., charismatic/direct vs uncharismatic/indirect) 
@@ -97,7 +97,7 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['project-text']}>
+            <p className={styles['blurb-4']}>
               Inspired by my previous work in accessible haptics,
               I iterated on a haptic mouse&nbsp;&nbsp;to facilitate
               on-demand and iterative adaptation of visual aids used in K-12
@@ -113,23 +113,20 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* FIX: REMOVED DIVIDER/FAVICON HERE */}
-
-      {/* ================= PROJECT 3: VERSATILE HAPTICS (Reordered) ================= */}
+      {/* ================= PROJECT 3: VERSATILE HAPTICS ================= */}
       <div className={styles['project-versatile-2']}>
         <p className={styles['versatile-haptics']}>
            Versatile Haptics
            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collaboration with Violet Han et al.]</span>
         </p>
 
-        {/* ROW 1: Image Left | Text Right */}
         <div className={styles['zig-zag-row']}>
             <div className={styles['left-column']}>
                <img className={styles['project-image']} src="/img/vers-haptics-img1-2.png" alt="Prototype 1" />
                <p className={styles['media-caption']}>Left: Early prototype with vertical motor arrangement.</p>
             </div>
             <div className={styles['right-column']}>
-               <p className={styles['project-text']}>
+               <p className={styles['text-wrapper-115']}>
                   We presented Parametric Haptics, customizable and versatile haptic
                   patches that are lightweight, reconfigurable, and can be integrated as
                   wearables or into objects. We linearly actuated the motors by
@@ -143,7 +140,6 @@ export const Projects = () => {
             </div>
         </div>
 
-        {/* ROW 2: Text Left | Image Right */}
         <div className={styles['zig-zag-row']}>
              <div className={styles['left-column']}>
                 <div className={styles['description-header']} style={{ textAlign: 'left', alignSelf: 'flex-start' }}>
@@ -157,8 +153,6 @@ export const Projects = () => {
                 <p className={styles['media-caption']}>
                   Right: Final Prototype with horizontal motor arrangement.
                 </p>
-                
-                {/* Date at Bottom Left of this text block */}
                 <div className={styles['project-date']}>Fall 2023</div>
              </div>
 
@@ -168,7 +162,7 @@ export const Projects = () => {
         </div>
       </div>
 
-      {/* ================= PROJECT 4: ACCESSIBLE HAPTICS (Reordered to Last) ================= */}
+      {/* ================= PROJECT 4: ACCESSIBLE HAPTICS ================= */}
       <div className={styles['project-haptics-2']}>
         
         <p className={styles['accessible-haptics']}>
@@ -177,21 +171,19 @@ export const Projects = () => {
         </p>
 
         <div className={styles['split-content']}>
-           {/* LEFT */}
            <div className={styles['left-column']}>
-             <video controls className={styles['project-video']}>
+              <video controls className={styles['project-video']}>
                 <source src="/vids/haptic-graphics.mp4 " type="video/mp4" />
-             </video>
-             <p className={styles['media-caption']}>
+              </video>
+              <p className={styles['media-caption']}>
                 Left: haptic mouse platform. Right: Rendering surface curvature
                 through kinesthetic feedback (left) and visually on GUI (right). Note:
                 While 2 fingers are placed on the tilt platform, 1 finger is best for
                 curvature perception.
-             </p>
-             <div className={styles['project-date']}>2020-2021</div>
+              </p>
+              <div className={styles['project-date']}>2020-2021</div>
            </div>
 
-           {/* RIGHT */}
            <div className={styles['right-column']}>
               <div className={styles['description-header']}>
                 Description 
@@ -202,7 +194,7 @@ export const Projects = () => {
                 <span className={styles['bracket']}>]</span>
               </div>
 
-              <p className={styles['project-text']}>
+              <p className={styles['text-wrapper-109']}>
                 The preliminary development of a mechanically-actuated, kinesthetic
                 haptic mouse for tactile graphic rendering to assist with remote
                 learning for blind and low vision (BLV) students. It provides
@@ -218,7 +210,7 @@ export const Projects = () => {
       </div>
 
       {/* FOOTER */}
-      <div style={{ width: '100%', position: 'relative' }}>
+      <div style={{ width: '100%' }}>
          <Footer />
       </div>
 
