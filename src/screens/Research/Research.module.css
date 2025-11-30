@@ -11,22 +11,18 @@
   position: relative;
   overflow-x: hidden;
   
-  /* FLEX COLUMN for vertical stacking */
   display: flex;
   flex-direction: column;
   align-items: center; 
   
-  /* Consistent spacing between research projects */
   gap: 100px; 
   
-  /* FIX: Increased padding to 800px to prevent Intro Text from overlapping Project 1 */
+  /* Keeps the intro text visible above the first project */
   padding-top: 800px; 
-  
-  /* No gap after footer */
   padding-bottom: 0px; 
 }
 
-/* --- HEADER / NAVBAR FIX --- */
+/* --- HEADER / NAVBAR --- */
 .navbar-container {
   position: absolute;
   top: 0;
@@ -36,7 +32,7 @@
   padding-top: 20px; 
 }
 
-/* --- TITLE & INTRO (Pinned Absolute) --- */
+/* --- TITLE & INTRO --- */
 .text-wrapper-127 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
@@ -68,10 +64,10 @@
 .project-ishra,
 .project-guide,
 .project-voice {
-  /* Using your moss-green variable */
   background-color: var(--moss-green, #697b6c); 
   border-radius: 84px;
   width: 1273px;
+  /* Allow height to grow naturally with content */
   height: auto; 
   padding: 60px;
   box-sizing: border-box;
@@ -84,7 +80,7 @@
   position: relative;
 }
 
-/* --- TITLES (Centered) --- */
+/* --- TITLES --- */
 .project-title {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
@@ -95,19 +91,21 @@
   margin: 0;
 }
 
-/* --- SPLIT CONTENT LAYOUT --- */
+/* --- SPLIT CONTENT --- */
 .split-content {
   display: flex;
   flex-direction: row;
   gap: 60px; 
-  align-items: stretch;
+  /* Items stretch to match height, but content inside aligns naturally */
+  align-items: stretch; 
 }
 
 .left-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Pushes date to bottom */
+  /* Ensures date is pushed to bottom */
+  justify-content: space-between; 
 }
 
 .right-column {
@@ -119,7 +117,7 @@
   align-items: flex-end;
 }
 
-/* --- TEXT ELEMENTS --- */
+/* --- TEXT --- */
 .description-header {
   color: var(--off-white);
   font-family: "Roboto Mono", Helvetica;
@@ -129,7 +127,9 @@
   text-align: right;
 }
 
-.project-text {
+.project-text, 
+.blurb-5, 
+.we-used-various-3 {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 20px;
@@ -146,24 +146,27 @@
 }
 .bracket { color: var(--off-white); }
 
-/* --- MEDIA --- */
+/* --- MEDIA (NO CROP FIX) --- */
 .project-image,
 .project-video {
-  width: 100%;
-  /* FIX: Enforce a max height for images to keep project boxes consistent */
-  height: 350px; 
+  /* Scale width to fill the column */
+  width: 100%; 
+  /* Allow height to adjust naturally based on aspect ratio */
+  height: auto; 
+  
   border-radius: 20px;
-  object-fit: cover;
+  
+  /* Ensure the full image is visible, never cropped */
+  object-fit: contain; 
+  
+  /* Optional: background for videos if aspect ratio leaves gaps */
+  background-color: transparent; 
 }
 
 .video-container {
-  position: relative;
   width: 100%;
-  height: 350px; /* Match image height */
-}
-
-.project-video {
-  height: 100%; /* Fill container */
+  height: auto; /* Let the video dictate height */
+  position: relative;
 }
 
 /* Caption under media */
@@ -190,24 +193,34 @@
   font-weight: 600;
   
   width: fit-content;
-  margin-top: auto; 
+  margin-top: 40px; /* Ensure space from caption above */
   padding-top: 8px; 
-  transform: translateY(10px); 
 }
 
-/* --- UTILITY SPANS --- */
+/* --- UTILITIES --- */
 .text-wrapper-122 { font-weight: 400; }
 .text-wrapper-124 { font-weight: 700; }
 .text-wrapper-125 { font-weight: 700; font-style: italic; }
 .text-wrapper-126 { text-decoration: underline; }
 
-/* Video Container for blur effect */
-.video-blur-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  pointer-events: none; /* Let clicks pass through */
-  opacity: 0.6;
+.name-component-3 {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 20px 0;
+}
+.bena-favicon-figma-5 {
+  height: 96px;
+  width: 96px;
+  object-fit: cover;
+}
+.text-wrapper-140 {
+  color: var(--dark-brown);
+  font-family: "Figma Hand-Bold", Helvetica;
+  font-size: 30px;
+  font-weight: 700;
 }
 
 /* Responsive */

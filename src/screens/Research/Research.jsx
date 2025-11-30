@@ -1,6 +1,5 @@
 // Research.jsx
 import React from "react";
-import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
 import { Footer } from "../../components/Footer";
@@ -108,11 +107,9 @@ export const Research = () => {
         <div className={styles['split-content']}>
           {/* LEFT */}
           <div className={styles['left-column']}>
-            <div className={styles['video-container']}>
-                <video controls className={styles['project-video']}>
-                  <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
-                </video>
-            </div>
+            <video controls className={styles['project-video']}>
+              <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
+            </video>
             <p className={styles['media-caption']}>
               Video featuring Control &amp; Experimental Conditions.
             </p>
@@ -147,7 +144,15 @@ export const Research = () => {
         </div>
       </div>
 
-      {/* FIX: REMOVED DIVIDER/FAVICON HERE */}
+      {/* DIVIDER */}
+      <div className={styles['name-component-3']}>
+        <img
+          className={styles['bena-favicon-figma-5']}
+          alt="Bena favicon"
+          src="/img/bena-favicon-figma-1-2.png"
+        />
+        <div className={styles['text-wrapper-140']}>Abena Boadi-Agyemang</div>
+      </div>
 
       {/* ================= RESEARCH 3: GUIDE ROBOTS ================= */}
       <div className={styles['project-guide']}>
@@ -168,6 +173,7 @@ export const Research = () => {
             <div className={styles['project-date']}>Summer 2023 - Fall 2023</div>
           </div>
 
+          {/* RIGHT */}
           <div className={styles['right-column']}>
             <div className={styles['description-header']}>
               Description 
@@ -208,7 +214,7 @@ export const Research = () => {
               <video controls className={styles['project-video']}>
                 <source src="/vids/voice_agent_4_artmaking-2.mp4" type="video/mp4" />
               </video>
-              <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" />
+              {/* Blur Overlay REMOVED */}
             </div>
             <p className={styles['media-caption']}>
               Pilot participant engaged in voice-agent guided art-making.
