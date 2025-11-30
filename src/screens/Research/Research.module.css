@@ -4,10 +4,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
 :root {
-  --high-contrast-color: rgba(255, 255, 255, 0.9);
+  --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
   --high-contrast-background: rgba(82, 96, 86, 1);
-
+  --off-white: #f4f1e8; /* Ensure this is defined */
+  --dark-brown: #3b3228; /* Ensure this is defined */
 }
+
 /* --- MAIN PAGE CONTAINER --- */
 .research {
   background-color: var(--off-white);
@@ -81,13 +83,14 @@
   flex-direction: column;
   gap: 40px;
   
-  color: var(--off-white);
+  /* High contrast text color */
+  color: var(--high-contrast-color);
   position: relative;
 }
 
 /* --- TITLES --- */
 .project-title {
-  color: var(--off-white);
+  color: var(--high-contrast-color);
   font-family: "Roboto", Helvetica;
   font-size: 36px;
   font-weight: 700;
@@ -124,7 +127,7 @@
 
 /* --- TEXT --- */
 .description-header {
-  color: var(--off-white);
+  color: var(--high-contrast-color);
   font-family: "Roboto Mono", Helvetica;
   font-size: 24px;
   font-weight: 700;
@@ -132,10 +135,8 @@
   text-align: right;
 }
 
-.project-text, 
-.blurb-5, 
-.we-used-various-3 {
-  color: var(--off-white);
+.project-text {
+  color: var(--high-contrast-color);
   font-family: "Roboto", Helvetica;
   font-size: 20px;
   font-weight: 400;
@@ -144,12 +145,12 @@
 }
 
 .link-text {
-  color: var(--off-white);
+  color: var(--high-contrast-color);
   text-decoration: underline;
   cursor: pointer;
   margin-left: 5px;
 }
-.bracket { color: var(--off-white); }
+.bracket { color: var(--high-contrast-color); }
 
 /* --- MEDIA (NO CROP FIX) --- */
 .project-image,
@@ -165,13 +166,26 @@
   object-fit: contain; 
   
   /* Optional: background for videos if aspect ratio leaves gaps */
-  background-color: transparent; 
+  background-color: transparent;
+  
+  /* Centers media if it's smaller than the container */
+  align-self: center; 
+}
+
+/* --- FIX FOR PROJECT 3 HEIGHT --- */
+/* Forces the image in the 'guide' project to be shorter, scaling it down without cropping. */
+.project-guide .project-image {
+  max-height: 350px; 
+  width: auto; /* Let width adjust to maintain aspect ratio */
+  max-width: 100%; /* Ensure it doesn't overflow width */
 }
 
 .video-container {
   width: 100%;
   height: auto; /* Let the video dictate height */
   position: relative;
+  display: flex;
+  justify-content: center; /* Center video if it scales down */
 }
 
 /* Caption under media */
@@ -207,26 +221,6 @@
 .text-wrapper-124 { font-weight: 700; }
 .text-wrapper-125 { font-weight: 700; font-style: italic; }
 .text-wrapper-126 { text-decoration: underline; }
-
-.name-component-3 {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 0;
-}
-.bena-favicon-figma-5 {
-  height: 96px;
-  width: 96px;
-  object-fit: cover;
-}
-.text-wrapper-140 {
-  color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-}
 
 /* Responsive */
 @media (max-width: 1440px) {

@@ -1,5 +1,6 @@
 // Research.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
 import { Footer } from "../../components/Footer";
@@ -107,9 +108,11 @@ export const Research = () => {
         <div className={styles['split-content']}>
           {/* LEFT */}
           <div className={styles['left-column']}>
-            <video controls className={styles['project-video']}>
-              <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
-            </video>
+            <div className={styles['video-container']}>
+                <video controls className={styles['project-video']}>
+                  <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
+                </video>
+            </div>
             <p className={styles['media-caption']}>
               Video featuring Control &amp; Experimental Conditions.
             </p>
