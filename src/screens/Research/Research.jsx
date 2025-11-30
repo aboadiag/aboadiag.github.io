@@ -144,16 +144,6 @@ export const Research = () => {
         </div>
       </div>
 
-      {/* DIVIDER */}
-      <div className={styles['name-component-3']}>
-        <img
-          className={styles['bena-favicon-figma-5']}
-          alt="Bena favicon"
-          src="/img/bena-favicon-figma-1-2.png"
-        />
-        <div className={styles['text-wrapper-140']}>Abena Boadi-Agyemang</div>
-      </div>
-
       {/* ================= RESEARCH 3: GUIDE ROBOTS ================= */}
       <div className={styles['project-guide']}>
         <p className={styles['project-title']}>
