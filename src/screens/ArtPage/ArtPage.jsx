@@ -1,3 +1,4 @@
+// ArtPage.jsx
 import React, { useState, useEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import { Footer } from "../../components/Footer";
@@ -8,184 +9,115 @@ const artPieces = [
   { id: 1, title: "Self Portrait (2020).", src: "/img/art/abena_self_portrait.png", alt: "Self portrait of Abena" },
   { id: 2, title: "TT 1 (2020).", src: "/img/art/tt_art1.jpg", alt: "Digital image of person with hand on breast in blue ink." },
   { id: 3, title: "TT 2 (2020).", src: "/img/art/tt_art2.jpg", alt: "Digital image of person in red ink." },
-  { id: 4, title: "Man Wearing Durag (2018).", src: "/img/art/durag_art.jpeg", alt: "Incomplete image of Black man wearing red durag, gazing forwards." },
+  { id: 4, title: "Man Wearing Durag (2018).", src: "/img/art/durag_art.jpeg", alt: "Incomplete image of Black man wearing red durag." },
   { id: 5, title: "Mother Nature (2018).", src: "/img/art/self_color.jpeg", alt: "Painting of young woman gazing at viewer." },
   { id: 6, title: "Jorja Smith in Pastel (2018).", src: "/img/art/jorja.jpeg", alt: "Portrait of musician Jorja Smith." },
   { id: 7, title: "Solonge (2017).", src: "/img/art/solonge.jpeg", alt: "Portrait of musician Solonge Knowles." },
   { id: 8, title: "Girl Sketch (2017).", src: "/img/art/girl_sketch.jpeg", alt: "Portrait of young girl gazing at the viewer." },
-  { id: 9, title: "Cara Delevigne Sketch (2013).", src: "/img/art/cara_del.jpeg", alt: "Portrait of model Cara Delevigne staring intently at a lighter in her hand." },
-  { id: 10, title: "Audrey Hepburn Sketch (2013).", src: "/img/art/audrey_sketch.jpg", alt: "Portrait of actress and humanitarian Audrey Hepburn, smiling softly at viewer with her face resting in her right hand." },
+  { id: 9, title: "Cara Delevigne Sketch (2013).", src: "/img/art/cara_del.jpeg", alt: "Portrait of model Cara Delevigne." },
+  { id: 10, title: "Audrey Hepburn Sketch (2013).", src: "/img/art/audrey_sketch.jpg", alt: "Portrait of Audrey Hepburn." },
 ];
 
 export const ArtPage = () => {
   const [modalArt, setModalArt] = useState(null);
   const [bubbleStyles, setBubbleStyles] = useState([]);
   const containerRef = useRef(null);
-  const firstComputeRef = useRef(true); // used to bias the very first placement top-left
 
-  // bias constants: adjust to move bubbles even more top-left
-  const BIAS_WIDTH = 0.30;  // use left within first 25% of container width (initially)
-  const BIAS_HEIGHT = 0.30; // use top within first 15% of container height (initially)
-
-  // Helper: read CSS variable for bubble size (fallback to 180)
-  const getBubbleSizePx = () => {
-    try {
-      const cssVar = getComputedStyle(document.documentElement).getPropertyValue("--art-bubble-size");
-      const parsed = parseInt(cssVar, 10);
-      return Number.isFinite(parsed) ? parsed : 180;
-    } catch (e) {
-      return 180;
-    }
-  };
-
+  // Helper: Random positions
   useEffect(() => {
-    const containerEl = containerRef.current;
-    if (!containerEl) return;
+    // Only calculate random positions on Client Side (after mount)
+    const calculatePositions = () => {
+      if (!containerRef.current) return;
+      
+      const containerW = containerRef.current.offsetWidth;
+      const containerH = containerRef.current.offsetHeight;
+      const bubbleSize = 150; // Match CSS var default
 
-    const computeStyles = (useTopLeftBias = false) => {
-      const rect = containerEl.getBoundingClientRect();
-      const containerW = Math.max(1, rect.width || window.innerWidth);
-      const containerH = Math.max(1, rect.height || window.innerHeight * 0.6);
-      const bubblePx = getBubbleSizePx();
+      const newStyles = artPieces.map(() => {
+        // Random X/Y within container bounds (minus bubble size)
+        const left = Math.random() * (containerW - bubbleSize);
+        const top = Math.random() * (containerH - bubbleSize);
+        // Random animation delay for natural feel
+        const delay = Math.random() * 2; 
+        const duration = 3 + Math.random() * 3; // 3-6s float duration
 
-      const maxLeftPx = Math.max(0, containerW - bubblePx);
-      const maxTopPx = Math.max(0, containerH - bubblePx);
-
-      // If bias requested, restrict initial positions to the top-left small area (BIAS_WIDTH x BIAS_HEIGHT)
-      const leftRange = useTopLeftBias ? Math.max(1, Math.floor(maxLeftPx * BIAS_WIDTH)) : maxLeftPx;
-      const topRange = useTopLeftBias ? Math.max(1, Math.floor(maxTopPx * BIAS_HEIGHT)) : maxTopPx;
-
-      const styles = artPieces.map(() => {
-        const leftPx = Math.random() * leftRange; // 0..leftRange px
-        const topPx = Math.random() * topRange; // 0..topRange px
         return {
-          left: `${Math.round(leftPx)}px`,
-          top: `${Math.round(topPx)}px`,
-          animationDuration: `${(6 + Math.random() * 6).toFixed(2)}s`,
-          animationDelay: `${(Math.random() * 5).toFixed(2)}s`,
+          left: `${left}px`,
+          top: `${top}px`,
+          animationDelay: `-${delay}s`, // Negative delay starts animation immediately at random point
+          animationDuration: `${duration}s`
         };
       });
-
-      setBubbleStyles(styles);
+      setBubbleStyles(newStyles);
     };
 
-    // initial compute after a frame so layout is stable -> bias to top-left
-    let raf = requestAnimationFrame(() => {
-      computeStyles(firstComputeRef.current);
-      firstComputeRef.current = false;
-    });
+    calculatePositions();
+    // Optional: Recalculate on resize
+    window.addEventListener('resize', calculatePositions);
+    return () => window.removeEventListener('resize', calculatePositions);
+  }, []);
 
-    // Resize handling — use ResizeObserver for container and window for layout changes
-    const resizeObserver = new ResizeObserver(() => computeStyles(false));
-    resizeObserver.observe(containerEl);
-
-    const onWindowResize = () => {
-      if (raf) cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => computeStyles(false));
-    };
-    window.addEventListener("resize", onWindowResize);
-
-    // recompute once images/fonts settle (small timeout)
-    const timeoutId = setTimeout(() => computeStyles(false), 600);
-
-    return () => {
-      if (raf) cancelAnimationFrame(raf);
-      resizeObserver.disconnect();
-      window.removeEventListener("resize", onWindowResize);
-      clearTimeout(timeoutId);
-      document.body.classList.remove("modal-open");
-    };
-  }, []); // run once on mount
-
-  // Modal helpers (pause animations via body.modal-open)
+  // Modal handlers
   const openModal = (art) => {
     setModalArt(art);
-    document.body.classList.add("modal-open");
+    document.body.style.overflow = "hidden"; // Prevent background scroll
   };
 
   const closeModal = () => {
     setModalArt(null);
-    document.body.classList.remove("modal-open");
+    document.body.style.overflow = "auto";
   };
 
-  // ESC to close modal
-  useEffect(() => {
-    const onKey = (e) => {
-      if (e.key === "Escape" && modalArt) closeModal();
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [modalArt]);
-
   return (
-    <div className={styles["art-page"]}>
-      <NavBar className="navbar" />
+    <div className={styles['art-page']}>
+      
+      {/* 1. Header */}
+      <header className={styles['navbar-container']}>
+        <NavBar />
+      </header>
 
-      <div className="art-intro">
-        <div className="select-art">select art.</div>
-        <p className="art-description">
+      {/* 2. Intro */}
+      <div className={styles['art-intro']}>
+        <div className={styles['select-art']}>select art.</div>
+        <p className={styles['art-description']}>
           I have always enjoyed creating visual art in my free time. This is some of my work. Click images to view larger.
         </p>
       </div>
 
-      {/* container ref used for size measurement */}
-      <div className="art-gallery art-bubbles-container" ref={containerRef} aria-live="polite">
-        {artPieces.map((art, index) => {
-          const style = bubbleStyles[index] || {};
-          const inlineStyle = {
-            top: style.top,
-            left: style.left,
-            animationDuration: style.animationDuration,
-            animationDelay: style.animationDelay,
-          };
-
-          return (
-            <button
-              key={art.id}
-              type="button"
-              className="art-item art-bubble"
-              style={inlineStyle}
-              onClick={() => openModal(art)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" || e.key === " ") {
-                  e.preventDefault();
-                  openModal(art);
-                }
-              }}
-              aria-label={`${art.title} — click to open`}
-              title={art.title}
-            >
-              <img src={art.src} alt={art.alt} />
-              <p className="art-caption" aria-hidden="true">{art.title}</p>
-            </button>
-          );
-        })}
+      {/* 3. Bubbles Container */}
+      <div className={styles['art-bubbles-container']} ref={containerRef}>
+        {artPieces.map((art, index) => (
+          <button
+            key={art.id}
+            type="button"
+            className={styles['art-bubble']}
+            style={bubbleStyles[index]} // Apply calculated random positions
+            onClick={() => openModal(art)}
+            aria-label={`View ${art.title}`}
+          >
+            <img src={art.src} alt={art.alt} />
+          </button>
+        ))}
       </div>
 
+      {/* 4. Modal (Overlay) */}
       {modalArt && (
-        <div
-          className="art-modal"
-          role="dialog"
-          aria-modal="true"
-          aria-label={`${modalArt.title} preview`}
-          onClick={closeModal}
-        >
-          <div className="art-modal-content" onClick={(e) => e.stopPropagation()}>
+        <div className={styles['art-modal']} onClick={closeModal}>
+          <div className={styles['art-modal-content']} onClick={(e) => e.stopPropagation()}>
             <img src={modalArt.src} alt={modalArt.alt} />
             <p>{modalArt.title}</p>
-            <button
-              type="button"
-              onClick={closeModal}
-              style={{ marginTop: 12 }}
-              aria-label="Close preview"
-            >
-              Close
+            <button className={styles['close-button']} onClick={closeModal}>
+              Close Preview
             </button>
           </div>
         </div>
       )}
 
-      <Footer className="footer" />
+      {/* 5. Footer */}
+      <div className={styles['footer-container']}>
+        <Footer />
+      </div>
+
     </div>
   );
 };

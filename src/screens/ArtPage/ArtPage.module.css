@@ -1,231 +1,199 @@
-/* tuning variable: total space to reserve for intro + footer (in px).
-   Adjust this if your intro/footer sizes change. */
-:root {
-  --art-reserved-space: 720px; /* tweak if needed (intro ~500 + footer ~220 = 720) */
-  --art-bubble-size: 180px;
-}
+/* ArtPage.module.css */
 
-/* ArtPage container — allow overflow (so modal / expanded content isn't clipped) */
+@import "./styleguide.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
+
+/* --- MAIN PAGE CONTAINER --- */
 .art-page {
-  background-color: var(--off-white); 
-  /* display: flex;
-  flex-direction: column;
+  background-color: var(--off-white);
+  width: 100%;
   min-height: 100vh;
-  width: 100%; */
-  overflow: visible;
   position: relative;
-  /* background-color: var(--off-white); */
+  overflow-x: hidden;
+  
+  /* Flex Column Layout */
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  max-width: 1440px; 
-  overflow: hidden;
-  width: 100%;  
+  align-items: center; 
 }
 
-/* Navbar */
-.art-page .navbar {
-  left: unset !important;
-  margin-left: 880px !important;
-  margin-top: 40px !important;
-  position: unset !important;
-  top: unset !important;
-}
-
-/* Intro / About section */
-.art-page .art-intro {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  height: 342px;
-  margin-left: 107px;
-  margin-top: 158px;
-  /* width: 1143px; */
+/* --- HEADER / NAVBAR --- */
+.navbar-container {
   width: 100%;
-}
-
-.art-page .select-art {
-  color: var(--dark-brown);
-  font-family: "Roboto-Regular", Helvetica;
-  font-size: 100px;
-  font-weight: 400;
-  height: 72px;
-  letter-spacing: 0;
-  line-height: 32px;
-  width: 840px;
-}
-
-.art-page .art-description {
-  color: var(--dark-brown);
-  font-family: "Roboto-Regular", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  height: 250px;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-/* Art gallery items */
-.art-page .art-gallery {
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
-  margin-left: 107px;
-  margin-top: 60px;
-  width: 1143px;
+  justify-content: center;
+  padding-top: 20px;
+  /* Ensure it sits at the top */
+  z-index: 100;
 }
 
-.art-page .art-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 350px; /* adjust based on your images */
+/* --- INTRO SECTION --- */
+.art-intro {
+  width: 90%;
+  max-width: 1143px;
+  margin-top: 100px;
+  text-align: left;
+  z-index: 10; /* Keep text above bubbles if they float near */
 }
 
-.art-page .art-item img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.art-page .art-caption {
-  margin-top: 12px;
-  font-family: "Roboto-Regular", Helvetica;
-  font-size: 18px;
+.select-art {
   color: var(--dark-brown);
-  text-align: center;
-}
-
-/* CV section */
-.art-page .cv-section {
-  margin-left: 107px;
-  margin-top: 80px;
-}
-
-.art-page .cv-text {
-  font-family: "Roboto-Regular", Helvetica;
-  font-size: 24px;
-  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: clamp(3rem, 8vw, 100px); /* Responsive font size */
+  font-weight: 400;
+  line-height: 1.1;
   margin-bottom: 20px;
 }
 
-/* Art-bubbles container — constrained so bubbles cannot overlap footer */
-/* breathing room so bubbles don't clip against the container edge */
-.art-bubbles-container {
-    position: relative;
-  width: 100%;
-  /* Reserve vertical space for intro and footer */
-  height: calc(100vh - var(--art-reserved-space));
-  margin-top: 60px; /* starts below intro text */
-  margin-bottom: 160px; /* buffer above footer */
-  box-sizing: border-box;
-  padding-left: 20px;
-  padding-top: 12px;
-  overflow: visible;
+.art-description {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: clamp(1.2rem, 3vw, 30px);
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 800px;
 }
 
-/* Each bubble keeps a square aspect ratio, size driven by CSS var */
+/* --- BUBBLE CONTAINER --- */
+.art-bubbles-container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  
+  /* Give it explicit height so bubbles have room to float */
+  height: 800px; 
+  margin: 40px 0;
+  
+  /* Bubbles stay inside this box */
+  overflow: visible; 
+}
+
+/* --- BUBBLES --- */
 .art-bubble {
-  will-change: top, left, transform;
   position: absolute;
-  width: var(--art-bubble-size);
+  /* Use CSS variable for size, fallback to 150px */
+  width: var(--art-bubble-size, 150px);
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid #ccc;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  border: 4px solid white; /* White border makes them pop */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2); /* Shadow for depth */
+  
+  /* Animation properties */
   animation-name: float;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  z-index: 2;
-  /* Increased motion speed */
-  animation-duration: 4s; /* default speed (can be randomized in JS) */
+  
+  /* Smooth transition for hover effect */
+  transition: transform 0.3s ease, border-color 0.3s ease, z-index 0s;
+  z-index: 1;
 }
 
-/* image inside bubble — cover and center, prevents squish */
 .art-bubble img {
-  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
-  border-radius: 50%;
+  pointer-events: none; /* Prevents dragging image inside button */
 }
 
-/* hover + focus visible */
-.art-bubble:hover,
-.art-bubble:focus {
-  transform: scale(1.12);
-  border-color: #555;
-  outline: none;
+.art-caption {
+  display: none; /* Hide caption in bubble mode, show in modal */
 }
 
+/* HOVER EFFECT: Scale up slightly */
+.art-bubble:hover {
+  transform: scale(1.15) !important; /* Override animation transform temporarily */
+  z-index: 10; /* Bring to front */
+  border-color: var(--sky-blue);
+}
 
-/* Floating travel distance and speed (faster + wider range) */
+/* --- ANIMATION --- */
+/* gentler float to keep them from disappearing */
 @keyframes float {
-  0% { transform: translate(0, 0); }
-  25% { transform: translate(50px, -100px); }
-  50% { transform: translate(-50px, 80px); }
-  75% { transform: translate(60px, 120px); }
-  100% { transform: translate(-60px, -120px); }
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-30px); }
 }
 
-/* Pause bubble animation when modal is open (toggle .modal-open on body) */
-body.modal-open .art-bubble {
-  animation-play-state: paused;
-  transition: transform 0.12s ease; /* reduce motion on pause */
-}
-
-/* Modal overlay — high z-index so it sits above footer & bubbles */
+/* --- MODAL --- */
 .art-modal {
   position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.8);
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
-/* Modal content: constrained to viewport */
 .art-modal-content {
   background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
   max-width: 90vw;
   max-height: 90vh;
   text-align: center;
-  overflow: auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* modal image respects aspect ratio and doesn't overflow viewport */
 .art-modal-content img {
-  width: auto;
-  height: auto;
   max-width: 100%;
   max-height: 70vh;
-  display: block;
-  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
-/* Footer */
-/* Footer rules for ArtPage: keep footer in document flow */
-.art-page .footer {
-  position: relative !important;
-  top: auto !important;
-  left: unset !important;
-  margin-top: 48px !important;
-  width: 100% !important;
-  box-sizing: border-box;
-  z-index: 10;
+.art-modal-content p {
+  font-family: "Roboto", Helvetica;
+  font-size: 1.2rem;
+  color: var(--dark-brown);
+  margin-bottom: 15px;
 }
 
-/* Make the footer's internal bar also position relatively so its children don't render off-screen */
-.art-page .footer .contact-bar-scholar {
-  position: relative !important;
-  top: auto !important;
-  left: unset !important;
-  width: 100% !important;
+.close-button {
+  background-color: var(--dark-brown);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+}
+.close-button:hover {
+  background-color: var(--red-brown);
+}
+
+/* --- FOOTER --- */
+.footer-container {
+  width: 100%;
+  margin-top: auto; /* Pushes footer to bottom if page is short */
+  position: relative;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .art-bubbles-container {
+    height: auto; /* On mobile, let them stack or wrap if needed */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .art-bubble {
+    position: relative; /* Disable absolute positioning on mobile for easier scrolling */
+    top: auto !important;
+    left: auto !important;
+    width: 120px; /* Smaller bubbles */
+    animation: none; /* Disable float on mobile for performance/readability */
+  }
 }
