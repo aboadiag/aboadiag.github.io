@@ -6,27 +6,16 @@
 /* Main Container */
 .projects {
   background-color: var(--off-white);
-  /* Use min-height so it can grow if needed, but respect your design height */
-  min-height: 3845px; 
+  /* Height increased slightly to accommodate content flow */
+  min-height: 4200px; 
   width: 100%;
   position: relative;
-  overflow-x: hidden; /* Prevent horizontal scroll bars */
+  overflow-x: hidden;
 }
 
-/* --- Intro Text Section --- */
-.during-my-phd-i-have {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 400;
-  left: 107px;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 320px;
-  width: 1143px;
-}
+/* --- FIX 1: SWAP TITLE AND TEXT POSITIONS --- */
 
+/* 1. Main Title (Select Projects) - Now Higher Up */
 .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
@@ -34,512 +23,304 @@
   font-weight: 400;
   left: 107px;
   letter-spacing: 0;
-  line-height: 32px;
+  line-height: 1.1;
   position: absolute;
-  top: 228px;
+  top: 150px; /* Moved UP */
   width: 840px;
 }
 
-/* --- Project 1: Persuasive Social Robots --- */
-.project-persuasive-2 {
+/* 2. Intro Text - Now Below Title */
+.during-my-phd-i-have {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 30px;
+  font-weight: 400;
+  left: 107px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  position: absolute;
+  top: 300px; /* Moved DOWN */
+  width: 1143px;
+}
+
+/* --- SHARED CARD STYLING --- */
+/* We turn the cards into Flex columns to fix overlap issues */
+.project-card {
   background-color: var(--red-brown);
   border-radius: 84px;
-  height: 530px;
-  left: 80px;
   position: absolute;
-  top: 570px;
   width: 1273px;
+  left: 80px;
+  padding: 50px; /* Internal breathing room */
+  box-sizing: border-box;
+  
+  display: flex;
+  flex-direction: column;
+  gap: 30px; /* Space between Title and Content */
 }
 
-.we-used-various-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 28px;
-  font-weight: 600;
-  height: 12.08%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
+/* --- PROJECT 1: PERSUASIVE (Layout) --- */
+.project-persuasive-2 {
+  /* Inherits .project-card styling via composition in CSS Modules not supported easily, 
+     so we copy the base styles or apply two classes in JSX. 
+     Here we apply properties directly. */
+  background-color: var(--red-brown);
+  border-radius: 84px;
   position: absolute;
-  top: 21.89%;
-  width: 37.91%;
+  width: 1273px;
+  left: 80px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  /* Position on page */
+  top: 550px;
+  height: auto; /* Allow height to fit content */
+  min-height: 600px;
 }
 
-.rectangle-9 {
-  height: 72.08%;
-  left: 5.04%;
-  object-fit: cover;
-  position: absolute;
-  top: 15.09%;
-  width: 52.48%;
-  border-radius: 20px; /* Optional: rounds video corners */
-}
-
+/* Title Centered Top */
 .persuasive-title {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
-  height: 9.43%;
-  left: 20.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  width: 56.99%;
+  text-align: center; /* Center aligned */
+  width: 100%;
+  margin-bottom: 20px;
 }
 
+/* Split Row: Video Left, Text Right */
+.split-content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: left; /* Text alignment */
+}
+
+/* Video Styling */
+.rectangle-9 {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+/* Captions */
+.collage-featuring-co-2 {
+  color: var(--off-white);
+  font-family: "Roboto", Helvetica;
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+/* Text Block */
 .persuasive-blurb {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 20px;
-  font-weight: 600;
-  height: 60.75%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 21.89%;
-  width: 37.91%;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
+/* Links */
 .div-3 {
   color: var(--off-white);
   font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.43%;
-  left: 59.59%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.09%;
-  width: 36.87%;
-}
-
-.text-wrapper-102 {
-  color: #e8e3cf;
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.text-wrapper-103 {
-  color: var(--off-white);
   font-size: 24px;
+  font-weight: 700;
 }
-
 .text-wrapper-104 {
   color: var(--off-white);
-  font-size: 24px;
   text-decoration: underline;
+  cursor: pointer;
 }
-.text-wrapper-104:hover {
-  color: var(--dark-brown);
-}
-
 .spring-fall {
-  color: var(--dark-brown);
+  color: var(--dark-brown); /* As requested in design */
+  background-color: rgba(255,255,255, 0.8); /* Added bg so it's readable on red */
+  padding: 5px 15px;
+  border-radius: 20px;
   font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.49%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 103.77%;
-  width: 19.98%;
-}
-
-.collage-featuring-co-2 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 600;
-  height: 6.04%;
-  left: 7.31%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 90.19%;
-  white-space: nowrap;
-  width: 50.98%;
+  width: fit-content;
 }
 
-/* --- Project 2: Robot Mediated Haptics --- */
+/* --- PROJECT 2: ROBOT MEDIATED (Layout) --- */
 .project-robot-2 {
-  height: 530px;
-  left: 80px;
-  position: absolute;
-  top: 1270px;
-  width: 1273px;
-}
-
-.rectangle-10 {
   background-color: var(--red-brown);
   border-radius: 84px;
-  height: 126.04%;
-  left: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.blurb-4 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 78.49%;
-  left: 58.76%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 19.81%;
-  width: 40.38%;
+  width: 1273px;
+  left: 80px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  /* Position */
+  top: 1350px;
+  height: auto;
 }
 
 .robot-mediated {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
-  height: 12.08%;
-  left: 6.28%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.96%;
-  width: 81.38%;
+  text-align: center;
+  width: 100%;
 }
 
 .robot-med-haptics-2 {
-  height: 73.02%;
-  left: 5.03%;
-  position: absolute;
-  top: 16.98%;
-  width: 50.75%;
+  width: 100%;
+  height: auto;
   border-radius: 20px;
 }
 
-.text-wrapper-105 {
-  color: var(--dark-brown);
+.blurb-4 {
+  color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 9.43%;
-  left: 4.24%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 129.25%;
-  width: 30.95%;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .challenges-of-2 {
   color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 400;
-  height: 16.23%;
-  left: 4.24%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 92.26%;
-  width: 51.69%;
+  font-size: 18px;
+  font-style: italic;
+  margin-top: 10px;
 }
 
-.text-wrapper-106 { font-weight: 600; }
-.text-wrapper-107 { font-style: italic; font-weight: 600; }
-
-/* --- Name / Divider --- */
-.name-component-2 {
-  display: flex;
-  gap: 20px;
-  height: 96px;
-  left: 155px;
-  position: absolute;
-  top: 40px;
-  width: 485px;
-}
-
-.bena-favicon-figma-4 {
-  aspect-ratio: 1;
-  height: 96px;
-  margin-left: -116px;
-  object-fit: cover;
-  width: 96px;
-}
-
-.text-wrapper-108 {
-  color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 96px;
-  letter-spacing: 0;
-  line-height: normal;
-  width: 485px;
-}
-
-/* --- Project 3: Haptic Graphics --- */
+/* --- PROJECT 3: ACCESSIBLE HAPTICS (Layout) --- */
 .project-haptics-2 {
-  height: 530px;
-  left: 97px;
-  position: absolute;
-  top: 2910px;
-  width: 1273px;
-}
-
-.rectangle-11 {
   background-color: var(--red-brown);
   border-radius: 84px;
-  height: 108.68%;
-  left: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.text-wrapper-109 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 78.49%;
-  left: 58.52%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 24.53%;
-  width: 37.91%;
-}
-
-.rectangle-12 {
-  height: 48.30%;
-  left: 2.99%;
-  position: absolute;
-  top: 29.06%;
-  width: 51.85%;
-  border-radius: 20px;
+  width: 1273px;
+  left: 80px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  /* Position */
+  top: 2150px;
+  height: auto;
 }
 
 .accessible-haptics {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: 700;
-  height: 7.17%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  white-space: nowrap;
-  width: 88.30%;
+  text-align: center;
 }
 
-.text-wrapper-110 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
-}
-
-.text-wrapper-111 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.43%;
-  left: 58.52%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.09%;
-  width: 36.87%;
-}
-
-.text-wrapper-112 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.11%;
-  left: 4.63%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 112.64%;
-  width: 29.93%;
-}
-
-.text-wrapper-113 {
+.text-wrapper-109 {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 22.64%;
-  left: 5.42%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 80.38%;
-  width: 50.98%;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
-/* --- Project 4: Versatile Haptics --- */
+.rectangle-12 {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* --- PROJECT 4: VERSATILE HAPTICS (Zig-Zag Layout) --- */
 .project-versatile-2 {
-  height: 530px;
-  left: 97px;
-  position: absolute;
-  top: 2050px;
-  width: 1273px;
-}
-
-.rectangle-13 {
   background-color: var(--red-brown);
   border-radius: 84px;
-  height: 134.15%;
-  left: 0;
   position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.text-wrapper-114 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 21.13%;
-  left: 32.99%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 27.36%;
-  width: 26.87%;
-}
-
-.text-wrapper-115 {
-  color: var(--off-white);
-  font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-weight: 600;
-  height: 114.72%;
-  left: 61.90%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 26.60%;
-  width: 37.91%;
-}
-
-.vers-haptics-2 {
-  height: 52.26%;
-  left: 0;
-  position: absolute;
-  top: 24.34%;
-  width: 29.54%;
+  width: 1273px;
+  left: 80px;
+  padding: 50px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+  /* Position */
+  top: 2950px;
+  height: auto;
 }
 
 .versatile-haptics {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 35px;
+  font-size: 36px;
   font-weight: 700;
-  height: 9.25%;
-  left: 20.03%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 3.77%;
-  width: 66.77%;
+  text-align: center;
 }
 
-.text-wrapper-116 {
-  color: #e8e3cf;
-  font-family: "Roboto", Helvetica;
-  font-size: 35px;
-  font-weight: 700;
-  letter-spacing: 0;
-  line-height: 32px;
+/* Zig-Zag Rows */
+.zig-zag-row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: flex-start;
 }
 
-.description-UIST-2 {
-  color: var(--off-white);
-  font-family: "Roboto Mono", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-  height: 9.06%;
-  left: 61.90%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 15.28%;
-  width: 39.04%;
+.vers-haptics-img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  object-fit: cover;
 }
 
-.text-wrapper-117 {
-  color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
-  font-size: 32px;
-  font-style: italic;
-  font-weight: 500;
-  height: 8.30%;
-  left: 4.32%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 137.17%;
-  width: 28.20%;
-}
-
-.vers-haptics-3 {
-  height: 51.89%;
-  left: 29.77%;
-  position: absolute;
-  top: 72.26%;
-  width: 30.71%;
-}
-
+.text-wrapper-115, 
+.text-wrapper-114, 
 .right-final-2 {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
-  font-size: 24px;
-  font-style: italic;
-  font-weight: 600;
-  height: 0;
-  left: 9.31%;
-  letter-spacing: 0;
-  line-height: 32px;
-  position: absolute;
-  top: 64.55%;
-  width: 22.36%;
+  font-size: 20px;
+  line-height: 1.5;
 }
 
-/* Mobile Responsiveness for Absolute Positioning
-   (Forces elements to scale down if screen is < 1440px)
-*/
+.text-wrapper-114,
+.right-final-2 {
+  font-style: italic;
+  font-size: 18px;
+}
+
+/* --- Utilities --- */
+.text-wrapper-103 { color: var(--off-white); }
+.text-wrapper-110 { color: #e8e3cf; }
+.text-wrapper-116 { color: #e8e3cf; }
+
+/* Responsive Scaling for Desktop */
 @media (max-width: 1440px) {
   .projects {
-    /* Scale content to fit width */
     transform: scale(calc(100vw / 1440));
     transform-origin: top left;
-    width: 1440px; /* Force width */
-    height: auto; 
+    width: 1440px;
+    height: auto;
     overflow-x: hidden;
   }
 }
