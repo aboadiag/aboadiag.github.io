@@ -8,6 +8,9 @@ export const Footer = ({
   githubHref = "https://github.com/aboadiag",
   style = {},
 }) => {
+
+  const currentYear = new Date().getFullYear();
+  
   return (
     // CRITICAL FIX 1: Use styles.footer for CSS Module targeting
     <footer className={`${styles.footer} ${className}`} style={style}>
