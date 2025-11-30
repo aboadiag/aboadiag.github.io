@@ -125,11 +125,11 @@ export const Projects = () => {
                <div className={styles['versatile-image-stack']}>
                   <div>
                     <img className={styles['vers-haptics-img']} src="/img/vers-haptics-img1-2.png" alt="Prototype 1" />
-                    <p className={styles['media-caption']}>Left: Early prototype with vertical motor arrangement.</p>
+                    <p className={styles['media-caption']}>Top: Early prototype with vertical motor arrangement.</p>
                   </div>
                   <div>
                     <img className={styles['vers-haptics-img']} src="/img/vers-haptics-img2-2.png" alt="Prototype 2" />
-                    <p className={styles['media-caption']}>Right: Final Prototype with horizontal motor arrangement.</p>
+                    <p className={styles['media-caption']}>Bottom: Final Prototype with horizontal motor arrangement.</p>
                   </div>
                </div>
                
