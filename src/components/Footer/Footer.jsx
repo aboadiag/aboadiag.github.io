@@ -68,7 +68,7 @@ export const Footer = ({
 
           {/* NEW: Credits Section */}
           <div className={styles['credits']}>
-            © {currentYear} Abena Boadi-Agyemang. Designed & Built with React, Figma, Anima, & Builder.io.
+            © {currentYear} Abena Boadi-Agyemang. Designed with (Love &) Figma. Built with React, Anima, & Builder.io.
           </div>
         </div>
       </section>
