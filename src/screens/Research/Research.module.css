@@ -19,8 +19,9 @@
   /* Consistent spacing between research projects */
   gap: 100px; 
   
-  /* Push content down below absolute Title/Intro */
-  padding-top: 550px; 
+  /* FIX: Increased padding to 800px to prevent Intro Text from overlapping Project 1 */
+  padding-top: 800px; 
+  
   /* No gap after footer */
   padding-bottom: 0px; 
 }
@@ -67,7 +68,7 @@
 .project-ishra,
 .project-guide,
 .project-voice {
-  /* Using your moss-green variable as seen in your previous CSS */
+  /* Using your moss-green variable */
   background-color: var(--moss-green, #697b6c); 
   border-radius: 84px;
   width: 1273px;
@@ -128,9 +129,7 @@
   text-align: right;
 }
 
-.project-text, 
-.blurb-5, 
-.we-used-various-3 {
+.project-text {
   color: var(--off-white);
   font-family: "Roboto", Helvetica;
   font-size: 20px;
@@ -151,9 +150,20 @@
 .project-image,
 .project-video {
   width: 100%;
-  height: auto;
+  /* FIX: Enforce a max height for images to keep project boxes consistent */
+  height: 350px; 
   border-radius: 20px;
   object-fit: cover;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Match image height */
+}
+
+.project-video {
+  height: 100%; /* Fill container */
 }
 
 /* Caption under media */
@@ -186,38 +196,12 @@
 }
 
 /* --- UTILITY SPANS --- */
-/* For your intro text specific highlighting */
 .text-wrapper-122 { font-weight: 400; }
 .text-wrapper-124 { font-weight: 700; }
 .text-wrapper-125 { font-weight: 700; font-style: italic; }
 .text-wrapper-126 { text-decoration: underline; }
 
-/* Name Component / Divider */
-.name-component-3 {
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  margin: 20px 0;
-}
-.bena-favicon-figma-5 {
-  height: 96px;
-  width: 96px;
-  object-fit: cover;
-}
-.text-wrapper-140 {
-  color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
-  font-size: 30px;
-  font-weight: 700;
-}
-
 /* Video Container for blur effect */
-.video-container {
-  position: relative;
-  width: 100%;
-}
 .video-blur-overlay {
   position: absolute;
   top: 0; left: 0;

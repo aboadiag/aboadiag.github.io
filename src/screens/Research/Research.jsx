@@ -108,9 +108,11 @@ export const Research = () => {
         <div className={styles['split-content']}>
           {/* LEFT */}
           <div className={styles['left-column']}>
-            <video controls className={styles['project-video']}>
-              <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
-            </video>
+            <div className={styles['video-container']}>
+                <video controls className={styles['project-video']}>
+                  <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
+                </video>
+            </div>
             <p className={styles['media-caption']}>
               Video featuring Control &amp; Experimental Conditions.
             </p>
@@ -145,15 +147,7 @@ export const Research = () => {
         </div>
       </div>
 
-      {/* DIVIDER */}
-      <div className={styles['name-component-3']}>
-        <img
-          className={styles['bena-favicon-figma-5']}
-          alt="Bena favicon"
-          src="/img/bena-favicon-figma-1-2.png"
-        />
-        <div className={styles['text-wrapper-140']}>Abena Boadi-Agyemang</div>
-      </div>
+      {/* FIX: REMOVED DIVIDER/FAVICON HERE */}
 
       {/* ================= RESEARCH 3: GUIDE ROBOTS ================= */}
       <div className={styles['project-guide']}>
@@ -214,7 +208,7 @@ export const Research = () => {
               <video controls className={styles['project-video']}>
                 <source src="/vids/voice_agent_4_artmaking-2.mp4" type="video/mp4" />
               </video>
-              {/* <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" /> */}
+              <img className={styles['video-blur-overlay']} src="/img/vid-blur.png" alt="" />
             </div>
             <p className={styles['media-caption']}>
               Pilot participant engaged in voice-agent guided art-making.
