@@ -6,8 +6,6 @@
 :root {
   --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
   --high-contrast-background: rgba(82, 96, 86, 1);
-  --off-white: #f4f1e8; /* Ensure this is defined */
-  --dark-brown: #3b3228; /* Ensure this is defined */
 }
 
 /* --- MAIN PAGE CONTAINER --- */
