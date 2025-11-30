@@ -173,7 +173,7 @@ export const Home = () => {
                 </p>
 
                 <p className={styles['text-wrapper-89']}>
-                  2021 - 2025, Carnegie Mellon University
+                  2021 - present, Carnegie Mellon University
                 </p>
 
                 <p className={styles['m-s-in-robotics-2']}>
@@ -199,7 +199,7 @@ export const Home = () => {
                 </p>
 
                 <p className={styles['text-wrapper-90']}>
-                  2021 - present, Carnegie Mellon University
+                  2021 - 2025, Carnegie Mellon University
                 </p>
 
                 <p className={styles['b-s-in-mechanical-2']}>
