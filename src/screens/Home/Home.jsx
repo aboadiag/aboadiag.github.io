@@ -30,7 +30,7 @@ export const Home = () => {
           <section className={styles['hero-intro']}>
             <img
               className={styles['bena-background']}
-              alt="Abena Boadi-Agyemang background"
+              alt="Reddish brown circle background"
               src="/img/bena-background-2.svg"
             />
             
@@ -40,11 +40,11 @@ export const Home = () => {
                 alt="Portrait of Abena smiling"
                 src="/img/bena-mug-removebg-preview-1-1.svg"
               />
-              <img
+              {/* <img
                 className={styles['bena-mask-2']}
                 alt=""
                 src="/img/bena-mask-1.svg"
-              />
+              /> */}
             </div>
 
             <img 
