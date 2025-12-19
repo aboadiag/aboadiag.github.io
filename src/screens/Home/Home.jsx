@@ -135,7 +135,7 @@ export const Home = () => {
               </p>
 
               <a
-                href="/pdfs/ab-final-cv-nov2025-updated.pdf"
+                href="/pdfs/abenab-cv-december2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
               >
