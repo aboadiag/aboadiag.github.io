@@ -118,7 +118,8 @@ export const Home = () => {
               <span className={styles['text-wrapper-76']}>people with disabilities </span>
               <span className={styles['text-wrapper-71']}>
                 &amp; their respective communities.
-              </span>
+               </span>
+        
             </p>
           </section>
 
@@ -127,6 +128,68 @@ export const Home = () => {
             <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
             <div className={styles['a-bit-about-me-2']}>
               <p className={styles['this-is-only-a-bit-2']}>
+                
+                {/* --- NEW BIO CONTENT START --- */}
+                <span className={styles['text-wrapper-71']}>
+                  I completed my B.S. in Mechanical Engineering at Stanford University. 
+                  During my undergraduate studies, I was fortunate to work as an 
+                  undergraduate researcher in 
+                </span>
+                
+                {/* 1. SHAPE Lab Link */}
+                <a href="https://shape.stanford.edu/" /* TODO: Insert SHAPE Lab link here */ target="_blank" rel="noopener noreferrer">
+                  <span className={styles['text-wrapper-74']}> SHAPE Lab </span>
+                </a>
+
+                <span className={styles['text-wrapper-71']}> under the supervision of </span>
+
+                {/* 2. Sean Follmer Link */}
+                <a href="https://me.stanford.edu/people/sean-follmer" /* TODO: Insert Sean Follmer link here */ target="_blank" rel="noopener noreferrer">
+                  <span className={styles['text-wrapper-74']}>Dr. Sean Follmer</span>
+                </a>
+
+                <span className={styles['text-wrapper-71']}>, at the </span>
+
+                {/* 3. Clayman Institute Link */}
+                <a href="https://gender.stanford.edu/" /* TODO: Insert Clayman Institute link here */ target="_blank" rel="noopener noreferrer">
+                  <span className={styles['text-wrapper-74']}>Clayman Institute for Gender Research</span>
+                </a>
+
+                <span className={styles['text-wrapper-71']}> with </span>
+
+                {/* 4. Melissa Abad Link */}
+                <a href="https://www.melissaabad.com/" /* TODO: Insert Melissa Abad link here */ target="_blank" rel="noopener noreferrer">
+                  <span className={styles['text-wrapper-74']}>Dr. Melissa Abad</span>
+                </a>
+
+                <span className={styles['text-wrapper-71']}>, and at the </span>
+                
+                {/* 5. Stanford Graduate School of Education Link */}
+                <a href="https://ed.stanford.edu/" /* TODO: Insert Stanford GSE link here */ target="_blank" rel="noopener noreferrer">
+                  <span className={styles['text-wrapper-74']}>Stanford Graduate School of Education</span>
+                </a>
+
+                <span className={styles['text-wrapper-71']}> with </span>
+
+                {/* 6. John Willinsky Link */}
+                <a href="https://ed.stanford.edu/faculty/willinsk" /* TODO: Insert John Willinsky link here */ target="_blank" rel="noopener noreferrer">
+                  <span className={styles['text-wrapper-74']}>Dr. John Willinsky</span>
+                </a>
+                
+                <span className={styles['text-wrapper-71']}>.</span>
+                <br /><br />
+
+                <span className={styles['text-wrapper-71']}>
+                  I am passionate about uncovering technology solutions that enable people to live empowered lives. If you are interested in collaborating, send me an email with your interests!
+                </span>
+                <br /><br />
+
+                <span className={styles['text-wrapper-71']}>
+                  When I am not doing research, you can find me doing yoga, bouldering, rollerblading, creating artwork, or playing with my cats, Bee and Bug!
+                </span>
+                <br /><br />
+
+                {/* --- NEW BIO CONTENT END  -- CV ORIGINAL BEGINS --- */}
                 <span className={styles['text-wrapper-71']}>This is only a </span>
                 <span className={styles['text-wrapper-72']}>bit</span>
                 <span className={styles['text-wrapper-71']}> about me. For a </span>
@@ -228,7 +291,7 @@ export const Home = () => {
           <Footer 
             style={{ 
               position: 'absolute', 
-              top: '2500px', 
+              top: '3200px', 
               width: '100%' 
             }} 
           />
