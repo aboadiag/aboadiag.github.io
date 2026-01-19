@@ -119,17 +119,9 @@ export const Home = () => {
               <span className={styles['text-wrapper-71']}>
                 &amp; their respective communities.
                </span>
-        
-            </p>
-          </section>
-
-          {/* SECTION 2: About Me & CV CTA */}
-          <section className={styles['about-me-cv-cta']}>
-            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
-            <div className={styles['a-bit-about-me-2']}>
-              <p className={styles['this-is-only-a-bit-2']}>
-                
-                {/* --- NEW BIO CONTENT START --- */}
+               <br /><br />
+               
+               {/* --- NEW BIO CONTENT START --- */}
                 <span className={styles['text-wrapper-71']}>
                   I completed my B.S. in Mechanical Engineering at Stanford University. 
                   During my undergraduate studies, I was fortunate to work as an 
@@ -189,6 +181,16 @@ export const Home = () => {
                 </span>
                 <br /><br />
 
+        
+            </p>
+          </section>
+
+          {/* SECTION 2: About Me & CV CTA */}
+          <section className={styles['about-me-cv-cta']}>
+            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
+            <div className={styles['a-bit-about-me-2']}>
+              <p className={styles['this-is-only-a-bit-2']}>
+      
                 {/* --- NEW BIO CONTENT END  -- CV ORIGINAL BEGINS --- */}
                 <span className={styles['text-wrapper-71']}>This is only a </span>
                 <span className={styles['text-wrapper-72']}>bit</span>
