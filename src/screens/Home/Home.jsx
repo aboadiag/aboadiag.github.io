@@ -120,6 +120,7 @@ export const Home = () => {
               <span className={styles['text-wrapper-71']}>
                 &amp; their respective communities.
                </span>
+                <br /><br />
 
                {/* --- NEW BIO CONTENT START --- */}
                 <span className={styles['text-wrapper-71']}>
