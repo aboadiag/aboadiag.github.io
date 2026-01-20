@@ -291,19 +291,19 @@ export const Home = () => {
              2. Add 'style' prop to position it absolutely at the bottom.
              3. 'top: 2500px' places it right after your education section ends.
           */}
-          {/* <Footer 
+          <Footer 
             style={{ 
               position: 'absolute', 
-              top: '3500px', 
+              top: '2850px', 
               width: '100%' 
             }} 
-          /> */}
+          />
         </main>
       </div> 
       {/* End of main-content-canvas */}
 
       {/* 3. Footer - Now outside the canvas, so it sits at the bottom */}
-       <Footer />
+       {/* <Footer /> */}
       
     </div>
   );
