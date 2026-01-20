@@ -70,6 +70,7 @@ export const Home = () => {
               &amp; final year PhD Candidate in Robotics!
             </h3>
 
+            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
             <p className={styles['i-am-in-the-fifth-2']}>
               <span className={styles['text-wrapper-71']}>I am in the </span>
               <span className={styles['text-wrapper-72']}>fifth</span>
@@ -255,7 +256,6 @@ export const Home = () => {
 
           {/* SECTION 3: About Me & CV CTA */}
           <section className={styles['about-me-cv-cta']}>
-            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
             <div className={styles['a-bit-about-me-2']}>
               <p className={styles['this-is-only-a-bit-2']}>
       
