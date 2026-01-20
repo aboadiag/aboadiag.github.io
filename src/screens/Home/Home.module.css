@@ -23,7 +23,7 @@
      It has a height of ~163px. 2280 + 163 = ~2443px.
      We set height to 2500px to ensure plenty of room before the footer starts.
   */
-  height: 2500px; 
+  height: 3500px; 
   position: relative;
   width: 100%;
 }
@@ -329,7 +329,8 @@
   left: 107px;
   position: absolute;
   /* top: 1350px; */
-  top: 2300px;
+  /* top: 2300px; */
+  top: 2550px;
   width: 1131px;
 }
 

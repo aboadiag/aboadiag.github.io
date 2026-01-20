@@ -292,7 +292,7 @@ export const Home = () => {
           <Footer 
             style={{ 
               position: 'absolute', 
-              top: '3600px', 
+              top: '3500px', 
               width: '100%' 
             }} 
           />
