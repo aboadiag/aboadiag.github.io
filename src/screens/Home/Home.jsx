@@ -184,38 +184,7 @@ export const Home = () => {
             </p>
           </section>
 
-          {/* SECTION 2: About Me & CV CTA */}
-          <section className={styles['about-me-cv-cta']}>
-            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
-            <div className={styles['a-bit-about-me-2']}>
-              <p className={styles['this-is-only-a-bit-2']}>
-      
-                {/* --- NEW BIO CONTENT END  -- CV ORIGINAL BEGINS --- */}
-                <span className={styles['text-wrapper-71']}>This is only a </span>
-                <span className={styles['text-wrapper-72']}>bit</span>
-                <span className={styles['text-wrapper-71']}> about me. For a </span>
-                <span className={styles['text-wrapper-72']}>byte</span>
-                <span className={styles['text-wrapper-71']}>, see my CV below.</span>
-              </p>
-
-              <a
-                href="/pdfs/abenab-cv-december2025.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Group
-                  className={styles['design-component-instance-node']}
-                  divClassName="group-4"
-                  property1="default"
-                  rectangleClassName="group-2"
-                  rectangleClassNameOverride="group-3"
-                  text="CV"
-                />
-              </a>
-            </div>
-          </section>
-
-          {/* SECTION 3: Education */}
+          {/* SECTION 2: Education */}
           <section className={styles['education-section']}>
             <div className={styles['education-bit']}>
               <div className={styles['ellipse-5']} />
@@ -284,6 +253,38 @@ export const Home = () => {
             </div>
           </section>
 
+          {/* SECTION 3: About Me & CV CTA */}
+          <section className={styles['about-me-cv-cta']}>
+            <h2 className={styles['text-wrapper-82']}>a(bit).</h2>
+            <div className={styles['a-bit-about-me-2']}>
+              <p className={styles['this-is-only-a-bit-2']}>
+      
+                {/* --- NEW BIO CONTENT END  -- CV ORIGINAL BEGINS --- */}
+                <span className={styles['text-wrapper-71']}>This is only a </span>
+                <span className={styles['text-wrapper-72']}>bit</span>
+                <span className={styles['text-wrapper-71']}> about me. For a </span>
+                <span className={styles['text-wrapper-72']}>byte</span>
+                <span className={styles['text-wrapper-71']}>, see my CV below.</span>
+              </p>
+
+              <a
+                href="/pdfs/abenab-cv-december2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Group
+                  className={styles['design-component-instance-node']}
+                  divClassName="group-4"
+                  property1="default"
+                  rectangleClassName="group-2"
+                  rectangleClassNameOverride="group-3"
+                  text="CV"
+                />
+              </a>
+            </div>
+          </section>
+
+
           {/* THE FIX: 
              1. Move Footer INSIDE the canvas.
              2. Add 'style' prop to position it absolutely at the bottom.
@@ -292,7 +293,7 @@ export const Home = () => {
           <Footer 
             style={{ 
               position: 'absolute', 
-              top: '3500px', 
+              top: '2700px', 
               width: '100%' 
             }} 
           />
