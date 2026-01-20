@@ -1,42 +1,43 @@
-/* Home.module.css */
-
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
+
+/* Home.module.css */
 
 :root {
   --blue-contrast: rgba(77, 99, 107, 1);
 }
-
 .home {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Stacks items: Navbar -> Content -> Footer */
   min-height: 100vh;
   width: 100%;
   background-color: var(--off-white);
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevents horizontal scrollbar */
 }
 
-/* UPDATED: Increased height to 3300px.
-   This creates enough canvas space for the moved sections 
-   so the footer doesn't overlap them.
-*/
+/* This is the container for your specific 'absolute' layout designs */
 .main-content-canvas {
   background-color: var(--off-white);
-  height: 3300px; 
+  /* CALCULATED HEIGHT: 
+     The lowest element in your design is 'a-bit-about-me-2' at top: 2280px.
+     It has a height of ~163px. 2280 + 163 = ~2443px.
+     We set height to 2500px to ensure plenty of room before the footer starts.
+  */
+  height: 2500px; 
   position: relative;
   width: 100%;
 }
 
-/* --- SECTION 1: HERO / INTRO --- */
-/* Kept mostly the same, but the text flows longer now */
-
+/* ... Keep all your existing image/text classes below exactly as they were ... */
 .bena-background {
   height: 550px;
   left: 833px;
   position: absolute;
-  top: 252px;
+  top: 252px; /* Relative to main-content-canvas */
   width: 540px;
 }
+
+/* ... (Rest of your CSS remains unchanged) ... */
 
 .home .name-component {
   display: flex;
@@ -134,13 +135,16 @@
 }
 
 .home .text-wrapper-74 {
-  color: var(--dark-brown);
-  text-decoration: underline;
-  font-weight: 600;
+  color: var(--dark-brown); /* same as your normal paragraph text */
+  text-decoration: underline; /* removes the underline if you want */
+  /* margin: 4rem 0;  */
+  font-weight: 600; /* optional: bold the link */
 }
 
 .home .text-wrapper-74:hover {
-    color: var(--red-brown);
+    color: var(--red-brown); /* hover effect for accessibility */
+
+  /* text-decoration: none; optional: show underline on hover */
 }
 
 .home .text-wrapper-75 {
@@ -162,10 +166,13 @@
   left: 97px;
   line-height: 116px;
   width: 674px;
-  display: block;
-  white-space: normal;
-  text-align: left;
+
+  /* 🪄 new fixes */
+  display: block; /* allow text to wrap */
+  white-space: normal; /* allow line breaks */
+  text-align: left; /* align text properly */
 }
+
 
 .home .text-wrapper-77 {
   color: #5b240c;
@@ -192,11 +199,6 @@
   font-family: "Linefont", Helvetica;
 }
 
-/* --- SECTION 2: ABOUT ME --- */
-
-/* UPDATED: Moved 'a(bit).' Header down to 1750px
-   (Previously 834px) 
-*/
 .home .text-wrapper-82 {
   align-items: flex-end;
   color: var(--blue-contrast);
@@ -210,7 +212,7 @@
   letter-spacing: 0;
   line-height: 116px;
   position: absolute;
-  top: 1750px; 
+  top: 834px;
   white-space: nowrap;
 }
 
@@ -274,15 +276,11 @@
   width: 34px;
 }
 
-/* UPDATED: Moved CV Section down to 1880px
-   (Previously 2280px in your file, or overlapping in others)
-   This places it nicely right under the 'a(bit).' header.
-*/
 .home .a-bit-about-me-2 {
   height: 163px;
   left: 368px;
   position: absolute;
-  top: 1880px; 
+  top: 2280px;
   width: 824px;
 }
 
@@ -326,16 +324,11 @@
   width: 28.12% !important;
 }
 
-/* --- SECTION 3: EDUCATION --- */
-
-/* UPDATED: Moved Education container down to 2300px.
-   (Previously 1350px, which would overlap the new bio)
-*/
 .home .education-bit {
   height: 810px;
   left: 107px;
   position: absolute;
-  top: 2300px;
+  top: 1350px;
   width: 1131px;
 }
 
@@ -517,8 +510,6 @@
   top: 336px;
   width: 568px;
 }
-
-/* ... Contact/Footer Elements below ... */
 
 .home .contact-bar-scholar {
   display: flex;

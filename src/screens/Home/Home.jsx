@@ -119,8 +119,7 @@ export const Home = () => {
               <span className={styles['text-wrapper-71']}>
                 &amp; their respective communities.
                </span>
-               <br /><br />
-
+               
                {/* --- NEW BIO CONTENT START --- */}
                 <span className={styles['text-wrapper-71']}>
                   I completed my B.S. in Mechanical Engineering at Stanford University. 
@@ -290,18 +289,22 @@ export const Home = () => {
              2. Add 'style' prop to position it absolutely at the bottom.
              3. 'top: 2500px' places it right after your education section ends.
           */}
+          <Footer 
+            style={{ 
+              position: 'absolute', 
+              top: '3200px', 
+              width: '100%' 
+            }} 
+          />
         </main>
       </div> 
       {/* End of main-content-canvas */}
 
       {/* 3. Footer - Now outside the canvas, so it sits at the bottom */}
-   <Footer  />
-            {/* style={  */}
-            {/* //   position: 'absolute', 
-            //   top: '3200px', 
-            //   width: '100%' 
-            //  */}
-         
+      {/* <footer>
+        <Footer />
+      </footer>
+       */}
       
     </div>
   );
