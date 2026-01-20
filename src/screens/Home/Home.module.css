@@ -212,7 +212,8 @@
   letter-spacing: 0;
   line-height: 116px;
   position: absolute;
-  top: 834px;
+  /* top: 834px; */
+  top: 1750px;
   white-space: nowrap;
 }
 
@@ -328,7 +329,8 @@
   height: 810px;
   left: 107px;
   position: absolute;
-  top: 1350px;
+  /* top: 1350px; */
+  top: 2300px;
   width: 1131px;
 }
 
