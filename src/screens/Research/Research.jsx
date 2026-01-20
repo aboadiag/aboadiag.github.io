@@ -82,33 +82,30 @@ export const Research = () => {
             <div className={styles['description-header']}>
               Description 
               <span className={styles['bracket']}> [</span>
-                <a
+               <a
                 href="/pdfs/HRI_2026__camera-ready_v3_accessible_final.pdf"
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles['link-text']}
-              ></a>
-              <span className={styles['link-text']}>HRI '26 Preprint</span>
+              >
+                HRI '26 Preprint
+              </a>
               <span className={styles['bracket']}>]</span>
             </div>
 
             <p className={styles['project-text']}>
-              On-demand, last-mile delivery (OD/LMD) - transportation of goods
-              from a business to a customer's door during a time window
-              specified by the customer – is used by people with disabilities (PwDs)
-              for various reasons, including inaccessible transporation &amp; infrastructure.
-              As delivery robots are being introduced into OD/LMD ecosystems, PwDs are more likely to encounter them.
+              On-demand, last-mile delivery (OD/LMD) is used by people with disabilities (PwDs)
+              for various reasons. As delivery robots are being introduced into OD/LMD ecosystems,
+              PwDs are more likely to encounter them.
               In the U.S. alone, there have been several reports about PwDs'
               negative encounters with delivery robots, necessitating their redesigns.
-              Over 2 months, we recruited 14 local PwDs to participate in 
-              2 phases: an initial workshop aimed at capturing their experiences 
+              Over 2 months, we invited 14 local PwDs to participate in 
+              2 phases: focus groups/interviews aimed at capturing their experiences 
               and perspectives on existing OD/LMD solutions;
               and participatory prototyping workshops in which participants 
               iterated on co-designs through up to three in-person sessions and remote diary studies.
-              The contributions of this work are twofold: (1) 
-              Our work surfaced varied design ideas for delivery robots – 
-              different form factors, capabilities, features, and interaction modalities –
-              to ensure that OD/LMD is accessible for a variety of PwDs' households; and 
+              The contributions of this work are twofold: (1) varied designs for delivery robots, including 
+              different form factors, features, &amp; interaction modalities; and 
               (2) community-informed considerations that roboticists &amp; designers 
               should incorporate when designing ADRs. 
             </p>
@@ -207,7 +204,7 @@ export const Research = () => {
 
             <p className={styles['project-text']}>
               We used scenario-based design &amp; dialogue simulations to
-              co-design with 16 pBLVs guide robots to support navigation in public
+              co-design with 16 people who are blind or have low vision (pBLVs) guide robots to support navigation in public
               settings. Our work provides design recommendations for roboticists
               &amp; interface designers, including robotic behaviors and features
               related to guide robot usability, shared-robot control, and factors
