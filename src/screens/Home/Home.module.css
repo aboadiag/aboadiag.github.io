@@ -280,7 +280,9 @@
   height: 163px;
   left: 368px;
   position: absolute;
-  top: 2280px;
+  /* top: 2280px; */
+  /* top: 2350px;  */
+  top: 3110px;
   width: 824px;
 }
 
@@ -329,8 +331,8 @@
   left: 107px;
   position: absolute;
   /* top: 1350px; */
-  /* top: 2300px; */
-  top: 2550px;
+  top: 2300px;
+  /* top: 2550px; */
   width: 1131px;
 }
 
