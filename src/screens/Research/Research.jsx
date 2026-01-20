@@ -96,13 +96,12 @@ export const Research = () => {
               On-demand, last-mile delivery (OD/LMD) - transportation of goods
               from a business to a customer's door during a time window
               specified by the customer – is used by people with disabilities (PwDs)
-              for various reasons, including due to inaccessible transporation &amp; infrastructure.
-              As autonomous delivery robots (ADRs), or simply delivery robots, 
-              are being introduced into OD/LMD ecosystems, PwDs are more likely to encounter them.
+              for various reasons, including inaccessible transporation &amp; infrastructure.
+              As delivery robots are being introduced into OD/LMD ecosystems, PwDs are more likely to encounter them.
               In the U.S. alone, there have been several reports about PwDs'
-              negative encounters with ADRs, necessitating their redesigns.
-              Over two months, we recruited 14 local PwDs to participate in 
-              two phases: an initial workshop aimed at capturing their experiences 
+              negative encounters with delivery robots, necessitating their redesigns.
+              Over 2 months, we recruited 14 local PwDs to participate in 
+              2 phases: an initial workshop aimed at capturing their experiences 
               and perspectives on existing OD/LMD solutions;
               and participatory prototyping workshops in which participants 
               iterated on co-designs through up to three in-person sessions and remote diary studies.
@@ -110,7 +109,7 @@ export const Research = () => {
               Our work surfaced varied design ideas for delivery robots – 
               different form factors, capabilities, features, and interaction modalities –
               to ensure that OD/LMD is accessible for a variety of PwDs' households; and 
-              (2) community-informed considerations that roboticists and designers 
+              (2) community-informed considerations that roboticists &amp; designers 
               should incorporate when designing ADRs. 
             </p>
           </div>
@@ -158,12 +157,8 @@ export const Research = () => {
               Interpersonal synchrony (IS), the behavioral &amp; physiological 
               coordination across time and space, plays a crucial role in social 
               interactions by fostering empathy, closeness, &amp; prosocial behaviors. 
-              However, there is a need for more examination of human-robot interaction (HRI) research
-              focused on interactions where the temporal alignment of body movements &amp; the spatial 
-              coordination of the content produced by those movements is vital to the quality of the 
-              interaction, such as in joint visual art-making. We investigated the impact of IS on 
-              human raters’ perceptions of a human-robot (HR) dyad engaged in a joint painting activity.
-              We conducted two online studies (n = 70, total) in which participants watched 4 videos (1 repeated synchronous video and 3 asynchronous videos).
+              We investigated the impact of IS on human raters’ perceptions of a human-robot (HR) dyad engaged in a joint painting activity.
+              We conducted two online studies (n = 70, total) in which participants watched 4 videos.
               We varied the degree of IS displayed by an HR dyad on two axes: (a) temporal alignment (e.g., speed of producing brush strokes) 
               &amp; (b) spatial similarity (i.e., similarity in the visual content produced).
               Our results indicate that some temporal &amp; spatial dimensions of IS displayed by an HR dyad 
