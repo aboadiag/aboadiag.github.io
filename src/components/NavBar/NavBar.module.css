@@ -15,7 +15,7 @@
   padding: 40px 60px; /* Adds breathing room (Top/Bottom, Left/Right) */
   box-sizing: border-box; /* Ensures padding doesn't break width */
   position: relative;
-  background-color: var(--high-contrast-color)
+  background-color: transparent;
   /* background-color: transparent; Or var(--off-white) if needed */
 }
 
