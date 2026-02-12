@@ -5,6 +5,7 @@
 
 :root {
   --blue-contrast: rgba(77, 99, 107, 1);
+  --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
 }
 .home {
   display: flex;
@@ -17,7 +18,7 @@
 
 /* This is the container for your specific 'absolute' layout designs */
 .main-content-canvas {
-  background-color: var(--off-white);
+  background-color: var(--high-contrast-color);
   /* CALCULATED HEIGHT: 
      The lowest element in your design is 'a-bit-about-me-2' at top: 2280px.
      It has a height of ~163px. 2280 + 163 = ~2443px.

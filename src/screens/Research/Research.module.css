@@ -10,7 +10,7 @@
 
 /* --- MAIN PAGE CONTAINER --- */
 .research {
-  background-color: var(--off-white);
+  background-color: var(--high-contrast-color);
   width: 100%;
   min-height: 100vh;
   position: relative;

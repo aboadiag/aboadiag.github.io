@@ -6,6 +6,8 @@
 /* --- CONFIG --- */
 :root {
   --art-bubble-size: 250px; 
+  --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
+
 }
 
 /* --- MAIN PAGE CONTAINER --- */

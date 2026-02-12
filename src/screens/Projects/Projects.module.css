@@ -3,9 +3,15 @@
 @import "./styleguide.css";
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
+/* --- CONFIG --- */
+:root {
+  --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
+
+}
+
 /* --- MAIN PAGE CONTAINER --- */
 .projects {
-  background-color: var(--off-white);
+  background-color: var(-high-contrast-color);
   width: 100%;
   
   /* FIX: 100vh allows the page to end exactly when content ends */
