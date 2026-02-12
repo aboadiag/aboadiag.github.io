@@ -12,7 +12,7 @@
 
 /* --- MAIN PAGE CONTAINER --- */
 .art-page {
-  background-color: var(--off-white);
+  background-color: var(--high-contrast-color);
   width: 100%;
   
   /* FIX: Changed to allow footer to be visible immediately on tall screens */

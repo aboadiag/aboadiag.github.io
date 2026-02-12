@@ -3,6 +3,12 @@
 @import "./styleguide.css"; 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
+/* --- CONFIG --- */
+:root {
+  --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
+
+}
+
 /* --- Main Footer Container --- */
 .footer {
   position: absolute;
@@ -13,7 +19,7 @@
   padding: 40px 80px;
   padding-bottom: 60px; /* Extra padding for the credits line */
   box-sizing: border-box;
-  background-color: var(--off-white);
+  background-color: var(--high-contrast-color);
   z-index: 10;
 }
 

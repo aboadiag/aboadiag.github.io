@@ -11,7 +11,7 @@
 
 /* --- MAIN PAGE CONTAINER --- */
 .projects {
-  background-color: var(-high-contrast-color);
+  background-color: var(--high-contrast-color);
   width: 100%;
   
   /* FIX: 100vh allows the page to end exactly when content ends */
