@@ -1,5 +1,10 @@
 /* NavBar.module.css */
 
+:root {
+  --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
+
+}
+
 .nav-bar {
   display: flex;
   justify-content: space-between; /* Pushes Logo to left, Links to right */
@@ -10,7 +15,8 @@
   padding: 40px 60px; /* Adds breathing room (Top/Bottom, Left/Right) */
   box-sizing: border-box; /* Ensures padding doesn't break width */
   position: relative;
-  background-color: transparent; /* Or var(--off-white) if needed */
+  background-color: var(--high-contrast-color)
+  /* background-color: transparent; Or var(--off-white) if needed */
 }
 
 /* --- LOGO SECTION --- */
