@@ -109,12 +109,12 @@ export const Home = () => {
               <span className={styles['text-wrapper-71']}>
                 . I am interested in applying{" "}
               </span>
-              <span className={styles['text-wrapper-75']}>
-                human-centered design approaches
+              <span className={styles['text-wrapper-71']}>
+                participatory approaches 
               </span>
               <span className={styles['text-wrapper-71']}>
                 {" "}
-                to design intelligent agents that can support{" "}
+                to design embodied &amp; agentic AI with and for{" "}
               </span>
               <span className={styles['text-wrapper-76']}>people with disabilities </span>
               <span className={styles['text-wrapper-71']}>
