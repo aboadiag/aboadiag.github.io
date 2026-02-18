@@ -109,7 +109,7 @@ export const Home = () => {
               <span className={styles['text-wrapper-71']}>
                 . I am interested in applying{" "}
               </span>
-              <span className={styles['text-wrapper-71']}>
+              <span className={styles['text-wrapper-72']}>
                 participatory approaches 
               </span>
               <span className={styles['text-wrapper-71']}>
