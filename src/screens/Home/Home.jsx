@@ -203,8 +203,16 @@ export const Home = () => {
                     Bennett
                     <br />
                     "Robot Design at the Margins: The Lived Experience as a Participatory 
-                    Approach to Co-designing with Disabled Adults” 
+                    Approach to Co-designing with Disabled Adults” [
                   </span>
+                  <a
+                    href="https://drive.google.com/file/d/1vOES-GlMrkdDGLuSiGDzSR8nxRw3KGi4/view?usp=sharing"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
+                    <span className={styles['text-wrapper-74']}>Proposed Thesis</span>
+                  </a>
+                  <span className={styles['text-wrapper-88']}>]</span>
                 </p>
 
                 <h3 className={styles['text-wrapper-89']}>
