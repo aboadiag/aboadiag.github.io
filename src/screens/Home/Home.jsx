@@ -210,7 +210,7 @@ export const Home = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <span className={styles['text-wrapper-74']}>Proposed Thesis</span>
+                    <span className={styles['text-wrapper-74']}>Proposed Thesis, Video Summary</span>
                   </a>
                   <span className={styles['text-wrapper-88']}>]</span>
                 </p>
