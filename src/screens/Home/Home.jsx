@@ -201,9 +201,9 @@ export const Home = () => {
                   <span className={styles['text-wrapper-88']}>
                     Aaron Steinfeld (Chair), Jean Oh, Patrick Carrington, Cynthia L.
                     Bennett
-                    <br />
+                    {/* <br />
                     “Designing Supportive Agents with the Lived Experience of People
-                    with Disabilities” [Proposed Thesis]
+                    with Disabilities” [Proposed Thesis] */}
                   </span>
                 </p>
 
