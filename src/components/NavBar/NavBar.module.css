@@ -64,3 +64,15 @@
 .nav-link-item:hover {
   color: var(--red-brown); /* Adds a hover effect */
 }
+
+/* Ensures the link doesn't look like a standard blue/underlined link */
+.site-logo-link {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.site-logo-link:hover {
+  opacity: 0.7;
+}

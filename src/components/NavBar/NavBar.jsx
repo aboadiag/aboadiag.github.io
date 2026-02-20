@@ -11,6 +11,12 @@ export const NavBar = ({ className }) => {
       role="navigation"
       aria-label="Main Navigation"
     >
+      {/* Logo Section - Redirects to Home */}
+      <Link 
+        to="/" 
+        className={styles['site-logo-link']} 
+        aria-label="Return to home page"
+      >
       {/* Logo Section */}
       <div className={styles['site-logo']}>
         <img
@@ -22,6 +28,7 @@ export const NavBar = ({ className }) => {
           Abena Boadi-Agyemang
         </span>
       </div>
+      </Link>
 
       {/* Navigation Links Grouped Together */}
       <div className={styles['nav-links']}>
