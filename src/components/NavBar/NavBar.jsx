@@ -15,8 +15,8 @@ export const NavBar = ({ className }) => {
       <div className={styles['site-logo']}>
         <img
           className={styles['bena-favicon-figma']}
-          alt="Site logo – sketch of Abena's face"
-          src="/img/bena-favicon-figma-1.svg"
+          alt="Site logo – sketch of Abena's side profile face with her initials, AB"
+          src="/img/aboadi-feb26-favicon-96x96_svg.svg"
         />
         <span className={styles['text-wrapper-4']}>
           Abena Boadi-Agyemang
