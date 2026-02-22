@@ -34,7 +34,7 @@ export const Research = () => {
         <span className={styles['text-wrapper-123']}>&nbsp;&nbsp;these </span>
         <span className={styles['text-wrapper-122']}>
           {" "}
-          technologies. Furthermore, I also leverage broader{" "}
+          technologies. Furthermore, I leverage broader{" "}
         </span>
         <span className={styles['text-wrapper-124']}>user-centered design (UCD) practices,</span>
         <span className={styles['text-wrapper-122']}>&nbsp; and </span>
