@@ -44,8 +44,9 @@ export const Research = () => {
         <span className={styles['text-wrapper-122']}>and </span>
         <span className={styles['text-wrapper-124']}>experimental methods.</span>
         <span className={styles['text-wrapper-122']}>
-          {/* in my work. <br />
-          <br /> */}
+          {/* in my work. */}
+          <br />
+          <br />
           My work has been{" "}
         </span>
         <span className={styles['text-wrapper-126']}>published</span>
