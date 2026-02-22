@@ -273,7 +273,7 @@ export const Research = () => {
             Still, there are few deliberate opportunities for employees to regulate their emotional state in the workplace. 
             We present a voice agent to guide a users through a therapeutic art-making intervention
             and promote emotion regulation within the workplace. We use a Wizard-of-Oz (WoZ)
-            methodology to conduct pilot evaluations in which we evaluate the voice agent-guided interactions
+            methodology to conduct pilot studies in which we evaluate the voice agent-guided interactions
             to that of a self-guided interaction. We share preliminary insights regarding the design 
             of our voice agent, including the importance of embodiment and personalization. 
             We also share insights about the feasibility of our proposed user study, 
