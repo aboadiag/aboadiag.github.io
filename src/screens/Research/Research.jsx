@@ -32,11 +32,12 @@ export const Research = () => {
         <span className={styles['text-wrapper-124']}> inclusive, intuitive, safe</span>
         <span className={styles['text-wrapper-122']}>, and </span>
         <span className={styles['text-wrapper-124']}>equitable</span>
-        <span className={styles['text-wrapper-122']}> for all who collaborate interact with</span>
-        <span className={styles['text-wrapper-123']}>&nbsp;&nbsp;these</span>
+        <span className={styles['text-wrapper-122']}> for all.</span>
+        {/* <span className={styles['text-wrapper-123']}>&nbsp;&nbsp;these</span>
         <span className={styles['text-wrapper-122']}>
           {" "}
-          technologies. Furthermore, I leverage mixed-methods UX approaches, including{" "}
+          technologies.  */}
+      <span className={styles['text-wrapper-122']}> Furthermore, I leverage mixed-methods UX approaches, including{" "}
         </span>
         <span className={styles['text-wrapper-124']}>user-centered design (UCD) practices,</span>
         <span className={styles['text-wrapper-122']}>&nbsp; and </span>
