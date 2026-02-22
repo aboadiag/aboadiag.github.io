@@ -105,7 +105,8 @@ export const Projects = () => {
               mechanism. 
               <br /><br />
               Additionally, I conducted semi-structured interviews with 5 educators --
-              all have teacher of students with visual impairment (TVI) experience -- and identified their considerations when creating adaptations, 
+              all have teacher of students with visual impairment (TVI) experience -- 
+              and identified their considerations when creating adaptations, 
               attitudes towards technology, and perspectives on existing barriers to access. 
               Our findings reveal and reaffirm unresolved challenges in the adaptation process
               as well as offer insights into key factors that must be considered when selecting the
