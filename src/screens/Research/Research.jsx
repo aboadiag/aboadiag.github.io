@@ -125,7 +125,7 @@ export const Research = () => {
       <div className={styles['project-ishra']}>
         
         <p className={styles['project-title']}>
-          Investigating Human-Robot Synchrony in Joint Painting
+          Investigating Human-Robot Synchrony in Collborative Art-Making
         </p>
 
         <div className={styles['split-content']}>
