@@ -20,26 +20,25 @@ export const Research = () => {
       {/* INTRO */}
       <p className={styles['my-research-focuses-3']}>
         <span className={styles['text-wrapper-122']}>
-          My research focuses on designing assistive robots and supportive
-          agents.&nbsp;&nbsp;I commonly{" "}
+          My research focuses on designing physically embodied and agentic AI that operate in service roles, namely assistive and social robots.&nbsp;&nbsp; I commonly use {" "}
         </span>
-        <span className={styles['text-wrapper-124']}>cooperatively design</span>
-        <span className={styles['text-wrapper-122']}> (“co-design) with</span>
-        <span className={styles['text-wrapper-125']}> people with disabilities</span>
+        <span className={styles['text-wrapper-124']}>participatory design</span>
+        <span className={styles['text-wrapper-122']}>approaches in my design research practice. I lead co-design workshops with</span>
+        <span className={styles['text-wrapper-125']}>people with disabilities</span>
         <span className={styles['text-wrapper-122']}>
           {" "}
-          (PwDs) who are non-professional designers to ensure more
+          (PwDs) who are non-roboticists to ensure these processes yield robots and AI systems that are
         </span>
-        <span className={styles['text-wrapper-125']}> equitable experiences</span>
-        <span className={styles['text-wrapper-122']}> with</span>
-        <span className={styles['text-wrapper-123']}>&nbsp;&nbsp;accessible</span>
+        <span className={styles['text-wrapper-124']}>inclusive, intuitive, safe and equitable</span>
+        <span className={styles['text-wrapper-122']}> for all who collaborate or interact with </span>
+        <span className={styles['text-wrapper-123']}>&nbsp;&nbsp;these </span>
         <span className={styles['text-wrapper-122']}>
           {" "}
-          robotic/agentic interfaces. I use{" "}
+          technologies. Furthermore, I also leverage broader{" "}
         </span>
-        <span className={styles['text-wrapper-124']}>participatory design,</span>
-        <span className={styles['text-wrapper-122']}>&nbsp;</span>
-        <span className={styles['text-wrapper-124']}>user-centered design (UCD), </span>
+        <span className={styles['text-wrapper-124']}>user-centered design (UCD) practices,</span>
+        <span className={styles['text-wrapper-122']}>&nbsp; and </span>
+        <span className={styles['text-wrapper-124']}>behvaioral science, </span>
         <span className={styles['text-wrapper-122']}>and </span>
         <span className={styles['text-wrapper-124']}>experimental methods </span>
         <span className={styles['text-wrapper-122']}>
