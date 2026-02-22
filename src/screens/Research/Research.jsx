@@ -72,7 +72,7 @@ export const Research = () => {
             <img
               className={styles['project-image']}
               alt="Four subfigures showing co-design workshops"
-              src="/img/rectangle-28-8.png"
+              src="/img/adr-new-img-website.png"
             />
             <p className={styles['media-caption']}>
               Collage featuring Co-Design Workshops &amp; Designs Generated.
