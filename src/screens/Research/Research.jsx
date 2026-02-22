@@ -193,7 +193,7 @@ export const Research = () => {
               src="/img/guide-robot-new-img-website.png"
             />
             <p className={styles['media-caption']}>
-              Participant engaging with our guide robot prototype.
+              Two-phase user study. Left: Robot Interaction. Right: Participatory Design Process &amp; Outcomes.
             </p>
             <div className={styles['project-date']}>Summer 2023 - Fall 2023</div>
           </div>
