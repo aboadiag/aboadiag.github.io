@@ -71,7 +71,12 @@ export const Research = () => {
           <div className={styles['left-column']}>
             <img
               className={styles['project-image']}
-              alt="Four subfigures showing co-design workshops"
+              alt="Two boxes with co-design process with text: 1 -initial workshop:
+              OD/LMD experiences and perceptions, and four subfigures showing process 
+              and materials generated. additional caption: motivations, advantages, challenges,
+              future desires, and early robot ideations. Second box with text: 2 - 2 Iterative Participatory Workshops:
+              generative activities to extend delivery robot ideations. Additional caption: 
+              speculative co-design surfaced varied robot morphologies, functionalities, roles, & socio-technical perspectives."
               src="/img/adr-new-img-website.png"
             />
             <p className={styles['media-caption']}>
