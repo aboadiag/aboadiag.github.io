@@ -40,7 +40,7 @@ export const Research = () => {
       <span className={styles['text-wrapper-122']}> Furthermore, I leverage mixed-methods UX approaches, including{" "}
         </span>
         <span className={styles['text-wrapper-124']}>user-centered design (UCD) practices,</span>
-        <span className={styles['text-wrapper-122']}>&nbsp; and </span>
+        <span className={styles['text-wrapper-122']}>&nbsp;, </span>
         <span className={styles['text-wrapper-124']}>behavioral science </span>
         <span className={styles['text-wrapper-122']}>and </span>
         <span className={styles['text-wrapper-124']}>experimental methods.</span>
