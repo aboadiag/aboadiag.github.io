@@ -258,12 +258,8 @@ export const Research = () => {
             </div>
 
             <p className={styles['project-text']}>
-            Workplaces are high-pressure environments where employees
-            often deal with inflexible deadlines, instability in work relationships due to conflict, 
-            and the expectations of deliverables -- factors that exacerbate occupational stress and anxiety. 
-            While studies have demonstrated the effectiveness of therapeutic art-making interventions for 
-            supporting emotion regulation and alleviating occupational stress, there are few deliberate 
-            opportunities for employees to regulate their emotional state within the workplace. 
+            Workplaces are high-pressure environments that lead to occupational stress and anxiety. 
+            Still, there are few deliberate opportunities for employees to regulate their emotional state in the workplace. 
             We present a voice agent to guide a users through a therapeutic art-making intervention
             and promote emotion regulation within the workplace. We use a Wizard-of-Oz (WoZ)
             methodology to conduct pilot evaluations in which we evaluate the voice agent-guided interactions
