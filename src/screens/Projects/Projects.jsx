@@ -98,15 +98,19 @@ export const Projects = () => {
 
             <p className={styles['blurb-4']}>
               Inspired by my previous work in accessible haptics,
-              I iterated on a haptic mouse&nbsp;&nbsp;to facilitate
+              I iterated on a robot-mediated haptic mouse&nbsp;&nbsp;to facilitate
               on-demand and iterative adaptation of visual aids used in K-12
               learning to non-visual, particularly haptic modalities. This haptic
               device is an impedance-type kinesthetic device based on an RUU delta
               mechanism. 
               <br /><br />
-              I also conducted semi-structured interviews with TVIs to uncover
-              design recommendations for interactive devices to support non-visual
-              adaptation.
+              Additionally, I conducted semi-structured interviews with 5 educators --
+              all have teacher of students with visual impairment (TVI) experience -- and identified their considerations when creating adaptations, 
+              attitudes towards technology, and perspectives on existing barriers to access. 
+              Our findings reveal and reaffirm unresolved challenges in the adaptation process
+              as well as offer insights into key factors that must be considered when selecting the
+              type of adaptation. We formulate design recommendations for interactive tools that support
+              TVIs in creating effective adaptations for BLV students.
             </p>
           </div>
         </div>
