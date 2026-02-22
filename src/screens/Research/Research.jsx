@@ -71,10 +71,10 @@ export const Research = () => {
           <div className={styles['left-column']}>
             <img
               className={styles['project-image']}
-              alt="Two boxes with co-design process with text: 1 -initial workshop:
+              alt="Two boxes with co-design process with text: 1 initial workshop:
               OD/LMD experiences and perceptions, and four subfigures showing process 
               and materials generated. additional caption: motivations, advantages, challenges,
-              future desires, and early robot ideations. Second box with text: 2 - 2 Iterative Participatory Workshops:
+              future desires, and early robot ideations. Second box with text: 2 Iterative Participatory Workshops:
               generative activities to extend delivery robot ideations. Additional caption: 
               speculative co-design surfaced varied robot morphologies, functionalities, roles, & socio-technical perspectives."
               src="/img/adr-new-img-website.png"
@@ -185,8 +185,12 @@ export const Research = () => {
           <div className={styles['left-column']}>
             <img
               className={styles['project-image']}
-              alt="Participant walking with guide robot prototype"
-              src="/img/rectangle-28-11.png"
+              alt="Two boxes with co-design process with text: 1 robot interaction. Photograph of 
+              man walking with guide robot prototype. Additional caption: interactions with guide robot prototype as mutual learning.
+              Second box with text: 2 Participatory Design: Interviews, Scenario-based Design, &amp; Dialogue Simulations. 
+              Diagram of overlapping factors: Usability, Shared Robot Control, and Safeguarding User Safety Perceptions.
+              Additional caption:key factors for user trust, safety, and comfort while using guide robot in public."
+              src="/img/guide-robot-new-img-website.png"
             />
             <p className={styles['media-caption']}>
               Participant engaging with our guide robot prototype.
