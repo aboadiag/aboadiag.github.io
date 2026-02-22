@@ -75,7 +75,7 @@ export const Research = () => {
               src="/img/adr-new-img-website.png"
             />
             <p className={styles['media-caption']}>
-              Collage featuring Co-Design Workshops &amp; Designs Generated.
+              Co-design Process &amp; Delivery Robot Designs Generated.
             </p>
             <div className={styles['project-date']}>Spring - Fall 2025</div>
           </div>
