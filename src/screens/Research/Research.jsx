@@ -20,7 +20,7 @@ export const Research = () => {
       {/* INTRO */}
       <p className={styles['my-research-focuses-3']}>
         <span className={styles['text-wrapper-122']}>
-          My research focuses on designing physically embodied and agentic AI that operate in service roles, namely assistive and social robots.&nbsp;&nbsp; I use{" "}
+          My research focuses on designing physically embodied and agentic AI that operate in service roles, namely assistive and social robots.&nbsp;&nbsp;I use{" "}
         </span>
         <span className={styles['text-wrapper-124']}>participatory design </span>
         <span className={styles['text-wrapper-122']}>approaches in my design research practice. I lead co-design workshops with </span>
