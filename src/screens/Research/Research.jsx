@@ -59,7 +59,7 @@ export const Research = () => {
       <div className={styles['project-delivery']}>
         
         <p className={styles['project-title']}>
-          Co-designing Delivery Robots with Local PwDs
+          Co-designing Autonomous Mobility with Local Disabled Adults
         </p>
 
         <div className={styles['split-content']}>
@@ -169,7 +169,7 @@ export const Research = () => {
       {/* ================= RESEARCH 3: GUIDE ROBOTS ================= */}
       <div className={styles['project-guide']}>
         <p className={styles['project-title']}>
-          Co-designing Guide Robots with People who are Blind &amp; Low Vision (pBLVs)
+          Co-designing Robotic Mobility Aids with Adults with Visual Disabilities
         </p>
 
         <div className={styles['split-content']}>
@@ -202,13 +202,19 @@ export const Research = () => {
             </div>
 
             <p className={styles['project-text']}>
-              We used scenario-based design &amp; dialogue simulations to
-              co-design with 16 people who are blind or have low vision (pBLVs) guide robots to support navigation in public
-              settings. Our work provides design recommendations for roboticists
-              &amp; interface designers, including robotic behaviors and features
-              related to guide robot usability, shared-robot control, and factors
-              to improve BLV users perceptions of safety when using guide robots
-              in public.
+              Navigating through unfamiliar environments is a challenging task.
+              For people who are blind or have low vision (BLV), 
+              navigation can be particularly daunting. 
+              Guide robots are a type of service robot that can assist BLV people with navigation tasks.
+              We conducted a user study with 16 BLV 
+              participants to co-design guide robots that enhance BLV users’ sense of orientation, perceived safety, and comfort. 
+              We conducted semi-structured interviews and participatory design (PD) sessions with each of the participants. 
+              The PD sessions utilized a scenario-based design (SBD) approach 
+              aimed at identifying ideal features and functionality of guide robots and a dialogue simulated activity to verify these requirements. 
+              We identified three key themes that serve as design considerations for future robotic mobility aids for BLV people:
+              (1) features that enhance the usability of guide robot systems;
+              factors that (2) influence BLV users’ desires for shared robot control;
+              and (3) enhance BLV users’ perceived safety in public settings.
             </p>
           </div>
         </div>
@@ -217,7 +223,7 @@ export const Research = () => {
       {/* ================= RESEARCH 4: VOICE AGENTS ================= */}
       <div className={styles['project-voice']}>
         <p className={styles['project-title']}>
-          Voice Agent Guided Art-Making for Emotion Regulation
+          Designing Voice Agents for Emotional Wellbeing in the Workplace
         </p>
 
         <div className={styles['split-content']}>
@@ -250,11 +256,20 @@ export const Research = () => {
             </div>
 
             <p className={styles['project-text']}>
-              Visual art-making can help support emotion regulation for many people;
-              however, few works seldom explore opportunities for art-making to
-              reduce occupational stress. We designed a preliminary voice agent with
-              definite voice characteristics to guide a human through an therapeutic
-              art-making activity.
+            Workplaces are high-pressure environments where employees
+            often deal with inflexible deadlines, instability in work relationships due to conflict, 
+            and the expectations of deliverables -- factors that exacerbate occupational stress and anxiety. 
+            While studies have demonstrated the effectiveness of therapeutic art-making interventions for 
+            supporting emotion regulation and alleviating occupational stress, there are few deliberate 
+            opportunities for employees to regulate their emotional state within the workplace. 
+            We present a voice agent to guide a users through a therapeutic art-making intervention
+            and promote emotion regulation within the workplace. We use a Wizard-of-Oz (WoZ)
+            methodology to conduct pilot evaluations in which we evaluate the voice agent-guided interactions
+            to that of a self-guided interaction. We share preliminary insights regarding the design 
+            of our voice agent, including the importance of embodiment and personalization. 
+            We also share insights about the feasibility of our proposed user study, 
+            which is aimed at evaluating the effectiveness of our voice agent at promoting emotion regulation 
+            in employees through therapeutic art-making.
             </p>
           </div>
         </div>
