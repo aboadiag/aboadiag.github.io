@@ -50,7 +50,7 @@ export const Research = () => {
           <br />
           My work has been{" "}
         </span>
-        <span className={styles['text-wrapper-126']}>published</span>
+        <span className={styles['text-wrapper-122']}>published</span>
         <span className={styles['text-wrapper-122']}>
           {" "}
           at several top tier conferences in ACM &amp;&nbsp;&nbsp;IEEE, such as
