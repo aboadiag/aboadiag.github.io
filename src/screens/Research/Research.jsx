@@ -20,7 +20,7 @@ export const Research = () => {
       {/* INTRO */}
       <p className={styles['my-research-focuses-3']}>
         <span className={styles['text-wrapper-122']}>
-          My research focuses on designing physically embodied and agentic AI that operate in service roles, namely assistive and social robots.&nbsp;&nbsp; I commonly use {" "}
+          My research focuses on designing physically embodied and agentic AI that operate in service roles, namely assistive and social robots.&nbsp;&nbsp; I use{" "}
         </span>
         <span className={styles['text-wrapper-124']}>participatory design </span>
         <span className={styles['text-wrapper-122']}>approaches in my design research practice. I lead co-design workshops with </span>
@@ -29,7 +29,7 @@ export const Research = () => {
           {" "}
           (PwDs) who are non-roboticists to ensure these processes yield robots and AI systems that are
         </span>
-        <span className={styles['text-wrapper-124']}>inclusive, intuitive, safe</span>
+        <span className={styles['text-wrapper-124']}> inclusive, intuitive, safe</span>
         <span className={styles['text-wrapper-122']}>, and </span>
         <span className={styles['text-wrapper-124']}>equitable</span>
         <span className={styles['text-wrapper-122']}> for all who collaborate interact with </span>
