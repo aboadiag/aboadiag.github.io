@@ -79,7 +79,7 @@ export const Home = () => {
               <span className={styles['text-wrapper-71']}>
                 {" "}
                 PhD Candidate at the Robotics Institute at Carnegie Mellon
-                University. Here, I am advised by{" "}
+                University. I am advised by{" "}
               </span>
               <a
                 href="https://www.ri.cmu.edu/ri-faculty/aaron-steinfeld/"
@@ -96,10 +96,11 @@ export const Home = () => {
               >
                 <span className={styles['text-wrapper-74']}>TBD Lab</span>
               </a>
-              <span className={styles['text-wrapper-71']}>
-                .<br />
+              <span className={styles['text-wrapper-71']}>. I graduate in 2026; thus, I'm actively seeking </span>
+                <span className={styles['text-wrapper-72']}>full-time positions.</span> <br />
                 <br />
-                My research interests are at the intersection of{" "}
+                <span className={styles['text-wrapper-71']}>
+                  My research interests are at the intersection of{" "}
               </span>
               <span className={styles['text-wrapper-72']}>human-robot interaction</span>
               <span className={styles['text-wrapper-71']}>, </span>
