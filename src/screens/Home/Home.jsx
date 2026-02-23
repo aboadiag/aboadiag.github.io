@@ -78,8 +78,8 @@ export const Home = () => {
               <span className={styles['text-wrapper-72']}>year</span>
               <span className={styles['text-wrapper-71']}>
                 {" "}
-                PhD Candidate at the Robotics Institute at Carnegie Mellon
-                University. I am advised by{" "}
+                PhD Candidate in the Robotics Institute at Carnegie Mellon
+                University. Here, I'm advised by{" "}
               </span>
               <a
                 href="https://www.ri.cmu.edu/ri-faculty/aaron-steinfeld/"
