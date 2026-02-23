@@ -22,7 +22,7 @@ export const NavBar = ({ className }) => {
         <img
           className={styles['bena-favicon-figma']}
           alt="Site logo – sketch of Abena's side profile face with her initials, AB"
-          src="/img/benab-favicon-96x96.svg"
+          src="/img/benab-favicon-196x196.svg"
         />
         <span className={styles['text-wrapper-4']}>
           Abena Boadi-Agyemang
