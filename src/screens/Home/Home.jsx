@@ -175,10 +175,9 @@ export const Home = () => {
 
                 <span className={styles['text-wrapper-71']}>
                   I am passionate about uncovering technology solutions that enable people to live empowered lives. If you are interested in collaborating, send me an email with your interests!
-                </span>
-                <br /><br />
-
-                <span className={styles['text-wrapper-71']}>
+                {/* </span> */}
+                {/* <br /><br /> */}
+                {/* <span className={styles['text-wrapper-71']}> */}
                   When I am not doing research, you can find me doing yoga, bouldering, rollerblading, creating artwork, or playing with my cats, Bee and Bug!
                 </span>
                 <br /><br />
