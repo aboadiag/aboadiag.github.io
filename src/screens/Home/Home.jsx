@@ -132,7 +132,7 @@ export const Home = () => {
                 
                 {/* 1. SHAPE Lab Link */}
                 <a href="https://shape.stanford.edu/" /* TODO: Insert SHAPE Lab link here */ target="_blank" rel="noopener noreferrer">
-                  <span className={styles['text-wrapper-74']}> SHAPE Lab </span>
+                  <span className={styles['text-wrapper-74']}>SHAPE Lab </span>
                 </a>
 
                 <span className={styles['text-wrapper-71']}> under the supervision of </span>
