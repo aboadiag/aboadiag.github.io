@@ -72,10 +72,10 @@ export const Home = () => {
 
             <h2 className={styles['text-wrapper-82']}>about.</h2>
             <p className={styles['i-am-in-the-fifth-2']}>
-              <span className={styles['text-wrapper-71']}>I am in the </span>
+              <span className={styles['text-wrapper-71']}>I am a </span>
               <span className={styles['text-wrapper-72']}>fifth</span>
               <span className={styles['text-wrapper-71']}>&nbsp;</span>
-              <span className={styles['text-wrapper-73']}>year</span>
+              <span className={styles['text-wrapper-72']}>year</span>
               <span className={styles['text-wrapper-71']}>
                 {" "}
                 PhD Candidate at the Robotics Institute at Carnegie Mellon
