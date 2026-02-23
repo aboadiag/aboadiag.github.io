@@ -127,7 +127,7 @@ export const Home = () => {
                 <span className={styles['text-wrapper-71']}>
                   I completed my B.S. in Mechanical Engineering at Stanford University. 
                   During my undergraduate studies, I was fortunate to work as an 
-                  undergraduate researcher in 
+                  undergraduate researcher in{""}
                 </span>
                 
                 {/* 1. SHAPE Lab Link */}
