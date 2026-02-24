@@ -46,7 +46,7 @@ export const Research = () => {
         <span className={styles['text-wrapper-124']}>experimental methods.</span>
         <span className={styles['text-wrapper-122']}>
           {/* in my work. */}
-          <br />
+          {/* <br /> */}
           {/* <br /> */}
           
         </span>
