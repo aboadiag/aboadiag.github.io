@@ -44,13 +44,12 @@ export const Research = () => {
         <span className={styles['text-wrapper-124']}>behavioral science </span>
         <span className={styles['text-wrapper-122']}>and </span>
         <span className={styles['text-wrapper-124']}>experimental methods.</span>
-        <span className={styles['text-wrapper-122']}>
-          {/* in my work. */}
+        {/* <span className={styles['text-wrapper-122']}>
+          in my work.
           {/* <br /> */}
-          {/* <br /> */}
-          
-        </span>
-        <span className={styles['text-wrapper-122']}> 
+          {/* <br />
+        </span> */}
+        <span className={styles['text-wrapper-122']}>{""}
           My work has been published at several top-tier conferences and journals in ACM &amp; IEEE, including
           ASSETS, UIST, HRI, RO-MAN, and THRI.&nbsp;&nbsp;See some of this research below.
         </span>
