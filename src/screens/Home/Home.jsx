@@ -181,8 +181,6 @@ export const Home = () => {
                  &nsb;&nsb; When I am not doing research, you can find me doing yoga, bouldering, rollerblading, creating artwork, or playing with my cats, Bee and Bug!
                 </span>
                 <br /><br />
-
-        
             </p>
           </section>
 
