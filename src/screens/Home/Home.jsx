@@ -178,7 +178,7 @@ export const Home = () => {
                 {/* </span> */}
                 {/* <br /><br /> */}
                 {/* <span className={styles['text-wrapper-71']}> */}
-                  {""}When I am not doing research, you can find me doing yoga, bouldering, rollerblading, creating artwork, or playing with my cats, Bee and Bug!
+                 &nsb;&nsb; When I am not doing research, you can find me doing yoga, bouldering, rollerblading, creating artwork, or playing with my cats, Bee and Bug!
                 </span>
                 <br /><br />
 
