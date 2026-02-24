@@ -37,7 +37,7 @@ export const Research = () => {
         <span className={styles['text-wrapper-122']}>
           {" "}
           technologies.  */}
-      <span className={styles['text-wrapper-122']}> Furthermore, I leverage mixed-methods UX approaches, including{" "}
+      <span className={styles['text-wrapper-122']}> I also leverage mixed-methods approaches, including{" "}
         </span>
         <span className={styles['text-wrapper-124']}>user-centered design (UCD) practices, </span>
         {/* <span className={styles['text-wrapper-122']}>&nbsp;, </span> */}
@@ -47,15 +47,12 @@ export const Research = () => {
         <span className={styles['text-wrapper-122']}>
           {/* in my work. */}
           <br />
-          <br />
-          My work has been{" "}
+          {/* <br /> */}
+          
         </span>
-        <span className={styles['text-wrapper-122']}>published</span>
-        <span className={styles['text-wrapper-122']}>
-          {" "}
-          at several top tier conferences in ACM &amp;&nbsp;&nbsp;IEEE, such as
-          SIGACCESS, UIST, HRI, RO-MAN, and journals, such as
-          THRI.&nbsp;&nbsp;See some of these research projects below.
+        <span className={styles['text-wrapper-122']}> 
+          My work has been published at several top-tier conferences and journals in ACM &amp; IEEE, including
+          ASSETS, UIST, HRI, RO-MAN, and THRI.&nbsp;&nbsp;See some of this research below.
         </span>
       </p>
 
