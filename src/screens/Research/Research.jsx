@@ -49,7 +49,7 @@ export const Research = () => {
           {/* <br /> */}
           {/* <br />
         </span> */}
-        <span className={styles['text-wrapper-122']}>.&nbsp;&nbsp;
+        <span className={styles['text-wrapper-122']}>.&nbsp;
           My work has been published at several top-tier conferences and journals in ACM &amp; IEEE, including
           ASSETS, UIST, HRI, RO-MAN, and THRI.&nbsp;&nbsp;See some of this research below.
         </span>
