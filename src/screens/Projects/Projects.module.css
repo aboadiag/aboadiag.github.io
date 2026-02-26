@@ -10,11 +10,10 @@
 }
 
 /* --- MAIN PAGE CONTAINER --- */
-.projects {
+/* .projects {
   background-color: var(--high-contrast-color);
   width: 100%;
   
-  /* FIX: 100vh allows the page to end exactly when content ends */
   min-height: 100vh; 
   
   position: relative;
@@ -27,13 +26,26 @@
   gap: 100px; 
   
   padding-top: 550px;
-  
-  /* FIX: 0px padding ensures no white gap after the footer */
+
+  padding-bottom: 0px; 
+} */
+ .projects {
+  background-color: var(--high-contrast-color);
+  width: 100%;
+  min-height: 100vh; 
+  position: relative;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  gap: 100px; 
+  /* Reduced from 550px so the first project box sits below the text */
+  padding-top: 100px; 
   padding-bottom: 0px; 
 }
 
 /* --- TITLE & INTRO --- */
-.text-wrapper-97 {
+/* .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 100px;
@@ -44,6 +56,19 @@
   top: 150px;
   width: 840px;
   z-index: 2;
+} */
+
+.text-wrapper-97 {
+  color: var(--dark-brown);
+  font-family: "Roboto", Helvetica;
+  font-size: 100px;
+  font-weight: 400;
+  /* Change from absolute to relative to allow it to push content down */
+  position: relative; 
+  margin-left: 107px;
+  top: 150px;
+  width: 840px;
+  z-index: 2;
 }
 
 .during-my-phd-i-have {
@@ -51,12 +76,19 @@
   font-family: "Roboto", Helvetica;
   font-size: 30px;
   font-weight: 400;
-  left: 107px;
+  /* left: 107px;
   line-height: 1.4;
   position: absolute;
   top: 300px;
   width: 1143px;
+  z-index: 2; */
+  /* Change from absolute to relative */
+  position: relative; 
+  margin-left: 107px;
+  top: 180px; /* Adjusted to sit below the title */
+  width: 1143px;
   z-index: 2;
+  margin-bottom: 100px; /* Adds space before the first project box */
 }
 
 /* --- SHARED CARD STYLING --- */

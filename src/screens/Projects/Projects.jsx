@@ -26,6 +26,52 @@ export const Projects = () => {
         See some of these&nbsp;&nbsp;projects below.
       </p>
 
+      {/* ================= PROJECT 0: INCLUSIVE E-LEARNING (DUOLINGO TARGET) ================= */}
+  <div className={styles['project-persuasive-2']}> {/* Reusing card style for consistency */}
+    <p className={styles['persuasive-title']}>
+      Inclusive Literacy: Expert-Novice Modeling for Digital Accessibility
+    </p>
+
+    <div className={styles['split-content']}>
+      <div className={styles['left-column']}>
+        {/* Assuming you'll add an image or GIF of the learning path here */}
+        <img 
+          className={styles['project-video']} 
+          src="/img/elearning-hero.png" 
+          alt="Inclusive Literacy Learning Path" 
+        />
+        <p className={styles['media-caption']}>
+          Mobile-first learning paths utilizing "Faded Worked Examples" to teach social media alt-text creation.
+        </p>
+        <div className={styles['project-date']}>Spring 2024</div>
+      </div>
+
+      <div className={styles['right-column']}>
+        <div className={styles['description-header']}>
+          Description 
+          <span className={styles['bracket']}> [</span>
+          <a href="YOUR_CANVA_LINK_HERE" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+            view case study
+          </a>
+          <span className={styles['bracket']}>]</span>
+        </div>
+
+        <p className={styles['persuasive-blurb']}>
+          I led the end-to-end UX strategy for an inclusive literacy tool, architecting 
+          mobile-first learning paths based on expert-novice cognitive modeling. 
+          I operationalized scaffolded interaction patterns (Faded Examples) 
+          and personalized feedback loops to teach high-stakes accessibility 
+          skills—specifically, social media alt-text creation. 
+          <br /><br />
+          A validated A/B test (n=20) demonstrated a <strong>40% increase in 
+          user performance</strong>. This project bridges learning science with 
+          scalable product design, focusing on reducing cognitive load for 
+          complex technical tasks.
+        </p>
+      </div>
+    </div>
+  </div>
+
       {/* ================= PROJECT 1: PERSUASIVE ================= */}
       <div className={styles['project-persuasive-2']}>
         <p className={styles['persuasive-title']}>
