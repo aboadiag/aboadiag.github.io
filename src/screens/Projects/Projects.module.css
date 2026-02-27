@@ -13,20 +13,14 @@
 /* .projects {
   background-color: var(--high-contrast-color);
   width: 100%;
-  
-  min-height: 100vh; 
-  
+  min-height: 100vh;  
   position: relative;
   overflow-x: hidden;
-  
   display: flex;
   flex-direction: column;
   align-items: center; 
-  
   gap: 100px; 
-  
   padding-top: 550px;
-
   padding-bottom: 0px; 
 } */
  .projects {
@@ -40,7 +34,8 @@
   align-items: center; 
   gap: 100px; 
   /* Reduced from 550px so the first project box sits below the text */
-  padding-top: 100px; 
+  /* padding-top: 100px;  */
+  padding-top: 550px;
   padding-bottom: 0px; 
 }
 
