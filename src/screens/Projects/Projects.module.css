@@ -52,7 +52,8 @@
   font-weight: 400;
   left: 107px;
   line-height: 1.1;
-  position: absolute;
+  /* position: absolute; */
+  position: relative;
   top: 150px;
   width: 840px;
   z-index: 2;
