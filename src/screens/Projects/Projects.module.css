@@ -76,12 +76,12 @@
   font-family: "Roboto", Helvetica;
   font-size: 30px;
   font-weight: 400;
-  /* left: 107px;
-  line-height: 1.4;
+  left: 107px;
+  /* line-height: 1.4;
   position: absolute;
   top: 300px;
   width: 1143px;
-  z-index: 2; */
+  z-index: 2;  */
   /* Change from absolute to relative */
   position: relative; 
   margin-left: 107px;
