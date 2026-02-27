@@ -78,12 +78,12 @@
   font-weight: 400;
   left: 107px;
   line-height: 1.4;
-  position: absolute;
+  /* position: absolute; */
   /* top: 300px;
   width: 1143px;
   z-index: 2;  */
   /* Change from absolute to relative */
-  /* position: relative;  */
+  position: relative; 
   /* margin-left: 107px; */
   top: 180px; /* Adjusted to sit below the title */
   width: 1143px;
