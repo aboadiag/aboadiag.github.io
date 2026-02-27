@@ -63,6 +63,8 @@
   font-family: "Roboto", Helvetica;
   font-size: 100px;
   font-weight: 400;
+   left: 107px;
+  line-height: 1.1;
   /* Change from absolute to relative to allow it to push content down */
   position: relative; 
   margin-left: 107px;
