@@ -41,7 +41,7 @@ export const Projects = () => {
           alt="Inclusive Literacy Learning Path" 
         />
         <p className={styles['media-caption']}>
-          Example of learning paths utilizing conversational tone (Personalization Principle) to teach social media alt-text creation.
+          Example of learning paths utilizing conversational tone to teach social media alt-text creation.
         </p>
         <div className={styles['project-date']}>Spring 2024</div>
       </div>
@@ -60,7 +60,7 @@ export const Projects = () => {
           I led the end-to-end UX strategy for an inclusive literacy tool, architecting 
           mobile-first learning paths based on expert-novice cognitive modeling. 
           I operationalized scaffolded interaction patterns (Faded Examples) 
-          and conversational instruction to teach high-stakes accessibility 
+          and conversational instruction (Personalization Principle) to teach high-stakes accessibility 
           skills, specifically social media alt-text authoring. 
           <br /><br />
           A validated A/B test (n=20) demonstrated a <strong>40% increase in 
