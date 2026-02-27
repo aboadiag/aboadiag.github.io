@@ -37,11 +37,11 @@ export const Projects = () => {
         {/* Assuming you'll add an image or GIF of the learning path here */}
         <img 
           className={styles['project-video']} 
-          src="/img/elearning-hero.png" 
+          src="/img/e-learning-project.png" 
           alt="Inclusive Literacy Learning Path" 
         />
         <p className={styles['media-caption']}>
-          Mobile-first learning paths utilizing "Faded Worked Examples" to teach social media alt-text creation.
+          Example of learning paths utilizing conversational tone (Personalization Principle) to teach social media alt-text creation.
         </p>
         <div className={styles['project-date']}>Spring 2024</div>
       </div>
@@ -50,7 +50,7 @@ export const Projects = () => {
         <div className={styles['description-header']}>
           Description 
           <span className={styles['bracket']}> [</span>
-          <a href="YOUR_CANVA_LINK_HERE" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+          <a href="https://www.canva.com/design/DAHCcmemD9o/sMxwc2YRiWiuOt6z2nJD4w/view?utm_content=DAHCcmemD9o&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h5e2ba5cf14" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
             view case study
           </a>
           <span className={styles['bracket']}>]</span>
@@ -60,8 +60,8 @@ export const Projects = () => {
           I led the end-to-end UX strategy for an inclusive literacy tool, architecting 
           mobile-first learning paths based on expert-novice cognitive modeling. 
           I operationalized scaffolded interaction patterns (Faded Examples) 
-          and personalized feedback loops to teach high-stakes accessibility 
-          skills—specifically, social media alt-text creation. 
+          and conversational instruction to teach high-stakes accessibility 
+          skills, specifically social media alt-text authoring. 
           <br /><br />
           A validated A/B test (n=20) demonstrated a <strong>40% increase in 
           user performance</strong>. This project bridges learning science with 
