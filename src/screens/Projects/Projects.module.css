@@ -45,7 +45,7 @@
 }
 
 /* --- TITLE & INTRO --- */
-/* .text-wrapper-97 {
+.text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 100px;
@@ -56,22 +56,20 @@
   top: 150px;
   width: 840px;
   z-index: 2;
-} */
+}
 
-.text-wrapper-97 {
+/* .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 100px;
   font-weight: 400;
-   left: 107px;
-  line-height: 1.1;
-  /* Change from absolute to relative to allow it to push content down */
+  Change from absolute to relative to allow it to push content down
   position: relative; 
   margin-left: 107px;
   top: 150px;
   width: 840px;
   z-index: 2;
-}
+} */
 
 .during-my-phd-i-have {
   color: var(--dark-brown);
