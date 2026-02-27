@@ -17,9 +17,9 @@ export const Projects = () => {
       <h1 className={styles['text-wrapper-97']}>select projects.</h1>
 
       <p className={styles['during-my-phd-i-have']}>
-        During my PhD, I have had the opportunity to design, fabricate, &amp;
-        implement various ideas within the space of HRI &amp; physical
-        computing. Some of these projects resulted in publication, others are
+        During my PhD, I have had the opportunity to design &amp;
+        implement various ideas that span across digital & physical experiences.
+        Some of these projects resulted in publication, others are
         archived here.
         <br />
         <br />
