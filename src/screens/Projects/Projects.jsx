@@ -42,7 +42,7 @@ export const Projects = () => {
         <p className={styles['media-caption']}>
           Example of learning paths utilizing conversational tone to teach social media alt-text creation.
         </p>
-        <div className={styles['project-date']}>Spring 2024</div>
+        <div className={styles['project-date']}>Fall 2022</div>
       </div>
 
       <div className={styles['right-column']}>
