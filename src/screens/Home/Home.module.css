@@ -13,7 +13,7 @@
   min-height: 100vh;
   width: 100%;
   background-color: var(--high-contrast-color);
-  overflow-x: hidden; /* Prevents horizontal scrollbar */
+  /* overflow-x: hidden; Prevents horizontal scrollbar */
 }
 
 /* This is the container for your specific 'absolute' layout designs */
@@ -28,6 +28,8 @@
   height: 2800px;
   position: relative;
   width: 100%;
+  /* FIX: This stops internal elements from triggering extra scrollbars */
+  overflow: hidden;
 }
 
 /* ... Keep all your existing image/text classes below exactly as they were ... */
