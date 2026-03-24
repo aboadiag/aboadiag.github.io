@@ -29,7 +29,9 @@
   position: relative;
   width: 100%;
   /* FIX: This stops internal elements from triggering extra scrollbars */
-  overflow: hidden;
+  /* CHANGE THIS: */
+  overflow-x: hidden; /* Clips the width but allows vertical scrolling */
+  overflow-y: visible; /* Ensures the bottom isn't cut off */
 }
 
 /* ... Keep all your existing image/text classes below exactly as they were ... */
@@ -669,15 +671,18 @@
   font-family: "Inter", Helvetica;
   font-size: 12px;
   font-weight: 400;
-  height: 2610px;
+  /* height: 2610px; */
   justify-content: center;
   left: 1167px;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   text-align: center;
-  top: 36px;
-  width: 1440px;
+  /* top: 36px; */
+  /* width: 1440px; */
+  height: 100px; /* Change from 2610px to something small */
+  width: 100px;  /* Change from 1440px to something small */
+  top: 16px;     /* Align it with its icon wrapper */
 }
 
 .home .text-wrapper-96 {
