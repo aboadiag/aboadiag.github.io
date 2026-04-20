@@ -26,6 +26,29 @@ export const Home = () => {
       <div className={styles['main-content-canvas']}>
         
         <main>
+          <aside
+            className={styles.recentUpdates}
+            aria-labelledby="recent-updates-heading"
+          >
+            <h2
+              id="recent-updates-heading"
+              className={styles.recentUpdatesTitle}
+            >
+              Recent updates
+            </h2>
+            <div className={styles.recentUpdatesScroll}>
+              {[2026, 2025, 2024, 2023, 2022, 2021].map((year) => (
+                <section key={year} className={styles.recentYearBlock}>
+                  <h3 className={styles.recentYear}>{year}</h3>
+                  <ul className={styles.recentList}>
+                    <li className={styles.recentListItem}>&nbsp;</li>
+                    <li className={styles.recentListItem}>&nbsp;</li>
+                  </ul>
+                </section>
+              ))}
+            </div>
+          </aside>
+
           {/* SECTION 1: Hero / Introduction */}
           <section className={styles['hero-intro']}>
             <img
