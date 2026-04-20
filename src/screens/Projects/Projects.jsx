@@ -8,6 +8,7 @@ import { Footer } from "../../components/Footer";
 const PROJECTS_DESIGN_W = 1440;
 
 export const Projects = () => {
+  const pageRef = useRef(null);
   const scaleWrapRef = useRef(null);
   const innerRef = useRef(null);
 
@@ -15,16 +16,32 @@ export const Projects = () => {
     const syncArtboardSize = () => {
       const inner = innerRef.current;
       const wrap = scaleWrapRef.current;
-      if (!inner || !wrap) return;
+      const page = pageRef.current;
+      if (!inner || !wrap || !page) return;
 
-      const h = Math.max(3200, Math.ceil(inner.scrollHeight));
-      inner.style.setProperty("--projects-design-h-px", `${h}px`);
+      inner.style.removeProperty("--projects-design-h-px");
+      void inner.offsetHeight;
+      const naturalH = Math.ceil(inner.scrollHeight);
 
       const vw =
         window.visualViewport?.width ??
         document.documentElement.clientWidth ??
         window.innerWidth;
+      const vh =
+        window.visualViewport?.height ??
+        document.documentElement.clientHeight ??
+        window.innerHeight;
       const scale = Math.min(1, vw / PROJECTS_DESIGN_W);
+
+      const footer = page.querySelector("footer");
+      const footerH = footer?.offsetHeight ?? 120;
+      const navReserve = 172;
+      const available = Math.max(400, vh - footerH - navReserve);
+      const minDesignH = Math.ceil(available / Math.max(scale, 1e-6));
+
+      const h = Math.max(naturalH, minDesignH);
+      inner.style.setProperty("--projects-design-h-px", `${h}px`);
+
       wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(h * scale)}px`);
     };
 
@@ -33,7 +50,11 @@ export const Projects = () => {
     window.visualViewport?.addEventListener("resize", syncArtboardSize);
     window.visualViewport?.addEventListener("scroll", syncArtboardSize);
     const ro = new ResizeObserver(() => syncArtboardSize());
-    if (innerRef.current) ro.observe(innerRef.current);
+    const inner = innerRef.current;
+    const page = pageRef.current;
+    if (inner) ro.observe(inner);
+    const footer = page?.querySelector("footer");
+    if (footer) ro.observe(footer);
 
     return () => {
       window.removeEventListener("resize", syncArtboardSize);
@@ -44,7 +65,7 @@ export const Projects = () => {
   }, []);
 
   return (
-    <div className={styles.projects}>
+    <div ref={pageRef} className={styles.projects}>
       
       {/* HEADER */}
       <header className={styles['navbar-container']}>
@@ -53,6 +74,7 @@ export const Projects = () => {
 
       <div ref={scaleWrapRef} className={styles.projectsLayoutScale}>
         <div ref={innerRef} className={styles.projectsLayoutScaleInner}>
+      <div className={styles.projectsIntro}>
       {/* INTRO */}
       <h1 className={styles['text-wrapper-97']}>select projects.</h1>
       <p className={styles['during-my-phd-i-have']}>
@@ -64,7 +86,9 @@ export const Projects = () => {
         <br />
         See some of these&nbsp;&nbsp;projects below.
       </p>
+      </div>
 
+      <div className={styles.projectsProjectStack}>
       {/* ================= PROJECT 0: INCLUSIVE E-LEARNING (DUOLINGO TARGET) ================= */}
   <div className={styles['project-persuasive-2']}> {/* Reusing card style for consistency */}
     <p className={styles['persuasive-title']}>
@@ -298,6 +322,7 @@ export const Projects = () => {
         </div>
       </div>
 
+      </div>
         </div>
       </div>
 

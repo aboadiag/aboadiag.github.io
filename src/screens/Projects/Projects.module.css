@@ -15,15 +15,16 @@
   width: 100%;
   max-width: 100vw;
   min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   overflow-x: hidden;
   align-self: stretch;
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  gap: 100px; 
-  padding-top: 550px;
-  padding-bottom: 0px; 
+  align-items: stretch;
+  gap: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
  /* .projects {
   background-color: var(--high-contrast-color);
@@ -40,17 +41,32 @@
   padding-bottom: 0px; 
 } */
 
+/* --- INTRO (flow under navbar, left-aligned) --- */
+.projectsIntro {
+  flex: 0 0 auto;
+  align-self: flex-start;
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 168px;
+  padding-left: 107px;
+  padding-right: 32px;
+  text-align: left;
+}
+
 /* --- TITLE & INTRO --- */
 .text-wrapper-97 {
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica;
   font-size: 100px;
   font-weight: 400;
-  left: 107px;
   line-height: 1.1;
-  position: absolute;
-  top: 150px;
-  width: 840px;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 1143px;
+  margin: 0 0 20px 0;
+  text-align: left;
   z-index: 2;
 }
 
@@ -72,19 +88,27 @@
   font-family: "Roboto", Helvetica;
   font-size: 30px;
   font-weight: 400;
-  left: 107px; 
   line-height: 1.4;
-  position: absolute; 
-  top: 300px;
-  width: 1143px;
-  z-index: 2; 
-  /* Change from absolute to relative */
-  /* position: relative; 
-  margin-left: 107px;
-  top: 180px;  Adjusted to sit below the title
-  width: 1143px;
-  z-index: 2; */
-  margin-bottom: 300px; /*Adds space before the first project box */
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 1143px;
+  margin: 0;
+  text-align: left;
+  z-index: 2;
+}
+
+.projectsProjectStack {
+  flex: 1 1 auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 28px 0 56px;
 }
 
 /* --- SHARED CARD STYLING --- */
@@ -233,6 +257,8 @@
 
 /* Narrow viewports: scale fixed-width artboard, centered — do not scale the whole .projects root */
 .projectsLayoutScale {
+  flex: 1 1 auto;
+  min-height: 0;
   width: 100%;
   max-width: 100vw;
   display: flex;
@@ -244,29 +270,30 @@
 
 .projectsLayoutScaleInner {
   --projects-design-w-px: 1440px;
-  --projects-design-h-px: 4200px;
   width: var(--projects-design-w-px);
   position: relative;
   flex: 0 0 auto;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: var(--projects-design-h-px, auto);
+  min-height: var(--projects-design-h-px, auto);
 }
 
 @media (max-width: 1439px) {
   .projectsLayoutScale {
     height: var(
       --projects-scaled-h,
-      calc(var(--projects-design-h-px) * min(1, calc(100vw / var(--projects-design-w-px))))
+      calc(var(--projects-design-h-px, 4200px) * min(1, calc(100vw / var(--projects-design-w-px))))
     );
     min-height: var(
       --projects-scaled-h,
-      calc(var(--projects-design-h-px) * min(1, calc(100vw / var(--projects-design-w-px))))
+      calc(var(--projects-design-h-px, 4200px) * min(1, calc(100vw / var(--projects-design-w-px))))
     );
     overflow: hidden;
   }
 
   .projectsLayoutScaleInner {
-    height: var(--projects-design-h-px);
-    min-height: var(--projects-design-h-px);
     transform: scale(min(1, calc(100vw / var(--projects-design-w-px))));
     transform-origin: top center;
     backface-visibility: hidden;

@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 const RESEARCH_DESIGN_W = 1440;
 
 export const Research = () => {
+  const pageRef = useRef(null);
   const scaleWrapRef = useRef(null);
   const innerRef = useRef(null);
 
@@ -16,16 +17,32 @@ export const Research = () => {
     const syncArtboardSize = () => {
       const inner = innerRef.current;
       const wrap = scaleWrapRef.current;
-      if (!inner || !wrap) return;
+      const page = pageRef.current;
+      if (!inner || !wrap || !page) return;
 
-      const h = Math.max(2800, Math.ceil(inner.scrollHeight));
-      inner.style.setProperty("--research-design-h-px", `${h}px`);
+      inner.style.removeProperty("--research-design-h-px");
+      void inner.offsetHeight;
+      const naturalH = Math.ceil(inner.scrollHeight);
 
       const vw =
         window.visualViewport?.width ??
         document.documentElement.clientWidth ??
         window.innerWidth;
+      const vh =
+        window.visualViewport?.height ??
+        document.documentElement.clientHeight ??
+        window.innerHeight;
       const scale = Math.min(1, vw / RESEARCH_DESIGN_W);
+
+      const footer = page.querySelector("footer");
+      const footerH = footer?.offsetHeight ?? 120;
+      const navReserve = 172;
+      const available = Math.max(400, vh - footerH - navReserve);
+      const minDesignH = Math.ceil(available / Math.max(scale, 1e-6));
+
+      const h = Math.max(naturalH, minDesignH);
+      inner.style.setProperty("--research-design-h-px", `${h}px`);
+
       wrap.style.setProperty("--research-scaled-h", `${Math.ceil(h * scale)}px`);
     };
 
@@ -34,7 +51,11 @@ export const Research = () => {
     window.visualViewport?.addEventListener("resize", syncArtboardSize);
     window.visualViewport?.addEventListener("scroll", syncArtboardSize);
     const ro = new ResizeObserver(() => syncArtboardSize());
-    if (innerRef.current) ro.observe(innerRef.current);
+    const inner = innerRef.current;
+    const page = pageRef.current;
+    if (inner) ro.observe(inner);
+    const footer = page?.querySelector("footer");
+    if (footer) ro.observe(footer);
 
     return () => {
       window.removeEventListener("resize", syncArtboardSize);
@@ -45,7 +66,7 @@ export const Research = () => {
   }, []);
 
   return (
-    <div className={styles.research}>
+    <div ref={pageRef} className={styles.research}>
       
       {/* HEADER */}
       <header className={styles['navbar-container']}>
@@ -54,6 +75,7 @@ export const Research = () => {
 
       <div ref={scaleWrapRef} className={styles.researchLayoutScale}>
         <div ref={innerRef} className={styles.researchLayoutScaleInner}>
+      <div className={styles.researchIntro}>
       {/* TITLE */}
       <h1 className={styles['text-wrapper-127']}>select research.</h1>
 
@@ -94,7 +116,9 @@ export const Research = () => {
           ASSETS, UIST, HRI, RO-MAN, and THRI.&nbsp;&nbsp;See some of this research below.
         </span>
       </p>
+      </div>
 
+      <div className={styles.researchProjectStack}>
       {/* ================= RESEARCH 1: DELIVERY ROBOTS ================= */}
       <div className={styles['project-delivery']}>
         
@@ -320,6 +344,7 @@ export const Research = () => {
         </div>
       </div>
 
+      </div>
         </div>
       </div>
 
