@@ -41,8 +41,16 @@ export const Home = () => {
                 <section key={year} className={styles.recentYearBlock}>
                   <h3 className={styles.recentYear}>{year}</h3>
                   <ul className={styles.recentList}>
-                    <li className={styles.recentListItem}>&nbsp;</li>
-                    <li className={styles.recentListItem}>&nbsp;</li>
+                    <li className={styles.recentListItem}>
+                      <span className={styles.recentPlaceholder}>
+                        e.g. presented at ACM/HRI {year}
+                      </span>
+                    </li>
+                    <li className={styles.recentListItem}>
+                      <span className={styles.recentPlaceholder}>
+                        e.g. best paper honorable mention
+                      </span>
+                    </li>
                   </ul>
                 </section>
               ))}
@@ -150,7 +158,7 @@ export const Home = () => {
                 <span className={styles['text-wrapper-71']}>
                   I completed my B.S. in Mechanical Engineering at Stanford University. 
                   During my undergraduate studies, I was fortunate to work as an 
-                  undergraduate researcher in{""}
+                  undergraduate researcher in{" "}
                 </span>
                 
                 {/* 1. SHAPE Lab Link */}

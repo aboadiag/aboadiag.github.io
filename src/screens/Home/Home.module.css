@@ -698,13 +698,14 @@
   white-space: nowrap;
 }
 
-/* Recent updates — left column; absolute so existing layout is unchanged */
+/* Recent updates — right of portrait/circle; sized so it stays in-view and clear of hero + bio */
 .home .recentUpdates {
+  --ru-fit-left: min(1390px, calc(100% - 292px));
   position: absolute;
-  left: 28px;
-  /* Vertical band below the hero title block, before the long bio, avoids overlapping it. */
-  top: 580px;
-  width: 236px;
+  left: max(1388px, var(--ru-fit-left));
+  top: 252px;
+  width: min(268px, calc(100% - 16px - max(1388px, var(--ru-fit-left))));
+  min-width: 0;
   z-index: 3;
   box-sizing: border-box;
   padding: 14px 14px 12px;
@@ -726,10 +727,9 @@
 }
 
 .home .recentUpdatesScroll {
-  max-height: min(420px, 42vh);
-  overflow-y: auto;
-  padding-right: 4px;
-  scrollbar-gutter: stable;
+  /* No nested scroll: one document scrollbar. Timeline sits in x > ~1360px where the bio column does not reach. */
+  overflow: visible;
+  padding-right: 0;
 }
 
 .home .recentYearBlock {
@@ -766,4 +766,9 @@
 
 .home .recentListItem:last-child {
   margin-bottom: 0;
+}
+
+.home .recentPlaceholder {
+  color: rgba(91, 36, 12, 0.45);
+  font-style: italic;
 }
