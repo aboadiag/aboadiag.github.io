@@ -751,7 +751,9 @@
 
 .home .recentList {
   margin: 0;
-  padding-left: 1.1rem;
+  padding-left: 1.25rem;
+  list-style-type: disc;
+  list-style-position: outside;
   color: var(--dark-brown);
   font-family: "Roboto", Helvetica, sans-serif;
   font-size: 14px;
@@ -766,9 +768,4 @@
 
 .home .recentListItem:last-child {
   margin-bottom: 0;
-}
-
-.home .recentPlaceholder {
-  color: rgba(91, 36, 12, 0.45);
-  font-style: italic;
 }

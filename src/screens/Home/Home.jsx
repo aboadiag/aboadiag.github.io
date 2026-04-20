@@ -9,6 +9,85 @@ import { Footer } from "../../components/Footer";
 
 // ... (Keep your existing handleLoadError function here) ...
 
+const UPDATES_DATA = {
+  2026: [
+    {
+      text: "Presented delivery robot full paper at ACM/IEE HRI 2026. Read full paper ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3757279.3785567",
+    },
+    {
+      text: "Received Best Paper Honorable Mention Award for the Design Track!",
+      link: "https://humanrobotinteraction.org/2026/award-nominees/",
+    },
+    {
+      text: "Selected as 2026 HRI Pioneer! Presented on my proposed thesis work. Read ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3776734.3794631",
+    },
+  ],
+  2025: [
+    { text: "Successfully Proposed my PhD thesis! Yay!", link: null },
+    {
+      text: "Presented our human-robot synchrony paper at IEEE RO-MAN 2025. Read full paper ",
+      link: "https://ieeexplore.ieee.org/abstract/document/11217674/",
+    },
+    {
+      text: "Our ACM HRI Journal paper on Delivery Robots was published. Read it ",
+      link: "https://ieeexplore.ieee.org/abstract/document/11217674/",
+    },
+  ],
+  2024: [
+    {
+      text: "Our short paper on voice agents for emotion regulation was accepted at ACM/IEEE HRI. Read paper ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3610978.3640600",
+    },
+    {
+      text: "Successfully defended my Master's thesis! Woohoo! Read my thesis ",
+      link: "https://publications.ri.cmu.edu/storage/publications/2025/03/WritingQual_MSRThesis_aboadiag_final.pdf",
+    },
+  ],
+  2023: [
+    {
+      text: "Presented our short paper on designing interactive creative haptic tools to support TVIs at ACM ASSETS. Read paper ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3597638.3614512",
+    },
+    {
+      text: "Our full paper on parametric haptics was accepted at ACM UIST. Read paper ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
+    },
+    { text: "Received Cadence Future Innovators Scholarship", link: null },
+  ],
+  2022: [
+    { text: ". Read paper ", link: "https://dl.acm.org/doi/abs/10.1145/3597638.3614512" },
+    {
+      text: "Our full paper on parametric haptics was accepted at ACM UIST. Read paper ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
+    },
+    { text: "Received CMU Uber Presedential PhD Fellowship for '22-'23", link: null },
+  ],
+  2021: [
+    { text: "Started PhD at CMU Robotics! ", link: null },
+    { text: "Graduated from Stanford!", link: null },
+    {
+      text: "Received MSR internship offer to work w/ Teddy Seyed (Yay)! Had to decline (Aww)!",
+      link: null,
+    },
+  ],
+  2020: [
+    {
+      text: "Presented our short paper for improving photo-social media accessibility using voice narration at ACM ASSETS. Read paper ",
+      link: "https://dl.acm.org/doi/abs/10.1145/3373625.3418013",
+    },
+    {
+      text: "Our short paper on multi-modal wearable haptics for tactile graphics was accepted at ACM ASSETS",
+      link: "https://dl.acm.org/doi/abs/10.1145/3373625.3418013",
+    },
+  ],
+};
+
+const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
+  .map(Number)
+  .sort((a, b) => b - a);
+
 export const Home = () => {
   return (
     <div className={styles.home}>
@@ -23,6 +102,7 @@ export const Home = () => {
              We use the new class 'main-content-canvas' (formerly div-2) 
              to give this a fixed height so the footer knows where to start. 
       */}
+      
       <div className={styles['main-content-canvas']}>
         
         <main>
@@ -37,57 +117,35 @@ export const Home = () => {
               Recent updates
             </h2>
             <div className={styles.recentUpdatesScroll}>
-              {[2026, 2025, 2024, 2023, 2022, 2021].map((year) => (
-                <section key={year} className={styles.recentYearBlock}>
-                  <h3 className={styles.recentYear}>{year}</h3>
-                  <ul className={styles.recentList}>
-                    {/* --2026- */}
-                    <li className={styles.recentListItem}>
-                      <span className={styles.recentPlaceholder}>
-                        Presented delivery robot full paper at ACM/IEE HRI {year}. Read full paper   
-                        <a href="https://dl.acm.org/doi/abs/10.1145/3757279.3785567" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
-                        <span className={styles['text-wrapper-74']}>here</span>
-                        </a>
-                      </span>
-                    </li>
-                    <li className={styles.recentListItem}>
-                      <span className={styles.recentPlaceholder}>
-                        Received best paper honorable mention!
-                      </span>
-                    </li>
-
-                    <li className={styles.recentListItem}>
-                      <span className={styles.recentPlaceholder}>
-                        Selected as 2026 HRI Pioneer! Presented on my proposed thesis work. Read
-                        <a href="https://dl.acm.org/doi/abs/10.1145/3776734.3794631" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
-                        <span className={styles['text-wrapper-74']}>here</span>
-                        </a>
-                      </span>
-                    </li>
-
-                    {/* --2025- */}
-                    <li className={styles.recentListItem}>
-                      <span className={styles.recentPlaceholder}>
-                        Presented our human-robot synchrony paper at IEEE RO-MAN {year}. Read full paper
-                        <a href="https://ieeexplore.ieee.org/abstract/document/11217674/" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
-                        <span className={styles['text-wrapper-74']}>here</span>
-                        </a>
-                      </span>
-                    </li>
-                    <li className={styles.recentListItem}>
-                      <span className={styles.recentPlaceholder}>
-                        Our ACM HRI Journal paper on Delivery Robots was published. Read it 
-                        <a href="https://dl.acm.org/doi/full/10.1145/3750054" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
-                        <span className={styles['text-wrapper-74']}>here</span>
-                        </a>
-                        
-                      </span>
-                    </li>
-                  </ul>
-                </section>
-
-
-              ))}
+              {UPDATES_YEAR_ORDER.map((year) => {
+                const items = UPDATES_DATA[year];
+                if (!items?.length) return null;
+                return (
+                  <section key={year} className={styles.recentYearBlock}>
+                    <h3 className={styles.recentYear}>{year}</h3>
+                    <ul className={styles.recentList}>
+                      {items.map((entry, idx) => (
+                        <li key={idx} className={styles.recentListItem}>
+                          {entry.text}
+                          {entry.link ? (
+                            <>
+                              {" "}
+                              <a
+                                href={entry.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={styles["text-wrapper-74"]}
+                              >
+                                here
+                              </a>
+                            </>
+                          ) : null}
+                        </li>
+                      ))}
+                    </ul>
+                  </section>
+                );
+              })}
             </div>
           </aside>
 
