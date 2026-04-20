@@ -1,6 +1,7 @@
 // Home.jsx
 
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { createPortal } from "react-dom";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
@@ -87,7 +88,69 @@ const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
   .map(Number)
   .sort((a, b) => b - a);
 
+const DOCK_UPDATES_QUERY = "(max-width: 640px)";
+
+function useDockRecentUpdatesToBody() {
+  const [dock, setDock] = useState(false);
+
+  useEffect(() => {
+    const mq = window.matchMedia(DOCK_UPDATES_QUERY);
+    const sync = () => setDock(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
+
+  return dock;
+}
+
+function RecentUpdatesPanel() {
+  return (
+    <aside
+      className={styles.recentUpdates}
+      aria-labelledby="recent-updates-heading"
+    >
+      <h2 id="recent-updates-heading" className={styles.recentUpdatesTitle}>
+        Recent updates
+      </h2>
+      <div className={styles.recentUpdatesScroll}>
+        {UPDATES_YEAR_ORDER.map((year) => {
+          const items = UPDATES_DATA[year];
+          if (!items?.length) return null;
+          return (
+            <section key={year} className={styles.recentYearBlock}>
+              <h3 className={styles.recentYear}>{year}</h3>
+              <ul className={styles.recentList}>
+                {items.map((entry, idx) => (
+                  <li key={idx} className={styles.recentListItem}>
+                    {entry.text}
+                    {entry.link ? (
+                      <>
+                        {" "}
+                        <a
+                          href={entry.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.updateLink}
+                        >
+                          here
+                        </a>
+                      </>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          );
+        })}
+      </div>
+    </aside>
+  );
+}
+
 export const Home = () => {
+  const dockRecentUpdates = useDockRecentUpdatesToBody();
+
   return (
     <div className={styles.home}>
       
@@ -105,48 +168,7 @@ export const Home = () => {
       <div className={styles['main-content-canvas']}>
         
         <main>
-          <aside
-            className={styles.recentUpdates}
-            aria-labelledby="recent-updates-heading"
-          >
-            <h2
-              id="recent-updates-heading"
-              className={styles.recentUpdatesTitle}
-            >
-              Recent updates
-            </h2>
-            <div className={styles.recentUpdatesScroll}>
-              {UPDATES_YEAR_ORDER.map((year) => {
-                const items = UPDATES_DATA[year];
-                if (!items?.length) return null;
-                return (
-                  <section key={year} className={styles.recentYearBlock}>
-                    <h3 className={styles.recentYear}>{year}</h3>
-                    <ul className={styles.recentList}>
-                      {items.map((entry, idx) => (
-                        <li key={idx} className={styles.recentListItem}>
-                          {entry.text}
-                          {entry.link ? (
-                            <>
-                              {" "}
-                              <a
-                                href={entry.link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className={styles["text-wrapper-74"]}
-                              >
-                                here
-                              </a>
-                            </>
-                          ) : null}
-                        </li>
-                      ))}
-                    </ul>
-                  </section>
-                );
-              })}
-            </div>
-          </aside>
+          {!dockRecentUpdates ? <RecentUpdatesPanel /> : null}
 
           {/* SECTION 1: Hero / Introduction */}
           <section className={styles['hero-intro']}>
@@ -432,7 +454,10 @@ export const Home = () => {
 
       {/* 3. Footer - Now outside the canvas, so it sits at the bottom */}
        {/* <Footer /> */}
-      
+
+      {dockRecentUpdates
+        ? createPortal(<RecentUpdatesPanel />, document.body)
+        : null}
     </div>
   );
 };

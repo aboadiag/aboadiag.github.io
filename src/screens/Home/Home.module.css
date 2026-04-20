@@ -700,8 +700,8 @@
   white-space: nowrap;
 }
 
-/* Recent updates — same vertical band as circle (top/height match .bena-background) */
-.home .recentUpdates {
+/* Recent updates — root `.recentUpdates` is intentionally not under `.home` so styles work when portaled to `body` on iOS */
+.recentUpdates {
   --ru-fit-left: min(1390px, calc(100% - 292px));
   position: absolute;
   left: max(1388px, var(--ru-fit-left));
@@ -721,7 +721,7 @@
   overflow: hidden;
 }
 
-.home .recentUpdatesTitle {
+.recentUpdatesTitle {
   flex-shrink: 0;
   margin: 0 0 10px;
   padding-bottom: 8px;
@@ -733,24 +733,25 @@
   line-height: 1.2;
 }
 
-.home .recentUpdatesScroll {
+.recentUpdatesScroll {
   flex: 1 1 auto;
   min-height: 0;
   overflow-y: auto;
   overflow-x: hidden;
   padding-right: 4px;
   overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
 }
 
-.home .recentYearBlock {
+.recentYearBlock {
   margin-bottom: 14px;
 }
 
-.home .recentYearBlock:last-child {
+.recentYearBlock:last-child {
   margin-bottom: 0;
 }
 
-.home .recentYear {
+.recentYear {
   margin: 0 0 6px;
   color: #5b240c;
   font-family: "Roboto", Helvetica, sans-serif;
@@ -759,7 +760,7 @@
   line-height: 1.2;
 }
 
-.home .recentList {
+.recentList {
   margin: 0;
   padding-left: 1.25rem;
   list-style-type: disc;
@@ -771,13 +772,25 @@
   line-height: 1.45;
 }
 
-.home .recentListItem {
+.recentListItem {
   margin-bottom: 4px;
   min-height: 1.2em;
 }
 
-.home .recentListItem:last-child {
+.recentListItem:last-child {
   margin-bottom: 0;
+}
+
+/* Links inside updates (must not rely on `.home` when panel is portaled) */
+.recentUpdates .updateLink {
+  color: var(--dark-brown);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.recentUpdates .updateLink:hover {
+  color: var(--red-brown);
+  text-decoration: underline;
 }
 
 /* ---- Responsive: real viewport + visible Recent updates on phones ---- */
@@ -789,38 +802,43 @@
   }
 
   /* Right column no longer fits; span full usable width under safe areas */
-  .home .recentUpdates {
+  .recentUpdates {
     left: max(12px, env(safe-area-inset-left, 0px)) !important;
     right: max(12px, env(safe-area-inset-right, 0px));
     width: auto !important;
     max-width: none !important;
     top: max(8px, env(safe-area-inset-top, 0px));
-    height: min(550px, 50vh);
+    height: min(550px, 50svh);
   }
 }
 
 @media (max-width: 640px) {
-  /* Dock updates so they stay reachable on small phones */
+  /* Dock updates; panel is portaled to document.body on small screens in Home.jsx (iOS fixed + overflow-x fix) */
   .home .main-content-canvas {
-    padding-bottom: min(48vh, 460px);
+    padding-bottom: min(42vh, 440px);
+    padding-bottom: min(42svh, 440px);
   }
 
-  .home .recentUpdates {
+  .recentUpdates {
     position: fixed;
     top: auto;
     bottom: 0;
+    padding-bottom: max(14px, env(safe-area-inset-bottom, 14px));
     left: 0 !important;
     right: 0;
     width: 100% !important;
     max-width: none !important;
-    height: min(42vh, 400px);
+    height: min(42vh, 380px);
+    height: min(38svh, 380px);
+    height: min(38dvh, 380px);
     margin: 0;
-    padding-left: max(14px, env(safe-area-inset-left, 14px));
-    padding-right: max(14px, env(safe-area-inset-right, 14px));
-    padding-bottom: max(12px, env(safe-area-inset-bottom, 12px));
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
     border-radius: 14px 14px 0 0;
-    z-index: 200;
-    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.12);
+    z-index: 99999;
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.15);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
   }
 }
 
