@@ -155,7 +155,10 @@ export const Home = () => {
 
       inner.style.setProperty("--home-design-h-px", `${h}px`);
 
-      const vw = document.documentElement.clientWidth || window.innerWidth;
+      const vw =
+        window.visualViewport?.width ??
+        document.documentElement.clientWidth ??
+        window.innerWidth;
       const scale = Math.min(1, vw / HOME_DESIGN_W);
       if (wrap) {
         wrap.style.setProperty("--home-scaled-h", `${Math.ceil(h * scale)}px`);
@@ -164,12 +167,16 @@ export const Home = () => {
 
     syncArtboardSize();
     window.addEventListener("resize", syncArtboardSize);
+    window.visualViewport?.addEventListener("resize", syncArtboardSize);
+    window.visualViewport?.addEventListener("scroll", syncArtboardSize);
     const ro = new ResizeObserver(() => syncArtboardSize());
     const footer = canvasRef.current?.querySelector("footer");
     if (footer) ro.observe(footer);
 
     return () => {
       window.removeEventListener("resize", syncArtboardSize);
+      window.visualViewport?.removeEventListener("resize", syncArtboardSize);
+      window.visualViewport?.removeEventListener("scroll", syncArtboardSize);
       ro.disconnect();
     };
   }, []);

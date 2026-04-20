@@ -12,10 +12,12 @@
 .research {
   background-color: var(--high-contrast-color);
   width: 100%;
+  max-width: 100vw;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
-  
+  align-self: stretch;
+
   display: flex;
   flex-direction: column;
   align-items: center; 

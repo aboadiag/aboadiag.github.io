@@ -14,13 +14,15 @@
 .art-page {
   background-color: var(--high-contrast-color);
   width: 100%;
-  
+  max-width: 100vw;
+
   /* FIX: Changed to allow footer to be visible immediately on tall screens */
   min-height: 100vh;
-  
+
   position: relative;
   overflow-x: hidden;
-  
+  align-self: stretch;
+
   display: flex;
   flex-direction: column;
   align-items: center; 
