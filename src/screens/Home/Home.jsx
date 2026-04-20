@@ -41,18 +41,52 @@ export const Home = () => {
                 <section key={year} className={styles.recentYearBlock}>
                   <h3 className={styles.recentYear}>{year}</h3>
                   <ul className={styles.recentList}>
+                    {/* --2026- */}
                     <li className={styles.recentListItem}>
                       <span className={styles.recentPlaceholder}>
-                        e.g. presented at ACM/HRI {year}
+                        Presented delivery robot full paper at ACM/IEE HRI {year}. Read full paper   
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3757279.3785567" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
+                        <span className={styles['text-wrapper-74']}>here</span>
+                        </a>
                       </span>
                     </li>
                     <li className={styles.recentListItem}>
                       <span className={styles.recentPlaceholder}>
-                        e.g. best paper honorable mention
+                        Received best paper honorable mention!
+                      </span>
+                    </li>
+
+                    <li className={styles.recentListItem}>
+                      <span className={styles.recentPlaceholder}>
+                        Selected as 2026 HRI Pioneer! Presented on my proposed thesis work. Read
+                        <a href="https://dl.acm.org/doi/abs/10.1145/3776734.3794631" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
+                        <span className={styles['text-wrapper-74']}>here</span>
+                        </a>
+                      </span>
+                    </li>
+
+                    {/* --2025- */}
+                    <li className={styles.recentListItem}>
+                      <span className={styles.recentPlaceholder}>
+                        Presented our human-robot synchrony paper at IEEE RO-MAN {year}. Read full paper
+                        <a href="https://ieeexplore.ieee.org/abstract/document/11217674/" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
+                        <span className={styles['text-wrapper-74']}>here</span>
+                        </a>
+                      </span>
+                    </li>
+                    <li className={styles.recentListItem}>
+                      <span className={styles.recentPlaceholder}>
+                        Our ACM HRI Journal paper on Delivery Robots was published. Read it 
+                        <a href="https://dl.acm.org/doi/full/10.1145/3750054" /* TODO: paper link here */ target="_blank" rel="noopener noreferrer">
+                        <span className={styles['text-wrapper-74']}>here</span>
+                        </a>
+                        
                       </span>
                     </li>
                   </ul>
                 </section>
+
+
               ))}
             </div>
           </aside>
