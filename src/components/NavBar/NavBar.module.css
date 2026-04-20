@@ -10,9 +10,9 @@
   justify-content: space-between; /* Pushes Logo to left, Links to right */
   align-items: center; /* Vertically centers items */
   width: 100%;
-  max-width: 1440px; /* Optional: keeps it from getting too wide on huge screens */
+  max-width: min(1440px, 100%);
   margin: 0 auto; /* Centers the bar itself */
-  padding: 40px 60px; /* Adds breathing room (Top/Bottom, Left/Right) */
+  padding: 40px clamp(12px, 4vw, 60px);
   box-sizing: border-box; /* Ensures padding doesn't break width */
   position: relative;
   background-color: transparent;

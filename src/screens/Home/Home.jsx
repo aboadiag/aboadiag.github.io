@@ -1,6 +1,6 @@
 // Home.jsx
 
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
@@ -87,6 +87,9 @@ const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
   .map(Number)
   .sort((a, b) => b - a);
 
+/** Artboard width (px) — must match `--home-design-w-px` in Home.module.css */
+const HOME_DESIGN_W = 1660;
+
 function RecentUpdatesPanel() {
   return (
     <aside
@@ -132,6 +135,45 @@ function RecentUpdatesPanel() {
 }
 
 export const Home = () => {
+  const scaleWrapRef = useRef(null);
+  const innerRef = useRef(null);
+  const canvasRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const syncArtboardSize = () => {
+      const inner = innerRef.current;
+      const wrap = scaleWrapRef.current;
+      const canvas = canvasRef.current;
+      if (!inner || !canvas) return;
+
+      const footer = canvas.querySelector("footer");
+      if (!footer) return;
+
+      const pad = 48;
+      const bottomPx = footer.offsetTop + footer.offsetHeight + pad;
+      const h = Math.max(3020, Math.ceil(bottomPx));
+
+      inner.style.setProperty("--home-design-h-px", `${h}px`);
+
+      const vw = document.documentElement.clientWidth || window.innerWidth;
+      const scale = Math.min(1, vw / HOME_DESIGN_W);
+      if (wrap) {
+        wrap.style.setProperty("--home-scaled-h", `${Math.ceil(h * scale)}px`);
+      }
+    };
+
+    syncArtboardSize();
+    window.addEventListener("resize", syncArtboardSize);
+    const ro = new ResizeObserver(() => syncArtboardSize());
+    const footer = canvasRef.current?.querySelector("footer");
+    if (footer) ro.observe(footer);
+
+    return () => {
+      window.removeEventListener("resize", syncArtboardSize);
+      ro.disconnect();
+    };
+  }, []);
+
   return (
     <div className={styles.home}>
       
@@ -146,9 +188,9 @@ export const Home = () => {
              to give this a fixed height so the footer knows where to start. 
       */}
 
-      <div className={styles.homeLayoutScale}>
-        <div className={styles.homeLayoutScaleInner}>
-          <div className={styles['main-content-canvas']}>
+      <div ref={scaleWrapRef} className={styles.homeLayoutScale}>
+        <div ref={innerRef} className={styles.homeLayoutScaleInner}>
+          <div ref={canvasRef} className={styles['main-content-canvas']}>
             <main>
               <RecentUpdatesPanel />
 
