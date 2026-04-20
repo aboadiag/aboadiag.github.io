@@ -1,7 +1,6 @@
 // Home.jsx
 
-import React, { useEffect, useState } from "react";
-import { createPortal } from "react-dom";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
@@ -88,22 +87,6 @@ const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
   .map(Number)
   .sort((a, b) => b - a);
 
-const DOCK_UPDATES_QUERY = "(max-width: 640px)";
-
-function useDockRecentUpdatesToBody() {
-  const [dock, setDock] = useState(false);
-
-  useEffect(() => {
-    const mq = window.matchMedia(DOCK_UPDATES_QUERY);
-    const sync = () => setDock(mq.matches);
-    sync();
-    mq.addEventListener("change", sync);
-    return () => mq.removeEventListener("change", sync);
-  }, []);
-
-  return dock;
-}
-
 function RecentUpdatesPanel() {
   return (
     <aside
@@ -149,8 +132,6 @@ function RecentUpdatesPanel() {
 }
 
 export const Home = () => {
-  const dockRecentUpdates = useDockRecentUpdatesToBody();
-
   return (
     <div className={styles.home}>
       
@@ -164,13 +145,14 @@ export const Home = () => {
              We use the new class 'main-content-canvas' (formerly div-2) 
              to give this a fixed height so the footer knows where to start. 
       */}
-      
-      <div className={styles['main-content-canvas']}>
-        
-        <main>
-          {!dockRecentUpdates ? <RecentUpdatesPanel /> : null}
 
-          {/* SECTION 1: Hero / Introduction */}
+      <div className={styles.homeLayoutScale}>
+        <div className={styles.homeLayoutScaleInner}>
+          <div className={styles['main-content-canvas']}>
+            <main>
+              <RecentUpdatesPanel />
+
+              {/* SECTION 1: Hero / Introduction */}
           <section className={styles['hero-intro']}>
             <img
               className={styles['bena-background']}
@@ -441,23 +423,20 @@ export const Home = () => {
              2. Add 'style' prop to position it absolutely at the bottom.
              3. 'top: 2500px' places it right after your education section ends.
           */}
-          <Footer 
-            style={{ 
-              position: 'absolute', 
-              top: '2850px', 
-              width: '100%' 
-            }} 
+          <Footer
+            style={{
+              position: 'absolute',
+              top: '2850px',
+              width: '100%',
+            }}
           />
-        </main>
-      </div> 
-      {/* End of main-content-canvas */}
+            </main>
+          </div>
+        </div>
+      </div>
 
       {/* 3. Footer - Now outside the canvas, so it sits at the bottom */}
        {/* <Footer /> */}
-
-      {dockRecentUpdates
-        ? createPortal(<RecentUpdatesPanel />, document.body)
-        : null}
     </div>
   );
 };

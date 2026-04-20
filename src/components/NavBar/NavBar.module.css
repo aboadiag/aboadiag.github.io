@@ -76,35 +76,3 @@
 .site-logo-link:hover {
   opacity: 0.7;
 }
-
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-wrap: wrap;
-    row-gap: 12px;
-    padding: 20px max(16px, env(safe-area-inset-left, 16px)) 20px
-      max(16px, env(safe-area-inset-right, 16px));
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    gap: 14px 18px;
-    justify-content: flex-end;
-    width: 100%;
-  }
-
-  .nav-link-item {
-    font-size: clamp(1rem, 3.8vw, 1.15rem);
-  }
-
-  .text-wrapper-4 {
-    font-size: clamp(1.05rem, 4vw, 1.35rem);
-    white-space: normal;
-    max-width: min(220px, 55vw);
-    line-height: 1.15;
-  }
-
-  .bena-favicon-figma {
-    height: 56px;
-    width: 56px;
-  }
-}
