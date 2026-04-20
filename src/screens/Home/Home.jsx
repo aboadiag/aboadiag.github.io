@@ -54,10 +54,9 @@ const UPDATES_DATA = {
       text: "Our full paper on parametric haptics was accepted at ACM UIST. Read paper ",
       link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
     },
-    { text: "Received Cadence Future Innovators Scholarship", link: null },
+    { text: "Received Cadence Future Innovators Scholarship.", link: null },
   ],
   2022: [
-    { text: ". Read paper ", link: "https://dl.acm.org/doi/abs/10.1145/3597638.3614512" },
     {
       text: "Our full paper on parametric haptics was accepted at ACM UIST. Read paper ",
       link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
