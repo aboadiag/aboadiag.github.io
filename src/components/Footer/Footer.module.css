@@ -160,36 +160,4 @@
   opacity: 0.8; 
 }
 
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-  .footer {
-    padding: 30px 20px;
-    height: auto;
-  }
-
-  .footer .contact-bar-scholar {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    
-    /* UPDATED: Stack credits at the very bottom */
-    grid-template-areas: 
-      "contact"
-      "email"
-      "scholar"
-      "github"
-      "credits";
-      
-    gap: 40px;
-    justify-items: center;
-  }
-  
-  /* Reset alignment for mobile centering */
-  .footer .text-wrapper-94,
-  .footer .text-wrapper-93,
-  .footer .link-google-scholar,
-  .footer .img-wrapper,
-  .footer .credits {
-    justify-self: center;
-    text-align: center;
-  }
-}
+/* Home scales as a single artboard on phones; keep the same 3-column footer layout as desktop */

@@ -76,3 +76,43 @@
 .site-logo-link:hover {
   opacity: 0.7;
 }
+
+/* Nav stays outside the scaled home canvas — must fit narrow viewports on its own */
+@media (max-width: 900px) {
+  .nav-bar {
+    max-width: 100%;
+    padding: 20px clamp(12px, 4vw, 24px);
+    row-gap: 16px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .site-logo {
+    flex: 1 1 auto;
+    min-width: 0;
+    flex-wrap: wrap;
+  }
+
+  .text-wrapper-4 {
+    font-size: clamp(1.1rem, 4.2vw, 1.75rem);
+    white-space: normal;
+    max-width: 100%;
+    line-height: 1.2;
+  }
+
+  .bena-favicon-figma {
+    height: clamp(48px, 12vw, 72px);
+    width: clamp(48px, 12vw, 72px);
+  }
+
+  .nav-links {
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2.5vw, 24px);
+  }
+
+  .nav-link-item {
+    font-size: clamp(1rem, 3.5vw, 1.2rem);
+  }
+}

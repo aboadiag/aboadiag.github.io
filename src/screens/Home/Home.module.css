@@ -28,8 +28,10 @@
 }
 
 .homeLayoutScaleInner {
-  --home-design-w-px: 1440px;
-  --home-design-h-px: 3200px;
+  /* 1660px fits bio + portrait + Recent updates column (~1388 + 268) without clipping */
+  --home-design-w-px: 1660px;
+  /* Tight to footer (top ~2850px + ~260px content) — avoids large blank strip below footer */
+  --home-design-h-px: 3140px;
   width: var(--home-design-w-px);
   min-height: var(--home-design-h-px);
   position: relative;
@@ -741,15 +743,14 @@
   white-space: nowrap;
 }
 
-/* Recent updates — root `.recentUpdates` is intentionally not under `.home` so styles work when portaled to `body` on iOS */
+/* Recent updates — fixed geometry (do not use % width against 1440 canvas; it collapsed to ~36px) */
 .recentUpdates {
-  --ru-fit-left: min(1390px, calc(100% - 292px));
   position: absolute;
-  left: max(1388px, var(--ru-fit-left));
+  left: 1388px;
   top: 252px;
-  width: min(268px, calc(100% - 16px - max(1388px, var(--ru-fit-left))));
+  width: 268px;
+  min-width: 240px;
   height: 550px;
-  min-width: 0;
   z-index: 3;
   box-sizing: border-box;
   padding: 14px 14px 12px;
