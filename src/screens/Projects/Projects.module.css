@@ -26,6 +26,17 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+@media (max-width: 1439px) {
+  .projects {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 112px);
+    box-sizing: border-box;
+  }
+
+  .projectsIntro {
+    padding-top: 56px;
+  }
+}
  /* .projects {
   background-color: var(--high-contrast-color);
   width: 100%;
@@ -243,6 +254,13 @@
   width: fit-content;
   margin-top: auto; 
   padding-top: 8px; 
+}
+
+.pageFooterWrap {
+  width: 100%;
+  max-width: 100vw;
+  align-self: stretch;
+  box-sizing: border-box;
 }
 
 /* --- NAVBAR FIX --- */

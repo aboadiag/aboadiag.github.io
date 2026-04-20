@@ -36,8 +36,8 @@ export const Research = () => {
 
       const footer = page.querySelector("footer");
       const footerH = footer?.offsetHeight ?? 120;
-      const navReserve = 172;
-      const available = Math.max(400, vh - footerH - navReserve);
+      const pageTopPad = parseFloat(getComputedStyle(page).paddingTop) || 0;
+      const available = Math.max(400, vh - footerH - pageTopPad - 32);
       const minDesignH = Math.ceil(available / Math.max(scale, 1e-6));
 
       const h = Math.max(naturalH, minDesignH);
@@ -349,7 +349,7 @@ export const Research = () => {
       </div>
 
       {/* FOOTER */}
-      <div style={{ width: '100%' }}>
+      <div className={styles.pageFooterWrap}>
          <Footer style={{ position: 'relative', top: 'auto' }} />
       </div>
 

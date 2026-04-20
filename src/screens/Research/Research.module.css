@@ -28,6 +28,18 @@
   padding-bottom: 0;
 }
 
+/* Navbar sits above scaled artboard; reserve space in real viewport px (not scaled with inner) */
+@media (max-width: 1439px) {
+  .research {
+    padding-top: calc(env(safe-area-inset-top, 0px) + 112px);
+    box-sizing: border-box;
+  }
+
+  .researchIntro {
+    padding-top: 56px;
+  }
+}
+
 /* --- HEADER / NAVBAR --- */
 .navbar-container {
   position: absolute;
@@ -251,6 +263,14 @@
 .text-wrapper-124 { font-weight: 700; }
 .text-wrapper-125 { font-weight: 700; font-style: italic; }
 .text-wrapper-126 { text-decoration: underline; }
+
+/* Footer row: full viewport width on narrow layouts */
+.pageFooterWrap {
+  width: 100%;
+  max-width: 100vw;
+  align-self: stretch;
+  box-sizing: border-box;
+}
 
 /* Narrow viewports: scale a fixed-width artboard (same idea as Home), centered — do not scale the whole .research root */
 .researchLayoutScale {

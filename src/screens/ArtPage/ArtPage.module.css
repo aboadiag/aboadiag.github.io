@@ -179,10 +179,13 @@
 /* --- FOOTER --- */
 .footer-container {
   width: 100%;
+  max-width: 100vw;
+  align-self: stretch;
   /* This ensures footer sits at bottom of content, 
      or bottom of screen if content is short */
-  margin-top: auto; 
+  margin-top: auto;
   position: relative;
+  box-sizing: border-box;
 }
 
 /* Mobile: keep absolute + float animation (desktop behavior); smaller bubbles + taller playfield */
