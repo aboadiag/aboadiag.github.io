@@ -1,11 +1,49 @@
 // Research.jsx
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
 import { Footer } from "../../components/Footer";
 
+/** Must match `--research-design-w-px` in Research.module.css */
+const RESEARCH_DESIGN_W = 1440;
+
 export const Research = () => {
+  const scaleWrapRef = useRef(null);
+  const innerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const syncArtboardSize = () => {
+      const inner = innerRef.current;
+      const wrap = scaleWrapRef.current;
+      if (!inner || !wrap) return;
+
+      const h = Math.max(2800, Math.ceil(inner.scrollHeight));
+      inner.style.setProperty("--research-design-h-px", `${h}px`);
+
+      const vw =
+        window.visualViewport?.width ??
+        document.documentElement.clientWidth ??
+        window.innerWidth;
+      const scale = Math.min(1, vw / RESEARCH_DESIGN_W);
+      wrap.style.setProperty("--research-scaled-h", `${Math.ceil(h * scale)}px`);
+    };
+
+    syncArtboardSize();
+    window.addEventListener("resize", syncArtboardSize);
+    window.visualViewport?.addEventListener("resize", syncArtboardSize);
+    window.visualViewport?.addEventListener("scroll", syncArtboardSize);
+    const ro = new ResizeObserver(() => syncArtboardSize());
+    if (innerRef.current) ro.observe(innerRef.current);
+
+    return () => {
+      window.removeEventListener("resize", syncArtboardSize);
+      window.visualViewport?.removeEventListener("resize", syncArtboardSize);
+      window.visualViewport?.removeEventListener("scroll", syncArtboardSize);
+      ro.disconnect();
+    };
+  }, []);
+
   return (
     <div className={styles.research}>
       
@@ -14,6 +52,8 @@ export const Research = () => {
         <NavBar />
       </header>
 
+      <div ref={scaleWrapRef} className={styles.researchLayoutScale}>
+        <div ref={innerRef} className={styles.researchLayoutScaleInner}>
       {/* TITLE */}
       <h1 className={styles['text-wrapper-127']}>select research.</h1>
 
@@ -277,6 +317,9 @@ export const Research = () => {
             in employees through therapeutic art-making.
             </p>
           </div>
+        </div>
+      </div>
+
         </div>
       </div>
 

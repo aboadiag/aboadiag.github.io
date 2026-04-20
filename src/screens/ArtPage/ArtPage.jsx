@@ -1,5 +1,5 @@
 // ArtPage.jsx
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useLayoutEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import { Footer } from "../../components/Footer";
 import styles from "./ArtPage.module.css";
@@ -21,38 +21,63 @@ export const ArtPage = () => {
   const [modalArt, setModalArt] = useState(null);
   const [bubbleStyles, setBubbleStyles] = useState([]);
   const containerRef = useRef(null);
+  const lastLayoutRef = useRef({ w: -1, h: -1, bubble: -1 });
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const calculatePositions = () => {
-      if (!containerRef.current) return;
-      
-      const containerW = containerRef.current.offsetWidth;
-      const containerH = containerRef.current.offsetHeight;
-      
-      // Match CSS var
-      const bubbleSize = 250; 
+      const el = containerRef.current;
+      if (!el) return;
+
+      const containerW = el.offsetWidth;
+      const containerH = el.offsetHeight;
+
+      const bubbleCss = getComputedStyle(el).getPropertyValue("--art-bubble-size").trim();
+      const bubbleSize = Math.max(
+        80,
+        parseFloat(bubbleCss) || 250
+      );
+
+      const prev = lastLayoutRef.current;
+      if (
+        prev.w === containerW &&
+        prev.h === containerH &&
+        prev.bubble === bubbleSize
+      ) {
+        return;
+      }
+      lastLayoutRef.current = { w: containerW, h: containerH, bubble: bubbleSize };
 
       const newStyles = artPieces.map(() => {
-        // Math.max(0, ...) ensures we don't get negative numbers
         const left = Math.random() * Math.max(0, containerW - bubbleSize);
         const top = Math.random() * Math.max(0, containerH - bubbleSize);
-        
-        const delay = Math.random() * 2; 
-        const duration = 3 + Math.random() * 3; 
+
+        const delay = Math.random() * 2;
+        const duration = 3 + Math.random() * 3;
 
         return {
           left: `${left}px`,
           top: `${top}px`,
           animationDelay: `-${delay}s`,
-          animationDuration: `${duration}s`
+          animationDuration: `${duration}s`,
         };
       });
       setBubbleStyles(newStyles);
     };
 
     calculatePositions();
-    window.addEventListener('resize', calculatePositions);
-    return () => window.removeEventListener('resize', calculatePositions);
+    window.addEventListener("resize", calculatePositions);
+    window.visualViewport?.addEventListener("resize", calculatePositions);
+    window.visualViewport?.addEventListener("scroll", calculatePositions);
+
+    const ro = new ResizeObserver(() => calculatePositions());
+    if (containerRef.current) ro.observe(containerRef.current);
+
+    return () => {
+      window.removeEventListener("resize", calculatePositions);
+      window.visualViewport?.removeEventListener("resize", calculatePositions);
+      window.visualViewport?.removeEventListener("scroll", calculatePositions);
+      ro.disconnect();
+    };
   }, []);
 
   const openModal = (art) => {

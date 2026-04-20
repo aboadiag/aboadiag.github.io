@@ -1,10 +1,48 @@
 // Projects.jsx
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Projects.module.css";
 import { Footer } from "../../components/Footer";
 
+/** Must match `--projects-design-w-px` in Projects.module.css */
+const PROJECTS_DESIGN_W = 1440;
+
 export const Projects = () => {
+  const scaleWrapRef = useRef(null);
+  const innerRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const syncArtboardSize = () => {
+      const inner = innerRef.current;
+      const wrap = scaleWrapRef.current;
+      if (!inner || !wrap) return;
+
+      const h = Math.max(3200, Math.ceil(inner.scrollHeight));
+      inner.style.setProperty("--projects-design-h-px", `${h}px`);
+
+      const vw =
+        window.visualViewport?.width ??
+        document.documentElement.clientWidth ??
+        window.innerWidth;
+      const scale = Math.min(1, vw / PROJECTS_DESIGN_W);
+      wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(h * scale)}px`);
+    };
+
+    syncArtboardSize();
+    window.addEventListener("resize", syncArtboardSize);
+    window.visualViewport?.addEventListener("resize", syncArtboardSize);
+    window.visualViewport?.addEventListener("scroll", syncArtboardSize);
+    const ro = new ResizeObserver(() => syncArtboardSize());
+    if (innerRef.current) ro.observe(innerRef.current);
+
+    return () => {
+      window.removeEventListener("resize", syncArtboardSize);
+      window.visualViewport?.removeEventListener("resize", syncArtboardSize);
+      window.visualViewport?.removeEventListener("scroll", syncArtboardSize);
+      ro.disconnect();
+    };
+  }, []);
+
   return (
     <div className={styles.projects}>
       
@@ -13,6 +51,8 @@ export const Projects = () => {
         <NavBar />
       </header>
 
+      <div ref={scaleWrapRef} className={styles.projectsLayoutScale}>
+        <div ref={innerRef} className={styles.projectsLayoutScaleInner}>
       {/* INTRO */}
       <h1 className={styles['text-wrapper-97']}>select projects.</h1>
       <p className={styles['during-my-phd-i-have']}>
@@ -255,6 +295,9 @@ export const Projects = () => {
                 tracking.
               </p>
            </div>
+        </div>
+      </div>
+
         </div>
       </div>
 

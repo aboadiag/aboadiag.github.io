@@ -5,7 +5,6 @@
 
 /* --- CONFIG --- */
 :root {
-  --art-bubble-size: 250px; 
   --high-contrast-color: rgba(255, 255, 255, 0.95); /* Slightly brighter for better contrast */
 
 }
@@ -70,15 +69,16 @@
   position: relative;
   width: 100%;
   max-width: 1440px;
-  
+  --art-bubble-size: 250px;
+
   /* FIX: Reduced from 600px to 350px (Approx 50% reduction) */
   /* Bubbles are 250px, so this leaves ~100px wiggle room for randomness */
-  height: 350px; 
-  
+  height: 350px;
+
   /* Reduced margins */
   margin: 10px 0;
-  
-  overflow: visible; 
+
+  overflow: visible;
 }
 
 /* --- BUBBLES --- */
@@ -185,22 +185,13 @@
   position: relative;
 }
 
-/* Mobile Responsiveness */
+/* Mobile: keep absolute + float animation (desktop behavior); smaller bubbles + taller playfield */
 @media (max-width: 768px) {
   .art-bubbles-container {
-    height: auto; 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-  
-  .art-bubble {
-    position: relative; 
-    top: auto !important;
-    left: auto !important;
-    width: 150px; 
-    animation: none; 
+    --art-bubble-size: 150px;
+    height: clamp(320px, 56vh, 520px);
+    max-width: 100%;
+    padding: 0 8px;
+    box-sizing: border-box;
   }
 }
