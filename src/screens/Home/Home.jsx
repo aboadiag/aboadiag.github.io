@@ -9,6 +9,7 @@ import { Footer } from "../../components/Footer";
 
 // ... (Keep your existing handleLoadError function here) ...
 
+/* ---- RECENT UPDATES CONTENT ---- */
 const UPDATES_DATA = {
   2026: [
     {
@@ -79,6 +80,7 @@ const UPDATES_DATA = {
   ],
 };
 
+/* ---- RECENT UPDATES FUNCTION ---- */
 const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
   .map(Number)
   .sort((a, b) => b - a);
@@ -101,6 +103,7 @@ const HIGHLIGHT_SLIDES = [
   },
 ];
 
+/* ---- CAROUSEL FUNCTION ---- */
 function HomeHighlightCarousel() {
   const n = HIGHLIGHT_SLIDES.length;
   const [index, setIndex] = useState(0);
