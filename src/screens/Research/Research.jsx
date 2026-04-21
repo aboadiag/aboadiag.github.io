@@ -196,7 +196,9 @@ export const Research = () => {
           <div className={styles['left-column']}>
             <div className={styles['video-container']}>
                 <video controls className={styles['project-video']}>
-                  <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" />
+                  {/* <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" /> */}
+                  <source src="/vids/IS4HRA_Supplemental_gif_2.gif" type="image/gif" />
+
                 </video>
             </div>
             <p className={styles['media-caption']}>
