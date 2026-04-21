@@ -365,7 +365,25 @@ export const Home = () => {
               &amp; final year PhD Candidate in Robotics!
             </h3>
 
-            <h2 className={styles['text-wrapper-82']}>about.</h2>
+            <div className={styles.aboutTitleRow}>
+              <h2 className={styles['text-wrapper-82']}>about.</h2>
+              <a
+                href="/pdfs/abenab-cv-december2025.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Open CV (PDF in new tab)"
+                className={styles.cvAboutLink}
+              >
+                <Group
+                  className={styles['design-component-instance-node']}
+                  divClassName={styles.cvAboutResume}
+                  property1="default"
+                  rectangleClassName="group-2"
+                  rectangleClassNameOverride="group-3"
+                  text="CV"
+                />
+              </a>
+            </div>
             <p className={styles['i-am-in-the-fifth-2']}>
               <span className={styles['text-wrapper-71']}>I am a </span>
               <span className={styles['text-wrapper-72']}>fifth</span>
@@ -558,37 +576,16 @@ export const Home = () => {
             </div>
           </section>
 
-          {/* SECTION 3: About Me & CV CTA */}
-          <section className={styles['about-me-cv-cta']}>
-            <div className={styles['a-bit-about-me-2']}>
-              <p className={styles['this-is-only-a-bit-2']}>
-      
-                {/* --- NEW BIO CONTENT END  -- CV ORIGINAL BEGINS --- */}
-                <span className={styles['text-wrapper-71']}>This is only a </span>
-                <span className={styles['text-wrapper-72']}>bit</span>
-                <span className={styles['text-wrapper-71']}> about me. For a </span>
-                <span className={styles['text-wrapper-72']}>byte</span>
-                <span className={styles['text-wrapper-71']}>, see my CV below.</span>
-              </p>
-
-              <a
-                href="/pdfs/abenab-cv-december2025.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Open CV (PDF in new tab)"
-              >
-                <Group
-                  className={styles['design-component-instance-node']}
-                  divClassName="group-4"
-                  property1="default"
-                  rectangleClassName="group-2"
-                  rectangleClassNameOverride="group-3"
-                  text="CV"
-                />
-              </a>
-            </div>
-          </section>
-
+          {/*
+            Former CV callout (moved next to “about.”):
+            <p className={styles['this-is-only-a-bit-2']}>
+              <span className={styles['text-wrapper-71']}>This is only a </span>
+              <span className={styles['text-wrapper-72']}>bit</span>
+              <span className={styles['text-wrapper-71']}> about me. For a </span>
+              <span className={styles['text-wrapper-72']}>byte</span>
+              <span className={styles['text-wrapper-71']}>, see my CV below.</span>
+            </p>
+          */}
 
           {/* THE FIX: 
              1. Move Footer INSIDE the canvas.
@@ -598,7 +595,7 @@ export const Home = () => {
           <Footer
             style={{
               position: 'absolute',
-              top: 'calc(4020px - var(--home-hero-lift))',
+              top: 'calc(3800px - var(--home-hero-lift))',
               width: '100%',
             }}
           />

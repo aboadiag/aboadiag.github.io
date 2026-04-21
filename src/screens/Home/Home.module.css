@@ -8,14 +8,14 @@
   /* Pull hero / portrait / Recent updates / about block closer to navbar */
   --home-hero-lift: 220px;
   /* Space reserved for highlight carousel (padding + track + padding) */
-  --home-carousel-pad-before: 72px;
+  --home-carousel-pad-before: 28px;
   --home-carousel-pad-after: 72px;
   --home-carousel-slide-h: 380px;
   /* Nav row (prev/next + dots) below the slide */
   /* Controls row + short caption below the slide */
   --home-carousel-controls-h: 100px;
-  /* Carousel sits after long “about” copy; education follows carousel */
-  --home-carousel-top: calc(2180px - var(--home-hero-lift));
+  /* Carousel after long “about” copy (tuned vs. bio block end + small gap) */
+  --home-carousel-top: calc(2000px - var(--home-hero-lift));
   display: flex;
   flex-direction: column; /* Stacks items: Navbar -> Content -> Footer */
   min-height: 100vh;
@@ -257,6 +257,7 @@
   font-family: "quicksand", sans-serif;
 }
 
+/* “about.” title — when not inside .aboutTitleRow, keep legacy absolute slot */
 .home .text-wrapper-82 {
   align-items: flex-end;
   color: var(--blue-contrast);
@@ -272,6 +273,61 @@
   position: absolute;
   top: calc(834px - var(--home-hero-lift));
   white-space: nowrap;
+}
+
+.home .aboutTitleRow {
+  position: absolute;
+  top: calc(834px - var(--home-hero-lift));
+  left: 107px;
+  width: 1253px;
+  height: 116px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.home .aboutTitleRow .text-wrapper-82 {
+  position: relative;
+  left: 0;
+  top: 0;
+  flex: 0 1 auto;
+  justify-content: flex-start;
+  height: auto;
+  min-width: 0;
+}
+
+.home .cvAboutLink {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.home .aboutTitleRow .design-component-instance-node {
+  position: relative !important;
+  left: 0 !important;
+  top: 0 !important;
+  width: 320px !important;
+  height: 120px !important;
+}
+
+.home .cvAboutResume {
+  color: var(--dark-brown) !important;
+  font-family: "quicksand", sans-serif !important;
+  font-size: 100px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0 !important;
+  line-height: 0.88 !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: max-content !important;
+  height: auto !important;
 }
 
 .home .navbar-2 {
@@ -332,28 +388,6 @@
   line-height: normal;
   white-space: nowrap;
   width: 34px;
-}
-
-.home .a-bit-about-me-2 {
-  height: 163px;
-  left: 368px;
-  position: absolute;
-  /* Below education block (depends on carousel + --home-carousel-controls-h) */
-  top: calc(3580px - var(--home-hero-lift));
-  width: 824px;
-}
-
-.home .this-is-only-a-bit-2 {
-  color: var(--dark-brown);
-  font-family: "quicksand", sans-serif;
-  font-size: 30px;
-  font-weight: 400;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 44px;
-  position: absolute;
-  top: 0;
-  width: 822px;
 }
 
 .home .design-component-instance-node {
