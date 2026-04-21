@@ -596,7 +596,7 @@ export const Home = () => {
           <Footer
             style={{
               position: 'absolute',
-              top: 'calc(3210px - var(--home-hero-lift))',
+              top: 'calc(3440px - var(--home-hero-lift))',
               width: '100%',
             }}
           />

@@ -57,16 +57,17 @@
 }
 
 /*
-  Clip box = post-scale footprint. Transform on the inner does not shrink layout size;
-  without this, the document grows to the full design height and fights the wrapper height → double scrollbars.
+  Clip box = scaled visual width × height. Inner is position:absolute so its 1660×H layout
+  does not get horizontally clipped before paint (flow + overflow:hidden was hiding the
+  right side: Recent updates + footer GitHub column).
 */
 .homeLayoutScaleClip {
+  position: relative;
   width: min(100vw, calc(1660px * var(--home-layout-scale, 1)));
   height: var(--home-scaled-h, auto);
   max-width: 100%;
   min-height: 0;
   overflow: hidden;
-  position: relative;
   flex: 0 0 auto;
 }
 
@@ -75,13 +76,15 @@
   --home-design-w-px: 1660px;
   /* --home-design-h-px is set in Home.jsx from footer layout (fallback below) */
   --home-design-h-px: 3140px;
+  position: absolute;
+  left: 0;
+  top: 0;
   width: var(--home-design-w-px);
   height: var(--home-design-h-px);
   min-height: var(--home-design-h-px);
-  position: relative;
-  flex: 0 0 auto;
+  box-sizing: border-box;
   transform: scale(var(--home-layout-scale, 1));
-  transform-origin: top center;
+  transform-origin: top left;
   backface-visibility: hidden;
 }
 
