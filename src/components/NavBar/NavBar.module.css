@@ -36,9 +36,14 @@
 
 .text-wrapper-4 {
   color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", "Patrick Hand", Helvetica, sans-serif; /* Added fallbacks */
+  /* font-family: "Figma Hand-Bold", "Patrick Hand", Helvetica, sans-serif;  */
+  /* Added fallbacks */
+  /* font-size: 30px;
+  font-weight: 700; */
+  font-family: "gugi", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   font-size: 30px;
-  font-weight: 700;
   white-space: nowrap; 
 }
 
