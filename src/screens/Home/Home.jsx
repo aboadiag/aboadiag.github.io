@@ -275,12 +275,11 @@ export const Home = () => {
 
       inner.style.setProperty("--home-design-h-px", `${h}px`);
 
-      const vw =
-        window.visualViewport?.width ??
-        document.documentElement.clientWidth ??
-        window.innerWidth;
-      const padX = navHorizontalPaddingPx(vw);
-      const availW = Math.min(NAV_BAR_MAX_PX, vw) - 2 * padX;
+      /* Layout viewport width — stable under pinch-zoom so zoom actually enlarges text */
+      const layoutW =
+        document.documentElement?.clientWidth ?? window.innerWidth;
+      const padX = navHorizontalPaddingPx(layoutW);
+      const availW = Math.min(NAV_BAR_MAX_PX, layoutW) - 2 * padX;
       const scale = Math.min(1, Math.max(0, availW) / HOME_DESIGN_W);
       inner.style.setProperty("--home-layout-scale", String(scale));
       if (wrap) {
@@ -290,16 +289,12 @@ export const Home = () => {
 
     syncArtboardSize();
     window.addEventListener("resize", syncArtboardSize);
-    window.visualViewport?.addEventListener("resize", syncArtboardSize);
-    window.visualViewport?.addEventListener("scroll", syncArtboardSize);
     const ro = new ResizeObserver(() => syncArtboardSize());
     const footer = canvasRef.current?.querySelector("footer");
     if (footer) ro.observe(footer);
 
     return () => {
       window.removeEventListener("resize", syncArtboardSize);
-      window.visualViewport?.removeEventListener("resize", syncArtboardSize);
-      window.visualViewport?.removeEventListener("scroll", syncArtboardSize);
       ro.disconnect();
     };
   }, []);

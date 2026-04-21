@@ -231,6 +231,17 @@
   justify-content: center; /* Center video if it scales down */
 }
 
+/* IS4HRA: animated GIF in same slot as former MP4 (16:9), letterboxed if needed */
+.project-ishra-gif {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: block;
+}
+
 /* Caption under media */
 .media-caption {
   color: var(--high-contrast-color);

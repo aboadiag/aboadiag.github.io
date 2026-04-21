@@ -195,11 +195,12 @@ export const Research = () => {
           {/* LEFT */}
           <div className={styles['left-column']}>
             <div className={styles['video-container']}>
-                <video controls className={styles['project-video']}>
-                  {/* <source src="/vids/IS4HRA_Supplemental.mp4" type="video/mp4" /> */}
-                  <source src="/vids/IS4HRA_Supplemental_gif_2.gif" type="image/gif" />
-
-                </video>
+              <img
+                className={`${styles['project-video']} ${styles['project-ishra-gif']}`}
+                src="/vids/IS4HRA_Supplemental_gif_2.gif"
+                alt="Human–robot synchrony study: control and experimental conditions."
+                decoding="async"
+              />
             </div>
             <p className={styles['media-caption']}>
               Video featuring Control &amp; Experimental Conditions.
