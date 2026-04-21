@@ -449,6 +449,7 @@ export const Home = () => {
                 href="/pdfs/abenab-cv-december2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Open CV (PDF in new tab)"
               >
                 <Group
                   className={styles['design-component-instance-node']}

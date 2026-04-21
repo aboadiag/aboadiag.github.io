@@ -256,6 +256,22 @@
   padding-top: 8px; 
 }
 
+.pageFooterWrap {
+  width: 100%;
+  max-width: 100vw;
+  min-width: 0;
+  align-self: stretch;
+  margin-top: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.pageFooterWrap footer {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
 /* --- NAVBAR FIX --- */
 .navbar-container {
   position: absolute;
@@ -289,7 +305,7 @@
   flex-direction: column;
   height: var(--projects-design-h-px, auto);
   min-height: var(--projects-design-h-px, auto);
-  padding-bottom: clamp(240px, 28vh, 340px);
+  padding-bottom: 56px;
 }
 
 @media (max-width: 1439px) {

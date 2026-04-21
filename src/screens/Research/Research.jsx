@@ -349,15 +349,19 @@ export const Research = () => {
 
       </div>
 
-      <Footer
-        style={{
-          position: 'absolute',
-          left: 0,
-          width: '100%',
-          bottom: 0,
-        }}
-      />
         </div>
+      </div>
+
+      <div className={styles.pageFooterWrap}>
+        <Footer
+          style={{
+            position: 'relative',
+            top: 'auto',
+            left: 0,
+            width: '100%',
+            maxWidth: '100%',
+          }}
+        />
       </div>
 
     </div>
