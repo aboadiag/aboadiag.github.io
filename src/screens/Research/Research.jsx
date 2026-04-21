@@ -123,7 +123,7 @@ export const Research = () => {
       <div className={styles['project-delivery']}>
         
         <p className={styles['project-title']}>
-          Co-designing Autonomous Mobility with Local Disabled Adults
+          Co-designing Autonomous Mobility with Local Disabled Adults [🏆 Best Paper Honorable Mention HRI '26]
         </p>
 
         <div className={styles['split-content']}>
@@ -151,12 +151,12 @@ export const Research = () => {
               Description 
               <span className={styles['bracket']}> [</span>
                <a
-                href="/pdfs/HRI_2026__camera-ready_v3_accessible_final.pdf"
+                href="https://dl.acm.org/doi/epdf/10.1145/3757279.3785567"
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles['link-text']}
               >
-                HRI '26 Preprint
+                HRI '26
               </a>
               <span className={styles['bracket']}>]</span>
             </div>
