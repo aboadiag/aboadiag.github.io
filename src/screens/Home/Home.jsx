@@ -1,6 +1,6 @@
 // Home.jsx
 
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
@@ -82,6 +82,119 @@ const UPDATES_DATA = {
 const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
   .map(Number)
   .sort((a, b) => b - a);
+
+const HIGHLIGHT_SLIDES = [
+  {
+    src: "/img/bena-mug-removebg-preview-1-1.svg",
+    alt: "Portrait of Abena smiling",
+    caption: "Portrait",
+  },
+  {
+    src: "/img/voice-agent-blur.svg",
+    alt: "Stylized graphic related to voice agents research",
+    caption: "Research & design",
+  },
+  {
+    src: "/img/vector-1-3.svg",
+    alt: "",
+    caption: "Visual work",
+  },
+];
+
+function HomeHighlightCarousel() {
+  const n = HIGHLIGHT_SLIDES.length;
+  const [index, setIndex] = useState(0);
+  const touchStartX = useRef(null);
+
+  const go = useCallback(
+    (dir) => {
+      setIndex((i) => (i + dir + n) % n);
+    },
+    [n]
+  );
+
+  const onTouchStart = useCallback((e) => {
+    touchStartX.current = e.touches[0]?.clientX ?? null;
+  }, []);
+
+  const onTouchEnd = useCallback(
+    (e) => {
+      const start = touchStartX.current;
+      touchStartX.current = null;
+      const end = e.changedTouches[0]?.clientX;
+      if (start == null || end == null) return;
+      const dx = end - start;
+      if (dx > 48) go(-1);
+      else if (dx < -48) go(1);
+    },
+    [go]
+  );
+
+  return (
+    <section
+      className={styles.homeCarousel}
+      aria-roledescription="carousel"
+      aria-label="Highlights"
+    >
+      <div className={styles.homeCarouselInner}>
+        <div
+          className={styles.homeCarouselViewport}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
+        >
+          <div
+            className={styles.homeCarouselTrack}
+            style={{ transform: `translateX(-${index * 100}%)` }}
+          >
+            {HIGHLIGHT_SLIDES.map((slide, i) => (
+              <div key={i} className={styles.homeCarouselSlide} aria-hidden={i !== index}>
+                <img src={slide.src} alt={slide.alt} draggable={false} />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className={styles.homeCarouselControls}>
+          <button
+            type="button"
+            className={styles.homeCarouselBtn}
+            onClick={() => go(-1)}
+            aria-label="Previous slide"
+          >
+            Previous
+          </button>
+          <div className={styles.homeCarouselDots} role="tablist" aria-label="Slides">
+            {HIGHLIGHT_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={`Go to slide ${i + 1} of ${n}`}
+                className={
+                  i === index
+                    ? `${styles.homeCarouselDot} ${styles.homeCarouselDotActive}`
+                    : styles.homeCarouselDot
+                }
+                onClick={() => setIndex(i)}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className={styles.homeCarouselBtn}
+            onClick={() => go(1)}
+            aria-label="Next slide"
+          >
+            Next
+          </button>
+        </div>
+        <p className={styles.homeCarouselCaption} aria-live="polite">
+          {HIGHLIGHT_SLIDES[index]?.caption}
+        </p>
+      </div>
+    </section>
+  );
+}
 
 /** Artboard width (px) — must match `--home-design-w-px` in Home.module.css */
 const HOME_DESIGN_W = 1660;
@@ -366,6 +479,8 @@ export const Home = () => {
             </p>
           </section>
 
+          <HomeHighlightCarousel />
+
           {/* SECTION 2: Education */}
           <section className={styles['education-section']}>
             <div className={styles['education-bit']}>
@@ -483,7 +598,7 @@ export const Home = () => {
           <Footer
             style={{
               position: 'absolute',
-              top: '2850px',
+              top: 'calc(4020px - var(--home-hero-lift))',
               width: '100%',
             }}
           />
