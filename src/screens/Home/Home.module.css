@@ -20,8 +20,8 @@
   --home-hero-circle-center-x: calc(833px + 270px);
   display: flex;
   flex-direction: column; /* Stacks items: Navbar -> Content -> Footer */
-  min-height: 100vh;
-  min-height: 100dvh;
+  /* Let page height follow the scaled artboard only (avoids stacking min-height + content) */
+  min-height: 0;
   width: 100%;
   max-width: 100vw;
   /* #app uses align-items: stretch so route roots span the full viewport width */
@@ -46,18 +46,28 @@
   max-width: 100vw;
   display: flex;
   justify-content: center;
-  /* Match Research/Projects: do not clip both axes — allows browser pinch-zoom */
-  overflow-x: hidden;
-  overflow-y: visible;
+  align-items: flex-start;
+  /* Flex default min-height:auto uses transformed children’s pre-scale size → extra scroll; reset it */
+  min-height: 0;
+  flex-shrink: 0;
   /* Scaled visual height (set from Home.jsx: design height × scale) */
   height: var(--home-scaled-h, auto);
   min-height: var(--home-scaled-h, auto);
+  overflow: hidden;
 }
 
-@media (max-width: 1439px) {
-  .homeLayoutScale {
-    overflow: hidden;
-  }
+/*
+  Clip box = post-scale footprint. Transform on the inner does not shrink layout size;
+  without this, the document grows to the full design height and fights the wrapper height → double scrollbars.
+*/
+.homeLayoutScaleClip {
+  width: min(100vw, calc(1660px * var(--home-layout-scale, 1)));
+  height: var(--home-scaled-h, auto);
+  max-width: 100%;
+  min-height: 0;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 auto;
 }
 
 .homeLayoutScaleInner {

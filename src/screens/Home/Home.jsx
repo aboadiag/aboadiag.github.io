@@ -269,9 +269,10 @@ export const Home = () => {
       const footer = canvas.querySelector("footer");
       if (!footer) return;
 
-      const pad = 48;
+      /* Small tail under footer — artboard height follows content (no huge empty band) */
+      const pad = 24;
       const bottomPx = footer.offsetTop + footer.offsetHeight + pad;
-      const h = Math.max(3020, Math.ceil(bottomPx));
+      const h = Math.max(2400, Math.ceil(bottomPx));
 
       inner.style.setProperty("--home-design-h-px", `${h}px`);
 
@@ -281,8 +282,9 @@ export const Home = () => {
       const padX = navHorizontalPaddingPx(layoutW);
       const availW = Math.min(NAV_BAR_MAX_PX, layoutW) - 2 * padX;
       const scale = Math.min(1, Math.max(0, availW) / HOME_DESIGN_W);
-      inner.style.setProperty("--home-layout-scale", String(scale));
+      /* Vars on scale wrap so clip layer can size to scaled box (avoids double scroll from transform layout) */
       if (wrap) {
+        wrap.style.setProperty("--home-layout-scale", String(scale));
         wrap.style.setProperty("--home-scaled-h", `${Math.ceil(h * scale)}px`);
       }
     };
@@ -314,7 +316,8 @@ export const Home = () => {
       */}
 
       <div ref={scaleWrapRef} className={styles.homeLayoutScale}>
-        <div ref={innerRef} className={styles.homeLayoutScaleInner}>
+        <div className={styles.homeLayoutScaleClip}>
+          <div ref={innerRef} className={styles.homeLayoutScaleInner}>
           <div ref={canvasRef} className={styles['main-content-canvas']}>
             <main>
               <RecentUpdatesPanel />
@@ -593,11 +596,12 @@ export const Home = () => {
           <Footer
             style={{
               position: 'absolute',
-              top: 'calc(3800px - var(--home-hero-lift))',
+              top: 'calc(3210px - var(--home-hero-lift))',
               width: '100%',
             }}
           />
             </main>
+          </div>
           </div>
         </div>
       </div>
