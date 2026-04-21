@@ -1,8 +1,6 @@
 // Home.jsx
 
 import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import { Group } from "../../components/Group";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Home.module.css";
 import { Footer } from "../../components/Footer";
@@ -372,9 +370,10 @@ export const Home = () => {
                 href="/pdfs/abenab-cv-december2025.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Open CV (PDF in new tab)"
+                aria-label="Open curriculum vitae (PDF in new tab)"
                 className={styles.cvAboutLink}
               >
+                {/*
                 <Group
                   className={styles['design-component-instance-node']}
                   divClassName={styles.cvAboutResume}
@@ -383,6 +382,8 @@ export const Home = () => {
                   rectangleClassNameOverride="group-3"
                   text="CV"
                 />
+                */}
+                <span className={styles['text-wrapper-74']}>Curriculum vitae</span>
               </a>
             </div>
             <p className={styles['i-am-in-the-fifth-2']}>
