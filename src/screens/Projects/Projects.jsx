@@ -255,7 +255,7 @@ export const Projects = () => {
               />
             </div>
             <p className={styles['media-caption']}>
-              Video featuring Control &amp; Experimental Conditions.
+              Tendon-driven customizable tactor patches with vertical motor arrangement &amp; final version with horizontal motor arrangement
             </p>
                
                <div className={styles['project-date']}>Fall 2023</div>
