@@ -264,14 +264,6 @@
 .text-wrapper-125 { font-weight: 700; font-style: italic; }
 .text-wrapper-126 { text-decoration: underline; }
 
-/* Footer row: full viewport width on narrow layouts */
-.pageFooterWrap {
-  width: 100%;
-  max-width: 100vw;
-  align-self: stretch;
-  box-sizing: border-box;
-}
-
 /* Narrow viewports: scale a fixed-width artboard (same idea as Home), centered — do not scale the whole .research root */
 .researchLayoutScale {
   flex: 1 1 auto;
@@ -295,6 +287,8 @@
   flex-direction: column;
   height: var(--research-design-h-px, auto);
   min-height: var(--research-design-h-px, auto);
+  /* Room for Footer (position absolute, bottom 0) inside artboard — same idea as Home */
+  padding-bottom: clamp(240px, 28vh, 340px);
 }
 
 @media (max-width: 1439px) {

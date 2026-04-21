@@ -323,12 +323,16 @@ export const Projects = () => {
       </div>
 
       </div>
-        </div>
-      </div>
 
-      {/* FOOTER - FIXED: Inline style override forces it to relative/auto */}
-      <div className={styles.pageFooterWrap}>
-         <Footer style={{ position: 'relative', top: 'auto' }} />
+      <Footer
+        style={{
+          position: 'absolute',
+          left: 0,
+          width: '100%',
+          bottom: 0,
+        }}
+      />
+        </div>
       </div>
 
     </div>
