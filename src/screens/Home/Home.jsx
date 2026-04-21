@@ -411,7 +411,8 @@ export const Home = () => {
                 target="_blank"
               >
                 <span className={styles['text-wrapper-74']}>TBD Lab</span>
-              </a>
+              </a> <br />
+              <br />
               <span className={styles['text-wrapper-71']}>. I graduate in 2026 and am actively seeking </span>
                 <span className={styles['text-wrapper-72']}>full-time positions.</span> <br />
                 <br />
