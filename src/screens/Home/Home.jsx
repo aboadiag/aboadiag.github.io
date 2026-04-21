@@ -12,7 +12,7 @@ import { Footer } from "../../components/Footer";
 const UPDATES_DATA = {
   2026: [
     {
-      text: "Presented delivery robot full paper at ACM/IEE HRI 2026. Read full paper ",
+      text: "Presented pluriversal approach to co-designing delivery robots at ACM/IEE HRI 2026. Read full paper ",
       link: "https://dl.acm.org/doi/abs/10.1145/3757279.3785567",
     },
     {
@@ -51,17 +51,13 @@ const UPDATES_DATA = {
       link: "https://dl.acm.org/doi/abs/10.1145/3597638.3614512",
     },
     {
-      text: "Our full paper on parametric haptics was accepted at ACM UIST. Read paper ",
+      text: "Our full paper on parametric tactors for modular, wearable haptics was accepted at ACM UIST. Read paper ",
       link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
     },
     { text: "Received Cadence Future Innovators Scholarship.", link: null },
   ],
   2022: [
-    {
-      text: "Our full paper on parametric haptics was accepted at ACM UIST. Read paper ",
-      link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
-    },
-    { text: "Received CMU Uber Presedential PhD Fellowship for '22-'23", link: null },
+    { text: "Received CMU Uber Presidential PhD Fellowship for '22-'23", link: null },
   ],
   2021: [
     { text: "Started PhD at CMU Robotics! ", link: null },
