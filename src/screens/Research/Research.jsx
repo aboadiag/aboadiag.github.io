@@ -123,7 +123,7 @@ export const Research = () => {
       <div className={styles['project-delivery']}>
         
         <p className={styles['project-title']}>
-          Co-designing Autonomous Mobility with Local Disabled Adults [🏆 Best Paper Honorable Mention HRI '26]
+          Co-designing Autonomous Mobility with Local Disabled Adults
         </p>
 
         <div className={styles['split-content']}>
@@ -156,9 +156,12 @@ export const Research = () => {
                 target="_blank"
                 className={styles['link-text']}
               >
-                HRI '26
+                HRI '26 
               </a>
               <span className={styles['bracket']}>]</span>
+              <p className={styles['project-text']}>
+                	🏆 Best Paper Honorable Mention
+              </p>
             </div>
 
             <p className={styles['project-text']}>
