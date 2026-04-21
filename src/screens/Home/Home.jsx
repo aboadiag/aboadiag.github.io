@@ -83,11 +83,12 @@ const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
   .map(Number)
   .sort((a, b) => b - a);
 
+/* --- CAROUSEL HIGHLIGHT SLIDES ------*/
 const HIGHLIGHT_SLIDES = [
   {
-    src: "/img/bena-mug-removebg-preview-1-1.svg",
-    alt: "Portrait of Abena smiling",
-    caption: "Portrait",
+    src: "/vids/parametric-haptics-vid-gif_v1.gif",
+    alt: "Gif of Early prototype with vertical motor arrangement then Final Prototype with horizontal motor arrangement",
+    caption: "Gif of Tendon-driven customizable tactor patches with vertical motor arrangement and final version with horizontal motor arrangement.",
   },
   {
     src: "/img/voice-agent-blur.svg",

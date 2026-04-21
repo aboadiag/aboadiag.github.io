@@ -236,7 +236,7 @@ export const Projects = () => {
         <div className={styles['split-content']}>
             {/* LEFT COLUMN: Both Images Stacked */}
             <div className={styles['left-column']}>
-               <div className={styles['versatile-image-stack']}>
+               {/* <div className={styles['versatile-image-stack']}>
                   <div>
                     <img className={styles['vers-haptics-img']} src="/img/vers-haptics-img1-2.png" alt="Prototype 1" />
                     <p className={styles['media-caption']}>Top: Early prototype with vertical motor arrangement.</p>
@@ -245,7 +245,18 @@ export const Projects = () => {
                     <img className={styles['vers-haptics-img']} src="/img/vers-haptics-img2-2.png" alt="Prototype 2" />
                     <p className={styles['media-caption']}>Bottom: Final Prototype with horizontal motor arrangement.</p>
                   </div>
-               </div>
+               </div> */}
+                <div className={styles['video-container']}>
+              <img
+                className={`${styles['project-video']} ${styles['vers-haptics-gif']}`}
+                src="/vids/parametric-haptics-vid-gif_v1.gif"
+                alt="Gif of Tendon-driven customizable tactor patches with vertical motor arrangement and final version with horizontal motor arrangement"
+                decoding="async"
+              />
+            </div>
+            <p className={styles['media-caption']}>
+              Video featuring Control &amp; Experimental Conditions.
+            </p>
                
                <div className={styles['project-date']}>Fall 2023</div>
             </div>
