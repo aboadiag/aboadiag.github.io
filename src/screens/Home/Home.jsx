@@ -86,6 +86,14 @@ const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
 /** Artboard width (px) — must match `--home-design-w-px` in Home.module.css */
 const HOME_DESIGN_W = 1660;
 
+/** Same as NavBar `.nav-bar` max-width — content scales to this band */
+const NAV_BAR_MAX_PX = 1440;
+
+/** Mirror NavBar `padding: … clamp(12px, 4vw, 60px)` horizontal inset */
+function navHorizontalPaddingPx(viewportWidth) {
+  return Math.min(60, Math.max(12, Math.round(viewportWidth * 0.04)));
+}
+
 function RecentUpdatesPanel() {
   return (
     <aside
@@ -155,7 +163,10 @@ export const Home = () => {
         window.visualViewport?.width ??
         document.documentElement.clientWidth ??
         window.innerWidth;
-      const scale = Math.min(1, vw / HOME_DESIGN_W);
+      const padX = navHorizontalPaddingPx(vw);
+      const availW = Math.min(NAV_BAR_MAX_PX, vw) - 2 * padX;
+      const scale = Math.min(1, Math.max(0, availW) / HOME_DESIGN_W);
+      inner.style.setProperty("--home-layout-scale", String(scale));
       if (wrap) {
         wrap.style.setProperty("--home-scaled-h", `${Math.ceil(h * scale)}px`);
       }

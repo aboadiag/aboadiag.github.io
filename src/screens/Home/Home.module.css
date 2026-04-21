@@ -26,20 +26,23 @@
   box-sizing: border-box;
 }
 
-/* Fixed design width; scale entire canvas on narrow viewports (same geometry as desktop) */
+/*
+  Scale the 1660px artboard to the same *content width band* as the navbar:
+  max width 1440px with horizontal padding clamp(12px, 4vw, 60px) — see Home.jsx (--home-layout-scale).
+*/
 .homeLayoutScale {
   width: 100%;
   max-width: 100vw;
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
-  /* Scaled visual height (set from Home.jsx from footer bottom × scale) trims extra scroll */
+  overflow: hidden;
+  /* Scaled visual height (set from Home.jsx: design height × scale) */
   height: var(--home-scaled-h, auto);
   min-height: var(--home-scaled-h, auto);
 }
 
 .homeLayoutScaleInner {
-  /* 1660px fits bio + portrait + Recent updates column without clipping */
+  /* 1660px design coordinate system (bio + portrait + Recent updates) */
   --home-design-w-px: 1660px;
   /* --home-design-h-px is set in Home.jsx from footer layout (fallback below) */
   --home-design-h-px: 3140px;
@@ -48,32 +51,9 @@
   min-height: var(--home-design-h-px);
   position: relative;
   flex: 0 0 auto;
-}
-
-/*
-  Uniform scale via transform (all engines). Avoid non-root `zoom`, which can cause
-  odd stacking/overlap of absolutely positioned children on mobile Safari.
-*/
-@media (max-width: 1439px) {
-  .homeLayoutScale {
-    height: var(
-      --home-scaled-h,
-      calc(var(--home-design-h-px) * min(1, calc(100vw / var(--home-design-w-px))))
-    );
-    min-height: var(
-      --home-scaled-h,
-      calc(var(--home-design-h-px) * min(1, calc(100vw / var(--home-design-w-px))))
-    );
-    overflow: hidden;
-  }
-
-  .homeLayoutScaleInner {
-    height: var(--home-design-h-px);
-    min-height: var(--home-design-h-px);
-    transform: scale(min(1, calc(100vw / var(--home-design-w-px))));
-    transform-origin: top center;
-    backface-visibility: hidden;
-  }
+  transform: scale(var(--home-layout-scale, 1));
+  transform-origin: top center;
+  backface-visibility: hidden;
 }
 
 /* This is the container for your specific 'absolute' layout designs */
