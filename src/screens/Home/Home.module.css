@@ -1,7 +1,6 @@
 @import "./styleguide.css";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
 
-/* Home.module.css */
+/* Home.module.css — body text: Quicksand via Adobe Typekit (index.html) */
 
 :root {
   --blue-contrast: rgba(77, 99, 107, 1);
@@ -122,7 +121,7 @@
 
 .home .site-title {
   color: var(--dark-brown);
-  font-family: 'Patrick Hand', cursive;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 700;
   height: 96px;
@@ -133,7 +132,7 @@
 
 .home .hi-my-name-is-abena-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 400;
   left: 107px;
@@ -145,19 +144,21 @@
 }
 
 .home .text-wrapper-69 {
-  font-weight: 500;
+  font-family: "quicksand", sans-serif;
+  font-weight: 400;
 }
 
 .home .text-wrapper-70 {
+  font-family: "quicksand", sans-serif;
   font-size: 36px;
   font-weight: 700;
 }
 
 .home .final-year-phd-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: 400;
   left: 107px;
   letter-spacing: 0;
   line-height: normal;
@@ -168,7 +169,7 @@
 
 .home .i-am-in-the-fifth-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 400;
   left: 107px;
@@ -181,7 +182,7 @@
 
 .home .text-wrapper-71 {
   color: #5b240c;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 0;
@@ -189,19 +190,21 @@
 }
 
 .home .text-wrapper-72 {
+  font-family: "quicksand", sans-serif;
   font-weight: 700;
 }
 
 .home .text-wrapper-73 {
-  font-family: "Roboto-ExtraBold", Helvetica;
-  font-weight: 800;
+  font-family: "quicksand", sans-serif;
+  font-weight: 700;
 }
 
 .home .text-wrapper-74 {
   color: var(--dark-brown); /* same as your normal paragraph text */
   text-decoration: underline; /* removes the underline if you want */
   /* margin: 4rem 0;  */
-  font-weight: 600; /* optional: bold the link */
+  font-family: "quicksand", sans-serif;
+  font-weight: 700;
 }
 
 .home .text-wrapper-74:hover {
@@ -211,17 +214,19 @@
 }
 
 .home .text-wrapper-75 {
+  font-family: "quicksand", sans-serif;
   font-style: italic;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .home .text-wrapper-76 {
-  font-weight: 900;
+  font-family: "quicksand", sans-serif;
+  font-weight: 700;
 }
 
 .home .researcher-designer-2 {
   color: transparent;
-  font-family: "Poppins", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 100px;
   font-weight: 400;
   position: absolute;
@@ -239,34 +244,35 @@
 
 .home .text-wrapper-77 {
   color: #5b240c;
-  font-weight: 800;
+  font-family: "quicksand", sans-serif;
+  font-weight: 700;
 }
 
 .home .text-wrapper-78 {
   color: #943b16;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
 }
 
 .home .text-wrapper-79 {
   color: #697b6c;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
 }
 
 .home .text-wrapper-80 {
   color: #5b240c;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
 }
 
 .home .text-wrapper-81 {
   color: #5b240c;
-  font-family: "Linefont", Helvetica;
+  font-family: "quicksand", sans-serif;
 }
 
 .home .text-wrapper-82 {
   align-items: flex-end;
   color: var(--blue-contrast);
   display: flex;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 100px;
   font-weight: 700;
   height: 116px;
@@ -291,7 +297,7 @@
 
 .home .text-wrapper-83 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -304,7 +310,7 @@
 .home .text-wrapper-84 {
   color: var(--dark-brown);
   display: block;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -317,7 +323,7 @@
 .home .text-wrapper-85 {
   color: var(--dark-brown);
   display: block;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -329,7 +335,7 @@
 
 .home .text-wrapper-86 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -351,7 +357,7 @@
 
 .home .this-is-only-a-bit-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 400;
   left: 0;
@@ -383,7 +389,7 @@
 
 .home .group-4 {
   color: var(--dark-brown) !important;
-  font-family: "Ribeye", Helvetica !important;
+  font-family: "quicksand", sans-serif !important;
   font-size: 40px !important;
   height: 50.93% !important;
   width: 28.12% !important;
@@ -440,7 +446,7 @@
 
 .home .phd-in-robotics-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 28px;
   font-weight: 400;
   left: 63px;
@@ -452,12 +458,13 @@
 }
 
 .home .text-wrapper-87 {
-  font-weight: 600;
+  font-family: "quicksand", sans-serif;
+  font-weight: 700;
 }
 
 .home .text-wrapper-88 {
   color: #5b240c;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 28px;
   font-weight: 400;
   letter-spacing: 0;
@@ -466,9 +473,9 @@
 
 .home .text-wrapper-89 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   left: 63px;
   letter-spacing: 0;
   line-height: 40px;
@@ -479,7 +486,7 @@
 
 .home .m-s-in-robotics-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 28px;
   font-weight: 400;
   left: 63px;
@@ -492,9 +499,9 @@
 
 .home .text-wrapper-90 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   left: 63px;
   letter-spacing: 0;
   line-height: 40px;
@@ -505,7 +512,7 @@
 
 .home .b-s-in-mechanical-2 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 28px;
   font-weight: 400;
   left: 63px;
@@ -518,9 +525,9 @@
 
 .home .text-wrapper-91 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 32px;
-  font-weight: 600;
+  font-weight: 700;
   left: 63px;
   letter-spacing: 0;
   line-height: 40px;
@@ -533,7 +540,7 @@
   align-items: flex-end;
   color: var(--blue-contrast);
   display: flex;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 80px;
   font-weight: 700;
   height: 116px;
@@ -597,9 +604,9 @@
 .home .text-wrapper-93 {
   color: var(--dark-brown);
   text-decoration: underline;
-  font-family: "Poppins", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 24px;
-  font-weight: 400;
+  font-weight: 700;
   left: 0;
   letter-spacing: 0;
   line-height: 44px;
@@ -616,9 +623,9 @@
 
 .home .text-wrapper-94 {
   color: var(--red-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 80px;
-  font-weight: 900;
+  font-weight: 700;
   left: 0;
   letter-spacing: 0;
   line-height: 44px;
@@ -679,7 +686,7 @@
   align-items: center;
   color: transparent;
   display: flex;
-  font-family: "Inter", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 12px;
   font-weight: 400;
   height: 110px;
@@ -695,7 +702,7 @@
 
 .home .text-wrapper-95 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 24px;
   font-weight: 400;
   left: 621px;
@@ -725,7 +732,7 @@
   align-items: center;
   color: transparent;
   display: flex;
-  font-family: "Inter", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 12px;
   font-weight: 400;
   /* height: 2610px; */
@@ -744,7 +751,7 @@
 
 .home .text-wrapper-96 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 24px;
   font-weight: 400;
   left: 1140px;
@@ -781,7 +788,7 @@
   padding-bottom: 8px;
   border-bottom: 1px solid rgba(91, 36, 12, 0.2);
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "quicksand", sans-serif;
   font-size: 17px;
   font-weight: 700;
   line-height: 1.2;
@@ -808,9 +815,9 @@
 .recentYear {
   margin: 0 0 6px;
   color: #5b240c;
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "quicksand", sans-serif;
   font-size: 15px;
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.2;
 }
 
@@ -820,7 +827,7 @@
   list-style-type: disc;
   list-style-position: outside;
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "quicksand", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.45;
@@ -839,7 +846,7 @@
 .recentUpdates .updateLink {
   color: var(--dark-brown);
   text-decoration: underline;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .recentUpdates .updateLink:hover {

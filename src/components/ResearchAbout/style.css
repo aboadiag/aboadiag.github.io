@@ -11,7 +11,7 @@
 
 .research-about .text-wrapper-14 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 100px;
   font-weight: 400;
   height: 72px;
@@ -22,7 +22,7 @@
 
 .research-about .my-research-focuses {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 400;
   height: 250px;
@@ -32,7 +32,7 @@
 
 .research-about .span {
   color: #5b240c;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 400;
   letter-spacing: 0;

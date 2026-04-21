@@ -59,7 +59,7 @@
 /* Common style for all links */
 .nav-link-item {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica, sans-serif;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   text-decoration: none; /* Removes default underline */

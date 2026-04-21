@@ -1,7 +1,6 @@
 /* Footer.module.css */
 
-@import "./styleguide.css"; 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Patrick+Hand&display=swap');
+@import "./styleguide.css";
 
 /* --- CONFIG --- */
 :root {
@@ -54,9 +53,9 @@
   
   margin-bottom: 0px; 
   color: var(--red-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: clamp(2.5rem, 5vw, 5rem); 
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -65,7 +64,7 @@
   justify-self: start;
   
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: clamp(1rem, 2vw, 24px); 
   font-weight: 400;
   line-height: 44px;
@@ -107,7 +106,7 @@
 
 .footer .text-wrapper-95 { 
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 44px;
@@ -134,7 +133,7 @@
 
 .footer .text-wrapper-96 { 
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 24px;
   font-weight: 400;
   line-height: 44px;
@@ -154,7 +153,7 @@
   
   /* Colors and Fonts */
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 16px; 
   font-weight: 700;
   opacity: 0.8; 

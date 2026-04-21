@@ -24,7 +24,7 @@
 
 .nav-bar-wrapper .text-wrapper-9 {
   color: var(--dark-brown);
-  font-family: "Figma Hand-Bold", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 30px;
   font-weight: 700;
   height: 96px;
@@ -35,7 +35,7 @@
 
 .nav-bar-wrapper .text-wrapper-10 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -48,7 +48,7 @@
 
 .nav-bar-wrapper .text-wrapper-11 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -62,7 +62,7 @@
 .nav-bar-wrapper .text-wrapper-12 {
   color: var(--dark-brown);
   display: block;
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
@@ -75,7 +75,7 @@
 
 .nav-bar-wrapper .text-wrapper-13 {
   color: var(--dark-brown);
-  font-family: "Roboto", Helvetica;
+  font-family: "quicksand", sans-serif;
   font-size: 25px;
   font-weight: 400;
   height: 29px;
