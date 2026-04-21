@@ -40,7 +40,8 @@
   /* Added fallbacks */
   /* font-size: 30px;
   font-weight: 700; */
-  font-family: "gugi", sans-serif;
+  /* Adobe Typekit kit uses lowercase family name; "Gugi" as fallback if kit CSS differs */
+  font-family: "gugi", "Gugi", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
