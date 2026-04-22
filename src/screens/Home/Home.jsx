@@ -4,6 +4,7 @@ import React, { useCallback, useLayoutEffect, useRef, useState } from "react";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Home.module.css";
 import { Footer } from "../../components/Footer";
+import footerStyles from "../../components/Footer/Footer.module.css";
 
 // ... (Keep your existing handleLoadError function here) ...
 
@@ -607,6 +608,7 @@ export const Home = () => {
              3. 'top: 2500px' places it right after your education section ends.
           */}
           <Footer
+            className={footerStyles.footerScaledCanvas}
             style={{
               position: 'absolute',
               top: 'calc(3440px - var(--home-hero-lift))',
