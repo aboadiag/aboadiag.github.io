@@ -237,15 +237,20 @@ export const Projects = () => {
       {/* ================= PROJECT 2: ROBOT MEDIATED ================= */}
       <div className={styles['project-robot-2']}>
         <p className={styles['robot-mediated']}>
-          Robot Mediated Haptic Mouse for Co-creation of Non-Visual Aids
+          Robot-Mediated Haptic Mouse for Co-creation of Non-Visual Aids
           between&nbsp;&nbsp;TVIs &amp; BLV Students
         </p>
 
         <div className={styles['split-content']}>
           <div className={styles['left-column']}>
-            <video controls className={styles['project-video']}>
-              <source src="/vids/haptic-mouse-vid.mp4" type="video/mp4" />
-            </video>
+            {/* <video controls className={styles['project-video']}>
+              <source src="/vids/haptic-mouse-gif.mp4" type="video/mp4" />
+            </video> */}
+             <img 
+            className={styles['project-video']} 
+            src="/vids/haptic-mouse-gif-2.gif" 
+            alt="Human engaging with interactive social robot" 
+            />
             <p className={styles['media-caption']}>
               Left: FDM 3D printed 3DoF RUU Delta Rendering a Simple Spring;
               Middle: SLA printed 3 Dof RUU Delta with Capstan Drive Mechanism;
