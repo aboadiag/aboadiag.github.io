@@ -86,20 +86,30 @@ const UPDATES_YEAR_ORDER = Object.keys(UPDATES_DATA)
 /* --- CAROUSEL HIGHLIGHT SLIDES ------*/
 const HIGHLIGHT_SLIDES = [
   {
+    src: "/vids/misty-reg-gif-2.gif",
+    alt: "Abena's smart watch shows elevated breathrate. Misty robot's light turns read and she says 'I'm sensing some stress. Let's take a minute.' Abena breaths. Misty's Light turns blue and she says 'Your breathing is perfect. Keep it up' ",
+    caption: "Ubiqutous sensing & social robot integration for personalized well-being.",
+  },
+  {
     src: "/vids/parametric-haptics-vid-gif_v1.gif",
     alt: "Gif of Early prototype with vertical motor arrangement then Final Prototype with horizontal motor arrangement",
     caption: "Tendon-driven customizable tactor patches with vertical motor arrangement &amp; final version with horizontal motor arrangement.",
   },
   {
-    src: "/img/voice-agent-blur.svg",
-    alt: "Stylized graphic related to voice agents research",
-    caption: "Research & design",
+    src: "/vids/human-robot-synchrony-gif-3.gif",
+    alt: "Human and robot arm paint in-sync",
+    caption: "Observers rated robots that synchronized their motions with a person during joint painting more empathic & acceptable.",
   },
-  {
-    src: "/img/vector-1-3.svg",
-    alt: "",
-    caption: "Visual work",
-  },
+  // {
+  //   src: "/vids/human-robot-synchrony-gif.gif",
+  //   alt: "Human and robot arm paint in-sync",
+  //   caption: "Observers rated robots that synchronized their motions with a person during joint painting more empathic & acceptable.",
+  // }
+  // {
+  //   src: "/img/vector-1-3.svg",
+  //   alt: "",
+  //   caption: "Visual work",
+  // },
 ];
 
 /* ---- CAROUSEL FUNCTION ---- */
@@ -410,10 +420,10 @@ export const Home = () => {
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <span className={styles['text-wrapper-74']}>TBD Lab</span>
+                <span className={styles['text-wrapper-74']}>TBD Lab.</span>
               </a> <br />
               <br />
-              <span className={styles['text-wrapper-71']}>. I graduate in 2026 and am actively seeking </span>
+              <span className={styles['text-wrapper-71']}> I graduate in 2026 and am actively seeking </span>
                 <span className={styles['text-wrapper-72']}>full-time positions.</span> <br />
                 <br />
                 <span className={styles['text-wrapper-71']}>

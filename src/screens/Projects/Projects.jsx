@@ -90,14 +90,13 @@ export const Projects = () => {
 
       <div className={styles.projectsProjectStack}>
       {/* ================= PROJECT 0: INCLUSIVE E-LEARNING (DUOLINGO TARGET) ================= */}
-  <div className={styles['project-persuasive-2']}> {/* Reusing card style for consistency */}
+  {/* <div className={styles['project-persuasive-2']}>
     <p className={styles['persuasive-title']}>
       Inclusive Literacy: Expert-Novice Modeling for Digital Accessibility
     </p>
 
     <div className={styles['split-content']}>
       <div className={styles['left-column']}>
-        {/* Assuming you'll add an image or GIF of the learning path here */}
         <img 
           className={styles['project-video']} 
           src="/img/e-learning-project.png" 
@@ -133,7 +132,61 @@ export const Projects = () => {
         </p>
       </div>
     </div>
-  </div>
+  </div> */}
+
+  {/* ================= PROJECT 0: CO-DESIGNING INCLUSIVE SOCIAL ROBOTS ================= */}
+
+  <div className={styles['project-persuasive-2']}>
+    <p className={styles['persuasive-title']}>
+      Co-designing Inclusive Social Robots with Black women with Anxiety and/or Depression
+    </p>
+
+    <div className={styles['split-content']}>
+      <div className={styles['left-column']}>
+        <img 
+          className={styles['project-video']} 
+          src="/vids/interactive-robot-misty-gif-2.gif" 
+          alt="Human engaging with interactive social robot" 
+        />
+        <p className={styles['media-caption']}>
+          Example of an interaction with a prototype of a social robot that supports meaning-making.
+        </p>
+        <div className={styles['project-date']}>Ongoing</div>
+      </div>
+
+      <div className={styles['right-column']}>
+        <div className={styles['description-header']}>
+              Description 
+              <span className={styles['bracket']}> [</span>
+              <a href="https://github.com/aboadiag/misty-speculative-prototyping" target="_blank" rel="noopener noreferrer" className={styles['link-text']}>
+                github project
+              </a>
+              <span className={styles['bracket']}>]</span>
+            </div>
+
+        <p className={styles['persuasive-blurb']}>
+          Anxiety and depression being the most common mental health conditions
+          experienced by black women (BW) in the US. Still, BW with anxiety and/or depression
+          (BWA/D) are under-diagnosed, mis-diagnosed, and under-treated at higher rates than other social groups
+          due to structural inequities. In human-robot interaction (HRI), researchers have shown the 
+          promise of social robots (SRs) for mental well-being. However, 
+          there is a lack of work exploring the potential of these technologies for BWA/D. 
+          Still, preliminary evidence suggests the value of engaging BWA/D in the co-design of mental health technologies.
+          Furthermore, recent work shows that culturally responsive technology innovation with Black girls
+          promotes techno-agency and community development; this suggests that engaging BW in community-focused technology 
+          innovation is empowering and enables them to construct futures necessary for their social transformation.
+    
+          <br /><br />
+          In this work, I lead two-phase participatory design (PD) workshops to explore how the 
+          lived experiences of BWA/D can reshape the design of social robot-mediated mental well-being. Across 15 in-person
+          PD prototyping sessions, we explore the roles and responsibilities of SRs, features and functionalities,
+          and socio-ethical considerations that BWA/D stakeholders envision when ideating about social robot-mediated mental well-being.
+        </p>
+      </div>
+    </div>
+  </div> 
+
+
 
       {/* ================= PROJECT 1: PERSUASIVE ================= */}
       <div className={styles['project-persuasive-2']}>
