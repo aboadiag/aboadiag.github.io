@@ -12,6 +12,10 @@ dist
 dist-ssr
 *.local
 
+# Vite publicDir is ./static — keep media only under static/ (avoid duplicate root folders)
+/vids/
+/img/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
