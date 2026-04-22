@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
 import { Footer } from "../../components/Footer";
+import { ProjectDescriptionClamp } from "../../components/ProjectDescriptionClamp/ProjectDescriptionClamp";
 
 /** Must match `--research-design-w-px` in Research.module.css */
 const RESEARCH_DESIGN_W = 1440;
@@ -148,38 +149,41 @@ export const Research = () => {
           {/* RIGHT */}
           <div className={styles['right-column']}>
             <div className={styles['description-header']}>
-              Description 
+              Description
               <span className={styles['bracket']}> [</span>
-               <a
+              <a
                 href="https://dl.acm.org/doi/epdf/10.1145/3757279.3785567"
                 rel="noopener noreferrer"
                 target="_blank"
                 className={styles['link-text']}
               >
-                HRI '26 
+                HRI '26
               </a>
               <span className={styles['bracket']}>]</span>
-              <p className={styles['project-text']}>
-                	🏆 Best Paper Honorable Mention
-              </p>
             </div>
 
-            <p className={styles['project-text']}>
-              On-demand, last-mile delivery (OD/LMD) is used by people with disabilities (PwDs)
-              for various reasons. As delivery robots are being introduced into OD/LMD ecosystems,
-              PwDs are more likely to encounter them.
-              In the U.S. alone, there have been several reports about PwDs'
-              negative encounters with delivery robots, necessitating their redesigns.
-              Over 2 months, we invited 14 local PwDs to participate in 
-              2 phases: focus groups/interviews aimed at capturing their experiences 
-              and perspectives on existing OD/LMD solutions;
-              and participatory prototyping workshops in which participants 
-              iterated on co-designs through up to three in-person sessions and remote diary studies.
-              The contributions of this work are twofold: (1) varied designs for delivery robots, including 
-              different form factors, features, &amp; interaction modalities; and 
-              (2) community-informed considerations that roboticists &amp; designers 
-              should incorporate when designing ADRs. 
+            <p className={styles.projectTextAward}>
+              🏆 Best Paper Honorable Mention
             </p>
+
+            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+              <p>
+                On-demand, last-mile delivery (OD/LMD) is used by people with disabilities (PwDs)
+                for various reasons. As delivery robots are being introduced into OD/LMD ecosystems,
+                PwDs are more likely to encounter them.
+                In the U.S. alone, there have been several reports about PwDs'
+                negative encounters with delivery robots, necessitating their redesigns.
+                Over 2 months, we invited 14 local PwDs to participate in
+                2 phases: focus groups/interviews aimed at capturing their experiences
+                and perspectives on existing OD/LMD solutions;
+                and participatory prototyping workshops in which participants
+                iterated on co-designs through up to three in-person sessions and remote diary studies.
+                The contributions of this work are twofold: (1) varied designs for delivery robots, including
+                different form factors, features, &amp; interaction modalities; and
+                (2) community-informed considerations that roboticists &amp; designers
+                should incorporate when designing ADRs.
+              </p>
+            </ProjectDescriptionClamp>
           </div>
         </div>
       </div>
@@ -224,19 +228,21 @@ export const Research = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['project-text']}>
-              Interpersonal synchrony (IS), the behavioral &amp; physiological 
-              coordination across time and space, plays a crucial role in social 
-              interactions by fostering empathy, closeness, &amp; prosocial behaviors. 
-              We investigated the impact of IS on human raters’ perceptions of a human-robot (HR) dyad engaged in a joint painting activity.
-              We conducted two online studies (n = 70, total) in which participants watched 4 videos.
-              We varied the degree of IS displayed by an HR dyad on two axes: (a) temporal alignment (e.g., speed of producing brush strokes) 
-              &amp; (b) spatial similarity (i.e., similarity in the visual content produced).
-              Our results indicate that some temporal &amp; spatial dimensions of IS displayed by an HR dyad 
-              during joint painting have significant positive impacts on external observers’ perceptions of the robot, 
-              including prosocial tendencies (i.e., empathy, synchrony, and closeness) and acceptance. 
-              These findings are significant for emergent research on collaborative robots.
-            </p>
+            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+              <p>
+                Interpersonal synchrony (IS), the behavioral &amp; physiological
+                coordination across time and space, plays a crucial role in social
+                interactions by fostering empathy, closeness, &amp; prosocial behaviors.
+                We investigated the impact of IS on human raters’ perceptions of a human-robot (HR) dyad engaged in a joint painting activity.
+                We conducted two online studies (n = 70, total) in which participants watched 4 videos.
+                We varied the degree of IS displayed by an HR dyad on two axes: (a) temporal alignment (e.g., speed of producing brush strokes)
+                &amp; (b) spatial similarity (i.e., similarity in the visual content produced).
+                Our results indicate that some temporal &amp; spatial dimensions of IS displayed by an HR dyad
+                during joint painting have significant positive impacts on external observers’ perceptions of the robot,
+                including prosocial tendencies (i.e., empathy, synchrony, and closeness) and acceptance.
+                These findings are significant for emergent research on collaborative robots.
+              </p>
+            </ProjectDescriptionClamp>
           </div>
         </div>
       </div>
@@ -280,21 +286,23 @@ export const Research = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['project-text']}>
-              Navigating through unfamiliar environments is a challenging task.
-              For people who are blind or have low vision (BLV), 
-              navigation can be particularly daunting. 
-              Guide robots are a type of service robot that can assist BLV people with navigation tasks.
-              We conducted a user study with 16 BLV 
-              participants to co-design guide robots that enhance BLV users’ sense of orientation, perceived safety, and comfort. 
-              We conducted semi-structured interviews and participatory design (PD) sessions with each of the participants. 
-              The PD sessions utilized a scenario-based design (SBD) approach 
-              aimed at identifying ideal features and functionality of guide robots and a dialogue simulated activity to verify these requirements. 
-              We identified three key themes that serve as design considerations for future robotic mobility aids for BLV people:
-              (1) features that enhance the usability of guide robot systems;
-              factors that (2) influence BLV users’ desires for shared robot control;
-              and (3) enhance BLV users’ perceived safety in public settings.
-            </p>
+            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+              <p>
+                Navigating through unfamiliar environments is a challenging task.
+                For people who are blind or have low vision (BLV),
+                navigation can be particularly daunting.
+                Guide robots are a type of service robot that can assist BLV people with navigation tasks.
+                We conducted a user study with 16 BLV
+                participants to co-design guide robots that enhance BLV users’ sense of orientation, perceived safety, and comfort.
+                We conducted semi-structured interviews and participatory design (PD) sessions with each of the participants.
+                The PD sessions utilized a scenario-based design (SBD) approach
+                aimed at identifying ideal features and functionality of guide robots and a dialogue simulated activity to verify these requirements.
+                We identified three key themes that serve as design considerations for future robotic mobility aids for BLV people:
+                (1) features that enhance the usability of guide robot systems;
+                factors that (2) influence BLV users’ desires for shared robot control;
+                and (3) enhance BLV users’ perceived safety in public settings.
+              </p>
+            </ProjectDescriptionClamp>
           </div>
         </div>
       </div>
@@ -334,18 +342,20 @@ export const Research = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['project-text']}>
-            Workplaces are high-pressure environments that lead to occupational stress and anxiety. 
-            Still, there are few deliberate opportunities for employees to regulate their emotional state in the workplace. 
-            We present a voice agent to guide a users through a therapeutic art-making intervention
-            and promote emotion regulation within the workplace. We use a Wizard-of-Oz (WoZ)
-            methodology to conduct pilot studies in which we evaluate the voice agent-guided interactions
-            to that of a self-guided interaction. We share preliminary insights regarding the design 
-            of our voice agent, including the importance of embodiment and personalization. 
-            We also share insights about the feasibility of our proposed user study, 
-            which is aimed at evaluating the effectiveness of our voice agent at promoting emotion regulation 
-            in employees through therapeutic art-making.
-            </p>
+            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+              <p>
+                Workplaces are high-pressure environments that lead to occupational stress and anxiety.
+                Still, there are few deliberate opportunities for employees to regulate their emotional state in the workplace.
+                We present a voice agent to guide a users through a therapeutic art-making intervention
+                and promote emotion regulation within the workplace. We use a Wizard-of-Oz (WoZ)
+                methodology to conduct pilot studies in which we evaluate the voice agent-guided interactions
+                to that of a self-guided interaction. We share preliminary insights regarding the design
+                of our voice agent, including the importance of embodiment and personalization.
+                We also share insights about the feasibility of our proposed user study,
+                which is aimed at evaluating the effectiveness of our voice agent at promoting emotion regulation
+                in employees through therapeutic art-making.
+              </p>
+            </ProjectDescriptionClamp>
           </div>
         </div>
       </div>

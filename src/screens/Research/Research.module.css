@@ -94,48 +94,53 @@
   z-index: 2;
 }
 
-/* Project cards: equal vertical spacing from intro through footer */
+/* Project rows: equal min-height, spacing between projects (no overlap) */
 .researchProjectStack {
   flex: 1 1 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 28px 0 56px;
+  padding: 32px 0 72px;
+  gap: 0;
 }
 
-/* --- SHARED CARD STYLING --- */
+/* --- PROJECT PANELS (white page; no colored card) --- */
 .project-delivery,
 .project-ishra,
 .project-guide,
 .project-voice {
-  background-color: var(--high-contrast-background); 
-  border-radius: 84px;
-  width: 1273px;
-  /* Allow height to grow naturally with content */
-  height: auto; 
-  padding: 60px;
+  background-color: transparent;
+  border-radius: 0;
+  width: 100%;
+  max-width: 1273px;
+  min-height: 680px;
+  padding: 0 60px 64px;
+  margin: 0 auto 0;
   box-sizing: border-box;
-  
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  
-  /* High contrast text color */
-  color: var(--high-contrast-color);
+  gap: 28px;
+  color: var(--dark-brown);
   position: relative;
+  border-bottom: 1px solid rgba(91, 36, 12, 0.12);
+}
+
+.project-voice {
+  border-bottom: none;
+  padding-bottom: 48px;
 }
 
 /* --- TITLES --- */
 .project-title {
-  color: var(--high-contrast-color);
+  color: var(--dark-brown);
   font-family: "quicksand", sans-serif;
   font-size: 36px;
   font-weight: 700;
-  text-align: center;
+  text-align: left;
   width: 100%;
   margin: 0;
 }
@@ -144,75 +149,87 @@
 .split-content {
   display: flex;
   flex-direction: row;
-  gap: 60px; 
-  /* Items stretch to match height, but content inside aligns naturally */
-  align-items: stretch; 
+  gap: 56px;
+  align-items: stretch;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .left-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* Ensures date is pushed to bottom */
-  justify-content: space-between; 
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  min-width: 0;
 }
 
 .right-column {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  text-align: right; 
+  gap: 12px;
+  text-align: right;
   align-items: flex-end;
+  min-width: 0;
 }
 
 /* --- TEXT --- */
 .description-header {
-  color: var(--high-contrast-color);
+  color: var(--dark-brown);
   font-family: "quicksand", sans-serif;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 5px;
-  text-align: justify;
+  margin-bottom: 4px;
+  text-align: right;
+  width: 100%;
 }
 
 .project-text {
-  color: var(--high-contrast-color);
+  color: var(--dark-brown);
   font-family: "quicksand", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 1.6;
-  text-align: justify;
+  text-align: right;
+  width: 100%;
+  margin: 0;
+}
+
+.projectTextAward {
+  color: var(--dark-brown);
+  font-family: "quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: right;
+  width: 100%;
+  margin: 0 0 8px;
 }
 
 .link-text {
-  color: var(--high-contrast-color);
+  color: var(--dark-brown);
   font-family: "quicksand", sans-serif;
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
   margin-left: 5px;
 }
-.bracket { color: var(--high-contrast-color); }
+
+.bracket {
+  color: var(--dark-brown);
+}
 
 /* --- MEDIA (NO CROP FIX) --- */
 .project-image,
 .project-video {
-  /* Scale width to fill the column */
-  width: 100%; 
-  /* Allow height to adjust naturally based on aspect ratio */
-  height: auto; 
-  
+  width: 100%;
+  height: auto;
   border-radius: 20px;
-  
-  /* Ensure the full image is visible, never cropped */
-  object-fit: contain; 
-  
-  /* Optional: background for videos if aspect ratio leaves gaps */
+  object-fit: contain;
   background-color: transparent;
-  
-  /* Centers media if it's smaller than the container */
-  align-self: center; 
+  align-self: flex-start;
 }
 
 /* --- FIX FOR PROJECT 3 HEIGHT --- */
@@ -225,10 +242,10 @@
 
 .video-container {
   width: 100%;
-  height: auto; /* Let the video dictate height */
+  height: auto;
   position: relative;
   display: flex;
-  justify-content: center; /* Center video if it scales down */
+  justify-content: flex-start;
 }
 
 /* IS4HRA: animated GIF in same slot as former MP4 (16:9), letterboxed if needed */
@@ -238,36 +255,36 @@
   max-width: 100%;
   height: auto;
   object-fit: contain;
-  background-color: rgba(0, 0, 0, 0.35);
+  background-color: rgba(91, 36, 12, 0.06);
   display: block;
 }
 
 /* Caption under media */
 .media-caption {
-  color: var(--high-contrast-color);
+  color: var(--dark-brown);
   font-family: "quicksand", sans-serif;
   font-size: 18px;
   font-style: italic;
   font-weight: 400;
-  margin-top: 15px;
+  margin-top: 12px;
   text-align: left;
+  width: 100%;
+  max-width: 100%;
 }
 
 /* --- DATES --- */
 .project-date {
   color: var(--dark-brown);
-  background-color: var(--high-contrast-color);
-  padding: 8px 24px;
+  background-color: rgba(91, 36, 12, 0.08);
+  padding: 8px 20px;
   border-radius: 30px;
-  
   font-family: "quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-style: italic;
   font-weight: 700;
-  
   width: fit-content;
-  margin-top: 40px; /* Ensure space from caption above */
-  padding-top: 8px; 
+  margin-top: auto;
+  padding-top: 8px;
 }
 
 /* --- UTILITIES --- */

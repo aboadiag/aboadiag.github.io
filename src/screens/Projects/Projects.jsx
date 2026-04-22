@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Projects.module.css";
 import { Footer } from "../../components/Footer";
+import { ProjectDescriptionClamp } from "../../components/ProjectDescriptionClamp/ProjectDescriptionClamp";
 
 /** Must match `--projects-design-w-px` in Projects.module.css */
 const PROJECTS_DESIGN_W = 1440;
@@ -164,24 +165,26 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-        <p className={styles['persuasive-blurb']}>
-          Anxiety and depression being the most common mental health conditions
-          experienced by black women (BW) in the US. Still, BW with anxiety and/or depression
-          (BWA/D) are under-diagnosed, mis-diagnosed, and under-treated at higher rates than other social groups
-          due to structural inequities. In human-robot interaction (HRI), researchers have shown the 
-          promise of social robots (SRs) for mental well-being. However, 
-          there is a lack of work exploring the potential of these technologies for BWA/D. 
-          Still, preliminary evidence suggests the value of engaging BWA/D in the co-design of mental health technologies.
-          Furthermore, recent work shows that culturally responsive technology innovation with Black girls
-          promotes techno-agency and community development; this suggests that engaging BW in community-focused technology 
-          innovation is empowering and enables them to construct futures necessary for their social transformation.
-    
-          <br /><br />
-          In this work, I lead two-phase participatory design (PD) workshops to explore how the 
-          lived experiences of BWA/D can reshape the design of social robot-mediated mental well-being. Across 15 in-person
-          PD prototyping sessions, we explore the roles and responsibilities of SRs, features and functionalities,
-          and socio-ethical considerations that BWA/D stakeholders envision when ideating about social robot-mediated mental well-being.
-        </p>
+        <ProjectDescriptionClamp contentClassName={styles['persuasive-blurb']}>
+          <p>
+            Anxiety and depression being the most common mental health conditions
+            experienced by black women (BW) in the US. Still, BW with anxiety and/or depression
+            (BWA/D) are under-diagnosed, mis-diagnosed, and under-treated at higher rates than other social groups
+            due to structural inequities. In human-robot interaction (HRI), researchers have shown the
+            promise of social robots (SRs) for mental well-being. However,
+            there is a lack of work exploring the potential of these technologies for BWA/D.
+            Still, preliminary evidence suggests the value of engaging BWA/D in the co-design of mental health technologies.
+            Furthermore, recent work shows that culturally responsive technology innovation with Black girls
+            promotes techno-agency and community development; this suggests that engaging BW in community-focused technology
+            innovation is empowering and enables them to construct futures necessary for their social transformation.
+            <br />
+            <br />
+            In this work, I lead two-phase participatory design (PD) workshops to explore how the
+            lived experiences of BWA/D can reshape the design of social robot-mediated mental well-being. Across 15 in-person
+            PD prototyping sessions, we explore the roles and responsibilities of SRs, features and functionalities,
+            and socio-ethical considerations that BWA/D stakeholders envision when ideating about social robot-mediated mental well-being.
+          </p>
+        </ProjectDescriptionClamp>
       </div>
     </div>
   </div> 
@@ -215,15 +218,17 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['persuasive-blurb']}>
-              Visual art-making can support mental wellbeing.
-              Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user "involvement" (a proxy for engagement; low, medium, high),
-              to adapt a social robotic coach's personality (i.e., charismatic/direct vs uncharismatic/indirect) 
-              with the goal of increasing user engagement. While there are benefits 
-              of personalized robotic coach feedback during visual art-making activities, 
-              our work suggests the importance of identifying user-specific context 
-              (e.g., attention, stress, affect) to enrich feedback personalization policies.
-            </p>
+            <ProjectDescriptionClamp contentClassName={styles['persuasive-blurb']}>
+              <p>
+                Visual art-making can support mental wellbeing.
+                Task engagement predicts the effectiveness of visual art-making. I implemented a context bandit policy, which contextualizes user &quot;involvement&quot; (a proxy for engagement; low, medium, high),
+                to adapt a social robotic coach&apos;s personality (i.e., charismatic/direct vs uncharismatic/indirect)
+                with the goal of increasing user engagement. While there are benefits
+                of personalized robotic coach feedback during visual art-making activities,
+                our work suggests the importance of identifying user-specific context
+                (e.g., attention, stress, affect) to enrich feedback personalization policies.
+              </p>
+            </ProjectDescriptionClamp>
           </div>
         </div>
       </div>
@@ -258,23 +263,26 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <p className={styles['blurb-4']}>
-              Inspired by my previous work in accessible haptics,
-              I iterated on a robot-mediated haptic mouse&nbsp;&nbsp;to facilitate
-              on-demand and iterative adaptation of visual aids used in K-12
-              learning to non-visual, particularly haptic modalities. This haptic
-              device is an impedance-type kinesthetic device based on an RUU delta
-              mechanism. 
-              <br /><br />
-              Additionally, I conducted semi-structured interviews with 5 educators --
-              all have teacher of students with visual impairment (TVI) experience -- 
-              and identified their considerations when creating adaptations, 
-              attitudes towards technology, and perspectives on existing barriers to access. 
-              Our findings reveal and reaffirm unresolved challenges in the adaptation process
-              as well as offer insights into key factors that must be considered when selecting the
-              type of adaptation. We formulate design recommendations for interactive tools that support
-              TVIs in creating effective adaptations for BLV students.
-            </p>
+            <ProjectDescriptionClamp contentClassName={styles['blurb-4']}>
+              <p>
+                Inspired by my previous work in accessible haptics,
+                I iterated on a robot-mediated haptic mouse&nbsp;&nbsp;to facilitate
+                on-demand and iterative adaptation of visual aids used in K-12
+                learning to non-visual, particularly haptic modalities. This haptic
+                device is an impedance-type kinesthetic device based on an RUU delta
+                mechanism.
+                <br />
+                <br />
+                Additionally, I conducted semi-structured interviews with 5 educators --
+                all have teacher of students with visual impairment (TVI) experience --
+                and identified their considerations when creating adaptations,
+                attitudes towards technology, and perspectives on existing barriers to access.
+                Our findings reveal and reaffirm unresolved challenges in the adaptation process
+                as well as offer insights into key factors that must be considered when selecting the
+                type of adaptation. We formulate design recommendations for interactive tools that support
+                TVIs in creating effective adaptations for BLV students.
+              </p>
+            </ProjectDescriptionClamp>
           </div>
         </div>
       </div>
@@ -325,17 +333,19 @@ export const Projects = () => {
                    <span className={styles['bracket']}>]</span>
                 </div>
 
-                <p className={styles['text-wrapper-115']}>
-                  We presented Parametric Haptics, customizable and versatile haptic
-                  patches that are lightweight, reconfigurable, and can be integrated as
-                  wearables or into objects. We linearly actuated the motors by
-                  varying the direction of the rotation, the Pulse-Width-Modulation
-                  (PWM), and the duration and frequency of the pulses, allowing us to
-                  approximate control over the displacement of the tactors and velocity
-                  of actuation to achieve a diverse set of tactile sensations.  Control
-                  strategies can be adapted to elicit desired tactile feedback and
-                  incorporate refined control approaches with appropriate hardware consideration.
-                </p>
+                <ProjectDescriptionClamp contentClassName={styles['text-wrapper-115']}>
+                  <p>
+                    We presented Parametric Haptics, customizable and versatile haptic
+                    patches that are lightweight, reconfigurable, and can be integrated as
+                    wearables or into objects. We linearly actuated the motors by
+                    varying the direction of the rotation, the Pulse-Width-Modulation
+                    (PWM), and the duration and frequency of the pulses, allowing us to
+                    approximate control over the displacement of the tactors and velocity
+                    of actuation to achieve a diverse set of tactile sensations. Control
+                    strategies can be adapted to elicit desired tactile feedback and
+                    incorporate refined control approaches with appropriate hardware consideration.
+                  </p>
+                </ProjectDescriptionClamp>
             </div>
         </div>
       </div>
@@ -371,17 +381,19 @@ export const Projects = () => {
                 <span className={styles['bracket']}>]</span>
               </div>
 
-              <p className={styles['text-wrapper-109']}>
-                The preliminary development of a mechanically-actuated, kinesthetic
-                haptic mouse for tactile graphic rendering to assist with remote
-                learning for blind and low vision (BLV) students. It provides
-                kinesthetic feedback to render surfaces and the mechanism is a 3 DOF
-                (height, pitch, yaw) modified Stewart platform. We explore the
-                system’s design, integration, and preliminary implementation. For
-                future work, we proposed the integration of a voice coil actuator
-                (VCA) for haptic texture rendering and a sensor for absolute position
-                tracking.
-              </p>
+              <ProjectDescriptionClamp contentClassName={styles['text-wrapper-109']}>
+                <p>
+                  The preliminary development of a mechanically-actuated, kinesthetic
+                  haptic mouse for tactile graphic rendering to assist with remote
+                  learning for blind and low vision (BLV) students. It provides
+                  kinesthetic feedback to render surfaces and the mechanism is a 3 DOF
+                  (height, pitch, yaw) modified Stewart platform. We explore the
+                  system&apos;s design, integration, and preliminary implementation. For
+                  future work, we proposed the integration of a voice coil actuator
+                  (VCA) for haptic texture rendering and a sensor for absolute position
+                  tracking.
+                </p>
+              </ProjectDescriptionClamp>
            </div>
         </div>
       </div>
