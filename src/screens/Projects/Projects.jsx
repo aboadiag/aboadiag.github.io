@@ -146,6 +146,8 @@ export const Projects = () => {
           className={styles['project-video']} 
           src="/vids/interactive-robot-misty-gif-2.gif" 
           alt="Human engaging with interactive social robot" 
+          decoding="async"
+
         />
         <p className={styles['media-caption']}>
           Example of an interaction with a prototype of a social robot that supports meaning-making.
@@ -207,6 +209,7 @@ export const Projects = () => {
               className={styles['project-video']} 
               src="/vids/persuasive_misty-gif-2.gif" 
               alt="Two side by side clips of participants drawing on computer while robot is on the table near them" 
+              decoding="async"
             />
             <p className={styles['media-caption']}>
               Two Pilot Participants. Left: Baseline. Right: Context Bandit.
@@ -255,6 +258,7 @@ export const Projects = () => {
             className={styles['project-video']} 
             src="/vids/haptic-mouse-gif-2.gif" 
             alt="Robot mediated haptic platform" 
+            decoding="async"
             />
             <p className={styles['media-caption']}>
               Left: FDM 3D printed 3DoF RUU Delta Rendering a Simple Spring;

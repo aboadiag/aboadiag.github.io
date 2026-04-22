@@ -160,7 +160,7 @@ function HomeHighlightCarousel() {
           >
             {HIGHLIGHT_SLIDES.map((slide, i) => (
               <div key={i} className={styles.homeCarouselSlide} aria-hidden={i !== index}>
-                <img src={slide.src} alt={slide.alt} draggable={false} />
+                <img src={slide.src} alt={slide.alt} draggable={false} decoding="async"/>
               </div>
             ))}
           </div>
