@@ -9,6 +9,8 @@ export function ProjectDescriptionClamp({
   children,
   contentClassName = "",
   collapsedHeightPx = 220,
+  /** Called after clamp layout (collapse/expand/measure) so the page can resize the artboard. */
+  onLayoutStable,
 }) {
   const innerRef = useRef(null);
   const [expanded, setExpanded] = useState(false);
@@ -27,11 +29,14 @@ export function ProjectDescriptionClamp({
     const ro = new ResizeObserver(() => measure());
     ro.observe(el);
     window.addEventListener("resize", measure);
+    queueMicrotask(() => {
+      onLayoutStable?.();
+    });
     return () => {
       ro.disconnect();
       window.removeEventListener("resize", measure);
     };
-  }, [measure, children]);
+  }, [measure, children, expanded, needsToggle, onLayoutStable]);
 
   const clamped =
     needsToggle && !expanded

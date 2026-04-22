@@ -338,8 +338,9 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: var(--research-design-h-px, auto);
-  min-height: var(--research-design-h-px, auto);
+  /* Height follows content: minimized when descriptions are clamped, grows when expanded */
+  height: auto;
+  min-height: 0;
   padding-bottom: 0;
 }
 

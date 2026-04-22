@@ -1,5 +1,5 @@
 // Projects.jsx
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useCallback, useLayoutEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Projects.module.css";
 import { Footer } from "../../components/Footer";
@@ -13,26 +13,28 @@ export const Projects = () => {
   const scaleWrapRef = useRef(null);
   const innerRef = useRef(null);
 
+  const syncArtboardSize = useCallback(() => {
+    const inner = innerRef.current;
+    const wrap = scaleWrapRef.current;
+    if (!inner || !wrap) return;
+
+    const naturalH = Math.ceil(inner.offsetHeight);
+    const vw =
+      window.visualViewport?.width ??
+      document.documentElement.clientWidth ??
+      window.innerWidth;
+    const scale = Math.min(1, vw / PROJECTS_DESIGN_W);
+
+    wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(naturalH * scale)}px`);
+  }, []);
+
+  const queueArtboardSync = useCallback(() => {
+    queueMicrotask(() => {
+      syncArtboardSize();
+    });
+  }, [syncArtboardSize]);
+
   useLayoutEffect(() => {
-    const syncArtboardSize = () => {
-      const inner = innerRef.current;
-      const wrap = scaleWrapRef.current;
-      if (!inner || !wrap) return;
-
-      inner.style.removeProperty("--projects-design-h-px");
-      void inner.offsetHeight;
-      const naturalH = Math.ceil(inner.scrollHeight);
-
-      const vw =
-        window.visualViewport?.width ??
-        document.documentElement.clientWidth ??
-        window.innerWidth;
-      const scale = Math.min(1, vw / PROJECTS_DESIGN_W);
-
-      inner.style.setProperty("--projects-design-h-px", `${naturalH}px`);
-      wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(naturalH * scale)}px`);
-    };
-
     syncArtboardSize();
     window.addEventListener("resize", syncArtboardSize);
     window.visualViewport?.addEventListener("resize", syncArtboardSize);
@@ -41,13 +43,18 @@ export const Projects = () => {
     const inner = innerRef.current;
     if (inner) ro.observe(inner);
 
+    const rafId = requestAnimationFrame(() => {
+      syncArtboardSize();
+    });
+
     return () => {
+      cancelAnimationFrame(rafId);
       window.removeEventListener("resize", syncArtboardSize);
       window.visualViewport?.removeEventListener("resize", syncArtboardSize);
       window.visualViewport?.removeEventListener("scroll", syncArtboardSize);
       ro.disconnect();
     };
-  }, []);
+  }, [syncArtboardSize]);
 
   return (
     <div ref={pageRef} className={styles.projects}>
@@ -149,7 +156,10 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-        <ProjectDescriptionClamp contentClassName={styles['persuasive-blurb']}>
+        <ProjectDescriptionClamp
+          contentClassName={styles['persuasive-blurb']}
+          onLayoutStable={queueArtboardSync}
+        >
           <p>
             Anxiety and depression being the most common mental health conditions
             experienced by black women (BW) in the US. Still, BW with anxiety and/or depression
@@ -247,7 +257,10 @@ export const Projects = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <ProjectDescriptionClamp contentClassName={styles['blurb-4']}>
+            <ProjectDescriptionClamp
+              contentClassName={styles['blurb-4']}
+              onLayoutStable={queueArtboardSync}
+            >
               <p>
                 Inspired by my previous work in accessible haptics,
                 I iterated on a robot-mediated haptic mouse&nbsp;&nbsp;to facilitate
@@ -365,7 +378,10 @@ export const Projects = () => {
                 <span className={styles['bracket']}>]</span>
               </div>
 
-              <ProjectDescriptionClamp contentClassName={styles['text-wrapper-109']}>
+              <ProjectDescriptionClamp
+                contentClassName={styles['text-wrapper-109']}
+                onLayoutStable={queueArtboardSync}
+              >
                 <p>
                   The preliminary development of a mechanically-actuated, kinesthetic
                   haptic mouse for tactile graphic rendering to assist with remote

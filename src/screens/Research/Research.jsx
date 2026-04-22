@@ -1,5 +1,5 @@
 // Research.jsx
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useCallback, useLayoutEffect, useRef } from "react";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
 import { Footer } from "../../components/Footer";
@@ -13,26 +13,28 @@ export const Research = () => {
   const scaleWrapRef = useRef(null);
   const innerRef = useRef(null);
 
+  const syncArtboardSize = useCallback(() => {
+    const inner = innerRef.current;
+    const wrap = scaleWrapRef.current;
+    if (!inner || !wrap) return;
+
+    const naturalH = Math.ceil(inner.offsetHeight);
+    const vw =
+      window.visualViewport?.width ??
+      document.documentElement.clientWidth ??
+      window.innerWidth;
+    const scale = Math.min(1, vw / RESEARCH_DESIGN_W);
+
+    wrap.style.setProperty("--research-scaled-h", `${Math.ceil(naturalH * scale)}px`);
+  }, []);
+
+  const queueArtboardSync = useCallback(() => {
+    queueMicrotask(() => {
+      syncArtboardSize();
+    });
+  }, [syncArtboardSize]);
+
   useLayoutEffect(() => {
-    const syncArtboardSize = () => {
-      const inner = innerRef.current;
-      const wrap = scaleWrapRef.current;
-      if (!inner || !wrap) return;
-
-      inner.style.removeProperty("--research-design-h-px");
-      void inner.offsetHeight;
-      const naturalH = Math.ceil(inner.scrollHeight);
-
-      const vw =
-        window.visualViewport?.width ??
-        document.documentElement.clientWidth ??
-        window.innerWidth;
-      const scale = Math.min(1, vw / RESEARCH_DESIGN_W);
-
-      inner.style.setProperty("--research-design-h-px", `${naturalH}px`);
-      wrap.style.setProperty("--research-scaled-h", `${Math.ceil(naturalH * scale)}px`);
-    };
-
     syncArtboardSize();
     window.addEventListener("resize", syncArtboardSize);
     window.visualViewport?.addEventListener("resize", syncArtboardSize);
@@ -41,13 +43,18 @@ export const Research = () => {
     const inner = innerRef.current;
     if (inner) ro.observe(inner);
 
+    const rafId = requestAnimationFrame(() => {
+      syncArtboardSize();
+    });
+
     return () => {
+      cancelAnimationFrame(rafId);
       window.removeEventListener("resize", syncArtboardSize);
       window.visualViewport?.removeEventListener("resize", syncArtboardSize);
       window.visualViewport?.removeEventListener("scroll", syncArtboardSize);
       ro.disconnect();
     };
-  }, []);
+  }, [syncArtboardSize]);
 
   return (
     <div ref={pageRef} className={styles.research}>
@@ -149,7 +156,10 @@ export const Research = () => {
               🏆 Best Paper Honorable Mention
             </p>
 
-            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+            <ProjectDescriptionClamp
+              contentClassName={styles['project-text']}
+              onLayoutStable={queueArtboardSync}
+            >
               <p>
                 On-demand, last-mile delivery (OD/LMD) is used by people with disabilities (PwDs)
                 for various reasons. As delivery robots are being introduced into OD/LMD ecosystems,
@@ -211,7 +221,10 @@ export const Research = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+            <ProjectDescriptionClamp
+              contentClassName={styles['project-text']}
+              onLayoutStable={queueArtboardSync}
+            >
               <p>
                 Interpersonal synchrony (IS), the behavioral &amp; physiological
                 coordination across time and space, plays a crucial role in social
@@ -325,7 +338,10 @@ export const Research = () => {
               <span className={styles['bracket']}>]</span>
             </div>
 
-            <ProjectDescriptionClamp contentClassName={styles['project-text']}>
+            <ProjectDescriptionClamp
+              contentClassName={styles['project-text']}
+              onLayoutStable={queueArtboardSync}
+            >
               <p>
                 Workplaces are high-pressure environments that lead to occupational stress and anxiety.
                 Still, there are few deliberate opportunities for employees to regulate their emotional state in the workplace.
