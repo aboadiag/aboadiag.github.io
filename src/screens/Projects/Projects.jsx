@@ -18,12 +18,19 @@ export const Projects = () => {
     const wrap = scaleWrapRef.current;
     if (!inner || !wrap) return;
 
-    const naturalH = Math.ceil(inner.offsetHeight);
+    const naturalH = Math.ceil(
+      Math.max(inner.scrollHeight, inner.offsetHeight, 1),
+    );
     const vw =
       window.visualViewport?.width ??
       document.documentElement.clientWidth ??
       window.innerWidth;
     const scale = Math.min(1, vw / PROJECTS_DESIGN_W);
+
+    if (!Number.isFinite(naturalH) || naturalH < 8) {
+      wrap.style.removeProperty("--projects-scaled-h");
+      return;
+    }
 
     wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(naturalH * scale)}px`);
   }, []);

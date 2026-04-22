@@ -325,6 +325,8 @@
   max-width: 100vw;
   display: flex;
   justify-content: center;
+  /* Do not stretch the artboard inner to this box’s height (breaks height sync on mobile). */
+  align-items: flex-start;
   overflow-x: hidden;
   height: var(--research-scaled-h, auto);
   min-height: var(--research-scaled-h, auto);

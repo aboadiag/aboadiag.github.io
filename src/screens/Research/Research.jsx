@@ -18,12 +18,21 @@ export const Research = () => {
     const wrap = scaleWrapRef.current;
     if (!inner || !wrap) return;
 
-    const naturalH = Math.ceil(inner.offsetHeight);
+    // scrollHeight: full content when the flex parent stretches this node (mobile).
+    // offsetHeight alone can match a short stretched box and under-fill --research-scaled-h.
+    const naturalH = Math.ceil(
+      Math.max(inner.scrollHeight, inner.offsetHeight, 1),
+    );
     const vw =
       window.visualViewport?.width ??
       document.documentElement.clientWidth ??
       window.innerWidth;
     const scale = Math.min(1, vw / RESEARCH_DESIGN_W);
+
+    if (!Number.isFinite(naturalH) || naturalH < 8) {
+      wrap.style.removeProperty("--research-scaled-h");
+      return;
+    }
 
     wrap.style.setProperty("--research-scaled-h", `${Math.ceil(naturalH * scale)}px`);
   }, []);
