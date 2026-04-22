@@ -159,8 +159,10 @@
   opacity: 0.8; 
 }
 
-/* Home scales as a single artboard on phones; keep the same 3-column footer layout as desktop */
-
+/*
+  Research / Projects / Art: footer sits in full viewport width (not scaled like Home).
+  Stack columns and allow wrapping so the contact bar fits narrow phones.
+*/
 @media (max-width: 900px) {
   .footer {
     position: relative;
@@ -170,8 +172,8 @@
     width: 100%;
     max-width: none;
     margin: 0;
-    padding: 32px max(16px, env(safe-area-inset-left, 0px))
-      48px max(16px, env(safe-area-inset-right, 0px));
+    padding: 28px max(16px, env(safe-area-inset-left, 0px))
+      40px max(16px, env(safe-area-inset-right, 0px));
     box-sizing: border-box;
   }
 
@@ -179,5 +181,46 @@
     max-width: none;
     width: 100%;
     margin: 0;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "contact"
+      "email"
+      "scholar"
+      "github"
+      "credits";
+    justify-items: center;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .footer .text-wrapper-94 {
+    justify-self: center;
+    text-align: center;
+  }
+
+  .footer .text-wrapper-93 {
+    justify-self: center;
+    text-align: center;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 100%;
+    line-height: 1.35;
+  }
+
+  .footer .link-google-scholar,
+  .footer .img-wrapper {
+    justify-self: center;
+  }
+
+  .footer .text-wrapper-95,
+  .footer .text-wrapper-96 {
+    white-space: normal;
+    max-width: min(100%, 22rem);
+    line-height: 1.3;
+  }
+
+  .footer .credits {
+    margin-top: 28px;
+    padding: 0 8px;
   }
 }

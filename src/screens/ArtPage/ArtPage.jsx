@@ -134,10 +134,11 @@ export const ArtPage = () => {
       <div className={styles['footer-container']}>
         <Footer
           style={{
-            position: 'absolute',
+            position: 'relative',
+            top: 'auto',
             left: 0,
             width: '100%',
-            bottom: 0,
+            maxWidth: '100%',
           }}
         />
       </div>

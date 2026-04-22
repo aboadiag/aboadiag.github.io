@@ -183,8 +183,9 @@
   align-self: stretch;
   margin-top: auto;
   box-sizing: border-box;
-  min-height: clamp(220px, 30vh, 340px);
   flex-shrink: 0;
+  /* Height comes from Footer content; avoid reserving a tall band on mobile */
+  min-height: 0;
 }
 
 /* Mobile: keep absolute + float animation (desktop behavior); smaller bubbles + taller playfield */
