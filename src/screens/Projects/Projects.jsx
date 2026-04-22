@@ -200,9 +200,14 @@ export const Projects = () => {
 
         <div className={styles['split-content']}>
           <div className={styles['left-column']}>
-            <video controls className={styles['project-video']}>
+            {/* <video controls className={styles['project-video']}>
               <source src="/vids/persuasive_misty.mp4" type="video/mp4" />
-            </video>
+            </video> */}
+            <img 
+              className={styles['project-video']} 
+              src="/vids/persuasive_misty-gif-2.gif" 
+              alt="Two side by side clips of participants drawing on computer while robot is on the table near them" 
+            />
             <p className={styles['media-caption']}>
               Two Pilot Participants. Left: Baseline. Right: Context Bandit.
             </p>
@@ -249,7 +254,7 @@ export const Projects = () => {
              <img 
             className={styles['project-video']} 
             src="/vids/haptic-mouse-gif-2.gif" 
-            alt="Human engaging with interactive social robot" 
+            alt="Robot mediated haptic platform" 
             />
             <p className={styles['media-caption']}>
               Left: FDM 3D printed 3DoF RUU Delta Rendering a Simple Spring;
@@ -368,9 +373,15 @@ export const Projects = () => {
 
         <div className={styles['split-content']}>
            <div className={styles['left-column']}>
-              <video controls className={styles['project-video']}>
+              {/* <video controls className={styles['project-video']}>
                 <source src="/vids/haptic-graphics.mp4 " type="video/mp4" />
-              </video>
+              </video> */}
+              <img
+                className={`${styles['project-video']} ${styles['vers-haptics-gif']}`}
+                src="/vids/haptic-graphics-gif-2.gif"
+                alt="Gif robot mediated haptic mouse"
+                decoding="async"
+              />
               <p className={styles['media-caption']}>
                 Left: haptic mouse platform. Right: Rendering surface curvature
                 through kinesthetic feedback (left) and visually on GUI (right). Note:
