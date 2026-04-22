@@ -9,6 +9,8 @@
 
 /* --- MAIN PAGE CONTAINER --- */
 .research {
+  /* Space after intro (“…below.”) and after last project (before footer) */
+  --project-page-rhythm: 56px;
   background-color: var(--high-contrast-color);
   width: 100%;
   max-width: 100vw;
@@ -58,6 +60,7 @@
   padding-top: 168px;
   padding-left: 107px;
   padding-right: 32px;
+  padding-bottom: var(--project-page-rhythm);
   text-align: left;
 }
 
@@ -96,7 +99,7 @@
 
 /* Project rows: equal min-height, spacing between projects (no overlap) */
 .researchProjectStack {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -104,7 +107,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 32px 0 72px;
+  padding: 0 0 var(--project-page-rhythm);
   gap: 0;
 }
 
@@ -131,7 +134,7 @@
 
 .project-voice {
   border-bottom: none;
-  padding-bottom: 48px;
+  padding-bottom: 0;
 }
 
 /* --- TITLES --- */
@@ -316,7 +319,7 @@
 
 /* Narrow viewports: scale a fixed-width artboard (same idea as Home), centered — do not scale the whole .research root */
 .researchLayoutScale {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 0;
   width: 100%;
   max-width: 100vw;
@@ -337,7 +340,7 @@
   flex-direction: column;
   height: var(--research-design-h-px, auto);
   min-height: var(--research-design-h-px, auto);
-  padding-bottom: 56px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 1439px) {

@@ -1,6 +1,5 @@
 // Research.jsx
 import React, { useLayoutEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import { NavBar } from "../../components/NavBar";
 import styles from "./Research.module.css";
 import { Footer } from "../../components/Footer";
@@ -18,8 +17,7 @@ export const Research = () => {
     const syncArtboardSize = () => {
       const inner = innerRef.current;
       const wrap = scaleWrapRef.current;
-      const page = pageRef.current;
-      if (!inner || !wrap || !page) return;
+      if (!inner || !wrap) return;
 
       inner.style.removeProperty("--research-design-h-px");
       void inner.offsetHeight;
@@ -29,22 +27,10 @@ export const Research = () => {
         window.visualViewport?.width ??
         document.documentElement.clientWidth ??
         window.innerWidth;
-      const vh =
-        window.visualViewport?.height ??
-        document.documentElement.clientHeight ??
-        window.innerHeight;
       const scale = Math.min(1, vw / RESEARCH_DESIGN_W);
 
-      const footer = page.querySelector("footer");
-      const footerH = footer?.offsetHeight ?? 120;
-      const pageTopPad = parseFloat(getComputedStyle(page).paddingTop) || 0;
-      const available = Math.max(400, vh - footerH - pageTopPad - 32);
-      const minDesignH = Math.ceil(available / Math.max(scale, 1e-6));
-
-      const h = Math.max(naturalH, minDesignH);
-      inner.style.setProperty("--research-design-h-px", `${h}px`);
-
-      wrap.style.setProperty("--research-scaled-h", `${Math.ceil(h * scale)}px`);
+      inner.style.setProperty("--research-design-h-px", `${naturalH}px`);
+      wrap.style.setProperty("--research-scaled-h", `${Math.ceil(naturalH * scale)}px`);
     };
 
     syncArtboardSize();
@@ -53,10 +39,7 @@ export const Research = () => {
     window.visualViewport?.addEventListener("scroll", syncArtboardSize);
     const ro = new ResizeObserver(() => syncArtboardSize());
     const inner = innerRef.current;
-    const page = pageRef.current;
     if (inner) ro.observe(inner);
-    const footer = page?.querySelector("footer");
-    if (footer) ro.observe(footer);
 
     return () => {
       window.removeEventListener("resize", syncArtboardSize);

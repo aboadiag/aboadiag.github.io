@@ -10,6 +10,8 @@
 
 /* --- MAIN PAGE CONTAINER --- */
 .projects {
+  /* Space after intro (“…below.”) and after last project (before footer) */
+  --project-page-rhythm: 56px;
   background-color: var(--high-contrast-color);
   width: 100%;
   max-width: 100vw;
@@ -60,6 +62,7 @@
   padding-top: 168px;
   padding-left: 107px;
   padding-right: 32px;
+  padding-bottom: var(--project-page-rhythm);
   text-align: left;
 }
 
@@ -110,7 +113,7 @@
 }
 
 .projectsProjectStack {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   min-height: 0;
   display: flex;
   flex-direction: column;
@@ -118,7 +121,7 @@
   align-items: center;
   width: 100%;
   box-sizing: border-box;
-  padding: 32px 0 72px;
+  padding: 0 0 var(--project-page-rhythm);
 }
 
 /* --- PROJECT PANELS (white page; no colored card) --- */
@@ -144,7 +147,7 @@
 
 .project-haptics-2 {
   border-bottom: none;
-  padding-bottom: 48px;
+  padding-bottom: 0;
 }
 
 /* --- TITLES --- */
@@ -304,7 +307,7 @@
   max-width: 100vw;
   min-width: 0;
   align-self: stretch;
-  margin-top: auto;
+  margin-top: 0;
   flex-shrink: 0;
   box-sizing: border-box;
 }
@@ -348,7 +351,7 @@
   flex-direction: column;
   height: var(--projects-design-h-px, auto);
   min-height: var(--projects-design-h-px, auto);
-  padding-bottom: 56px;
+  padding-bottom: 0;
 }
 
 @media (max-width: 1439px) {

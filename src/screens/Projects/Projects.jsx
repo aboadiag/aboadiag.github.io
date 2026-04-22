@@ -17,8 +17,7 @@ export const Projects = () => {
     const syncArtboardSize = () => {
       const inner = innerRef.current;
       const wrap = scaleWrapRef.current;
-      const page = pageRef.current;
-      if (!inner || !wrap || !page) return;
+      if (!inner || !wrap) return;
 
       inner.style.removeProperty("--projects-design-h-px");
       void inner.offsetHeight;
@@ -28,22 +27,10 @@ export const Projects = () => {
         window.visualViewport?.width ??
         document.documentElement.clientWidth ??
         window.innerWidth;
-      const vh =
-        window.visualViewport?.height ??
-        document.documentElement.clientHeight ??
-        window.innerHeight;
       const scale = Math.min(1, vw / PROJECTS_DESIGN_W);
 
-      const footer = page.querySelector("footer");
-      const footerH = footer?.offsetHeight ?? 120;
-      const pageTopPad = parseFloat(getComputedStyle(page).paddingTop) || 0;
-      const available = Math.max(400, vh - footerH - pageTopPad - 32);
-      const minDesignH = Math.ceil(available / Math.max(scale, 1e-6));
-
-      const h = Math.max(naturalH, minDesignH);
-      inner.style.setProperty("--projects-design-h-px", `${h}px`);
-
-      wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(h * scale)}px`);
+      inner.style.setProperty("--projects-design-h-px", `${naturalH}px`);
+      wrap.style.setProperty("--projects-scaled-h", `${Math.ceil(naturalH * scale)}px`);
     };
 
     syncArtboardSize();
@@ -52,10 +39,7 @@ export const Projects = () => {
     window.visualViewport?.addEventListener("scroll", syncArtboardSize);
     const ro = new ResizeObserver(() => syncArtboardSize());
     const inner = innerRef.current;
-    const page = pageRef.current;
     if (inner) ro.observe(inner);
-    const footer = page?.querySelector("footer");
-    if (footer) ro.observe(footer);
 
     return () => {
       window.removeEventListener("resize", syncArtboardSize);
