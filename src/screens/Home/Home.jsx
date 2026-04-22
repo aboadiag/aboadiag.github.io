@@ -19,38 +19,38 @@ const UPDATES_DATA = {
       link: "https://humanrobotinteraction.org/2026/award-nominees/",
     },
     {
-      text: "Selected as 2026 HRI Pioneer! Presented on my proposed thesis work. Read ",
+      text: "Selected as 2026 HRI Pioneer! Presented on my proposed thesis work. Read article: ",
       link: "https://dl.acm.org/doi/abs/10.1145/3776734.3794631",
     },
   ],
   2025: [
     { text: "Successfully Proposed my PhD thesis! Yay!", link: null },
     {
-      text: "Presented our human-robot synchrony paper at IEEE RO-MAN 2025. Read full paper ",
+      text: "Presented our human-robot synchrony paper at IEEE RO-MAN 2025. Read full paper: ",
       link: "https://ieeexplore.ieee.org/abstract/document/11217674/",
     },
     {
-      text: "Our ACM HRI Journal paper on Delivery Robots was published. Read it ",
+      text: "Our ACM HRI Journal paper on Delivery Robots was published. Read article: ",
       link: "https://ieeexplore.ieee.org/abstract/document/11217674/",
     },
   ],
   2024: [
     {
-      text: "Our short paper on voice agents for emotion regulation was accepted at ACM/IEEE HRI. Read paper ",
+      text: "Our short paper on voice agents for emotion regulation was accepted at ACM/IEEE HRI. Read paper: ",
       link: "https://dl.acm.org/doi/abs/10.1145/3610978.3640600",
     },
     {
-      text: "Successfully defended my Master's thesis! Woohoo! Read my thesis ",
+      text: "Successfully defended my Master's thesis! Woohoo! Read my thesis: ",
       link: "https://publications.ri.cmu.edu/storage/publications/2025/03/WritingQual_MSRThesis_aboadiag_final.pdf",
     },
   ],
   2023: [
     {
-      text: "Presented our short paper on designing interactive creative haptic tools to support TVIs at ACM ASSETS. Read paper ",
+      text: "Presented our short paper on designing interactive creative haptic tools to support TVIs at ACM ASSETS. Read paper: ",
       link: "https://dl.acm.org/doi/abs/10.1145/3597638.3614512",
     },
     {
-      text: "Our full paper on parametric tactors for modular, wearable haptics was accepted at ACM UIST. Read paper ",
+      text: "Our full paper on parametric tactors for modular, wearable haptics was accepted at ACM UIST. Read paper: ",
       link: "https://dl.acm.org/doi/abs/10.1145/3586183.3606766",
     },
     { text: "Received Cadence Future Innovators Scholarship.", link: null },
@@ -62,13 +62,13 @@ const UPDATES_DATA = {
     { text: "Started PhD at CMU Robotics! ", link: null },
     { text: "Graduated from Stanford!", link: null },
     {
-      text: "Received MSR internship offer to work w/ Teddy Seyed (Yay)! Had to decline (Aww)!",
+      text: "Received MSR internship offer to work w/ Teddy Seyed (Yay!), but had to decline (Boo!)",
       link: null,
     },
   ],
   2020: [
     {
-      text: "Presented our short paper for improving photo-social media accessibility using voice narration at ACM ASSETS. Read paper ",
+      text: "Presented our short paper for improving photo-social media accessibility using voice narration at ACM ASSETS. Read paper: ",
       link: "https://dl.acm.org/doi/abs/10.1145/3373625.3418013",
     },
     {
@@ -248,7 +248,7 @@ function RecentUpdatesPanel() {
                           rel="noopener noreferrer"
                           className={styles.updateLink}
                         >
-                          here
+                          view update
                         </a>
                       </>
                     ) : null}
