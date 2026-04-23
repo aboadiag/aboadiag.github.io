@@ -85,7 +85,7 @@ export const Research = () => {
           My research focuses on designing physically embodied and agentic AI that operate in service roles, namely assistive and social robots.&nbsp;&nbsp;I use{" "}
         </span>
         <span className={styles['text-wrapper-124']}>participatory design </span>
-        <span className={styles['text-wrapper-122']}>approaches and lead co-design workshops with </span>
+        <span className={styles['text-wrapper-122']}>approaches and facilitate co-design workshops with </span>
         <span className={styles['text-wrapper-124']}>people with disabilities</span>
         <span className={styles['text-wrapper-122']}>
           {" "}

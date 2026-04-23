@@ -94,7 +94,7 @@ const HIGHLIGHT_SLIDES = [
   {
     src: "/vids/parametric-haptics-vid-gif_v1.gif",
     alt: "Gif of Early prototype with vertical motor arrangement then Final Prototype with horizontal motor arrangement",
-    caption: "Tendon-driven customizable tactor patches with vertical motor arrangement &amp; final version with horizontal motor arrangement.",
+    caption: "Tendon-driven customizable tactor patches with vertical motor arrangement & final version with horizontal motor arrangement.",
   },
   {
     src: "/vids/human-robot-synchrony-gif-3.gif",
