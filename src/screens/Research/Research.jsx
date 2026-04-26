@@ -122,9 +122,9 @@ export const Research = () => {
       {/* ================= RESEARCH 1: DELIVERY ROBOTS ================= */}
       <div className={styles['project-delivery']}>
         
-        <p className={styles['project-title']}>
+        <h2 className={styles['project-title']}>
           Co-designing Autonomous Mobility with Local Disabled Adults
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
           {/* LEFT */}
@@ -193,9 +193,9 @@ export const Research = () => {
       {/* ================= RESEARCH 2: IS4HRA ================= */}
       <div className={styles['project-ishra']}>
         
-        <p className={styles['project-title']}>
+        <h2 className={styles['project-title']}>
           Investigating Human-Robot Synchrony in Collborative Art-Making
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
           {/* LEFT */}
@@ -254,9 +254,9 @@ export const Research = () => {
 
       {/* ================= RESEARCH 3: GUIDE ROBOTS ================= */}
       <div className={styles['project-guide']}>
-        <p className={styles['project-title']}>
+        <h2 className={styles['project-title']}>
           Co-designing Robotic Mobility Aids with Adults with Visual Disabilities
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
           <div className={styles['left-column']}>
@@ -314,9 +314,9 @@ export const Research = () => {
 
       {/* ================= RESEARCH 4: VOICE AGENTS ================= */}
       <div className={styles['project-voice']}>
-        <p className={styles['project-title']}>
+        <h2 className={styles['project-title']}>
           Designing Voice Agents for Emotional Wellbeing in the Workplace
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
           <div className={styles['left-column']}>

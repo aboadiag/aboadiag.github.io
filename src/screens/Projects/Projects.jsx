@@ -136,9 +136,9 @@ export const Projects = () => {
   {/* ================= PROJECT 0: CO-DESIGNING INCLUSIVE SOCIAL ROBOTS ================= */}
 
   <div className={styles['project-persuasive-2']}>
-    <p className={styles['persuasive-title']}>
+    <h2 className={styles['persuasive-title']}>
       Co-designing Inclusive Social Robots with Black women with Anxiety and/or Depression
-    </p>
+    </h2>
 
     <div className={styles['split-content']}>
       <div className={styles['left-column']}>
@@ -196,9 +196,9 @@ export const Projects = () => {
 
       {/* ================= PROJECT 1: PERSUASIVE ================= */}
       <div className={styles['project-persuasive-2']}>
-        <p className={styles['persuasive-title']}>
+        <h2 className={styles['persuasive-title']}>
           Persuasive Social Robots to Encourage Art-making
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
           <div className={styles['left-column']}>
@@ -244,10 +244,10 @@ export const Projects = () => {
 
       {/* ================= PROJECT 2: ROBOT MEDIATED ================= */}
       <div className={styles['project-robot-2']}>
-        <p className={styles['robot-mediated']}>
+        <h2 className={styles['robot-mediated']}>
           Robot-Mediated Haptic Mouse for Co-creation of Non-Visual Aids
           between&nbsp;&nbsp;TVIs &amp; BLV Students
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
           <div className={styles['left-column']}>
@@ -307,10 +307,10 @@ export const Projects = () => {
 
       {/* ================= PROJECT 3: VERSATILE HAPTICS ================= */}
       <div className={styles['project-versatile-2']}>
-        <p className={styles['versatile-haptics']}>
+        <h2 className={styles['versatile-haptics']}>
            Versatile Haptics
            <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collaboration with Violet Han et al.]</span>
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
             {/* LEFT COLUMN: Both Images Stacked */}
@@ -370,10 +370,10 @@ export const Projects = () => {
 
       {/* ================= PROJECT 4: ACCESSIBLE HAPTICS ================= */}
       <div className={styles['project-haptics-2']}>
-        <p className={styles['accessible-haptics']}>
+        <h2 className={styles['accessible-haptics']}>
             Accessible Haptics through Graphics Rendering
             <span style={{ fontSize: '24px', fontWeight: 400 }}> [Collab with A. Brantley, A.F. Siu, &amp; S. Follmer]</span>
-        </p>
+        </h2>
 
         <div className={styles['split-content']}>
            <div className={styles['left-column']}>
