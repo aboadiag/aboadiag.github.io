@@ -23,7 +23,11 @@ export const Footer = ({
           {/* Note: Corrected 'text-wrapper-93ssa' to 'text-wrapper-93' to match typical CSS naming */}
           <div className={styles['text-wrapper-94']}>Contact</div> 
           <div className={styles['text-wrapper-93']}>
-            <a href="mailto:aboadiag@andrew.cmu.edu" style={{ textDecoration: "none", color: "inherit" }}>
+            <a href="mailto:aboadiag@andrew.cmu.edu" 
+            style={{ textDecoration: "none", color: "inherit" }}
+            aria-label="Contact information: Abena's professional email"
+
+            >
               aboadiag@andrew.cmu.edu
             </a>
           </div>
