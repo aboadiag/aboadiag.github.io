@@ -400,14 +400,20 @@ export const Home = () => {
             </div>
             <p className={styles['i-am-in-the-fifth-2']}>
               <span className={styles['text-wrapper-71']}>I am a </span>
-              <span className={styles['text-wrapper-72']}>fifth</span>
-              <span className={styles['text-wrapper-71']}>&nbsp;</span>
-              <span className={styles['text-wrapper-72']}>year</span>
-              <span className={styles['text-wrapper-71']}>
-                {" "}
-                PhD Candidate in the Robotics Institute at Carnegie Mellon
-                University. Here, I'm advised by{" "}
+              <span className={styles['text-wrapper-72']}>
+                human-centered roboticist
               </span>
+              {/* <span className={styles['text-wrapper-71']}>&nbsp;</span>
+              <span className={styles['text-wrapper-72']}>year</span> */}
+              <span className={styles['text-wrapper-71']}>and </span>
+               <span className={styles['text-wrapper-72']}>researcher </span>
+              <span className={styles['text-wrapper-71']}> 
+                {" "}
+                who focuses on designing and evaluating robots and AI-driven systems for and with people with disabilities and their respective communities.
+              <br /><br />
+                I completed my PhD at Carnegie Mellon University in the Robotics Institute where my I focused on research interests at the intersection of human-robot interaction, design research and accessibility.Specifically, I used participatory approaches and human-centered approaches to design inclusive service robots whose design specifications were informed by the lived experiences of people with disabilities. My research has been published in top-tier HRI, HCI, and robotics venues.
+            
+                I completed my PhD at Carnegie Mellon University in the Robotics Institute working with{" "}</span>
               <a
                 href="https://www.ri.cmu.edu/ri-faculty/aaron-steinfeld/"
                 rel="noopener noreferrer"
@@ -415,7 +421,37 @@ export const Home = () => {
               >
                 <span className={styles['text-wrapper-74']}>Aaron Steinfeld</span>
               </a>
-              <span className={styles['text-wrapper-71']}> and a part of the </span>
+              <span className={styles['text-wrapper-71']}>. </span>
+                
+                <br /><br />
+               <span className={styles['text-wrapper-71']}>
+                Later this year, I will join{" "}
+              </span>
+              <a
+                href="https://lavoro.bot/"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <span className={styles['text-wrapper-74']}>Lavoro AI</span>
+              </a>
+              <span className={styles['text-wrapper-71']}> a physical AI startup located in Pittsburgh, PA.</span>
+              <span className={styles['text-wrapper-71']}>as a </span>
+              <span className={styles['text-wrapper-72']}>Senior Robotics Scientist</span>
+               <span className={styles['text-wrapper-71']}>
+                where I will to work inclusive and novel robotic systems that support people with varied dis/abilities.
+                 </span>
+                 <span className={styles['text-wrapper-71']}>I am also one of the </span>
+                 <span className={styles['text-wrapper-72']}>co-founding members of{""}</span>
+                 <a
+                href="https://robotsforall.us/"
+                rel="noopener noreferrer" 
+                target="_blank"
+                >
+                  <span className={styles['text-wrapper-74']}> Robots for All</span>
+                </a>
+                  <span className={styles['text-wrapper-71']}>, a cross-organizational initiative that aims to make robotics more accessible and inclusive.</span>
+               
+              {/* <span className={styles['text-wrapper-71']}> and a part of the </span>
               <a
                 href="https://tbd.ri.cmu.edu/"
                 rel="noopener noreferrer"
@@ -426,30 +462,8 @@ export const Home = () => {
               <br />
               <span className={styles['text-wrapper-71']}> I graduate in 2026 and am actively seeking </span>
                 <span className={styles['text-wrapper-72']}>full-time positions.</span> <br />
-                <br />
-                <span className={styles['text-wrapper-71']}>
-                  My research interests are at the intersection of{" "}
-              </span>
-              <span className={styles['text-wrapper-72']}>human-robot interaction</span>
-              <span className={styles['text-wrapper-71']}>, </span>
-              <span className={styles['text-wrapper-72']}>design research</span>
-              <span className={styles['text-wrapper-71']}>, and </span>
-              <span className={styles['text-wrapper-72']}>accessibility</span>
-              <span className={styles['text-wrapper-71']}>
-                . I am interested in applying{" "}
-              </span>
-              <span className={styles['text-wrapper-72']}>
-                participatory approaches 
-              </span>
-              <span className={styles['text-wrapper-71']}>
-                {" "}
-                to design embodied &amp; agentic AI with and for{" "}
-              </span>
-              <span className={styles['text-wrapper-76']}>people with disabilities </span>
-              <span className={styles['text-wrapper-71']}>
-                &amp; their respective communities.
-               </span>
-                <br /><br />
+                <br />*/}
+            
 
                {/* --- NEW BIO CONTENT START --- */}
                 <span className={styles['text-wrapper-71']}>
