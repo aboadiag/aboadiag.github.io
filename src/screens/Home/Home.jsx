@@ -434,7 +434,7 @@ export const Home = () => {
               >
                 <span className={styles['text-wrapper-74']}>Aaron Steinfeld</span>
               </a>
-              <span className={styles['text-wrapper-71']}>. My thesis resesearch focused using participatory approaches to co-design inclusive service robots and equitable human-robot interactions alongside adults with disabilities. {" "} </span>
+              <span className={styles['text-wrapper-71']}>. My thesis resesearch focused on using participatory approaches to co-design inclusive service robots and equitable human-robot interactions alongside adults with disabilities. {" "} </span>
                 
                 <span className={styles['text-wrapper-71']}>During my PhD, I helped co-found {" "}</span>
                  <a
