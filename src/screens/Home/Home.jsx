@@ -545,9 +545,8 @@ export const Home = () => {
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <span className={styles['text-wrapper-74']}>"From Margin to Center: Designing Inclusive and Equitable Service Robots with Disabled Adults"</span>
+                    <span className={styles['text-wrapper-74']}>[Doctoral Thesis]</span>
                   </a>
-                  <span className={styles['text-wrapper-88']}>]</span>
                 </p>
 
                 <h3 className={styles['text-wrapper-89']}>
