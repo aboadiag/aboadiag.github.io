@@ -373,7 +373,7 @@ export const Home = () => {
             </h2>
 
             <h3 className={styles['final-year-phd-2']}>
-              &amp; human-centered roboticist +  researcher!
+              &amp; human-centered roboticist!
             </h3>
 
             <div className={styles.aboutTitleRow}>
