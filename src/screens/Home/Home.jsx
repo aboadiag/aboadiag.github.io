@@ -413,7 +413,7 @@ export const Home = () => {
                 I am a human-robot interaction researcher whose interests exist at the intersection of design research and accessibility. My research centers on designing and evaluating robots and AI-driven technologies for diverse populations. 
                 </span>
                    
-                <span className={styles['text-wrapper-71']}>As of November 2026, I will join {" "}</span>
+                <span className={styles['text-wrapper-71']}>{" "}As of November 2026, I will join {" "}</span>
                  <a
                 href="https://lavoro.bot/"
                 rel="noopener noreferrer" 
