@@ -539,15 +539,16 @@ export const Home = () => {
                     Aaron Steinfeld (Chair), Jean Oh, Patrick Carrington, Cynthia L.
                     Bennett
                     <br />
-                    “From Margin to Center: Designing Inclusive and Equitable Service Robots with Disabled Adults”
+                    “From Margin to Center: Designing Inclusive and Equitable Service Robots with Disabled Adults” [
                   </span>
                   <a
                     href="https://publications.ri.cmu.edu/storage/publications/2026/09/aboadiag-dissertation2026-manual-tagged_20260901153517.pdf"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <span className={styles['text-wrapper-74']}>[Doctoral Thesis]</span>
+                    <span className={styles['text-wrapper-74']}>Doctoral Thesis</span>
                   </a>
+                    <span className={styles['text-wrapper-88']}>]</span>
                 </p>
 
                 <h3 className={styles['text-wrapper-89']}>
