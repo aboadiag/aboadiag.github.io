@@ -410,7 +410,7 @@ export const Home = () => {
                */}
 
               <span className={styles['text-wrapper-71']}> 
-                I am a human-robot interaction researcher whose interests exist at the intersection of design research and accessibility. I focuses on designing and evaluating robots and AI-driven technologies for people with disabilities and their respective communities. 
+                I am a human-robot interaction researcher whose interests exist at the intersection of design research and accessibility. My research centers on designing and evaluating robots and AI-driven technologies for diverse populations. 
                 </span>
                    
                 <span className={styles['text-wrapper-71']}>As of November 2026, I will join {" "}</span>
@@ -421,7 +421,7 @@ export const Home = () => {
                 >
                   <span className={styles['text-wrapper-74']}>Lavoro AI</span>
                 </a>
-                  <span className={styles['text-wrapper-71']}>{" "}as Senior Robotics Scientist working on physical AI for caregiving tasks. </span>
+                  <span className={styles['text-wrapper-71']}>{" "}as Senior Robotics Scientist working on human-robot interaction for rehabilitation and caregiving. </span>
 
               <br /><br />
 
