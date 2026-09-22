@@ -249,7 +249,7 @@ function RecentUpdatesPanel() {
                           rel="noopener noreferrer"
                           className={styles.updateLink}
                         >
-                          view update
+                          View update.
                         </a>
                       </>
                     ) : null}
