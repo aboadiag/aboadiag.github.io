@@ -538,7 +538,7 @@ export const Home = () => {
                   <span className={styles['text-wrapper-88']}>
                     Aaron Steinfeld (Chair), Jean Oh, Patrick Carrington, Cynthia L.
                     Bennett
-                    {/* <br /> */}
+                    <br />
                     “From Margin to Center: Designing Inclusive and Equitable Service Robots with Disabled Adults” [
                   </span>
                   <a
