@@ -421,7 +421,7 @@ export const Home = () => {
                 >
                   <span className={styles['text-wrapper-74']}>Lavoro AI</span>
                 </a>
-                  <span className={styles['text-wrapper-71']}>{" "}as Senior Robotics Scientist working on physical AI to support caregiving workers. </span>
+                  <span className={styles['text-wrapper-71']}>{" "}as Senior Robotics Scientist working on physical AI for caregiving tasks. </span>
 
               <br /><br />
 
