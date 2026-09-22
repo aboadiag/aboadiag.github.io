@@ -371,10 +371,10 @@ export const Home = () => {
               <span className={styles['text-wrapper-79']}>Designer,<br /></span>
               <span className={styles['text-wrapper-80']}>Engineer,</span>
             </h2>
-{/* 
+
             <h3 className={styles['final-year-phd-2']}>
-              &amp; final year PhD Candidate in Robotics!
-            </h3> */}
+              &amp; human-centered roboticist +  researcher!
+            </h3>
 
             <div className={styles.aboutTitleRow}>
               <h2 className={styles['text-wrapper-82']}>about.</h2>
@@ -399,20 +399,34 @@ export const Home = () => {
               </a>
             </div>
             <p className={styles['i-am-in-the-fifth-2']}>
-              <span className={styles['text-wrapper-71']}>I am a </span>
+              {/* <span className={styles['text-wrapper-71']}>I am a </span>
               <span className={styles['text-wrapper-72']}>
                 human-centered roboticist
               </span>
               {/* <span className={styles['text-wrapper-71']}>&nbsp;</span>
-              <span className={styles['text-wrapper-72']}>year</span> */}
+              <span className={styles['text-wrapper-72']}>year</span> 
               <span className={styles['text-wrapper-71']}>and{" "} </span>
-               <span className={styles['text-wrapper-72']}>researcher </span>
+               <span className={styles['text-wrapper-72']}>researcher </span> 
+               */}
+
               <span className={styles['text-wrapper-71']}> 
-                {" "}
-                whose interests are at the intersection of human-robot interaction, design research and accessibility.
-                {/* who focuses on designing and evaluating robots and AI-driven systems for and with people with disabilities and their respective communities. */}
+                I am a human-robot interaction researcher whose interests exist at the intersection of design research and accessibility. I focuses on designing and evaluating robots and AI-driven technologies for people with disabilities and their respective communities. 
+                </span>
+                   
+                <span className={styles['text-wrapper-71']}>As of November 2026, I will join {" "}</span>
+                 <a
+                href="https://lavoro.bot/"
+                rel="noopener noreferrer" 
+                target="_blank"
+                >
+                  <span className={styles['text-wrapper-74']}>Lavoro AI</span>
+                </a>
+                  <span className={styles['text-wrapper-71']}>{" "}as Senior Robotics Scientist working on physical AI to support caregiving workers. </span>
+
               <br /><br />
-                I completed my PhD at Carnegie Mellon University in the Robotics Institute, where I was advised by {" "}</span>
+
+              <span className={styles['text-wrapper-71']}> 
+                I completed my PhD at Carnegie Mellon University in the Robotics Institute, where I was advised by{" "}</span>
               <a
                 href="https://www.ri.cmu.edu/ri-faculty/aaron-steinfeld/"
                 rel="noopener noreferrer"
@@ -420,24 +434,9 @@ export const Home = () => {
               >
                 <span className={styles['text-wrapper-74']}>Aaron Steinfeld</span>
               </a>
-              <span className={styles['text-wrapper-71']}>. </span>
+              <span className={styles['text-wrapper-71']}>. My thesis resesearch focused using participatory approaches to co-design inclusive service robots and equitable human-robot interactions alongside adults with disabilities. {" "} </span>
                 
-                <br /><br />
-               <span className={styles['text-wrapper-71']}>
-                Later this year, I will join{" "}
-              </span>
-              <a
-                href="https://lavoro.bot/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <span className={styles['text-wrapper-74']}>Lavoro AI</span>
-              </a>
-              <span className={styles['text-wrapper-71']}> a physical AI startup located in Pittsburgh, PA as a {" "}</span>
-              <span className={styles['text-wrapper-72']}>Senior Robotics Scientist</span>
-               <span className={styles['text-wrapper-71']}>.
-                 </span>
-                 <span className={styles['text-wrapper-71']}>During my PhD, I helped co-found {" "}</span>
+                <span className={styles['text-wrapper-71']}>During my PhD, I helped co-found {" "}</span>
                  <a
                 href="https://robotsforall.us/"
                 rel="noopener noreferrer" 
@@ -446,6 +445,7 @@ export const Home = () => {
                   <span className={styles['text-wrapper-74']}> Robots for All</span>
                 </a>
                   <span className={styles['text-wrapper-71']}>, a cross-organizational initiative that aims to make robotics accessible for anyone.</span>
+                
                
               {/* <span className={styles['text-wrapper-71']}> and a part of the </span>
               <a
@@ -463,8 +463,7 @@ export const Home = () => {
                 <br /><br />
                {/* --- NEW BIO CONTENT START --- */}
                 <span className={styles['text-wrapper-71']}>
-                  I completed my B.S. in Mechanical Engineering at Stanford University. 
-                  During my undergraduate studies, I was fortunate to work as an 
+                  I completed my B.S. in Mechanical Engineering at Stanford University. During my undergraduate studies, I was fortunate to work as an 
                   undergraduate researcher in{" "}
                 </span>
                 
