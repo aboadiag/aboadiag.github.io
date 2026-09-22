@@ -539,21 +539,19 @@ export const Home = () => {
                     Aaron Steinfeld (Chair), Jean Oh, Patrick Carrington, Cynthia L.
                     Bennett
                     <br />
-                    "Robot Design at the Margins: The Lived Experience as a Participatory 
-                    Approach to Co-designing with Disabled Adults” [
                   </span>
                   <a
-                    href="https://drive.google.com/file/d/1vOES-GlMrkdDGLuSiGDzSR8nxRw3KGi4/view?usp=sharing"
+                    href="https://publications.ri.cmu.edu/storage/publications/2026/09/aboadiag-dissertation2026-manual-tagged_20260901153517.pdf"
                     rel="noopener noreferrer"
                     target="_blank"
                   >
-                    <span className={styles['text-wrapper-74']}>Proposed Thesis, Video Summary</span>
+                    <span className={styles['text-wrapper-74']}>"From Margin to Center: Designing Inclusive and Equitable Service Robots with Disabled Adults"</span>
                   </a>
                   <span className={styles['text-wrapper-88']}>]</span>
                 </p>
 
                 <h3 className={styles['text-wrapper-89']}>
-                  2021 - present, Carnegie Mellon University
+                  2021 - 2026, Carnegie Mellon University
                 </h3>
 
                 <p className={styles['m-s-in-robotics-2']}>
