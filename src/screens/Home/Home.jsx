@@ -379,7 +379,7 @@ export const Home = () => {
             <div className={styles.aboutTitleRow}>
               <h2 className={styles['text-wrapper-82']}>about.</h2>
               <a
-                href="/pdfs/aboadiag-cv-4_23_26.pdf"
+                href="/pdfs/aboadiag-cv-sept-2026.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Open curriculum vitae (PDF in new tab)"
